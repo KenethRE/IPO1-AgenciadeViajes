@@ -1,0 +1,32 @@
+﻿<Window x:Class="IPO1_AgenciadeViajes.ConfirmacionParcela"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IPO1_AgenciadeViajes"
+        mc:Ignorable="d"
+        Title="ConfirmacionParcela" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock FontSize="16" Text=" Escriba sus comentarios" Margin="4"
+            Grid.ColumnSpan="2" HorizontalAlignment="Center" />
+        <Label Content ="Nombre:" Grid.Row="1" />
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="_nombre" Margin="2" />
+        <Label Content="_Comentario:" Grid.Row="2" />
+        <TextBox AcceptsReturn="True" Grid.Row="2" Grid.Column="1"
+            x:Name="_comentario" Margin="2" />
+        <Button HorizontalAlignment="Center" Margin="298.8,3.8,373.6,0" Grid.Row="3" FontSize="16" Content="Enviar" Grid.Column="1" Height="25" VerticalAlignment="Top" Click="AceptarConfirmacionParcela" />
+
+
+    </Grid>
+</Window>
