@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace IPO1_AgenciadeViajes
 {
     /// <summary>
-    /// Lógica de interacción para Principal.xaml
+    /// Lógica de interacción para Promocion.xaml
     /// </summary>
-    public partial class Principal : Window
+    public partial class Promocion : Window
     {
-        public Principal()
+        public Promocion()
         {
             InitializeComponent();
         }

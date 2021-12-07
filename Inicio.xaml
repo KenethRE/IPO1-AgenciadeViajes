@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IPO1_AgenciadeViajes"
         mc:Ignorable="d"
-        Title="Inicio" Width="800" Height="500" Opacity="0.6" Foreground="White">
-    <Grid Background="White" Margin="10" Width="800" Height="500">
+        Title="Inicio" Width="800" Height="500" Opacity="0.6" Foreground="White" >
+    <Grid Background="Black" Margin="0,0,0,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="100*"/>
             <RowDefinition Height="70*"/>
@@ -26,29 +26,24 @@
             <ColumnDefinition Width="60*"/>
             <ColumnDefinition Width="211*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="tbxEmail" TextWrapping="Wrap"
-            VerticalContentAlignment="Center" TabIndex="1" Grid.Column="2" Grid.Row="3"
-            Grid.ColumnSpan="2" Margin="8,8,8,8"/>
+        <Rectangle Height="500" Opacity="0.6" Width="800">
+        </Rectangle>
+        <Rectangle Margin="10,10,10,10" Grid.Row="1" Grid.Column="1" Grid.RowSpan="6" Grid.ColumnSpan="4" Fill="#FF424242" RadiusX="10" RadiusY="10" Width="374" Height="282"/>
+        <Button x:Name="btnIniciarSesion" Grid.ColumnSpan="2" Content="{DynamicResource lblLogin}" Grid.Row="6" Grid.Column="2" Margin="92.8,14.8,82,24" Grid.RowSpan="1" AutomationProperties.Name="btnLogin" Background="#FFFF5852" Foreground="White" Height="30" Padding="6" TabIndex="3" Click="ComprobarInformacion"/>
+        <TextBox x:Name="tbxEmail" TextWrapping="Wrap" VerticalContentAlignment="Center" TabIndex="1" Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2" Margin="8,8,8,8"/>
+        <PasswordBox x:Name="pbxContraseña" PasswordChar="*" VerticalContentAlignment="Center" Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2" Margin="8,8,8,8" IsEnabled="False" TabIndex="2" />
+        <Label x:Name="lblUsuario" Foreground="White" RenderTransformOrigin="0.902,-0.345" Grid.Column="2" Grid.Row="2" VerticalContentAlignment="Center" Margin="5,5,10,5" Grid.ColumnSpan="2" Content="{DynamicResource lblUsuario}" />
+        <Label x:Name="lblContraseña" Content="{DynamicResource lblContraseña}" Foreground="White" Grid.Column="2" Grid.Row="4" VerticalContentAlignment="Center" Margin="5,5,10,5" HorizontalContentAlignment="Left" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblLogin" FontSize="20" Content="{DynamicResource lblLogin}" Foreground="White" IsTabStop="True" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Grid.Column="1" Margin="20,15,20,5" Grid.ColumnSpan="2" Grid.Row="1" Padding="10,10,10,10"/>
+        <Label x:Name="lblRecordarContraseña" Content="{DynamicResource lblRecordarContraseña}" Foreground="#FFFF5852" FontStyle="Italic" IsTabStop="True" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Grid.Column="3" Margin="15,15,15,5" Grid.ColumnSpan="2" Grid.Row="1" Padding="10,10,10,10"/>
+        <Label Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label x:Name="lblEstado" Content="Estado de aplicación" Margin="0,10,0,0" Grid.Row="8" Background="White" Opacity="0.7" Width="800" Height="30" Grid.ColumnSpan="6"/>
+        <Image x:Name="imgIdioma" Grid.Column="5" HorizontalAlignment="Stretch" Margin="62.738,25,63.862,24.6" VerticalAlignment="Center" Source="/Imagenes/spain.png" Height="48"/>
+        <ComboBox x:Name="cbIdiomas" Grid.Column="5" HorizontalAlignment="Stretch" Margin="137.769,38,14.831,37.6" VerticalAlignment="Center" Opacity="0.6" SelectedIndex="0" SelectionChanged="cb_elementoSeleccionado" Background="Black" >
+            <ComboBoxItem x:Name="cbItem1" Content="ES"/>
+            <ComboBoxItem x:Name="cbItem2" Content="EN"/>
+        </ComboBox>
 
-        <PasswordBox x:Name="pbxContraseña" PasswordChar="*" VerticalContentAlignment="Center" Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2"
-        Margin="8,8,8,8" IsEnabled="False" TabIndex="2" />
+    </Grid>
 
-        <Label x:Name="lblUsuario" Foreground="White" RenderTransformOrigin="0.902,-0.345" Content="Usuario" Grid.Column="2" Grid.Row="2"
-        VerticalContentAlignment="Center" Margin="5,5,10,5" Grid.ColumnSpan="2"/>
-
-        <Label x:Name="lblContraseña" Foreground="White" Content="Contraseña" Grid.Column="2" Grid.Row="4" VerticalContentAlignment="Center"
-        Margin="5,5,10,5" HorizontalContentAlignment="Left" Grid.ColumnSpan="2"/>
-
-        <Label x:Name="lblLogin" FontSize="20" Foreground="White" IsTabStop="True" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"
-        Content="Iniciar sesión" Grid.Column="1" Margin="20,15,20,5" Grid.ColumnSpan="2" Grid.Row="1" Padding="10,10,10,10"/>
-
-        <Label x:Name="lblRecordarContraseña" Foreground="#FFFF5852" FontStyle="Italic" IsTabStop="True" HorizontalContentAlignment="Right"
-        VerticalContentAlignment="Center" Content="¿Olvidó su contraseña?" Grid.Column="3" Margin="15,15,15,5" Grid.ColumnSpan="2" Grid.Row="1"
-        Padding="10,10,10,10"/>
-        <Button x:Name="btnIniciarSesion" Content="Iniciar sesión" Margin="16.2,31,0,9.8" Grid.Row="6" Background="#FFFF5852" Foreground="White" Height="32" Width="123" Padding="6" Grid.Column="2" TabIndex="3"/>
-        <Label Content="Usuario:" Grid.Column="2" HorizontalAlignment="Left" Margin="10.2,10.4,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="26" Width="209"/>
-        <Label Content="Usuario:" Grid.Column="2" HorizontalAlignment="Left" Margin="10.2,10.4,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="26" Width="209"/>
-        <Label Content="Contraseña:" Grid.Column="2" HorizontalAlignment="Left" Margin="8.2,5.2,0,0" Grid.Row="4" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="26" Width="209"/>
-        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="93,68,0,0" Grid.RowSpan="2"/>
-    </Grid>
 </Window>

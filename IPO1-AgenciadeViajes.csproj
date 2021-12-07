@@ -58,7 +58,32 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Inscrito.xaml.cs">
+      <DependentUpon>Inscrito.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Promocion.xaml.cs">
+      <DependentUpon>Promocion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RutaSenderista.xaml.cs">
+      <DependentUpon>RutaSenderista.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Actividad.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cabana.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ConfirmacionCabana.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ConfirmacionParcela.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CrearRuta.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -66,32 +91,74 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
+    <Compile Include="Actividad.xaml.cs">
+      <DependentUpon>Actividad.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Cabana.xaml.cs">
+      <DependentUpon>Cabana.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmacionCabana.xaml.cs">
+      <DependentUpon>ConfirmacionCabana.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ConfirmacionParcela.xaml.cs">
       <DependentUpon>ConfirmacionParcela.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CrearRuta.xaml.cs">
+      <DependentUpon>CrearRuta.xaml</DependentUpon>
     </Compile>
     <Compile Include="Inicio.xaml.cs">
       <DependentUpon>Inicio.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Page Include="Principal.xaml">
+    <Page Include="Inscrito.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MenuPrincipal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Monitor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Parcela.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Promocion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RutaSenderista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Resource Include="Recursos\StringResources.en-US.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="Recursos\StringResources.es-ES.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="Recursos\StringResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Principal.xaml.cs">
-      <DependentUpon>Principal.xaml</DependentUpon>
+    <Compile Include="MenuPrincipal.xaml.cs">
+      <DependentUpon>MenuPrincipal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Monitor.xaml.cs">
+      <DependentUpon>Monitor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Parcela.xaml.cs">
+      <DependentUpon>Parcela.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -117,6 +184,26 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\spain.png" />
+    <Resource Include="Imagenes\united-states.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\salir_c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\icono_imagen.png" />
+    <Resource Include="Imagenes\icono_usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\imagen_ruta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Inscritos.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -15,21 +15,13 @@ using System.Windows.Shapes;
 namespace IPO1_AgenciadeViajes
 {
     /// <summary>
-    /// Lógica de interacción para ConfirmacionParcela.xaml
+    /// Lógica de interacción para RutaSenderista.xaml
     /// </summary>
-    public partial class ConfirmacionParcela : Window
+    public partial class RutaSenderista : Window
     {
-        public ConfirmacionParcela()
+        public RutaSenderista()
         {
             InitializeComponent();
         }
-
-        private void AceptarConfirmacionParcela(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show(string.Format("El usuario: {0}, Ha reservado la parcela {1}{2}", _nombre.Text,
-            Environment.NewLine, _comentario.Text));
-        }
-
-     
     }
 }

@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IPO1_AgenciadeViajes"
         mc:Ignorable="d"
-        Title="ConfirmacionParcela" Height="450" Width="800">
-    <Grid>
+        Title="ConfirmacionParcela" Height="295.6" Width="560.8">
+    <Grid Margin="0,0,3.6,2.4">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto"/>
@@ -14,18 +14,34 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" MinWidth="87.2" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-        <TextBlock FontSize="16" Text=" Escriba sus comentarios" Margin="4"
-            Grid.ColumnSpan="2" HorizontalAlignment="Center" />
-        <Label Content ="Nombre:" Grid.Row="1" />
-        <TextBox Grid.Row="1" Grid.Column="1" x:Name="_nombre" Margin="2" />
-        <Label Content="_Comentario:" Grid.Row="2" />
+        <TextBlock FontSize="16" Margin="0,4,47.2,118" HorizontalAlignment="Right" Width="478" Grid.RowSpan="3" Grid.ColumnSpan="2" ><Run Text="Para reservar la parcela &quot;parcela deluxe&quot; "/><Run Text="para las fechas"/><Run Text=" "/><Run/><LineBreak/><Run Text="12/12/2001"/><Run Text=" al 16/12/2001 debe rellenar"/><Run Text=" "/><Run Text="los siguientes datos"/><Run Text=":"/></TextBlock>
+        <Label Content ="Nombre:" Grid.Row="2" Margin="0,63,0.2,118"/>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="_nombre" Margin="1.8,65,152.2,178"/>
+        <Label Content="Teléfono:" Grid.Row="2" Margin="0,88,0.2,33" />
         <TextBox AcceptsReturn="True" Grid.Row="2" Grid.Column="1"
-            x:Name="_comentario" Margin="2" />
-        <Button HorizontalAlignment="Center" Margin="298.8,3.8,373.6,0" Grid.Row="3" FontSize="16" Content="Enviar" Grid.Column="1" Height="25" VerticalAlignment="Top" Click="AceptarConfirmacionParcela" />
+            x:Name="_comentario" Margin="1.8,91,270.2,150" />
+        <Button HorizontalAlignment="Center" Margin="238,211,115.2,0" Grid.Row="2" FontSize="16" Content="Cancelar" Grid.Column="1" Height="37" VerticalAlignment="Top" Click="AceptarConfirmacionParcela" Width="98" RenderTransformOrigin="0.452,-3.352" />
+        <Label Content="Email:" Grid.Row="2" Margin="0,142,0.2,10" />
+        <TextBox AcceptsReturn="True" Grid.Row="2" Grid.Column="1"
+            x:Name="_comentario_Copy" Margin="1.8,114,270.2,123" Text="(Opcional)" />
+        <Label Content="Nº ocupantes:" Grid.Row="2" Margin="1,172,1.2,2" />
+        <TextBox AcceptsReturn="True" Grid.Row="2" Grid.Column="1"
+            x:Name="_comentario_Copy2" Margin="3.8,174,460.2,10" />
+        <Button HorizontalAlignment="Center" Margin="55,211,293.2,0" Grid.Row="2" FontSize="16" Content="Confirmar" Height="37" VerticalAlignment="Top" Click="AceptarConfirmacionParcela" Width="103" RenderTransformOrigin="0.452,-3.352" Grid.Column="1" />
+        <TextBox AcceptsReturn="True" Grid.Row="2"
+            x:Name="_comentario_Copy3" Margin="2,146,211.2,95" Text="(Opcional)" Grid.Column="1" />
+        <TextBox AcceptsReturn="True" Grid.Row="2" Grid.Column="1"
+            x:Name="_comentario_Copy1" Margin="1.8,174,418.2,64" />
+        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="7,232,0,-4" VerticalAlignment="Center" Source="Imagenes/spain.png" Height="36" Grid.Row="2" Width="60" Grid.RowSpan="2"/>
+        <Image Source="Imagenes/salir_c.png" Margin="421.8,10,10.2,229" Grid.RowSpan="3" Grid.Column="1"/>
+        <ComboBox x:Name="cbIdiomas" HorizontalAlignment="Stretch" Margin="49,236,10,2" VerticalAlignment="Center" Opacity="0.6" SelectedIndex="0" Background="Black" Height="26" Grid.Row="2" >
+            <ComboBoxItem x:Name="cbItem1" Content="ES"/>
+            <ComboBoxItem x:Name="cbItem2" Content="EN"/>
+        </ComboBox>
 
 
     </Grid>
