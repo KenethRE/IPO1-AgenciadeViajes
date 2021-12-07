@@ -22,6 +22,7 @@ namespace IPO1_AgenciadeViajes
         public ConfirmacionParcela()
         {
             InitializeComponent();
+
         }
 
         private void AceptarConfirmacionParcela(object sender, RoutedEventArgs e)

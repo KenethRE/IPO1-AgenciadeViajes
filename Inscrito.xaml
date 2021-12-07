@@ -17,7 +17,9 @@
                             <TextBlock Padding="2" Margin="10,0,0,0" Text="{Binding Nombre}" />
                         </StackPanel>
                     </DataTemplate>
-                </ListBox.ItemTemplate>                <ListBox.ItemContainerStyle>
+                </ListBox.ItemTemplate>
+
+                <ListBox.ItemContainerStyle>
                     <Style TargetType="{x:Type ListBoxItem}">
                         <Setter Property="Margin" Value="2"/>
                         <Style.Triggers>
@@ -32,8 +34,10 @@
                             </Trigger>
                         </Style.Triggers>
                     </Style>
-                </ListBox.ItemContainerStyle>
-            </ListBox>
+                </ListBox.ItemContainerStyle>
+
+            </ListBox>
+
             <StackPanel x:Name="spDetallesInscrito" Orientation="Vertical">
                 <Label x:Name="lblNombre" FontWeight="Bold" FontSize="20" Content="{Binding ElementName=lstListaInscritos, Path=SelectedItem.Nombre}"/>
                 <Image x:Name="imgFoto" Height="120" Width="100" HorizontalAlignment="Left" Margin="5,5,5,5" Stretch="Fill"
@@ -46,7 +50,8 @@
                 <TextBlock x:Name="txtPago" Margin="5" Text="{Binding ElementName=lstListaInscritos, Path=SelectedItem.Pago}"/>
                 <Label FontWeight="Bold">Tipo Inscripcion:</Label>
                 <TextBlock x:Name="txtInscripcion" Margin="5" Text="{Binding ElementName=lstListaInscritos, Path=SelectedItem.Inscripcion}"/>
-            </StackPanel>        </StackPanel>
+            </StackPanel>
+        </StackPanel>
         <Button HorizontalAlignment="Center" Margin="597,317,114,0" FontSize="16" Content="Cancelar" Height="39" VerticalAlignment="Top" Width="83" RenderTransformOrigin="0.452,-3.352" />
         <Button HorizontalAlignment="Center" Margin="569,140,88,0" FontSize="16" Content="Dar de Alta/Baja" Height="44" VerticalAlignment="Top" Width="137" RenderTransformOrigin="0.452,-3.352" />
         <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="7,362,0,6" VerticalAlignment="Center" Source="Imagenes/spain.png" Height="42" Width="55" RenderTransformOrigin="0.572,1.906"/>

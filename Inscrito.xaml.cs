@@ -32,6 +32,10 @@ namespace IPO1_AgenciadeViajes
             lstListaInscritos.ItemsSource = listadoInscritos;
 
         }
+        public Inscrito() 
+        {
+            InitializeComponent();
+        }
 
         public string Nombre { get; private set; }
         public string Correo { get; private set; }
