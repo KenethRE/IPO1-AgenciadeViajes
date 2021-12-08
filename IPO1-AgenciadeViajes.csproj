@@ -203,7 +203,7 @@
     <Resource Include="Imagenes\guardar.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Inscritos.xml" />
+    <Resource Include="Datos\Inscritos.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

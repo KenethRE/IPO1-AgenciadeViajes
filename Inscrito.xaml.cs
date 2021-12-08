@@ -42,7 +42,7 @@ namespace IPO1_AgenciadeViajes
         public int Telefono { get; private set; }
         public string Pago { get; private set; }
         public Uri Foto { get; private set; }
-        public string Inscipcion { get; private set; }
+        public string Inscripcion { get; private set; }
 
         private void CargarContenidoListaXML()
         {
@@ -59,9 +59,14 @@ namespace IPO1_AgenciadeViajes
                 nuevoInscrito.Telefono = Convert.ToInt32(node.Attributes["Telefono:"].Value);
                 nuevoInscrito.Pago = node.Attributes["Pago"].Value;
                 nuevoInscrito.Foto = new Uri(node.Attributes["Foto"].Value, UriKind.Relative);
-                nuevoInscrito.Inscipcion = node.Attributes["Inscripcion"].Value;
+                nuevoInscrito.Inscripcion = node.Attributes["Inscripcion"].Value;
                 listadoInscritos.Add(nuevoInscrito);
             }
+        }
+        private void btnSalir_Click(object sender, RoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Hidden;
+
         }
 
     }

@@ -31,5 +31,10 @@ namespace IPO1_AgenciadeViajes
             MessageBox.Show(string.Format("El usuario: {0}, Ha reservado la cabaña {1}{2}", _nombre.Text,
             Environment.NewLine, _comentario.Text));
         }
+        private void btnSalir_Click(object sender, RoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Hidden;
+
+        }
     }
 }

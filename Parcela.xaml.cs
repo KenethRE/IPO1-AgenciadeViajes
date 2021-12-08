@@ -22,6 +22,7 @@ namespace IPO1_AgenciadeViajes
 
     public partial class Parcela : Window
     {
+        private ConfirmacionParcela ventanaConfirmacionParcela;
         public Parcela()
         {
             InitializeComponent();
@@ -29,7 +30,13 @@ namespace IPO1_AgenciadeViajes
 
         private void ReservarParcela_Click(object sender, RoutedEventArgs e)
         {
-          
+            ventanaConfirmacionParcela = new ConfirmacionParcela();
+            ventanaConfirmacionParcela.Show();
+
+        }
+        private void btnSalir_Click(object sender, RoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Hidden;
 
         }
     }

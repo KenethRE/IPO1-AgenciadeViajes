@@ -10,40 +10,53 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto"/>
-            <RowDefinition />
+            <RowDefinition Height="34*" />
+            <RowDefinition Height="52*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="98*"/>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="31*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" MinWidth="87.2" />
-            <ColumnDefinition />
+            <ColumnDefinition Width="41*" />
+            <ColumnDefinition Width="163*"/>
+            <ColumnDefinition Width="209*"/>
+            <ColumnDefinition Width="51*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock FontSize="16" Margin="31,10,94.2,112.2" HorizontalAlignment="Center" Width="426" Grid.RowSpan="3" Grid.ColumnSpan="2" ><Run Text="Para reservar la "/><Run Text="cabaña"/><Run Text=" &quot;"/><Run Text="cabaña"/><Run Text="&quot; "/><Run Text="para las fechas "/><LineBreak/><Run Text="12/12/2001 al 16/12/2001 debe rellenar"/><Run Text=" "/><Run Text="los siguientes datos"/><Run Text=":"/></TextBlock>
-        <Label Content ="Nombre:" Grid.Row="2" Margin="0,63,0.2,118.4"/>
-        <TextBox Grid.Row="2" Grid.Column="1" x:Name="_nombre" Margin="1.8,65,152.2,286.8"/>
-        <Label Content="Teléfono:" Grid.Row="2" Margin="0,88,0.2,33.2" />
-        <TextBox AcceptsReturn="True" Grid.Row="2" Grid.Column="1"
-            x:Name="_comentario" Margin="1.8,91,270.2,258.8" />
-        <Button HorizontalAlignment="Center" Margin="242.8,328,123.2,0" Grid.Row="2" FontSize="16" Content="Cancelar" Grid.Column="1" Height="31" VerticalAlignment="Top" Width="98" RenderTransformOrigin="0.452,-3.352" />
-        <Label Content="Email:" Grid.Row="2" Margin="0,142,0.2,10.2" />
-        <TextBox AcceptsReturn="True" Grid.Row="2" Grid.Column="1"
-            x:Name="_comentario_Copy" Margin="1.8,114,270.2,231.8" Text="(Opcional)" />
-        <Label Content="Nº ocupantes:" Grid.Row="2" Margin="1,172,1.2,33" />
-        <TextBox AcceptsReturn="True" Grid.Row="2" Grid.Column="1"
-            x:Name="_comentario_Copy2" Margin="3.8,174,661.4,10.2" />
-        <Button HorizontalAlignment="Center" Margin="62.8,328,293.2,13.8" Grid.Row="2" FontSize="16" Content="Confirmar" Click="AceptarConfirmacionCabana_Click" Width="108" RenderTransformOrigin="0.452,-3.352" Grid.Column="1" />
-        <TextBox AcceptsReturn="True" Grid.Row="2"
-            x:Name="_comentario_Copy3" Margin="87,146,226.2,203.8" Text="(Opcional)" Grid.ColumnSpan="2" />
-        <TextBox AcceptsReturn="True" Grid.Row="2" Grid.Column="1"
-            x:Name="_comentario_Copy1" Margin="1.8,174,418.2,175.8" />
-        <Label Content="Solicitudes&#xD;&#xA;especiales:" Grid.Row="2" Margin="1,200,1.2,53" />
-        <TextBox AcceptsReturn="True" Grid.Row="2" Grid.Column="1"
-            x:Name="_comentario_Copy4" Margin="3.8,211,79.2,78.8" Text="Introduzca aquí si necesita alguna solicitud especial como por ejemplo&#xD;&#xA;cuna, menaje concreto, alguna circunstancia de movilidad especial de&#xD;&#xA;personas alojadas u otros." />
-        <Image Source="Imagenes/salir_c.png" Margin="421.8,10,10.2,337.8" Grid.RowSpan="3" Grid.Column="1" RenderTransformOrigin="0.494,0.282"/>
-        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="8,339,0,-2.2" VerticalAlignment="Center" Source="Imagenes/spain.png" Height="36" Grid.Row="2" Width="60" Grid.RowSpan="2"/>
-        <ComboBox x:Name="cbIdiomas" HorizontalAlignment="Stretch" Margin="68,347,441.2,3.8" VerticalAlignment="Center" Opacity="0.6" SelectedIndex="0" Background="Black" Height="22" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2" >
+        <TextBlock FontSize="16" Margin="31,10,43,42.4" HorizontalAlignment="Center" Width="426" Grid.RowSpan="8" Grid.ColumnSpan="4" ><Run Text="Para reservar la "/><Run Text="cabaña"/><Run Text=" &quot;"/><Run Text="cabaña"/><Run Text="&quot; "/><Run Text="para las fechas "/><LineBreak/><Run Text="12/12/2001 al 16/12/2001 debe rellenar"/><Run Text=" "/><Run Text="los siguientes datos"/><Run Text=":"/></TextBlock>
+        <Label Content ="Nombre:" Grid.Row="3" Margin="0,29.6,0.2,49.4" Grid.RowSpan="5"/>
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="_nombre" Margin="1.8,31.6,101,48.2" Grid.RowSpan="2" Grid.ColumnSpan="3"/>
+        <Label Content="Teléfono:" Grid.Row="4" Margin="0,2.6,0.2,1.6" Grid.RowSpan="5" />
+        <TextBox AcceptsReturn="True" Grid.Row="4" Grid.Column="1"
+            x:Name="_comentario" Margin="1.8,5.6,9.6,20.2" Grid.ColumnSpan="2" />
+        <Button HorizontalAlignment="Center" Margin="39.4,24.6,72,0" Grid.Row="8" FontSize="16" Content="Cancelar" Grid.Column="3" Height="31" VerticalAlignment="Top" Width="98" RenderTransformOrigin="0.452,-3.352" Grid.RowSpan="2" />
+        <Label Content="Email:" Grid.Row="5" Margin="0,7.8,0.2,9.8" Grid.RowSpan="5" />
+        <TextBox AcceptsReturn="True" Grid.Row="4" Grid.Column="1"
+            x:Name="_comentario_Copy" Margin="1.8,28.6,9.6,28" Text="(Opcional)" Grid.RowSpan="2" Grid.ColumnSpan="2" />
+        <Label Content="Nº ocupantes:" Grid.Row="6" Margin="1,4,1.2,1.6" Grid.RowSpan="3" />
+        <TextBox AcceptsReturn="True" Grid.Row="6" Grid.Column="1"
+            x:Name="_comentario_Copy2" Margin="3.8,6,37,9.8" Grid.RowSpan="4" />
+        <Button HorizontalAlignment="Center" Margin="22,24.6,32.6,13.8" Grid.Row="8" FontSize="16" Content="Confirmar" Click="AceptarConfirmacionCabana_Click" Width="108" RenderTransformOrigin="0.452,-3.352" Grid.Column="2" Grid.RowSpan="2" />
+        <TextBox AcceptsReturn="True" Grid.Row="5"
+            x:Name="_comentario_Copy3" Margin="87,11.8,175,35.8" Text="(Opcional)" Grid.ColumnSpan="4" Grid.RowSpan="2" />
+        <TextBox AcceptsReturn="True" Grid.Row="6" Grid.Column="1"
+            x:Name="_comentario_Copy1" Margin="1.8,6,157.6,7.8" Grid.ColumnSpan="2" />
+        <Label Content="Solicitudes&#xD;&#xA;especiales:" Grid.Row="6" Margin="1,32,1.2,21.6" Grid.RowSpan="3" />
+        <TextBox AcceptsReturn="True" Grid.Row="7" Grid.Column="1"
+            x:Name="_comentario_Copy4" Margin="3.8,6.2,28,9.4" Text="Introduzca aquí si necesita alguna solicitud especial como por ejemplo&#xD;&#xA;cuna, menaje concreto, alguna circunstancia de movilidad especial de&#xD;&#xA;personas alojadas u otros." Grid.ColumnSpan="3" />
+        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="8,36.6,0,-2.2" VerticalAlignment="Center" Source="Imagenes/spain.png" Height="36" Grid.Row="8" Width="60" Grid.RowSpan="3"/>
+        <ComboBox x:Name="cbIdiomas" HorizontalAlignment="Stretch" Margin="68,5.4,18,3.8" VerticalAlignment="Center" Opacity="0.6" SelectedIndex="0" Background="Black" Height="22" Grid.Row="9" Grid.ColumnSpan="2" >
             <ComboBoxItem x:Name="cbItem1" Content="ES"/>
             <ComboBoxItem x:Name="cbItem2" Content="EN"/>
         </ComboBox>
+        <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="4" Margin="10,10,14.2,0.4" RenderTransformOrigin="0.5,0.707" Grid.RowSpan="3" Click="btnSalir_Click">
+            
+            <Image Source="Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
+        </Button>
     </Grid>
 </Window>
