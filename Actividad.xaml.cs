@@ -19,11 +19,21 @@ namespace IPO1_AgenciadeViajes
     /// </summary>
     public partial class Actividad : Window
     {
+        private Inscrito ventanaInscrito;
         public Actividad()
         {
             InitializeComponent();
         }
 
-  
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ventanaInscrito = new Inscrito();
+            ventanaInscrito.Show();
+        }
+        private void btnSalir_Click(object sender, RoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Hidden;
+
+        }
     }
 }

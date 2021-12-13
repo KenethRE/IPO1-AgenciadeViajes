@@ -31,6 +31,11 @@ namespace IPO1_AgenciadeViajes
             Environment.NewLine, _comentario.Text));
         }
 
-     
+        private void btnSalir_Click(object sender, RoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Hidden;
+
+        }
+
     }
 }

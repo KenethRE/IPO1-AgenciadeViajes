@@ -53,6 +53,11 @@ namespace IPO1_AgenciadeViajes
                 listadoInscritos.Add(nuevoInscrito);
             }
         }
+        private void btnSalir_Click(object sender, RoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Hidden;
+
+        }
 
     }
 }

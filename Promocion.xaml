@@ -28,7 +28,6 @@
             <ComboBoxItem x:Name="cbItem1" Content="ES"/>
             <ComboBoxItem x:Name="cbItem2" Content="EN"/>
         </ComboBox>
-        <Image Source="Imagenes/salir_c.png" Margin="2.2,10,7.6,14.2" RenderTransformOrigin="0.494,0.282" Grid.Column="3"/>
         <Label Content="Descripción" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="9.6,0,0,229.8" Width="216" FontSize="16" Height="54" RenderTransformOrigin="0.5,0.5" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -43,6 +42,8 @@
         <Button HorizontalAlignment="Right" Margin="0,198.525,143.8,0" FontSize="16" Content="Guardar cambios" Height="53" VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.452,-3.352" Grid.Row="2" Grid.Column="2" Grid.RowSpan="2" />
         <Image Grid.Column="1" HorizontalAlignment="Left" Height="102" Margin="9.6,66.4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="122" Source="Imagenes/icono_imagen.png" />
         <Image Grid.Column="1" HorizontalAlignment="Left" Height="122" Margin="115.6,66.4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="112" Source="Imagenes/icono_imagen.png" Grid.ColumnSpan="2" />
-
+        <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="3" Margin="8.2,0,9.6,10.2" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click">
+            <Image Source="Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
+        </Button>
     </Grid>
 </Window>

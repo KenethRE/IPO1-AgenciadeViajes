@@ -54,7 +54,6 @@
             <ComboBoxItem x:Name="cbItem1" Content="ES"/>
             <ComboBoxItem x:Name="cbItem2" Content="EN"/>
         </ComboBox>
-        <Image Source="Imagenes/salir_c.png" Margin="10.4,10,9.4,0.4" RenderTransformOrigin="0.494,0.282" Grid.Column="3"/>
         <Label Content="Nombre y Apellidos" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="1,0,0,84.8" Width="382" FontSize="16" Height="39" RenderTransformOrigin="0.5,0.5" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Column="1">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -89,6 +88,8 @@
         </Label>
         <Label Content="Mapa de la ruta" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="295.8,21.6,0,0" FontSize="22" Height="57" Width="228" Grid.Row="1" Grid.Column="2" Grid.RowSpan="2"/>
         <Image Grid.Column="2" HorizontalAlignment="Left" Height="266" Margin="295.8,13,0,0" Grid.Row="2" Grid.RowSpan="4" VerticalAlignment="Top" Width="271" Source="Imagenes/imagen_ruta.jpg" Grid.ColumnSpan="2" />
-
+        <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="3" Margin="10.4,0,10.4,10.4" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click">
+            <Image Source="Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
+        </Button>
     </Grid>
 </Window>

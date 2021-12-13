@@ -86,8 +86,9 @@
 			<ComboBoxItem x:Name="cbItem2" Content="EN"/>
 		</ComboBox>
 		<Grid HorizontalAlignment="Left" Margin="0,-26,-5.6,7.8" Width="592" Grid.ColumnSpan="4" Grid.RowSpan="5"/>
-		<Image Source="Imagenes/salir_c.png" Margin="32.8,10,10.4,9.2" Grid.Column="3" RenderTransformOrigin="0.494,0.282"/>
+        <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="3" Margin="38.8,0,10.4,10.2" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click">
+            <Image Source="Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
+        </Button>
 
-
-	</Grid>
+    </Grid>
 </Window>

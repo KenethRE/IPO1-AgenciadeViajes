@@ -2,9 +2,9 @@
 	<Inscrito Nombre="Lucia" Correo="lucia@gmail.com" Telefono="65456545"
 	Pago="No realizado"
 	Foto="Imagenes/icono_usuario.png"
-	Incripcion="Mensual" />
+	Inscripcion="Mensual" />
 	<Inscrito Nombre="Pedro" Correo="pedro@gmail.com" Telefono="65353554"
 	Pago="Realizado"
 	Foto="Imagenes/icono_usuario.png"
-	Incripcion="Por hora" />
+	Inscripcion="Por hora" />
 </Inscritos>
