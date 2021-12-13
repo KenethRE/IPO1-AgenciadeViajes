@@ -14,7 +14,7 @@
                     <DataTemplate>
                         <StackPanel Height="30" Orientation="Horizontal">
                             <Image Width="32" Height="32" Stretch="Fill" Source="{Binding Foto}"/>
-                            <TextBlock Padding="2" Margin="10,0,0,0" Text="{Binding Nombre}" />
+                            <TextBlock Padding="2" Margin="10,0,0,0" />
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>

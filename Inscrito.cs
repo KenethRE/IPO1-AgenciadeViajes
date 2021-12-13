@@ -11,12 +11,12 @@ namespace IPO1_AgenciadeViajes {
 
         public Inscrito(string v, string v1, int v2, string v3, Uri p, string v4)
         {
-            this.Nombre = v;
-            this.Correo = v1;
-            this.Telefono = v2;
-            this.Pago = v3;
-            this.Foto = p;
-            this.Inscripcion = v4;
+            Nombre = v;
+            Correo = v1;
+            Telefono = v2;
+            Pago = v3;
+            Foto = p;
+            Inscripcion = v4;
         }
     }
 }

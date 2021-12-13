@@ -19,7 +19,7 @@ namespace IPO1_AgenciadeViajes
     /// </summary>
     public partial class Actividad : Window
     {
-        private Inscrito ventanaInscrito;
+        private InfoInscrito ventanaInscrito;
         public Actividad()
         {
             InitializeComponent();
@@ -27,7 +27,7 @@ namespace IPO1_AgenciadeViajes
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ventanaInscrito = new Inscrito();
+            ventanaInscrito = new InfoInscrito();
             ventanaInscrito.Show();
         }
         private void btnSalir_Click(object sender, RoutedEventArgs e)
