@@ -16,12 +16,12 @@ using System.Xml;
 namespace IPO1_AgenciadeViajes
 {
     /// <summary>
-    /// Lógica de interacción para Inscrito.xaml
+    /// Lógica de interacción para InfoInscrito.xaml
     /// </summary>
-    public partial class Inscrito : Window
+    public partial class InfoInscrito : Window
     {
         List<Inscrito> listadoInscritos;
-        public Inscrito(string v, string v1, int v2, string v3, object p, string v4)
+        public InfoInscrito()
         {
             InitializeComponent();
             // Crear el listado de películas
@@ -32,17 +32,7 @@ namespace IPO1_AgenciadeViajes
             lstListaInscritos.ItemsSource = listadoInscritos;
 
         }
-        public Inscrito() 
-        {
-            InitializeComponent();
-        }
 
-        public string Nombre { get; private set; }
-        public string Correo { get; private set; }
-        public int Telefono { get; private set; }
-        public string Pago { get; private set; }
-        public Uri Foto { get; private set; }
-        public string Inscipcion { get; private set; }
 
         private void CargarContenidoListaXML()
         {
@@ -59,7 +49,7 @@ namespace IPO1_AgenciadeViajes
                 nuevoInscrito.Telefono = Convert.ToInt32(node.Attributes["Telefono:"].Value);
                 nuevoInscrito.Pago = node.Attributes["Pago"].Value;
                 nuevoInscrito.Foto = new Uri(node.Attributes["Foto"].Value, UriKind.Relative);
-                nuevoInscrito.Inscipcion = node.Attributes["Inscripcion"].Value;
+                nuevoInscrito.Inscripcion = node.Attributes["Inscripcion"].Value;
                 listadoInscritos.Add(nuevoInscrito);
             }
         }

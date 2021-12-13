@@ -1,11 +1,11 @@
-﻿<Window x:Class="IPO1_AgenciadeViajes.Inscrito"
+﻿<Window x:Class="IPO1_AgenciadeViajes.InfoInscrito"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IPO1_AgenciadeViajes"
         mc:Ignorable="d"
-        Title="Inscrito" Height="450" Width="800">
+        Title="InfoInscrito" Height="450" Width="800">
     <Grid Height="410" Margin="0,0,-0.4,0" VerticalAlignment="Bottom">
         <StackPanel Orientation="Horizontal" Margin="5,10,4.6,5">
             <ListBox x:Name="lstListaInscritos" SelectedIndex="0" Width="200" Margin="5">
