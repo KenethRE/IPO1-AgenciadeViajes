@@ -1,12 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
 
 namespace IPO1_AgenciadeViajes.Dominio
 {
-    class Cabana
+    class Cabana : ValidationRule
     {
         public string Titulo { set; get; }
         public double Precio { set; get; }
@@ -17,6 +26,8 @@ namespace IPO1_AgenciadeViajes.Dominio
         public string Equipamiento { set; get; }
         public string Disponibilidad { set; get; }
         public Uri URL_IMDB { set; get; }
+        public int MinimoCaracteres { set; get; }
+        public int MaximoCaracteres { set; get; }
 
         public Cabana(string titulo, double precio, int capacidad, string descripcion, Uri imagen, string restriccion, string equipamiento, string disponibilidad)
         {
@@ -28,6 +39,15 @@ namespace IPO1_AgenciadeViajes.Dominio
             Restriccion = restriccion;
             Equipamiento = equipamiento;
             Disponibilidad = disponibilidad;
+        }
+        public override ValidationResult Validate(object value, CultureInfo cultureInfo)
+        {
+            int longitud = ((string)value).Length;
+            if ((longitud < MinimoCaracteres) || (longitud > MaximoCaracteres))
+                return new ValidationResult(false, "Loongitud entre " +
+                MinimoCaracteres.ToString() + " y " + MaximoCaracteres.ToString() +
+                " caracteres");
+            return new ValidationResult(true, null);
         }
 
     }

@@ -37,35 +37,6 @@ namespace IPO1_AgenciadeViajes
             this.Visibility = Visibility.Hidden;
 
         }
-    }
-    public class ReglaRangoLongitudCaracteres : ValidationRule
-    {
-        public int MinimoCaracteres { set; get; }
-        public int MaximoCaracteres { set; get; }
-        public override ValidationResult Validate(object value, CultureInfo cultureInfo)
-        {
-            int longitud = ((string)value).Length;
-            if ((longitud < MinimoCaracteres) || (longitud > MaximoCaracteres))
-                return new ValidationResult(false, "Loongitud entre " +
-                MinimoCaracteres.ToString() + " y " + MaximoCaracteres.ToString() +
-                " caracteres");
-            return new ValidationResult(true, null);
-        }
-    }
-    class Customer
-    {
-        private string _name;
-        public string Name
-        {
-            get { return _name; }
-            set
-            {
-                _name = value;
-                if (String.IsNullOrEmpty(value))
-                {
-                    throw new Exception("Nombre es obligatorio.");
-                }
-            }
-        }
+
     }
 }
