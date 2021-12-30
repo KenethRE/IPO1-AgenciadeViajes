@@ -43,12 +43,11 @@ namespace IPO1_AgenciadeViajes
             doc.Load(fichero.Stream);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
-                var nuevoInscrito = new Inscrito("", "", 0, "", null, "");
+                var nuevoInscrito = new Inscrito("", "", "", "", "");
                 nuevoInscrito.Nombre = node.Attributes["Nombre"].Value;
                 nuevoInscrito.Correo = node.Attributes["Correo"].Value;
-                nuevoInscrito.Telefono = Convert.ToInt32(node.Attributes["Telefono"].Value);
+                nuevoInscrito.Telefono = node.Attributes["Telefono"].Value;
                 nuevoInscrito.Pago = node.Attributes["Pago"].Value;
-                nuevoInscrito.Foto = new Uri(node.Attributes["Foto"].Value, UriKind.Relative);
                 nuevoInscrito.Inscripcion = node.Attributes["Inscripcion"].Value;
                 listadoInscritos.Add(nuevoInscrito);
             }

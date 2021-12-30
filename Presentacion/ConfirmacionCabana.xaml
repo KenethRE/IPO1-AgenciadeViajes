@@ -30,7 +30,12 @@
 
         <TextBlock FontSize="16" Margin="31,10,43,42.4" HorizontalAlignment="Center" Width="426" Grid.RowSpan="8" Grid.ColumnSpan="4" ><Run Text="Para reservar la "/><Run Text="cabaña"/><Run Text=" &quot;"/><Run Text="cabaña"/><Run Text="&quot; "/><Run Text="para las fechas "/><LineBreak/><Run Text="12/12/2001 al 16/12/2001 debe rellenar"/><Run Text=" "/><Run Text="los siguientes datos"/><Run Text=":"/></TextBlock>
         <Label Content ="Nombre:" Grid.Row="3" Margin="0,29.6,0.2,49.4" Grid.RowSpan="5"/>
-        <TextBox Grid.Row="3" Grid.Column="1" x:Name="_nombre" Margin="1.8,31.6,101,48.2" Grid.RowSpan="2" Grid.ColumnSpan="3"/>
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="_nombre" Margin="1.8,31.6,101,48.2" Grid.RowSpan="2" Grid.ColumnSpan="3"
+            Text="{Binding Path=Customer.Name, 
+                ValidatesOnExceptions=True, 
+                ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged,
+                NotifyOnValidationError=True}" />
         <Label Content="Teléfono:" Grid.Row="4" Margin="0,2.6,0.2,1.6" Grid.RowSpan="5" />
         <TextBox AcceptsReturn="True" Grid.Row="4" Grid.Column="1"
             x:Name="_comentario" Margin="1.8,5.6,9.6,20.2" Grid.ColumnSpan="2" />

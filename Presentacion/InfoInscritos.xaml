@@ -46,8 +46,9 @@
                 <Label x:Name="lblCorreo" Content="{Binding ElementName=lstListaInscritos, Path=SelectedItem.Correo}"/>
                 <Label FontWeight="Bold">Telefono:</Label>
                 <Label x:Name="lblTelefono" Content="{Binding ElementName=lstListaInscritos, Path=SelectedItem.Telefono}"/>
-                <Label FontWeight="Bold">Pago:</Label>
-                <TextBlock x:Name="txtPago" Margin="5" Text="{Binding ElementName=lstListaInscritos, Path=SelectedItem.Pago}"/>
+                <Label FontWeight="Bold">
+                    <CheckBox Content="Pagado" HorizontalAlignment="Left"/>
+                </Label>
                 <Label FontWeight="Bold">Tipo Inscripcion:</Label>
                 <TextBlock x:Name="txtInscripcion" Margin="5" Text="{Binding ElementName=lstListaInscritos, Path=SelectedItem.Inscripcion}"/>
             </StackPanel>

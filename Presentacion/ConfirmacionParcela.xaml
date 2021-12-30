@@ -27,7 +27,12 @@
 
         <TextBlock FontSize="16" Margin="0,4,0.4,20.4" HorizontalAlignment="Right" Width="478" Grid.RowSpan="6" Grid.ColumnSpan="3" ><Run Text="Para reservar la parcela &quot;parcela deluxe&quot; "/><Run Text="para las fechas"/><Run Text=" "/><Run/><LineBreak/><Run Text="12/12/2001"/><Run Text=" al 16/12/2001 debe rellenar"/><Run Text=" "/><Run Text="los siguientes datos"/><Run Text=":"/></TextBlock>
         <Label Content ="Nombre:" Grid.Row="3" Margin="0,16.4,0,20.4" Grid.RowSpan="3"/>
-        <TextBox Grid.Row="3" Grid.Column="1" x:Name="_nombre" Margin="2,18.4,104.4,52" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="_nombre" Margin="2,18.4,104.4,52" Grid.RowSpan="2" Grid.ColumnSpan="2"
+                 Text="{Binding Path=Customer.Name, 
+                ValidatesOnExceptions=True, 
+                ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged,
+                NotifyOnValidationError=True}" />
         <Label Content="Teléfono:" Grid.Row="4" Margin="0,3.6,0,33" Grid.RowSpan="4" />
         <TextBox AcceptsReturn="True" Grid.Row="4" Grid.Column="1"
             x:Name="_comentario" Margin="2,6.6,14,24" />
