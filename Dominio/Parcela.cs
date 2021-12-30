@@ -9,14 +9,14 @@ namespace IPO1_AgenciadeViajes.Dominio
     class Parcela
     {
         public string Titulo { set; get; }
-        public string Precio { set; get; }
+        public double Precio { set; get; }
         public string Temporada { set; get; }
         public string Ubicacion { set; get; }
-        public string Tamano { set; get; }
+        public int Tamano { set; get; }
         public string Servicios { set; get; }
         public string Disponibilidad { set; get; }
 
-        public Parcela(string titulo, string precio, string temporada, string ubicacion, string tamano, string servicios, string disponibilidad)
+        public Parcela(string titulo, double precio, string temporada, string ubicacion, int tamano, string servicios, string disponibilidad)
         {
             Titulo = titulo;
             Precio = precio;

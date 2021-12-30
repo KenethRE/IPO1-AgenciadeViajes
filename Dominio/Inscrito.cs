@@ -4,19 +4,17 @@ namespace IPO1_AgenciadeViajes {
     {
         public string Nombre { get; set; }
         public string Correo { get; set; }
-        public int Telefono { get; set; }
-        public string Pago { get; set; }
-        public Uri Foto { get; set; }
+        public string Telefono { get; set; }
+        public bool Pago { get; set; }
         public string Inscripcion { get; set; }
 
-        public Inscrito(string nombre, string correo, int telefono, string v3, Uri p, string v4)
+        public Inscrito(string nombre, string correo, string telefono, bool pago, string instripcion)
         {
             Nombre = nombre;
             Correo = correo;
             Telefono = telefono;
-            Pago = v3;
-            Foto = p;
-            Inscripcion = v4;
+            Pago = pago;
+            Inscripcion = instripcion;
         }
     }
 }

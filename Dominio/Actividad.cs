@@ -10,21 +10,25 @@ namespace IPO1_AgenciadeViajes.Dominio
     {
         public string Titulo { set; get; }
         public string Descripcion { set; get; }
-        public string Monitor { set; get; }
+        public Monitor Monitor { set; get; }
         public string Horario { set; get; }
-        public string Capacidad { set; get; }
-        public string Precio { set; get; }
+        public bool Niños { set; get; }
+        public int MaxCapacidad { set; get; }
+        public int MinCapacidad { set; get; }
+        public double Precio { set; get; }
         public string Area { set; get; }
         public string Equipamiento { set; get; }
         public bool Estado { set; get; }
 
-        public Actividad(string titulo, string descripcion, string monitor, string horario, string capacidad, string precio, string area, string equipamiento, bool estado)
+        public Actividad(string titulo, string descripcion, Monitor monitor, string horario,bool niños, int maxcapacidad,int mincapacidad, double precio, string area, string equipamiento, bool estado)
         {
             Titulo = titulo;
             Descripcion = descripcion;
             Monitor = monitor;
             Horario = horario;
-            Capacidad = capacidad;
+            Niños = niños;
+            MinCapacidad = mincapacidad;
+            MaxCapacidad = maxcapacidad;
             Precio = precio;
             Area = area;
             Equipamiento = equipamiento;

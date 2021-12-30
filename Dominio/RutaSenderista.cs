@@ -12,13 +12,14 @@ namespace IPO1_AgenciadeViajes.Dominio
         public string Descripcion { set; get; }
         public Uri Mapa { set; get; }
         public string Horario { set; get; }
-        public string Monitor { set; get; }
+        public Monitor Monitor { set; get; }
         public string Encuentro { set; get; }
-        public string Capacidad { set; get; }
+        public int Capacidadmax { set; get; }
+        public int Capacidadmin { set; get; }
         public string Dificultad { set; get; }
         public Uri URL_IMDB { set; get; }
 
-        public RutaSenderista(string titulo, string descripcion, Uri mapa, string horario, string monitor, string encuentro, string capacidad, string dificultad)
+        public RutaSenderista(string titulo, string descripcion, Uri mapa, string horario, Monitor monitor, string encuentro, int capacidadmax,int capacidadmin, string dificultad)
         {
             Titulo = titulo;
             Descripcion = descripcion;
@@ -26,7 +27,8 @@ namespace IPO1_AgenciadeViajes.Dominio
             Horario = horario;
             Monitor = monitor;
             Encuentro = encuentro;
-            Capacidad = capacidad;
+            Capacidadmax = capacidadmax;
+            Capacidadmin = capacidadmin;
             Dificultad = dificultad;
         }
     }

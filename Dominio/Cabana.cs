@@ -9,7 +9,7 @@ namespace IPO1_AgenciadeViajes.Dominio
     class Cabana
     {
         public string Titulo { set; get; }
-        public int Precio { set; get; }
+        public double Precio { set; get; }
         public int Capacidad { set; get; }
         public string Descripcion { set; get; }
         public Uri Imagen { set; get; }
@@ -18,7 +18,7 @@ namespace IPO1_AgenciadeViajes.Dominio
         public string Disponibilidad { set; get; }
         public Uri URL_IMDB { set; get; }
 
-        public Cabana(string titulo, int precio, int capacidad, string descripcion, Uri imagen, string restriccion, string equipamiento, string disponibilidad)
+        public Cabana(string titulo, double precio, int capacidad, string descripcion, Uri imagen, string restriccion, string equipamiento, string disponibilidad)
         {
             Titulo = titulo;
             Precio = precio;
