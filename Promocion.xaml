@@ -22,7 +22,7 @@
         <Label Content="Promoción" HorizontalAlignment="Left" VerticalAlignment="Top" Height="60" Width="314" Margin="7.6,32,0,0" FontSize="26" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"/>
         <Label Content="Fotos" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="9.6,23.4,0,0" FontSize="22" Height="43" Width="314" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"/>
         <Button HorizontalAlignment="Center" Margin="477.6,198.525,22.8,0" FontSize="16" Content="Cancelar" Height="53" VerticalAlignment="Top" Width="82" RenderTransformOrigin="0.452,-3.352" Grid.Row="2" Grid.Column="2" Grid.RowSpan="2" />
-        <Button HorizontalAlignment="Center" Margin="29.6,198.525,556.8,0" FontSize="16" Content="Dar de Alta/Baja" Height="53" VerticalAlignment="Top" Width="136" RenderTransformOrigin="0.452,-3.352" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" />
+        <Button x:Name="Dar_de_baja" HorizontalAlignment="Center" Margin="29.6,198.525,556.8,0" FontSize="16" Content="Dar de Alta/Baja" Height="53" VerticalAlignment="Top" Width="136" RenderTransformOrigin="0.452,-3.352" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" Click="Button_Click" />
         <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="8.6,15.2,0,6" VerticalAlignment="Center" Source="Imagenes/spain.png" Height="42" Width="56" RenderTransformOrigin="0.572,1.906" Grid.Row="3" Grid.Column="1"/>
         <ComboBox x:Name="cbIdiomas" Margin="73.6,25.2,12.4,10" VerticalAlignment="Center" Opacity="0.6" SelectedIndex="0" Background="Black" Height="28" RenderTransformOrigin="0.077,0.142" Grid.Row="3" Grid.Column="1" >
             <ComboBoxItem x:Name="cbItem1" Content="ES"/>
@@ -38,7 +38,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Button HorizontalAlignment="Center" Margin="68.6,198.525,333.8,0" FontSize="16" Content="Modificar información" Height="53" VerticalAlignment="Top" Width="180" RenderTransformOrigin="0.452,-3.352" Grid.Row="2" Grid.Column="2" Grid.RowSpan="2" />
+        <Button HorizontalAlignment="Center" Margin="68.6,198.525,333.8,0" FontSize="16" Content="Modificar información" Height="53" VerticalAlignment="Top" Width="180" RenderTransformOrigin="0.452,-3.352" Grid.Row="2" Grid.Column="2" Grid.RowSpan="2" Click="Button_Click_1" />
         <Button HorizontalAlignment="Right" Margin="0,198.525,143.8,0" FontSize="16" Content="Guardar cambios" Height="53" VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.452,-3.352" Grid.Row="2" Grid.Column="2" Grid.RowSpan="2" />
         <Image Grid.Column="1" HorizontalAlignment="Left" Height="102" Margin="9.6,66.4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="122" Source="Imagenes/icono_imagen.png" />
         <Image Grid.Column="1" HorizontalAlignment="Left" Height="122" Margin="115.6,66.4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="112" Source="Imagenes/icono_imagen.png" Grid.ColumnSpan="2" />

@@ -68,6 +68,9 @@
     <Compile Include="RutaSenderista.xaml.cs">
       <DependentUpon>RutaSenderista.xaml</DependentUpon>
     </Compile>
+    <Compile Include="confirmacionbajacabaña.xaml.cs">
+      <DependentUpon>confirmacionbajacabaña.xaml</DependentUpon>
+    </Compile>
     <Page Include="Actividad.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -135,6 +138,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RutaSenderista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="confirmacionbajacabaña.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

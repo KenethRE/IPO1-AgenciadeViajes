@@ -15,23 +15,13 @@ using System.Windows.Shapes;
 namespace IPO1_AgenciadeViajes
 {
     /// <summary>
-    /// Lógica de interacción para CrearRuta.xaml
+    /// Lógica de interacción para Window1.xaml
     /// </summary>
-    public partial class CrearRuta : Window
+    public partial class Window1 : Window
     {
-        public CrearRuta()
+        public Window1()
         {
             InitializeComponent();
-        }
-        private void btnSalir_Click(object sender, RoutedEventArgs e)
-        {
-            this.Visibility = Visibility.Hidden;
-
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
