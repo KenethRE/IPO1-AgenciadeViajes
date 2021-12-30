@@ -58,86 +58,89 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Inscrito.cs" />
-    <Compile Include="InfoInscritos.xaml.cs">
+    <Compile Include="Dominio\Actividad.cs" />
+    <Compile Include="Dominio\Cabana.cs" />
+    <Compile Include="Dominio\Inscrito.cs" />
+    <Compile Include="Dominio\Monitor.cs" />
+    <Compile Include="Dominio\Parcela.cs" />
+    <Compile Include="Dominio\Promocion.cs" />
+    <Compile Include="Dominio\RutaSenderista.cs" />
+    <Compile Include="Presentacion\InfoInscritos.xaml.cs">
       <DependentUpon>InfoInscritos.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Promocion.xaml.cs">
-      <DependentUpon>Promocion.xaml</DependentUpon>
+    <Compile Include="Presentacion\InfoPromocion.xaml.cs">
+      <DependentUpon>InfoPromocion.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RutaSenderista.xaml.cs">
-      <DependentUpon>RutaSenderista.xaml</DependentUpon>
+    <Compile Include="Presentacion\InfoRutaSenderista.xaml.cs">
+      <DependentUpon>InfoRutaSenderista.xaml</DependentUpon>
     </Compile>
-    <Compile Include="confirmacionbajacabaña.xaml.cs">
-      <DependentUpon>confirmacionbajacabaña.xaml</DependentUpon>
-    </Compile>
-    <Page Include="Actividad.xaml">
+    <Page Include="Presentacion\InfoActividad.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Cabana.xaml">
+    <Page Include="Presentacion\InfoCabana.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ConfirmacionCabana.xaml">
+    <Page Include="Presentacion\ConfirmacionCabana.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ConfirmacionParcela.xaml">
+    <Page Include="Presentacion\ConfirmacionParcela.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CrearRuta.xaml">
+    <Page Include="Presentacion\CrearRuta.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Inicio.xaml">
+    <Page Include="Presentacion\Inicio.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Compile Include="Actividad.xaml.cs">
-      <DependentUpon>Actividad.xaml</DependentUpon>
+    <Compile Include="Presentacion\InfoActividad.xaml.cs">
+      <DependentUpon>InfoActividad.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Cabana.xaml.cs">
-      <DependentUpon>Cabana.xaml</DependentUpon>
+    <Compile Include="Presentacion\InfoCabana.xaml.cs">
+      <DependentUpon>InfoCabana.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ConfirmacionCabana.xaml.cs">
+    <Compile Include="Presentacion\ConfirmacionCabana.xaml.cs">
       <DependentUpon>ConfirmacionCabana.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ConfirmacionParcela.xaml.cs">
+    <Compile Include="Presentacion\ConfirmacionParcela.xaml.cs">
       <DependentUpon>ConfirmacionParcela.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CrearRuta.xaml.cs">
+    <Compile Include="Presentacion\CrearRuta.xaml.cs">
       <DependentUpon>CrearRuta.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Inicio.xaml.cs">
+    <Compile Include="Presentacion\Inicio.xaml.cs">
       <DependentUpon>Inicio.xaml</DependentUpon>
     </Compile>
-    <Page Include="InfoInscritos.xaml">
+    <Page Include="Presentacion\InfoInscritos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MenuPrincipal.xaml">
+    <Page Include="Presentacion\MenuPrincipal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Monitor.xaml">
+    <Page Include="Presentacion\InfoMonitor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Parcela.xaml">
+    <Page Include="Presentacion\InfoParcela.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Promocion.xaml">
+    <Page Include="Presentacion\InfoPromocion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RutaSenderista.xaml">
+    <Page Include="Presentacion\InfoRutaSenderista.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -159,14 +162,14 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MenuPrincipal.xaml.cs">
+    <Compile Include="Presentacion\MenuPrincipal.xaml.cs">
       <DependentUpon>MenuPrincipal.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Monitor.xaml.cs">
-      <DependentUpon>Monitor.xaml</DependentUpon>
+    <Compile Include="Presentacion\InfoMonitor.xaml.cs">
+      <DependentUpon>InfoMonitor.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Parcela.xaml.cs">
-      <DependentUpon>Parcela.xaml</DependentUpon>
+    <Compile Include="Presentacion\InfoParcela.xaml.cs">
+      <DependentUpon>InfoParcela.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -211,7 +214,7 @@
     <Resource Include="Imagenes\guardar.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Datos\Inscritos.xml" />
+    <Resource Include="Persistencia\Inscritos.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

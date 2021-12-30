@@ -9,11 +9,11 @@ namespace IPO1_AgenciadeViajes {
         public Uri Foto { get; set; }
         public string Inscripcion { get; set; }
 
-        public Inscrito(string v, string v1, int v2, string v3, Uri p, string v4)
+        public Inscrito(string nombre, string correo, int telefono, string v3, Uri p, string v4)
         {
-            Nombre = v;
-            Correo = v1;
-            Telefono = v2;
+            Nombre = nombre;
+            Correo = correo;
+            Telefono = telefono;
             Pago = v3;
             Foto = p;
             Inscripcion = v4;

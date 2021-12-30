@@ -39,7 +39,7 @@ namespace IPO1_AgenciadeViajes
             // Cargar contenido de prueba
 
             XmlDocument doc = new XmlDocument();
-            var fichero = Application.GetResourceStream(new Uri("Datos/Inscritos.xml", UriKind.Relative));
+            var fichero = Application.GetResourceStream(new Uri("Persistencia/Inscritos.xml", UriKind.Relative));
             doc.Load(fichero.Stream);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
