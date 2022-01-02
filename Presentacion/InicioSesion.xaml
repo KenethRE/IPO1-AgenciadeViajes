@@ -48,7 +48,7 @@
         <Label x:Name="lblContraseña" Content="{DynamicResource lblContraseña}" Foreground="White" Grid.Column="2" Grid.Row="4" VerticalContentAlignment="Center" Margin="5,5,10,5" HorizontalContentAlignment="Left" Grid.ColumnSpan="2"/>
         <Label x:Name="lblLogin" FontSize="20" Content="{DynamicResource lblLogin}" Foreground="White" IsTabStop="True" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Grid.Column="1" Margin="20,15,20,5" Grid.ColumnSpan="2" Grid.Row="1" Padding="10,10,10,10"/>
         <Label x:Name="lblEstado" Content="Estado de aplicación" Margin="0,10,0,0" Grid.Row="8" Background="White" Opacity="0.7" Width="800" Height="30" Grid.ColumnSpan="6"/>
-        <Image x:Name="imgIdioma" Grid.Column="5" HorizontalAlignment="Stretch" Margin="62.738,25,63.862,24.6" VerticalAlignment="Center" Source="Imagenes/spain.png" Height="48"/>
+        <Image x:Name="imgIdioma" Grid.Column="5" HorizontalAlignment="Stretch" Margin="62.738,25,63.862,24.6" VerticalAlignment="Center" Source="/Recursos/Imagenes/spain.png" Height="48"/>
         <ComboBox x:Name="cbIdiomas" Grid.Column="5" HorizontalAlignment="Stretch" Margin="137.769,38,14.831,37.6" VerticalAlignment="Center" Opacity="0.6" SelectedIndex="0" SelectionChanged="cb_elementoSeleccionado" Background="Black" >
             <ComboBoxItem x:Name="cbItem1" Content="ES"/>
             <ComboBoxItem x:Name="cbItem2" Content="EN"/>

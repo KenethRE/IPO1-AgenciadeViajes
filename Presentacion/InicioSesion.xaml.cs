@@ -85,11 +85,11 @@ namespace IPO1_AgenciadeViajes
 
 
         private void cambiarBandera(string idioma)
-        {
+        {   
             imgIdioma.Source = idioma.Equals("en-US")
-            ? new BitmapImage(new Uri("/Imagenes/united-states.png",
+            ? new BitmapImage(new Uri("/Resources/Imagenes/united-states.png",
             UriKind.Relative))
-            : new BitmapImage(new Uri("/Imagenes/spain.png",
+            : new BitmapImage(new Uri("/Resources/Imagenes/spain.png",
             UriKind.Relative));
         }
 
