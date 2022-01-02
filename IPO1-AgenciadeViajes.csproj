@@ -292,6 +292,28 @@
   <ItemGroup>
     <Resource Include="Persistencia\Promociones.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Presentacion\Imagenes\Actividad.png" />
+    <Resource Include="Presentacion\Imagenes\Actividad1.png" />
+    <Resource Include="Presentacion\Imagenes\Actividad2.png" />
+    <Resource Include="Presentacion\Imagenes\Actividad3.png" />
+    <Resource Include="Presentacion\Imagenes\Actividad4.png" />
+    <Resource Include="Presentacion\Imagenes\Cabaña.png" />
+    <Resource Include="Presentacion\Imagenes\Cabaña1.png" />
+    <Resource Include="Presentacion\Imagenes\Cabaña2.png" />
+    <Resource Include="Presentacion\Imagenes\Inscrito.png" />
+    <Resource Include="Presentacion\Imagenes\Inscrito1.png" />
+    <Resource Include="Presentacion\Imagenes\Inscrito2.png" />
+    <Resource Include="Presentacion\Imagenes\Monitor.png" />
+    <Resource Include="Presentacion\Imagenes\Monitor1.png" />
+    <Resource Include="Presentacion\Imagenes\Monitor2.png" />
+    <Resource Include="Presentacion\Imagenes\multiple-users-silhouette.png" />
+    <Resource Include="Presentacion\Imagenes\Persona.png" />
+    <Resource Include="Presentacion\Imagenes\plot.png" />
+    <Resource Include="Presentacion\Imagenes\promotions.png" />
+    <Resource Include="Presentacion\Imagenes\user.png" />
+    <Resource Include="Presentacion\Imagenes\walk.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\GemBox.Pdf.17.0.1072\build\netstandard2.0\GemBox.Pdf.targets" Condition="Exists('packages\GemBox.Pdf.17.0.1072\build\netstandard2.0\GemBox.Pdf.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
