@@ -106,13 +106,15 @@ namespace IPO1_AgenciadeViajes
             doc.Load(fichero.Stream);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
-                var nuevaParcela = new Dominio.Parcela("", 0, "", "", 0, "", false);
-                nuevaParcela.Titulo = node.Attributes["Titulo"].Value;
-                nuevaParcela.Precio = Convert.ToInt32(node.Attributes["Precio"].Value);
-                nuevaParcela.Temporada = node.Attributes["Temporada"].Value;
-                nuevaParcela.Ubicacion = node.Attributes["Ubicacion"].Value;
-                nuevaParcela.Servicios = node.Attributes["Servicios"].Value;
-                nuevaParcela.Disponibilidad = Convert.ToBoolean(node.Attributes["Disponibilidad"].Value);
+                var nuevaParcela = new Dominio.Parcela("", 0, "", "", 0, "", false)
+                {
+                    Titulo = node.Attributes["Titulo"].Value,
+                    Precio = Convert.ToInt32(node.Attributes["Precio"].Value),
+                    Temporada = node.Attributes["Temporada"].Value,
+                    Ubicacion = node.Attributes["Ubicacion"].Value,
+                    Servicios = node.Attributes["Servicios"].Value,
+                    Disponibilidad = Convert.ToBoolean(node.Attributes["Disponibilidad"].Value)
+                };
                 listadoParcelas.Add(nuevaParcela);
             }
 
@@ -127,15 +129,17 @@ namespace IPO1_AgenciadeViajes
             doc.Load(fichero.Stream);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
-                var nuevaCabana = new Dominio.Cabana("", 0, 0, "", null,"","", false);
-                nuevaCabana.Titulo = node.Attributes["Titulo"].Value;
-                nuevaCabana.Precio = Convert.ToInt32(node.Attributes["Precio"].Value);
-                nuevaCabana.Capacidad = Convert.ToInt32(node.Attributes["Capacidad"].Value);
-                nuevaCabana.Descripcion = node.Attributes["Descripcion"].Value;
-                nuevaCabana.Imagen = new Uri(node.Attributes["Imagen"].Value, UriKind.Relative);
-                nuevaCabana.Restriccion = node.Attributes["Restriccion"].Value;
-                nuevaCabana.Equipamiento = node.Attributes["Equipamiento"].Value;
-                nuevaCabana.Disponibilidad = Convert.ToBoolean(node.Attributes["Disponibilidad"].Value);
+                var nuevaCabana = new Dominio.Cabana("", 0, 0, "", null, "", "", false)
+                {
+                    Titulo = node.Attributes["Titulo"].Value,
+                    Precio = Convert.ToInt32(node.Attributes["Precio"].Value),
+                    Capacidad = Convert.ToInt32(node.Attributes["Capacidad"].Value),
+                    Descripcion = node.Attributes["Descripcion"].Value,
+                    Imagen = new Uri(node.Attributes["Imagen"].Value, UriKind.Relative),
+                    Restriccion = node.Attributes["Restriccion"].Value,
+                    Equipamiento = node.Attributes["Equipamiento"].Value,
+                    Disponibilidad = Convert.ToBoolean(node.Attributes["Disponibilidad"].Value)
+                };
                 listadoCabanas.Add(nuevaCabana);
             }
 
@@ -149,17 +153,19 @@ namespace IPO1_AgenciadeViajes
             doc.Load(fichero.Stream);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
-                var nuevaActividad = new Dominio.Actividad("", "", "", "", false, 0, 0, 0, "", "", false);
-                nuevaActividad.Titulo = node.Attributes["Titulo"].Value;
-                nuevaActividad.Descripcion = node.Attributes["Descripcion"].Value;
-                nuevaActividad.Monitor = node.Attributes["Monitor"].Value;
-                nuevaActividad.Niños = Convert.ToBoolean(node.Attributes["Niños"].Value);
-                nuevaActividad.MaxCapacidad = Convert.ToInt32(node.Attributes["MaxCapacidad"].Value);
-                nuevaActividad.MinCapacidad = Convert.ToInt32(node.Attributes["MinCapacidad"].Value);
-                nuevaActividad.Precio = Convert.ToInt32(node.Attributes["Precio"].Value);
-                nuevaActividad.Area = node.Attributes["Area"].Value;
-                nuevaActividad.Equipamiento = node.Attributes["Equipamiento"].Value;
-                nuevaActividad.Estado = Convert.ToBoolean(node.Attributes["Estado"].Value);
+                var nuevaActividad = new Dominio.Actividad("", "", "", "", false, 0, 0, 0, "", "", false)
+                {
+                    Titulo = node.Attributes["Titulo"].Value,
+                    Descripcion = node.Attributes["Descripcion"].Value,
+                    Monitor = node.Attributes["Monitor"].Value,
+                    Niños = Convert.ToBoolean(node.Attributes["Niños"].Value),
+                    MaxCapacidad = Convert.ToInt32(node.Attributes["MaxCapacidad"].Value),
+                    MinCapacidad = Convert.ToInt32(node.Attributes["MinCapacidad"].Value),
+                    Precio = Convert.ToInt32(node.Attributes["Precio"].Value),
+                    Area = node.Attributes["Area"].Value,
+                    Equipamiento = node.Attributes["Equipamiento"].Value,
+                    Estado = Convert.ToBoolean(node.Attributes["Estado"].Value)
+                };
                 listadoActividades.Add(nuevaActividad);
             }
 
@@ -173,11 +179,13 @@ namespace IPO1_AgenciadeViajes
             doc.Load(fichero.Stream);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
-                var nuevaPromocion = new Dominio.Promocion("", "", null, false);
-                nuevaPromocion.Titulo = node.Attributes["Titulo"].Value;
-                nuevaPromocion.Descripcion = node.Attributes["Descripcion"].Value;
-                nuevaPromocion.Foto = new Uri(node.Attributes["Foto"].Value, UriKind.Relative);
-                nuevaPromocion.Estado = Convert.ToBoolean(node.Attributes["Estado"].Value);
+                var nuevaPromocion = new Dominio.Promocion("", "", null, false)
+                {
+                    Titulo = node.Attributes["Titulo"].Value,
+                    Descripcion = node.Attributes["Descripcion"].Value,
+                    Foto = new Uri(node.Attributes["Foto"].Value, UriKind.Relative),
+                    Estado = Convert.ToBoolean(node.Attributes["Estado"].Value)
+                };
                 listadoPromociones.Add(nuevaPromocion);
             }
 
