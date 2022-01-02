@@ -18,11 +18,11 @@ namespace IPO1_AgenciadeViajes
     /// <summary>
     /// Lógica de interacción para Inicio.xaml
     /// </summary>
-    public partial class Inicio : Window
+    public partial class InicioSesion : Window
 
     {
         private MenuPrincipal ventana;
-        public Inicio()
+        public InicioSesion()
         {
             InitializeComponent();
             App.SelectCulture("es-ES");
@@ -38,15 +38,14 @@ namespace IPO1_AgenciadeViajes
                 pbxContraseña.IsEnabled = true;
                 tbxEmail.BorderBrush = Brushes.Transparent;
                 comprobarContraseña(pbxContraseña.Password);
-                
-                
-                
             }
             else
             {
                 // comprobación errónea
                 tbxEmail.BorderBrush = Brushes.Red;
                 tbxEmail.BorderThickness = new Thickness(2);
+                lblEstado.Content = "Usuario Incorrecto!";
+                lblEstado.Foreground = Brushes.Red;
                 if (pbxContraseña.IsEnabled)
                 {
                     pbxContraseña.IsEnabled = false;

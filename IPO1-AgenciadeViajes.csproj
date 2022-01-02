@@ -135,7 +135,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Presentacion\Inicio.xaml">
+    <Page Include="Presentacion\InicioSesion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -158,8 +158,8 @@
     <Compile Include="Presentacion\CrearRuta.xaml.cs">
       <DependentUpon>CrearRuta.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Inicio.xaml.cs">
-      <DependentUpon>Inicio.xaml</DependentUpon>
+    <Compile Include="Presentacion\InicioSesion.xaml.cs">
+      <DependentUpon>InicioSesion.xaml</DependentUpon>
     </Compile>
     <Page Include="Presentacion\InfoInscritos.xaml">
       <SubType>Designer</SubType>
