@@ -185,6 +185,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Presentacion\ReportarErrrores.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Resource Include="Recursos\StringResources.en-US.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -207,6 +211,9 @@
     </Compile>
     <Compile Include="Presentacion\InfoParcela.xaml.cs">
       <DependentUpon>InfoParcela.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\ReportarErrrores.xaml.cs">
+      <DependentUpon>ReportarErrrores.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
