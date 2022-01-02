@@ -1,0 +1,14 @@
+﻿<Parcelas>
+	<Parcela Titulo="Parcela" Precio="800" Temporada="Alta"
+	Ubicacion="Se encuentra cerca de una piscina"
+	Tamano="5000"
+	Servicios ="Luz"
+	MinCapacidad ="10"
+	Disponibilidad ="true"/>
+	<Parcela Titulo="Parcela" Precio="800" Temporada="Alta"
+	Ubicacion="Se encuentra cerca de una piscina"
+	Tamano="5000"
+	Servicios ="Luz"
+	MinCapacidad ="10"
+	Disponibilidad ="true"/>
+</Parcelas>

@@ -205,24 +205,55 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Imagenes\spain.png" />
-    <Resource Include="Imagenes\united-states.png" />
+    <Resource Include="Presentacion\Imagenes\spain.png" />
+    <Resource Include="Presentacion\Imagenes\united-states.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Imagenes\salir_c.png" />
+    <Resource Include="Presentacion\Imagenes\salir_c.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Imagenes\icono_imagen.png" />
-    <Resource Include="Imagenes\icono_usuario.png" />
+    <Resource Include="Presentacion\Imagenes\icono_imagen.png" />
+    <Resource Include="Presentacion\Imagenes\icono_usuario.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Imagenes\imagen_ruta.jpg" />
+    <Resource Include="Presentacion\Imagenes\imagen_ruta.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Imagenes\guardar.png" />
+    <Resource Include="Presentacion\Imagenes\guardar.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Persistencia\Inscritos.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Presentacion\Imagenes\icono_cabana.png" />
+    <Resource Include="Presentacion\Imagenes\icono_comentario.png" />
+    <Resource Include="Presentacion\Imagenes\icono_promocion.png" />
+    <Resource Include="Presentacion\Imagenes\icono_parcela.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Presentacion\Imagenes\icono_actividad.png" />
+    <Resource Include="Presentacion\Imagenes\icono_monitores.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Persistencia\Monitores.xml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Presentacion\Imagenes\add_c.png" />
+    <Resource Include="Presentacion\Imagenes\remove_c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Persistencia\Actividades.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Persistencia\Cabanas.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Persistencia\Parcelas.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Persistencia\Promociones.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

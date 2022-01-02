@@ -17,9 +17,9 @@ namespace IPO1_AgenciadeViajes
     /// <summary>
     /// Lógica de interacción para Promocion.xaml
     /// </summary>
-    public partial class Promocion : Window
+    public partial class InfoPromocion : Window
     {
-        public Promocion()
+        public InfoPromocion()
         {
             InitializeComponent();
         }

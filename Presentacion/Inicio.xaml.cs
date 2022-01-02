@@ -112,6 +112,10 @@ namespace IPO1_AgenciadeViajes
             }
         }
 
-
+        private void mostrarLetraPulsada(object sender, KeyEventArgs e)
+        {
+            lblEstado.Content = "Has pulsado la tecla << " + e.Key.ToString() + " >>";
+            lblEstado.Foreground = Brushes.Black;
+        }
     }
 }

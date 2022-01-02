@@ -39,14 +39,14 @@
         <Label Content="Teléfono:" Grid.Row="4" Margin="0,2.6,0.2,1.6" Grid.RowSpan="5" />
         <TextBox AcceptsReturn="True" Grid.Row="4" Grid.Column="1"
             x:Name="_comentario" Margin="1.8,5.6,9.6,20.2" Grid.ColumnSpan="2" />
-        <Button HorizontalAlignment="Center" Margin="39.4,24.6,72,0" Grid.Row="8" FontSize="16" Content="Cancelar" Grid.Column="3" Height="31" VerticalAlignment="Top" Width="98" RenderTransformOrigin="0.452,-3.352" Grid.RowSpan="2" />
+        <Button HorizontalAlignment="Center" Margin="38.8,97.2,72,0" Grid.Row="7" FontSize="16" Content="Cancelar" Grid.Column="3" Height="31" VerticalAlignment="Top" Width="98" RenderTransformOrigin="0.452,-3.352" Grid.RowSpan="2" />
         <Label Content="Email:" Grid.Row="5" Margin="0,7.8,0.2,9.8" Grid.RowSpan="5" />
         <TextBox AcceptsReturn="True" Grid.Row="4" Grid.Column="1"
             x:Name="_comentario_Copy" Margin="1.8,28.6,9.6,28" Text="(Opcional)" Grid.RowSpan="2" Grid.ColumnSpan="2" />
         <Label Content="Nº ocupantes:" Grid.Row="6" Margin="1,4,1.2,1.6" Grid.RowSpan="3" />
         <TextBox AcceptsReturn="True" Grid.Row="6" Grid.Column="1"
             x:Name="_comentario_Copy2" Margin="3.8,6,37,9.8" Grid.RowSpan="4" />
-        <Button HorizontalAlignment="Center" Margin="22,24.6,32.6,13.8" Grid.Row="8" FontSize="16" Content="Confirmar" Click="AceptarConfirmacionCabana_Click" Width="108" RenderTransformOrigin="0.452,-3.352" Grid.Column="2" Grid.RowSpan="2" />
+        <Button HorizontalAlignment="Center" Margin="23,1.6,32.2,5.6" Grid.Row="8" FontSize="16" Content="Confirmar" Click="AceptarConfirmacionCabana_Click" Width="108" RenderTransformOrigin="0.452,-3.352" Grid.Column="2" />
         <TextBox AcceptsReturn="True" Grid.Row="5"
             x:Name="_comentario_Copy3" Margin="87,11.8,175,35.8" Text="(Opcional)" Grid.ColumnSpan="4" Grid.RowSpan="2" />
         <TextBox AcceptsReturn="True" Grid.Row="6" Grid.Column="1"
@@ -54,14 +54,15 @@
         <Label Content="Solicitudes&#xD;&#xA;especiales:" Grid.Row="6" Margin="1,32,1.2,21.6" Grid.RowSpan="3" />
         <TextBox AcceptsReturn="True" Grid.Row="7" Grid.Column="1"
             x:Name="_comentario_Copy4" Margin="3.8,6.2,28,9.4" Text="Introduzca aquí si necesita alguna solicitud especial como por ejemplo&#xD;&#xA;cuna, menaje concreto, alguna circunstancia de movilidad especial de&#xD;&#xA;personas alojadas u otros." Grid.ColumnSpan="3" />
-        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="8,36.6,0,-2.2" VerticalAlignment="Center" Source="Imagenes/spain.png" Height="36" Grid.Row="8" Width="60" Grid.RowSpan="3"/>
-        <ComboBox x:Name="cbIdiomas" HorizontalAlignment="Stretch" Margin="68,5.4,18,3.8" VerticalAlignment="Center" Opacity="0.6" SelectedIndex="0" Background="Black" Height="22" Grid.Row="9" Grid.ColumnSpan="2" >
+        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="3,9.6,0,24.8" VerticalAlignment="Center" Source="Imagenes/spain.png" Height="36" Grid.Row="8" Width="60" Grid.RowSpan="2"/>
+        <ComboBox x:Name="cbIdiomas" HorizontalAlignment="Stretch" Margin="49,17.6,37,30.8" VerticalAlignment="Center" Opacity="0.6" SelectedIndex="0" Background="Black" Height="22" Grid.Row="8" Grid.ColumnSpan="2" Grid.RowSpan="2" >
             <ComboBoxItem x:Name="cbItem1" Content="ES"/>
             <ComboBoxItem x:Name="cbItem2" Content="EN"/>
         </ComboBox>
         <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="4" Margin="10,10,14.2,0.4" RenderTransformOrigin="0.5,0.707" Grid.RowSpan="3" Click="btnSalir_Click">
-            
+
             <Image Source="Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
         </Button>
+        <Label x:Name="lblEstado" Content="Estado de aplicación" Margin="0,0.4,0.2,0.8" Grid.Row="9" Background="White" Opacity="0.7" Height="30" Grid.ColumnSpan="5"/>
     </Grid>
 </Window>

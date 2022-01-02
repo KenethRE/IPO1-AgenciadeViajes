@@ -17,13 +17,14 @@
             <RowDefinition Height="235*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="29*"/>
-            <ColumnDefinition Width="693*"/>
-            <ColumnDefinition Width="72*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="459*"/>
+            <ColumnDefinition Width="129*"/>
+            <ColumnDefinition Width="61*"/>
         </Grid.ColumnDefinitions>
         <Label Content="Cabaña" HorizontalAlignment="Left" VerticalAlignment="Top" Height="56" Width="230" Margin="24,28,0,0" FontSize="26" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-        <Label Content="Precio por noche:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,12.8,0,0" FontSize="22" Height="40" Width="179" Grid.Row="2" Grid.ColumnSpan="2"/>
-        <Label Content="Cabaña acogedora" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="26,0,0,63.6" Width="274" FontSize="16" Height="37" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <Label Content="Precio por noche:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1.2,12.8,0,0" FontSize="22" Height="40" Width="179" Grid.Row="2" Grid.Column="1"/>
+        <Label Content="Cabaña acogedora" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="1.2,0,0,63.6" Width="274" FontSize="16" Height="37" Grid.Row="1" Grid.RowSpan="2" Grid.Column="1"/>
         <Label Content="Capacidad máxima" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1.2,14.4,0,0" FontSize="22" Height="40" Width="211" Grid.Row="3" Grid.Column="1"/>
         <Label Content="7 personas&#xD;&#xA;Tamaño: 156m^2" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="1.2,0,0,92.4" Width="274" FontSize="16" Height="58" RenderTransformOrigin="0.5,0.5" Grid.Row="3" Grid.Column="1" Grid.RowSpan="2">
             <Label.RenderTransform>
@@ -36,7 +37,7 @@
             </Label.RenderTransform>
         </Label>
         <Label Content="Restricción de estancia mínima" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0.2,16.6,0,0" FontSize="22" Height="40" Width="313" Grid.Row="4" Grid.Column="1"/>
-        <Label Content="Entrada a partir de las 14:00&#xD;&#xA;Salida antes de las 12:00" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="2.2,0,0,144.8" Width="274" FontSize="16" Height="67" RenderTransformOrigin="0.5,0.5" Grid.Row="4" Grid.Column="1" Grid.RowSpan="2">
+        <Label Content="Entrada a partir de las 14:00&#xD;&#xA;Salida antes de las 12:00" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="2.2,0,0,145.2" Width="274" FontSize="16" Height="67" RenderTransformOrigin="0.5,0.5" Grid.Row="4" Grid.Column="1" Grid.RowSpan="2">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -46,7 +47,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label Content="Disponibilidad: Ocupada/lLibre/En reparación/A espera de limpiar/Etc" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="28,0,0,175.4" Width="560" FontSize="16" Height="38" RenderTransformOrigin="0.5,0.5" Grid.Row="6" Grid.ColumnSpan="2">
+        <Label Content="Disponibilidad: Ocupada/lLibre/En reparación/A espera de limpiar/Etc" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="3.2,0,0,175.4" Width="560" FontSize="16" Height="38" RenderTransformOrigin="0.5,0.5" Grid.Row="6" Grid.ColumnSpan="2" Grid.Column="1">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -56,8 +57,8 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <DatePicker HorizontalAlignment="Left" Height="43" Margin="26,86.2,0,0" VerticalAlignment="Top" Width="188" FontSize="16" Grid.Row="6" Grid.ColumnSpan="2"/>
-        <DatePicker HorizontalAlignment="Left" Height="43" Margin="265.2,86.2,0,0" VerticalAlignment="Top" Width="188" FontSize="16" Grid.Row="6" Grid.Column="1"/>
+        <DatePicker HorizontalAlignment="Left" Height="43" Margin="1.2,85.8,0,0" VerticalAlignment="Top" Width="188" FontSize="16" Grid.Row="6" Grid.Column="1"/>
+        <DatePicker HorizontalAlignment="Left" Height="43" Margin="265.2,85.8,0,0" VerticalAlignment="Top" Width="188" FontSize="16" Grid.Row="6" Grid.Column="1"/>
         <Label Content="Fecha de inicio:" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="2.2,0,0,141.4" Width="153" FontSize="16" Height="38" RenderTransformOrigin="0.5,0.5" Grid.Row="6" Grid.Column="1">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -78,14 +79,14 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Button HorizontalAlignment="Center" Margin="276.2,147.8,207,0" FontSize="16" Content="Cancelar" Height="37" VerticalAlignment="Top" Width="104" RenderTransformOrigin="0.452,-3.352" Grid.Row="6" Grid.Column="1" />
-        <Button HorizontalAlignment="Center" Margin="73.2,147.8,416,0" FontSize="16" Content="Reservar" Height="37" VerticalAlignment="Top" Width="98" RenderTransformOrigin="0.452,-3.352" Grid.Row="6" Grid.Column="1" />
-        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="16,192.2,0,3.4" VerticalAlignment="Center" Source="Imagenes/spain.png" Height="39" Width="40" RenderTransformOrigin="0.572,1.906" Grid.Row="6" Grid.ColumnSpan="2"/>
-        <ComboBox x:Name="cbIdiomas" Margin="31.2,200.8,509,7.4" VerticalAlignment="Center" Opacity="0.6" SelectedIndex="0" Background="Black" Height="27" RenderTransformOrigin="0.077,0.142" Grid.Row="6" Grid.Column="1" >
+        <Button HorizontalAlignment="Center" Margin="276.2,147.8,78.4,0" FontSize="16" Content="Cancelar" Height="37" VerticalAlignment="Top" Width="104" RenderTransformOrigin="0.452,-3.352" Grid.Row="6" Grid.Column="1" />
+        <Button HorizontalAlignment="Center" Margin="73.2,147.8,287.4,0" FontSize="16" Content="Reservar" Height="37" VerticalAlignment="Top" Width="98" RenderTransformOrigin="0.452,-3.352" Grid.Row="6" Grid.Column="1" />
+        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="20.6,0,0,1" VerticalAlignment="Center" Source="Imagenes/spain.png" Height="39" Width="40" RenderTransformOrigin="0.572,1.906" Grid.Column="2"/>
+        <ComboBox x:Name="cbIdiomas" Margin="60.6,9,21,4" VerticalAlignment="Center" Opacity="0.6" SelectedIndex="0" Background="Black" Height="27" RenderTransformOrigin="0.077,0.142" Grid.Column="2" >
             <ComboBoxItem x:Name="cbItem1" Content="ES"/>
             <ComboBoxItem x:Name="cbItem2" Content="EN"/>
         </ComboBox>
-        <Grid HorizontalAlignment="Left" Margin="0,-26,-0.2,1.4" Width="673" Grid.ColumnSpan="3" Grid.RowSpan="7">
+        <Grid HorizontalAlignment="Left" Margin="0,-26,-0.2,1.4" Width="673" Grid.ColumnSpan="4" Grid.RowSpan="7">
             <Grid.RowDefinitions>
                 <RowDefinition Height="123*"/>
                 <RowDefinition Height="652*"/>
@@ -106,12 +107,13 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label Content="Imágenes" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="416.2,25.8,0,0" FontSize="22" Height="40" Width="179" Grid.Row="2" Grid.Column="1"/>
-        <Image HorizontalAlignment="Left" Height="59" Margin="416.2,0.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="94" Grid.Column="1"/>
-        <Image HorizontalAlignment="Left" Height="54" Margin="416.2,0.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="56" Grid.Column="1" Source="Imagenes/icono_imagen.png"/>
-        <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="2" Margin="21,10,9.8,0" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click">
+        <Label Content="Imágenes" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="416.2,25.8,0,0" FontSize="22" Height="40" Width="179" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"/>
+        <Image HorizontalAlignment="Left" Height="59" Margin="416.2,0.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="94" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Image HorizontalAlignment="Left" Height="54" Margin="416.2,0.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="56" Grid.Column="1" Source="Imagenes/icono_imagen.png" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="3" Margin="21,10,9.8,0" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click">
             <Image Source="Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
         </Button>
+        <Label x:Name="lblEstado" Content="Estado de aplicación" Margin="0,204.8,-0.2,0.4" Grid.Row="6" Background="White" Opacity="0.7" Height="30" Grid.ColumnSpan="4"/>
 
     </Grid>
 </Window>

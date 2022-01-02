@@ -29,9 +29,11 @@ namespace IPO1_AgenciadeViajes
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void mostrarCoordenadas(object sender, MouseButtonEventArgs e)
         {
-
+            Point p = e.GetPosition(this);
+            lblEstado.Content = "Coordenadas pulsadas: (" + p.X + ", " + p.Y + ")";
+            lblEstado.Foreground = Brushes.Black;
         }
     }
 }

@@ -24,12 +24,11 @@ namespace IPO1_AgenciadeViajes.Dominio
         public Uri Imagen { set; get; }
         public string Restriccion { set; get; }
         public string Equipamiento { set; get; }
-        public string Disponibilidad { set; get; }
-        public Uri URL_IMDB { set; get; }
+        public bool Disponibilidad { set; get; }
         public int MinimoCaracteres { set; get; }
         public int MaximoCaracteres { set; get; }
 
-        public Cabana(string titulo, double precio, int capacidad, string descripcion, Uri imagen, string restriccion, string equipamiento, string disponibilidad)
+        public Cabana(string titulo, double precio, int capacidad, string descripcion, Uri imagen, string restriccion, string equipamiento, bool disponibilidad)
         {
             Titulo = titulo;
             Precio = precio;

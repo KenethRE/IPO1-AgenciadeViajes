@@ -1,0 +1,14 @@
+﻿<Cabanas>
+	<Cabana Titulo="Cabaña" Precio="90" Capacidad="65456545"
+	Descripcion="Cabaña acogedora"
+	Imagen="Imagenes/icono_cabana.png"
+	Restriccion="Entrada a partir de las 14:00"
+	Equpamiento="Tele"
+	Disponibilidad="true" />
+	<Cabana Titulo="Cabaña" Precio="90" Capacidad="65456545"
+	Descripcion="Cabaña acogedora"
+	Imagen="Imagenes/icono_cabana.png"
+	Restriccion="Entrada a partir de las 14:00"
+	Equpamiento="Tele"
+	Disponibilidad="true" />
+</Cabanas>

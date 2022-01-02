@@ -23,8 +23,8 @@
         <Label Content="Fotos" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="9.6,23.4,0,0" FontSize="22" Height="43" Width="314" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"/>
         <Button HorizontalAlignment="Center" Margin="477.6,198.525,22.8,0" FontSize="16" Content="Cancelar" Height="53" VerticalAlignment="Top" Width="82" RenderTransformOrigin="0.452,-3.352" Grid.Row="2" Grid.Column="2" Grid.RowSpan="2" />
         <Button x:Name="Dar_de_baja" HorizontalAlignment="Center" Margin="29.6,198.525,556.8,0" FontSize="16" Content="Dar de Alta/Baja" Height="53" VerticalAlignment="Top" Width="136" RenderTransformOrigin="0.452,-3.352" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" Click="Button_Click" />
-        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="8.6,15.2,0,6" VerticalAlignment="Center" Source="Imagenes/spain.png" Height="42" Width="56" RenderTransformOrigin="0.572,1.906" Grid.Row="3" Grid.Column="1"/>
-        <ComboBox x:Name="cbIdiomas" Margin="73.6,25.2,12.4,10" VerticalAlignment="Center" Opacity="0.6" SelectedIndex="0" Background="Black" Height="28" RenderTransformOrigin="0.077,0.142" Grid.Row="3" Grid.Column="1" >
+        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="440.6,-1,0,6.2" VerticalAlignment="Center" Source="Imagenes/spain.png" Height="42" Width="56" RenderTransformOrigin="0.572,1.906" Grid.Column="2"/>
+        <ComboBox x:Name="cbIdiomas" Margin="505.6,9,22.8,10.2" VerticalAlignment="Center" Opacity="0.6" SelectedIndex="0" Background="Black" Height="28" RenderTransformOrigin="0.077,0.142" Grid.Column="2" >
             <ComboBoxItem x:Name="cbItem1" Content="ES"/>
             <ComboBoxItem x:Name="cbItem2" Content="EN"/>
         </ComboBox>
@@ -45,5 +45,6 @@
         <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="3" Margin="8.2,0,9.6,10.2" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click">
             <Image Source="Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
         </Button>
+        <Label x:Name="lblEstado" Content="Estado de aplicación" Margin="0,33.2,-0.4,0" Grid.Row="3" Background="White" Opacity="0.7" Height="30" Grid.ColumnSpan="4"/>
     </Grid>
 </Window>

@@ -15,15 +15,17 @@ using System.Windows.Shapes;
 namespace IPO1_AgenciadeViajes
 {
     /// <summary>
-    /// Lógica de interacción para Actividad.xaml
+    /// Lógica de interacción para InfoActividad.xaml
     /// </summary>
-    public partial class Actividad : Window
+    public partial class InfoActividad : Window
     {
         private InfoInscrito ventanaInscrito;
-        public Actividad()
+        public InfoActividad()
         {
             InitializeComponent();
         }
+
+       
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {

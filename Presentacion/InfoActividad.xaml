@@ -62,8 +62,8 @@
         </Label>
         <Button HorizontalAlignment="Center" Margin="402.6,10.4,58.2,0" FontSize="16" Content="Cancelar" Height="52" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.452,-3.352" Grid.Row="9" Grid.Column="1" />
         <Button HorizontalAlignment="Center" Margin="1.6,25.2,413.2,0" FontSize="16" Content="Dar de Alta/Baja" Height="52" VerticalAlignment="Top" Width="166" RenderTransformOrigin="0.452,-3.352" Grid.Row="8" Grid.Column="1" Grid.RowSpan="2" />
-        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="17,8.2,0,4.2" VerticalAlignment="Center" Source="Imagenes/spain.png" Height="42" Width="55" RenderTransformOrigin="0.572,1.906" Grid.Row="10" Grid.ColumnSpan="2"/>
-        <ComboBox x:Name="cbIdiomas" Margin="43.6,18.2,488.2,8.2" VerticalAlignment="Center" Opacity="0.6" SelectedIndex="0" Background="Black" Height="28" RenderTransformOrigin="0.077,0.142" Grid.Row="10" Grid.Column="1" >
+        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="448.6,10,0,52" VerticalAlignment="Center" Source="Imagenes/spain.png" Height="42" Width="55" RenderTransformOrigin="0.572,1.906" Grid.Column="1"/>
+        <ComboBox x:Name="cbIdiomas" Margin="509.6,20,22.2,56" VerticalAlignment="Center" Opacity="0.6" SelectedIndex="0" Background="Black" Height="28" RenderTransformOrigin="0.077,0.142" Grid.Column="1" >
             <ComboBoxItem x:Name="cbItem1" Content="ES"/>
             <ComboBoxItem x:Name="cbItem2" Content="EN"/>
         </ComboBox>
@@ -114,8 +114,9 @@
         <Button HorizontalAlignment="Center" Margin="210.6,25.2,205.2,0" FontSize="16" Content="Modificar información" Height="52" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.452,-3.352" Grid.Row="8" Grid.Column="1" Grid.RowSpan="2" />
         <Button HorizontalAlignment="Right" Margin="0,25.2,10.2,0" FontSize="16" Content="Guardar cambios" Height="52" VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.452,-3.352" Grid.Row="8" Grid.Column="1" Grid.RowSpan="2" />
         <Button HorizontalAlignment="Center" Margin="97.6,11.4,221.2,0" FontSize="16" Content="Gestionar el listado de inscritos" Height="52" VerticalAlignment="Top" Width="262" RenderTransformOrigin="0.452,-3.352" Grid.Row="9" Grid.Column="1" Grid.RowSpan="2" Click="Button_Click" />
-        <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="2" Margin="36.8,10,10.4,38" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click">
+        <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="2" Margin="36.8,10,10.4,52" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click">
             <Image Source="Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
         </Button>
+        <Label x:Name="lblEstado" Content="Estado de aplicación" Margin="0,24.2,0.4,0.2" Grid.Row="10" Background="White" Opacity="0.7" Height="30" Grid.ColumnSpan="3"/>
     </Grid>
 </Window>

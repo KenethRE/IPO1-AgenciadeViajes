@@ -1,0 +1,14 @@
+﻿<Monitores>
+	<Monitor Nombre="Lucia" Correo="lucia@gmail.com" Telefono="65456545"
+	Idioma="Español"
+	Foto="Imagenes/icono_usuario.png" 
+	Restricciones ="Fines de semana"
+	Estado ="Disponible"
+	Formacion="Bachillerato"/>
+	<Monitor Nombre="Lucia" Correo="lucia@gmail.com" Telefono="65456545"
+	Idioma="Español"
+	Foto="Imagenes/icono_usuario.png"
+	Restricciones ="Fines de semana"
+	Estado ="Disponible"
+	Formacion="Bachillerato"/>
+</Monitores>

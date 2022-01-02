@@ -43,11 +43,11 @@ namespace IPO1_AgenciadeViajes
             doc.Load(fichero.Stream);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
-                var nuevoInscrito = new Inscrito("", "", "", "", "");
+                var nuevoInscrito = new Inscrito("", "", 0, false, "");
                 nuevoInscrito.Nombre = node.Attributes["Nombre"].Value;
                 nuevoInscrito.Correo = node.Attributes["Correo"].Value;
-                nuevoInscrito.Telefono = node.Attributes["Telefono"].Value;
-                nuevoInscrito.Pago = node.Attributes["Pago"].Value;
+                nuevoInscrito.Telefono = Convert.ToInt32(node.Attributes["Telefono"].Value);
+                nuevoInscrito.Pago = Convert.ToBoolean(node.Attributes["Pago"].Value);
                 nuevoInscrito.Inscripcion = node.Attributes["Inscripcion"].Value;
                 listadoInscritos.Add(nuevoInscrito);
             }
@@ -56,6 +56,27 @@ namespace IPO1_AgenciadeViajes
         {
             this.Visibility = Visibility.Hidden;
 
+        }
+
+        private void miAniadirItemLB_Click(object sender, RoutedEventArgs e)
+        {
+            var nuevoInscrito = new Inscrito("...", "...", 0, false, "...");
+            // Añadimos una nueva película a la lista de películas (listadoPeliculas)
+            listadoInscritos.Add(nuevoInscrito);
+            //nuevoInscrito.AltaEnVideoteca = DateTime.Today;
+            // Actualizaremos tanto el ListBox como el DataGrid para que las dos vistas
+            // queden actualizadas
+            lstListaInscritos.Items.Refresh();
+        }
+        private void miEliminarItemLB_Click(object sender, RoutedEventArgs e)
+        {
+            // CUIDADO CON HACERLO DE ESTA FORMA: 
+            // Se da un error porque la fuente de datos está en uso:
+            // lstListaPeliculas.Items.RemoveAt(lstListaPeliculas.SelectedIndex);
+            listadoInscritos.RemoveAt(lstListaInscritos.SelectedIndex);
+            // Actualizaremos tanto el ListBox como el DataGrid para que las dos vistas
+            // queden actualizadas
+            lstListaInscritos.Items.Refresh();
         }
 
     }

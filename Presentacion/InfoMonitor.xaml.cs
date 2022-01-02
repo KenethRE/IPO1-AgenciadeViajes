@@ -17,9 +17,9 @@ namespace IPO1_AgenciadeViajes
     /// <summary>
     /// Lógica de interacción para Monitor.xaml
     /// </summary>
-    public partial class Monitor : Window
+    public partial class InfoMonitor : Window
     {
-        public Monitor()
+        public InfoMonitor()
         {
             InitializeComponent();
         }

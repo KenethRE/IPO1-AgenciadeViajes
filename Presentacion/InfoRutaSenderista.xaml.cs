@@ -17,9 +17,9 @@ namespace IPO1_AgenciadeViajes
     /// <summary>
     /// Lógica de interacción para RutaSenderista.xaml
     /// </summary>
-    public partial class RutaSenderista : Window
+    public partial class InfoRutaSenderista : Window
     {
-        public RutaSenderista()
+        public InfoRutaSenderista()
         {
             InitializeComponent();
         }

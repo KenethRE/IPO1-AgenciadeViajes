@@ -31,12 +31,12 @@
         <Rectangle Margin="10,10,10,10" Grid.Row="1" Grid.Column="1" Grid.RowSpan="6" Grid.ColumnSpan="4" Fill="#FF424242" RadiusX="10" RadiusY="10" Width="374" Height="282"/>
         <Button x:Name="btnIniciarSesion" Grid.ColumnSpan="2" Content="{DynamicResource lblLogin}" Grid.Row="6" Grid.Column="2" Margin="92.8,14.8,82,24" Grid.RowSpan="1" AutomationProperties.Name="btnLogin" Foreground="Black" Height="30" Padding="6" TabIndex="3" Click="ComprobarInformacion"/>
         <TextBox x:Name="tbxEmail" TextWrapping="Wrap" VerticalContentAlignment="Center" TabIndex="1" Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2" Margin="8,8,8,8"/>
-        <PasswordBox x:Name="pbxContraseña" PasswordChar="*" VerticalContentAlignment="Center" Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2" Margin="8,8,8,8" IsEnabled="False" TabIndex="2" />
+        <PasswordBox x:Name="pbxContraseña" PasswordChar="*" VerticalContentAlignment="Center" Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2" Margin="8,8,8,8" IsEnabled="False" TabIndex="2" KeyUp="mostrarLetraPulsada" />
         <Label x:Name="lblUsuario" Foreground="White" RenderTransformOrigin="0.902,-0.345" Grid.Column="2" Grid.Row="2" VerticalContentAlignment="Center" Margin="5,5,10,5" Grid.ColumnSpan="2" Content="{DynamicResource lblUsuario}" />
         <Label x:Name="lblContraseña" Content="{DynamicResource lblContraseña}" Foreground="White" Grid.Column="2" Grid.Row="4" VerticalContentAlignment="Center" Margin="5,5,10,5" HorizontalContentAlignment="Left" Grid.ColumnSpan="2"/>
         <Label x:Name="lblLogin" FontSize="20" Content="{DynamicResource lblLogin}" Foreground="White" IsTabStop="True" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Grid.Column="1" Margin="20,15,20,5" Grid.ColumnSpan="2" Grid.Row="1" Padding="10,10,10,10"/>
         <Label x:Name="lblEstado" Content="Estado de aplicación" Margin="0,10,0,0" Grid.Row="8" Background="White" Opacity="0.7" Width="800" Height="30" Grid.ColumnSpan="6"/>
-        <Image x:Name="imgIdioma" Grid.Column="5" HorizontalAlignment="Stretch" Margin="62.738,25,63.862,24.6" VerticalAlignment="Center" Source="/Imagenes/spain.png" Height="48"/>
+        <Image x:Name="imgIdioma" Grid.Column="5" HorizontalAlignment="Stretch" Margin="62.738,25,63.862,24.6" VerticalAlignment="Center" Source="Imagenes/spain.png" Height="48"/>
         <ComboBox x:Name="cbIdiomas" Grid.Column="5" HorizontalAlignment="Stretch" Margin="137.769,38,14.831,37.6" VerticalAlignment="Center" Opacity="0.6" SelectedIndex="0" SelectionChanged="cb_elementoSeleccionado" Background="Black" >
             <ComboBoxItem x:Name="cbItem1" Content="ES"/>
             <ComboBoxItem x:Name="cbItem2" Content="EN"/>

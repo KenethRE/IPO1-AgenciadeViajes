@@ -1,0 +1,20 @@
+﻿<Actividades>
+	<Actividad Titulo="Actividad" Descripcion="Actividad" Monitor="Nombre"
+	Horario="De 18:00 a 19:30"
+	Niños="false"
+	MaxCapacidad ="30"
+	MinCapacidad ="10"
+	Precio ="10€"
+	Area ="En la piscina"
+	Equipamiento="Chanclas"
+	Estado ="true"/>
+	<Actividad Titulo="Actividad" Descripcion="Actividad" Monitor="Nombre"
+	Horario="De 18:00 a 19:30"
+	Niños="false"
+	MaxCapacidad ="30"
+	MinCapacidad ="10"
+	Precio ="10€"
+	Area ="En la piscina"
+	Equipamiento="Chanclas"
+	Estado ="true"/>
+</Actividades>

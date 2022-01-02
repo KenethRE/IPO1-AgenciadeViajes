@@ -20,10 +20,10 @@ namespace IPO1_AgenciadeViajes
     /// 
     
 
-    public partial class Parcela : Window
+    public partial class InfoParcela : Window
     {
         private ConfirmacionParcela ventanaConfirmacionParcela;
-        public Parcela()
+        public InfoParcela()
         {
             InitializeComponent();
         }

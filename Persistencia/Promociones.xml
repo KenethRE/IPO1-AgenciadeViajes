@@ -1,0 +1,6 @@
+﻿<Promociones>
+	<Promocion Titulo="Promocion" Descripcion="Promocion" Foto="Presentacion/Imagenes/icono_promocion.png"
+	Estado ="true"/>
+	<Promocion Titulo="Promocion" Descripcion="Promocion" Foto="Presentacion/Imagenes/icono_promocion.png"
+	Estado ="true"/>
+</Promociones>

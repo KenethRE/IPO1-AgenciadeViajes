@@ -24,58 +24,59 @@
         </Menu>
         <Grid>
             <TabControl x:Name="tcPestanas" Margin="0,27,-0.4,0">
-                <TabItem Header="Monitores" Margin="0,1,-43.4,-14.2">
+                <TabItem Header="Monitores" Margin="0,1,-41.6,-14.2">
                     <Grid>
-                        <DataGrid x:Name="dgMonitores" Margin="5,40,5,4.8" AutoGenerateColumns="False">
+                        <DataGrid x:Name="dgMonitores" Margin="5,40,5,28.8" AutoGenerateColumns="False">
                         </DataGrid>
-                        <ScrollBar HorizontalAlignment="Left" Height="315" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
+                        <ScrollBar HorizontalAlignment="Left" Height="296" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
                         <Button Margin="485,14,179,324.8" Content="Monitor" Click="btnMonitor_Click" />
                     </Grid>
                 </TabItem>
-                <TabItem Header="Parcelas" Margin="43.4,1,-81,-14.2">
+                <TabItem Header="Parcelas" Margin="36.6,1,-95.2,-14.2">
                     <Grid>
-                        <DataGrid x:Name="dgParcelas" Margin="5,40,5,4.8" AutoGenerateColumns="False">
+                        <DataGrid x:Name="dgParcelas" Margin="5,40,5,26.8" AutoGenerateColumns="False">
                         </DataGrid>
-                        <ScrollBar HorizontalAlignment="Left" Height="315" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
+                        <ScrollBar HorizontalAlignment="Left" Height="298" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
                         <Button Margin="485,14,179,324.8" Content="Parcela" Click="btnParcela_Click" />
                     </Grid>
                 </TabItem>
-                <TabItem Header="Cabañas" Margin="81,1,-120.2,-14.2">
+                <TabItem Header="Cabañas" Margin="81.2,1,-141.4,-14.2">
                     <Grid>
-                        <DataGrid x:Name="dgCabañas" Margin="5,40,5,4.8" AutoGenerateColumns="False">
+                        <DataGrid x:Name="dgCabanas" Margin="5,40,5,26.8" AutoGenerateColumns="False">
                         </DataGrid>
-                        <ScrollBar HorizontalAlignment="Left" Height="315" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
+                        <ScrollBar HorizontalAlignment="Left" Height="298" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
                         <Button Margin="485,14,179,324.8" Content="Cabaña" Click="btnCabana_Click" />
                     </Grid>
                 </TabItem>
-                <TabItem Header="Actividades" Margin="120.4,1,-167.6,-14.2">
+                <TabItem Header="Actividades" Margin="111.4,1,-180.6,-14.2">
                     <Grid>
-                        <DataGrid x:Name="dgActividades" Margin="5,79,5,4.8" AutoGenerateColumns="False">
+                        <DataGrid x:Name="dgActividades" Margin="5,79,5,26.8" AutoGenerateColumns="False">
                         </DataGrid>
-                        <ScrollBar HorizontalAlignment="Left" Height="276" Margin="765,79,0,0" VerticalAlignment="Top" Width="13"/>
+                        <ScrollBar HorizontalAlignment="Left" Height="259" Margin="765,79,0,0" VerticalAlignment="Top" Width="13"/>
                         <Button Margin="483,48,181,290.8" Content="Crear Ruta" Click="Button_Click" />
                         <Button Margin="332,48,332,290.8" Content="Actividad" Click="btnActividad_Click" />
                         <Button Margin="191,48,479,290.8" Content="Ruta senderista" Click="btnRutaSenderista_Click" />
                     </Grid>
                 </TabItem>
-                <TabItem Header="Historial de actividades" Margin="168.4,1,-260,-14.2">
+                <TabItem Header="Historial de actividades" Margin="162.2,1,-254.8,-14.2">
                     <Grid>
-                        <DataGrid x:Name="dgHistorial" Margin="5,40,5,4.8" AutoGenerateColumns="False">
+                        <DataGrid x:Name="dgHistorial" Margin="5,40,5,26.8" AutoGenerateColumns="False">
                         </DataGrid>
-                        <ScrollBar HorizontalAlignment="Left" Height="315" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
+                        <ScrollBar HorizontalAlignment="Left" Height="298" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
                     </Grid>
                 </TabItem>
-                <TabItem Header="Promociones" Margin="256,-2,-317.2,-14.2">
+                <TabItem Header="Promociones" Margin="253.2,-2,-317.2,-14.2">
                     <Grid Margin="0,17,0,-0.2">
-                        <DataGrid x:Name="dgPromociones" Margin="5,40,5,4.8" AutoGenerateColumns="False">
+                        <DataGrid x:Name="dgPromociones" Margin="5,40,5,28" AutoGenerateColumns="False">
                         </DataGrid>
-                        <ScrollBar HorizontalAlignment="Left" Height="315" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
+                        <ScrollBar HorizontalAlignment="Left" Height="280" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
                         <Button Margin="488,10,176,313" Content="Promocion" Click="btnPromocion_Click" />
                     </Grid>
                 </TabItem>
             </TabControl>
         </Grid>
-        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="471,3,0,387" VerticalAlignment="Center" Source="Imagenes/spain.png" Height="30" Width="50" RenderTransformOrigin="0.572,1.906"/>
+        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="514,0,0,390" VerticalAlignment="Center" Source="Imagenes/spain.png" Height="30" Width="50" RenderTransformOrigin="0.572,1.906"/>
+        <Image x:Name="imgIconoMonitores" />
         <ComboBox x:Name="cbIdiomas" Margin="550,4,195,0" VerticalAlignment="Top" Opacity="0.6" SelectedIndex="0" Background="Black" Height="20" RenderTransformOrigin="0.077,0.142" >
             <ComboBoxItem x:Name="cbItem1" Content="ES"/>
             <ComboBoxItem x:Name="cbItem2" Content="EN"/>
@@ -83,6 +84,14 @@
         <Button x:Name="btnSalir" ToolTip="Salir" Margin="751,3,10,397" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click">
             <Image Source="Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
         </Button>
+        <Label x:Name="lblEstado" Content="Estado de aplicación" Margin="0,390,0,0" Background="White" Opacity="0.7" Height="30"/>
+        <Image HorizontalAlignment="Left" Height="27" Margin="0,33,0,0" VerticalAlignment="Top" Width="31" Source="Imagenes/icono_monitores.jpg"/>
+        <Image HorizontalAlignment="Left" Height="27" Margin="107,33,0,0" VerticalAlignment="Top" Width="33" Source="Imagenes/icono_parcela.jpg"/>
+        <Image HorizontalAlignment="Left" Height="29" Margin="212,31,0,0" VerticalAlignment="Top" Width="30" Source="Imagenes/icono_cabana.png"/>
+        <Image HorizontalAlignment="Left" Height="27" Margin="300,33,0,0" VerticalAlignment="Top" Width="37" Source="Imagenes/icono_actividad.png"/>
+        <Image HorizontalAlignment="Left" Height="29" Margin="446,33,0,0" VerticalAlignment="Top" Width="26" Source="Imagenes/icono_comentario.png"/>
+        <Image HorizontalAlignment="Left" Height="26" Margin="651,34,0,0" VerticalAlignment="Top" Width="35" Source="Imagenes/icono_promocion.png"/>
+
 
     </Grid>
 </Window>

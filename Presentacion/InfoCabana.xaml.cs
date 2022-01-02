@@ -17,12 +17,14 @@ namespace IPO1_AgenciadeViajes
     /// <summary>
     /// Lógica de interacción para Cabana.xaml
     /// </summary>
-    public partial class Cabana : Window
+    public partial class InfoCabana : Window
     {
-        public Cabana()
+        public InfoCabana()
         {
             InitializeComponent();
         }
+
+
         private void btnSalir_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Hidden;
