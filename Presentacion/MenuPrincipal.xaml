@@ -19,7 +19,9 @@
                 <MenuItem x:Name="miSalir" Header="Salir"/>
             </MenuItem>
             <MenuItem Header="Ayuda" FontSize="14">
-                <MenuItem x:Name="miAcercaDe" Header="Acerca de..." />
+                <MenuItem x:Name="miAcercaDe" Header="Acerca de..." Click="miAcercaDe_Click" />
+                <MenuItem x:Name="miDocumentacion" Header="Documentacion" Click="miDocumentacion_Click" />
+                <MenuItem x:Name="miError" Header="Reportaru un Error" />
             </MenuItem>
         </Menu>
         <Grid>

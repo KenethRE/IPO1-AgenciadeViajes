@@ -4,7 +4,7 @@
 	Niños="false"
 	MaxCapacidad ="30"
 	MinCapacidad ="10"
-	Precio ="10€"
+	Precio ="10"
 	Area ="En la piscina"
 	Equipamiento="Chanclas"
 	Estado ="true"/>
@@ -13,7 +13,7 @@
 	Niños="false"
 	MaxCapacidad ="30"
 	MinCapacidad ="10"
-	Precio ="10€"
+	Precio ="10"
 	Area ="En la piscina"
 	Equipamiento="Chanclas"
 	Estado ="true"/>

@@ -18,7 +18,7 @@ namespace IPO1_AgenciadeViajes
     /// <summary>
     /// Lógica de interacción para MenuPrincipal.xaml
     /// </summary>
-    
+
     public partial class MenuPrincipal : Window
     {
         private CrearRuta ventana;
@@ -28,8 +28,9 @@ namespace IPO1_AgenciadeViajes
         private InfoActividad ventanaActividad;
         private InfoPromocion ventanaPromocion;
         private InfoRutaSenderista ventanaRutaSenderista;
+        private Presentacion.Documentacion ventanaDocumentacion;
 
-        List<Dominio.Monitor>listadoMonitores;
+        List<Dominio.Monitor> listadoMonitores;
         List<Dominio.Parcela> listadoParcelas;
         List<Dominio.Cabana> listadoCabanas;
         List<Dominio.Actividad> listadoActividades;
@@ -125,7 +126,7 @@ namespace IPO1_AgenciadeViajes
             doc.Load(fichero.Stream);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
-                var nuevaCabana = new Dominio.Cabana("", 0, 0, "", null, "", "", false);
+                var nuevaCabana = new Dominio.Cabana("", 0, 0, "", null,"","", false);
                 nuevaCabana.Titulo = node.Attributes["Titulo"].Value;
                 nuevaCabana.Precio = Convert.ToInt32(node.Attributes["Precio"].Value);
                 nuevaCabana.Capacidad = Convert.ToInt32(node.Attributes["Capacidad"].Value);
@@ -187,7 +188,7 @@ namespace IPO1_AgenciadeViajes
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ventana = new CrearRuta ();
+            ventana = new CrearRuta();
             ventana.Show();
         }
 
@@ -232,7 +233,18 @@ namespace IPO1_AgenciadeViajes
             ventanaRutaSenderista = new InfoRutaSenderista();
             ventanaRutaSenderista.Show();
         }
+        private void miAcercaDe_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Aplicación realizada por ...", "Acerca de");
 
+        }
+        private void miDocumentacion_Click(object sender, RoutedEventArgs e)
+        {
+            ventanaDocumentacion = new Presentacion.Documentacion();
+            ventanaDocumentacion.Show();
+        
+        }
+
+    
     }
-
 }
