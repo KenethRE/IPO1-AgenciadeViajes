@@ -10,7 +10,7 @@ namespace IPO1_AgenciadeViajes.Dominio
     {
         public string Titulo { set; get; }
         public string Descripcion { set; get; }
-        public Monitor Monitor { set; get; }
+        public string Monitor { set; get; }
         public string Horario { set; get; }
         public bool Niños { set; get; }
         public int MaxCapacidad { set; get; }
@@ -20,7 +20,7 @@ namespace IPO1_AgenciadeViajes.Dominio
         public string Equipamiento { set; get; }
         public bool Estado { set; get; }
 
-        public Actividad(string titulo, string descripcion, Monitor monitor, string horario,bool niños, int maxcapacidad,int mincapacidad, double precio, string area, string equipamiento, bool estado)
+        public Actividad(string titulo, string descripcion, string monitor, string horario,bool niños, int maxcapacidad,int mincapacidad, double precio, string area, string equipamiento, bool estado)
         {
             Titulo = titulo;
             Descripcion = descripcion;

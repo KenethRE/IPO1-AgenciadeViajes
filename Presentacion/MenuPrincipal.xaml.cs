@@ -29,45 +29,45 @@ namespace IPO1_AgenciadeViajes
         private InfoPromocion ventanaPromocion;
         private InfoRutaSenderista ventanaRutaSenderista;
 
-        List<Monitor>listadoMonitores;
-        List<Parcela> listadoParcelas;
-        List<Cabana> listadoCabanas;
-        List<Actividad> listadoActividades;
-        List<Promociones> listadoPromociones;
+        List<Dominio.Monitor>listadoMonitores;
+        List<Dominio.Parcela> listadoParcelas;
+        List<Dominio.Cabana> listadoCabanas;
+        List<Dominio.Actividad> listadoActividades;
+        List<Dominio.Promocion> listadoPromociones;
 
         public MenuPrincipal()
         {
             InitializeComponent();
             // Crear el listado de monitores
-            listadoMonitores = new List<Monitor>();
+            listadoMonitores = new List<Dominio.Monitor>();
             // Se cargarán los datos de prueba de un fichero XML
             CargarContenidoListaXMLMonitores();
             // Indicar que el origen de datos del ListBox es listadoMonitores
             dgMonitores.ItemsSource = listadoMonitores;
 
             // Crear el listado de parcelas
-            listadoParcelas = new List<Parcela>();
+            listadoParcelas = new List<Dominio.Parcela>();
             // Se cargarán los datos de prueba de un fichero XML
             CargarContenidoListaXMLParcelas();
             // Indicar que el origen de datos del ListBox es listadoParcelas
             dgParcelas.ItemsSource = listadoParcelas;
 
             // Crear el listado de cabañas
-            listadoCabanas = new List<Cabana>();
+            listadoCabanas = new List<Dominio.Cabana>();
             // Se cargarán los datos de prueba de un fichero XML
             CargarContenidoListaXMLCabanas();
             // Indicar que el origen de datos del ListBox es listadoParcelas
             dgCabanas.ItemsSource = listadoCabanas;
 
             // Crear el listado de actividades
-            listadoActividades = new List<Actividad>();
+            listadoActividades = new List<Dominio.Actividad>();
             // Se cargarán los datos de prueba de un fichero XML
             CargarContenidoListaXMLActividades();
             // Indicar que el origen de datos del ListBox es listadoParcelas
             dgActividades.ItemsSource = listadoActividades;
 
             // Crear el listado de actividades
-            listadoPromociones = new List<Promocion>();
+            listadoPromociones = new List<Dominio.Promocion>();
             // Se cargarán los datos de prueba de un fichero XML
             CargarContenidoListaXMLPromociones();
             // Indicar que el origen de datos del ListBox es listadoParcelas
@@ -81,14 +81,16 @@ namespace IPO1_AgenciadeViajes
             doc.Load(fichero.Stream);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
-                var nuevoMonitor = new Monitor("", 0, "", "", null, "", "", false);
-                nuevoMonitor.Nombre = node.Attributes["Nombre"].Value;
-                nuevoMonitor.Telefono = Convert.ToInt32(node.Attributes["Telefono"].Value);
-                nuevoMonitor.Correo = node.Attributes["Correo"].Value;
-                nuevoMonitor.Foto = new Uri(node.Attributes["Foto"].Value, UriKind.Relative);
-                nuevoMonitor.Formacion = node.Attributes["Formacion"].Value;
-                nuevoMonitor.Restricciones = node.Attributes["Restricciones"].Value;
-                nuevoMonitor.Estado = Convert.ToBoolean(node.Attributes["Estado"].Value);
+                var nuevoMonitor = new Dominio.Monitor("", 0, "", "", null, "", "", "")
+                {
+                    Nombre = node.Attributes["Nombre"].Value,
+                    Telefono = Convert.ToInt32(node.Attributes["Telefono"].Value),
+                    Correo = node.Attributes["Correo"].Value,
+                    Foto = new Uri(node.Attributes["Foto"].Value, UriKind.Relative),
+                    Formacion = node.Attributes["Formacion"].Value,
+                    Restricciones = node.Attributes["Restricciones"].Value,
+                    Estado = node.Attributes["Estado"].Value
+                };
                 listadoMonitores.Add(nuevoMonitor);
             }
 
@@ -102,7 +104,7 @@ namespace IPO1_AgenciadeViajes
             doc.Load(fichero.Stream);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
-                var nuevaParcela = new Parcela("", 0, "", "", 0, "", false);
+                var nuevaParcela = new Dominio.Parcela("", 0, "", "", 0, "", false);
                 nuevaParcela.Titulo = node.Attributes["Titulo"].Value;
                 nuevaParcela.Precio = Convert.ToInt32(node.Attributes["Precio"].Value);
                 nuevaParcela.Temporada = node.Attributes["Temporada"].Value;
@@ -123,7 +125,7 @@ namespace IPO1_AgenciadeViajes
             doc.Load(fichero.Stream);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
-                var nuevaCabana = new Cabana("", 0, 0, "", null, "", "", false);
+                var nuevaCabana = new Dominio.Cabana("", 0, 0, "", null, "", "", false);
                 nuevaCabana.Titulo = node.Attributes["Titulo"].Value;
                 nuevaCabana.Precio = Convert.ToInt32(node.Attributes["Precio"].Value);
                 nuevaCabana.Capacidad = Convert.ToInt32(node.Attributes["Capacidad"].Value);
@@ -145,9 +147,9 @@ namespace IPO1_AgenciadeViajes
             doc.Load(fichero.Stream);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
-                var nuevaActividad = new Actividad("", "", "", false, 0, 0, 0, "", "", false);
+                var nuevaActividad = new Dominio.Actividad("", "", "", "", false, 0, 0, 0, "", "", false);
                 nuevaActividad.Titulo = node.Attributes["Titulo"].Value;
-                nuevaActividad.Descipcion = node.Attributes["Descripcion"].Value;
+                nuevaActividad.Descripcion = node.Attributes["Descripcion"].Value;
                 nuevaActividad.Monitor = node.Attributes["Monitor"].Value;
                 nuevaActividad.Niños = Convert.ToBoolean(node.Attributes["Niños"].Value);
                 nuevaActividad.MaxCapacidad = Convert.ToInt32(node.Attributes["MaxCapacidad"].Value);
@@ -169,9 +171,9 @@ namespace IPO1_AgenciadeViajes
             doc.Load(fichero.Stream);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
-                var nuevaPromocion = new Promocion("", "", null, false);
+                var nuevaPromocion = new Dominio.Promocion("", "", null, false);
                 nuevaPromocion.Titulo = node.Attributes["Titulo"].Value;
-                nuevaPromocion.Descipcion = node.Attributes["Descripcion"].Value;
+                nuevaPromocion.Descripcion = node.Attributes["Descripcion"].Value;
                 nuevaPromocion.Foto = new Uri(node.Attributes["Foto"].Value, UriKind.Relative);
                 nuevaPromocion.Estado = Convert.ToBoolean(node.Attributes["Estado"].Value);
                 listadoPromociones.Add(nuevaPromocion);

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IPO1_AgenciadeViajes.Dominio
 {
-    class Monitor
+    public class Monitor
     {
         public string Nombre { set; get; }
         public int Telefono { set; get; }
@@ -15,9 +15,9 @@ namespace IPO1_AgenciadeViajes.Dominio
         public Uri Foto { set; get; }
         public string Formacion { set; get; }
         public string Restricciones { set; get; }
-        public bool Estado { set; get; }
+        public string Estado { set; get; }
 
-        public Monitor(string nombre, int telefono, string correo, string idioma, Uri foto, string formacion, string restricciones, bool estado)
+        public Monitor(string nombre, int telefono, string correo, string idioma, Uri foto, string formacion, string restricciones, string estado)
         {
             Nombre = nombre;
             Telefono = telefono;
