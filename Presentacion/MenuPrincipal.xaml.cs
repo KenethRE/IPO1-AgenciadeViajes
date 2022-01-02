@@ -29,6 +29,7 @@ namespace IPO1_AgenciadeViajes
         private InfoPromocion ventanaPromocion;
         private InfoRutaSenderista ventanaRutaSenderista;
         private Presentacion.Documentacion ventanaDocumentacion;
+        private Presentacion.ReportarErrrores ventanaErrores;
 
         List<Dominio.Monitor> listadoMonitores;
         List<Dominio.Parcela> listadoParcelas;
@@ -245,6 +246,11 @@ namespace IPO1_AgenciadeViajes
         
         }
 
-    
+        private void miError_Click(object sender, RoutedEventArgs e)
+        {
+
+            ventanaErrores = new Presentacion.ReportarErrrores();
+            ventanaErrores.Show();
+        }
     }
 }

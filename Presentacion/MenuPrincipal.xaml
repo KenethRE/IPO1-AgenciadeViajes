@@ -21,7 +21,7 @@
             <MenuItem Header="Ayuda" FontSize="14">
                 <MenuItem x:Name="miAcercaDe" Header="Acerca de..." Click="miAcercaDe_Click" />
                 <MenuItem x:Name="miDocumentacion" Header="Documentacion" Click="miDocumentacion_Click" />
-                <MenuItem x:Name="miError" Header="Reportaru un Error" />
+                <MenuItem x:Name="miError" Header="Reportar un Error" Click="miError_Click" />
             </MenuItem>
         </Menu>
         <Grid>
