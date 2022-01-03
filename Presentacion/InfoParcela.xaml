@@ -80,14 +80,14 @@
         </Label>
         <Button HorizontalAlignment="Center" Margin="95.4,15.2,52.2,0" FontSize="16" Content="Cancelar" Grid.Column="2" Height="50" VerticalAlignment="Top" Width="102" RenderTransformOrigin="0.452,-3.352" Grid.Row="3" />
         <Button HorizontalAlignment="Center" Margin="138,15.2,7.6,0.4" FontSize="16" Content="Reservar" Width="100" RenderTransformOrigin="0.452,-3.352" Grid.Column="1" Grid.Row="3" Click="ReservarParcela_Click" />
-        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="163.4,-6,0,6.2" VerticalAlignment="Center" Source="Imagenes/spain.png" Height="39" Width="40" RenderTransformOrigin="0.572,1.906" Grid.Column="2"/>
+        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="163.4,-6,0,6.2" VerticalAlignment="Center" Source="/Recursos/Imagenes/spain.png" Height="39" Width="40" RenderTransformOrigin="0.572,1.906" Grid.Column="2"/>
         <ComboBox x:Name="cbIdiomas" Margin="208.4,2,0.2,10.2" VerticalAlignment="Center" Opacity="0.6" SelectedIndex="0" Background="Black" Height="27" Grid.Column="2" RenderTransformOrigin="0.077,0.142" >
             <ComboBoxItem x:Name="cbItem1" Content="ES"/>
             <ComboBoxItem x:Name="cbItem2" Content="EN"/>
         </ComboBox>
         <Grid HorizontalAlignment="Left" Margin="0,-26,-5.6,7.8" Width="592" Grid.ColumnSpan="4" Grid.RowSpan="5"/>
         <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="3" Margin="38.8,0,10.4,10.2" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click">
-            <Image Source="Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
+            <Image Source="/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
         </Button>
         <Label x:Name="lblEstado" Content="Estado de aplicación" Margin="0,4.8,0.4,6.8" Grid.Row="4" Background="White" Opacity="0.7" Height="30" Grid.ColumnSpan="4"/>
 

@@ -54,14 +54,14 @@
         <Label Content="Solicitudes&#xD;&#xA;especiales:" Grid.Row="6" Margin="1,32,1.2,21.6" Grid.RowSpan="3" />
         <TextBox AcceptsReturn="True" Grid.Row="7" Grid.Column="1"
             x:Name="_comentario_Copy4" Margin="3.8,6.2,28,9.4" Text="Introduzca aquí si necesita alguna solicitud especial como por ejemplo&#xD;&#xA;cuna, menaje concreto, alguna circunstancia de movilidad especial de&#xD;&#xA;personas alojadas u otros." Grid.ColumnSpan="3" />
-        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="3,9.6,0,24.8" VerticalAlignment="Center" Source="Imagenes/spain.png" Height="36" Grid.Row="8" Width="60" Grid.RowSpan="2"/>
+        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="3,9.6,0,24.8" VerticalAlignment="Center" Source="/Recursos/Imagenes/spain.png" Height="36" Grid.Row="8" Width="60" Grid.RowSpan="2"/>
         <ComboBox x:Name="cbIdiomas" HorizontalAlignment="Stretch" Margin="49,17.6,37,30.8" VerticalAlignment="Center" Opacity="0.6" SelectedIndex="0" Background="Black" Height="22" Grid.Row="8" Grid.ColumnSpan="2" Grid.RowSpan="2" >
             <ComboBoxItem x:Name="cbItem1" Content="ES"/>
             <ComboBoxItem x:Name="cbItem2" Content="EN"/>
         </ComboBox>
         <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="4" Margin="10,10,14.2,0.4" RenderTransformOrigin="0.5,0.707" Grid.RowSpan="3" Click="btnSalir_Click">
 
-            <Image Source="Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
+            <Image Source="/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
         </Button>
         <Label x:Name="lblEstado" Content="Estado de aplicación" Margin="0,0.4,0.2,0.8" Grid.Row="9" Background="White" Opacity="0.7" Height="30" Grid.ColumnSpan="5"/>
     </Grid>

@@ -81,7 +81,7 @@
         </Label>
         <Button HorizontalAlignment="Center" Margin="276.2,147.8,78.4,0" FontSize="16" Content="Cancelar" Height="37" VerticalAlignment="Top" Width="104" RenderTransformOrigin="0.452,-3.352" Grid.Row="6" Grid.Column="1" />
         <Button HorizontalAlignment="Center" Margin="73.2,147.8,287.4,0" FontSize="16" Content="Reservar" Height="37" VerticalAlignment="Top" Width="98" RenderTransformOrigin="0.452,-3.352" Grid.Row="6" Grid.Column="1" />
-        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="20.6,0,0,1" VerticalAlignment="Center" Source="Imagenes/spain.png" Height="39" Width="40" RenderTransformOrigin="0.572,1.906" Grid.Column="2"/>
+        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="20.6,0,0,1" VerticalAlignment="Center" Source="/Recursos/Imagenes/spain.png" Height="39" Width="40" RenderTransformOrigin="0.572,1.906" Grid.Column="2"/>
         <ComboBox x:Name="cbIdiomas" Margin="60.6,9,21,4" VerticalAlignment="Center" Opacity="0.6" SelectedIndex="0" Background="Black" Height="27" RenderTransformOrigin="0.077,0.142" Grid.Column="2" >
             <ComboBoxItem x:Name="cbItem1" Content="ES"/>
             <ComboBoxItem x:Name="cbItem2" Content="EN"/>
@@ -92,8 +92,8 @@
                 <RowDefinition Height="652*"/>
             </Grid.RowDefinitions>
             <Image HorizontalAlignment="Left" Height="59" Margin="459,63.8,0,0" Grid.Row="1" VerticalAlignment="Top" Width="94"/>
-            <Image HorizontalAlignment="Left" Height="59" Margin="500,63.8,0,0" Grid.Row="1" VerticalAlignment="Top" Width="53" Source="Imagenes/icono_imagen.png" />
-            <Image HorizontalAlignment="Left" Height="75" Margin="440,109.8,0,0" Grid.Row="1" VerticalAlignment="Top" Width="94" Source="Imagenes/icono_imagen.png" />
+            <Image HorizontalAlignment="Left" Height="59" Margin="500,63.8,0,0" Grid.Row="1" VerticalAlignment="Top" Width="53" Source="/Recursos/Imagenes/icono_imagen.png" />
+            <Image HorizontalAlignment="Left" Height="75" Margin="440,109.8,0,0" Grid.Row="1" VerticalAlignment="Top" Width="94" Source="/Recursos/Imagenes/icono_imagen.png" />
         </Grid>
         <Label Content="El precio actual por noche es 30€" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="24,0,0,86.4" Width="274" FontSize="16" Height="37" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
         <Label Content="Equipamiento" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1.2,9.6,0,0" FontSize="22" Height="40" Width="313" Grid.Row="5" Grid.Column="1"/>
@@ -109,9 +109,9 @@
         </Label>
         <Label Content="Imágenes" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="416.2,25.8,0,0" FontSize="22" Height="40" Width="179" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"/>
         <Image HorizontalAlignment="Left" Height="59" Margin="416.2,0.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="94" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <Image HorizontalAlignment="Left" Height="54" Margin="416.2,0.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="56" Grid.Column="1" Source="Imagenes/icono_imagen.png" Grid.ColumnSpan="2"/>
+        <Image HorizontalAlignment="Left" Height="54" Margin="416.2,0.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="56" Grid.Column="1" Source="/Recursos/Imagenes/icono_imagen.png" Grid.ColumnSpan="2"/>
         <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="3" Margin="21,10,9.8,0" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click">
-            <Image Source="Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
+            <Image Source="/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
         </Button>
         <Label x:Name="lblEstado" Content="Estado de aplicación" Margin="0,204.8,-0.2,0.4" Grid.Row="6" Background="White" Opacity="0.7" Height="30" Grid.ColumnSpan="4"/>
 

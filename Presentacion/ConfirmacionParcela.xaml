@@ -48,14 +48,14 @@
             x:Name="_comentario_Copy3" Margin="2,7,164.4,28.8" Text="(Opcional)" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2" />
         <TextBox AcceptsReturn="True" Grid.Row="6" Grid.Column="1"
             x:Name="_comentario_Copy1" Margin="2,6.6,162,64" Grid.RowSpan="2" />
-        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="7,9.2,0,22" VerticalAlignment="Center" Source="Imagenes/spain.png" Height="36" Grid.Row="7" Width="60"/>
+        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="7,9.2,0,22" VerticalAlignment="Center" Source="/Recursos/Imagenes/spain.png" Height="36" Grid.Row="7" Width="60"/>
         <ComboBox x:Name="cbIdiomas" HorizontalAlignment="Stretch" Margin="49,13.2,10,28" VerticalAlignment="Center" Opacity="0.6" SelectedIndex="0" Background="Black" Height="26" Grid.Row="7" >
             <ComboBoxItem x:Name="cbItem1" Content="ES"/>
             <ComboBoxItem x:Name="cbItem2" Content="EN"/>
         </ComboBox>
         <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="3" Margin="3,10,10.2,9.6" RenderTransformOrigin="0.5,0.707" Grid.RowSpan="3" Click="btnSalir_Click">
 
-            <Image Source="Imagenes/salir_c.png"  />
+            <Image Source="/Recursos/Imagenes/salir_c.png"  />
         </Button>
         <Label x:Name="lblEstado" Content="Estado de aplicación" Margin="0,39.2,0.2,-2" Grid.Row="7" Background="White" Opacity="0.7" Height="30" Grid.ColumnSpan="4" Grid.RowSpan="2"/>
 
