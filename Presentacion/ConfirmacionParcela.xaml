@@ -26,26 +26,26 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock FontSize="16" Margin="0,4,0.4,20.4" HorizontalAlignment="Right" Width="478" Grid.RowSpan="6" Grid.ColumnSpan="3" ><Run Text="Para reservar la parcela &quot;parcela deluxe&quot; "/><Run Text="para las fechas"/><Run Text=" "/><Run/><LineBreak/><Run Text="12/12/2001"/><Run Text=" al 16/12/2001 debe rellenar"/><Run Text=" "/><Run Text="los siguientes datos"/><Run Text=":"/></TextBlock>
-        <Label Content ="Nombre:" Grid.Row="3" Margin="0,16.4,0,20.4" Grid.RowSpan="3"/>
+        <Label x:Name="lblNombreReservarParcela" Content ="Nombre:" Grid.Row="3" Margin="0,16.4,0,20.4" Grid.RowSpan="3"/>
         <TextBox Grid.Row="3" Grid.Column="1" x:Name="_nombre" Margin="2,18.4,104.4,52" Grid.RowSpan="2" Grid.ColumnSpan="2"
                  Text="{Binding Path=Customer.Name, 
                 ValidatesOnExceptions=True, 
                 ValidatesOnDataErrors=True,
                 UpdateSourceTrigger=PropertyChanged,
                 NotifyOnValidationError=True}" />
-        <Label Content="Teléfono:" Grid.Row="4" Margin="0,3.6,0,33" Grid.RowSpan="4" />
+        <Label x:Name="lblTelefonoReservarParcela" Content="Teléfono:" Grid.Row="4" Margin="0,3.6,0,33" Grid.RowSpan="4" />
         <TextBox AcceptsReturn="True" Grid.Row="4" Grid.Column="1"
             x:Name="_comentario" Margin="2,6.6,14,24" />
-        <Button HorizontalAlignment="Center" Margin="42,4.2,68,0" Grid.Row="7" FontSize="16" Content="Cancelar" Grid.Column="2" Height="37" VerticalAlignment="Top" Click="AceptarConfirmacionParcela" Width="98" RenderTransformOrigin="0.452,-3.352" />
-        <Label Content="Email:" Grid.Row="5" Margin="0,3,0,9" Grid.RowSpan="3" />
+        <Button x:Name="CancelarReserbarParcela" HorizontalAlignment="Center" Margin="42,4.2,68,0" Grid.Row="7" FontSize="16" Content="Cancelar" Grid.Column="2" Height="37" VerticalAlignment="Top" Click="AceptarConfirmacionParcela" Width="98" RenderTransformOrigin="0.452,-3.352" />
+        <Label x:Name="lblEmailReservarParcela" Content="Email:" Grid.Row="5" Margin="0,3,0,9" Grid.RowSpan="3" />
         <TextBox AcceptsReturn="True" Grid.Row="4" Grid.Column="1"
-            x:Name="_comentario_Copy" Margin="2,29.6,14,25.4" Text="(Opcional)" Grid.RowSpan="2" />
-        <Label Content="Nº ocupantes:" Grid.Row="6" Margin="1,4.6,1,1" Grid.RowSpan="2" />
+            x:Name="txtBoxTelefonoReservarParcela" Margin="2,29.6,14,25.4" Text="(Opcional)" Grid.RowSpan="2" />
+        <Label x:Name="lblCapacidadReservarParcela" Content="Nº ocupantes:" Grid.Row="6" Margin="1,4.6,1,1" Grid.RowSpan="2" />
         <TextBox AcceptsReturn="True" Grid.Row="6" Grid.Column="1"
             x:Name="_comentario_Copy2" Margin="4,6.6,192,10" Grid.RowSpan="2" />
-        <Button HorizontalAlignment="Center" Margin="55,4.2,38,0" Grid.Row="7" FontSize="16" Content="Confirmar" Height="37" VerticalAlignment="Top" Click="AceptarConfirmacionParcela" Width="103" RenderTransformOrigin="0.452,-3.352" Grid.Column="1" />
+        <Button x:Name="btnReservarParcela" HorizontalAlignment="Center" Margin="55,4.2,38,0" Grid.Row="7" FontSize="16" Content="Confirmar" Height="37" VerticalAlignment="Top" Click="AceptarConfirmacionParcela" Width="103" RenderTransformOrigin="0.452,-3.352" Grid.Column="1" />
         <TextBox AcceptsReturn="True" Grid.Row="5"
-            x:Name="_comentario_Copy3" Margin="2,7,164.4,28.8" Text="(Opcional)" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2" />
+            x:Name="txtBoxEmailReservarParcela" Margin="2,7,164.4,28.8" Text="(Opcional)" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2" />
         <TextBox AcceptsReturn="True" Grid.Row="6" Grid.Column="1"
             x:Name="_comentario_Copy1" Margin="2,6.6,162,64" Grid.RowSpan="2" />
         <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="7,9.2,0,22" VerticalAlignment="Center" Source="/Recursos/Imagenes/spain.png" Height="36" Grid.Row="7" Width="60"/>

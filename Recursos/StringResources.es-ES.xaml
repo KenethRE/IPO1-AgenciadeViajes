@@ -7,4 +7,31 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblLogin">Inicio de sesión</sys:String>
     <sys:String x:Key="lblRecordarContraseña">¿Olvidó su contraseña?</sys:String>
     <sys:String x:Key="lblUsuario">Usuario</sys:String>
+    <sys:String x:Key="lblNombreReservarCabana">Nombre:</sys:String>
+    <sys:String x:Key="TelefonoReservarCabana">Telefono:</sys:String>
+    <sys:String x:Key="btnCancelarReservarCabana">Cancelar</sys:String>
+    <sys:String x:Key="EmailReservarCabana">Email:</sys:String>
+    <sys:String x:Key="txtBox">(Opcional):</sys:String>
+    <sys:String x:Key="CapacidadReservarCabana">Nº ocupantes:</sys:String>
+    <sys:String x:Key="btnConfirmarReservarCabana">Confirmar</sys:String>
+    <sys:String x:Key="txtBoxEmailOpcionalReservarCabana">(Opcional)</sys:String>
+    <sys:String x:Key="SolicitudesReservarCabana">Solicitudes especiales:</sys:String>
+    <sys:String x:Key="txtBoxSolicitudesReservarCabana">Introduzca aquí si necesita alguna solicitud especial como por ejemplo cuna, menaje concreto, alguna circunstancia de movilidad especial de personas alojadas u otros.</sys:String>
+    <sys:String x:Key="lblNombreReservarParcela">Nombre:</sys:String>
+    <sys:String x:Key="lblTelefonoReservarParcela">Telefono:</sys:String>
+    <sys:String x:Key="CancelarReservarParcela">Cancelar:</sys:String>
+    <sys:String x:Key="lblEmailReservarParcela">Email:</sys:String>
+    <sys:String x:Key="txtBoxTelefonoReservarParcela">(Opcional)</sys:String>
+    <sys:String x:Key="lblCapacidadReservarParcela">Nº ocupantes:</sys:String>
+    <sys:String x:Key="btnReservarParcela">Confirmar</sys:String>
+    <sys:String x:Key="txtBoxEmailReservarParcela">(Opcional)</sys:String>
+    
+    
+    
+    
+    
+    
+    
+
+
 </ResourceDictionary>
