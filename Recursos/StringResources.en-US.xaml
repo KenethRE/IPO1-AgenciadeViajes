@@ -8,4 +8,5 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblRecordarContraseña">Forgot password?</sys:String>
     <sys:String x:Key="lblUsuario">User</sys:String>
     <sys:String x:Key="txtMonitores">Guides</sys:String>
+    <sys:String x:Key="lblCabanas">Cabins</sys:String>
 </ResourceDictionary>

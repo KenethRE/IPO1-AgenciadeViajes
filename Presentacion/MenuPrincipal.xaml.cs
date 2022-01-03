@@ -31,11 +31,11 @@ namespace IPO1_AgenciadeViajes
         private Presentacion.Documentacion ventanaDocumentacion;
         private Presentacion.ReportarErrrores ventanaErrores;
 
-        List<Dominio.Monitor> listadoMonitores;
-        List<Dominio.Parcela> listadoParcelas;
-        List<Dominio.Cabana> listadoCabanas;
-        List<Dominio.Actividad> listadoActividades;
-        List<Dominio.Promocion> listadoPromociones;
+        readonly List<Dominio.Monitor> listadoMonitores;
+        readonly List<Dominio.Parcela> listadoParcelas;
+        readonly List<Dominio.Cabana> listadoCabanas;
+        readonly List<Dominio.Actividad> listadoActividades;
+        readonly List<Dominio.Promocion> listadoPromociones;
 
         public MenuPrincipal()
         {
@@ -191,17 +191,13 @@ namespace IPO1_AgenciadeViajes
 
         }
 
-
-
-
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             ventana = new CrearRuta();
             ventana.Show();
         }
 
-        private void btnSalir_Click(object sender, RoutedEventArgs e)
+        private void BtnSalir_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Hidden;
 
@@ -213,48 +209,48 @@ namespace IPO1_AgenciadeViajes
             ventanaMonitor.Show();
         }
 
-        private void btnParcela_Click(object sender, RoutedEventArgs e)
+        private void BtnParcela_Click(object sender, RoutedEventArgs e)
         {
             ventanaParcela = new InfoParcela();
             ventanaParcela.Show();
         }
 
-        private void btnCabana_Click(object sender, RoutedEventArgs e)
+        private void BtnCabana_Click(object sender, RoutedEventArgs e)
         {
             ventanaCabana = new InfoCabana();
             ventanaCabana.Show();
         }
 
-        private void btnActividad_Click(object sender, RoutedEventArgs e)
+        private void BtnActividad_Click(object sender, RoutedEventArgs e)
         {
             ventanaActividad = new InfoActividad();
             ventanaActividad.Show();
         }
 
-        private void btnPromocion_Click(object sender, RoutedEventArgs e)
+        private void BtnPromocion_Click(object sender, RoutedEventArgs e)
         {
             ventanaPromocion = new InfoPromocion();
             ventanaPromocion.Show();
         }
 
-        private void btnRutaSenderista_Click(object sender, RoutedEventArgs e)
+        private void BtnRutaSenderista_Click(object sender, RoutedEventArgs e)
         {
             ventanaRutaSenderista = new InfoRutaSenderista();
             ventanaRutaSenderista.Show();
         }
-        private void miAcercaDe_Click(object sender, RoutedEventArgs e)
+        private void MiAcercaDe_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Aplicación realizada por ...", "Acerca de");
 
         }
-        private void miDocumentacion_Click(object sender, RoutedEventArgs e)
+        private void MiDocumentacion_Click(object sender, RoutedEventArgs e)
         {
             ventanaDocumentacion = new Presentacion.Documentacion();
             ventanaDocumentacion.Show();
         
         }
 
-        private void miError_Click(object sender, RoutedEventArgs e)
+        private void MiError_Click(object sender, RoutedEventArgs e)
         {
 
             ventanaErrores = new Presentacion.ReportarErrrores();
