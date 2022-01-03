@@ -26,7 +26,6 @@ namespace IPO1_AgenciadeViajes
         {
             InitializeComponent();
             App.SelectCulture("es-ES");
-            cambiarBandera("es-ES");
         }
 
         private void ComprobarInformacion(object sender, RoutedEventArgs e)
@@ -79,6 +78,7 @@ namespace IPO1_AgenciadeViajes
 
                     ventana = new MenuPrincipal();
                     ventana.Show();
+                    this.Hide();
                 }
             }
         }
@@ -87,9 +87,9 @@ namespace IPO1_AgenciadeViajes
         private void cambiarBandera(string idioma)
         {   
             imgIdioma.Source = idioma.Equals("en-US")
-            ? new BitmapImage(new Uri("/Resources/Imagenes/united-states.png",
+            ? new BitmapImage(new Uri("/Recursos/Imagenes/united-states.png",
             UriKind.Relative))
-            : new BitmapImage(new Uri("/Resources/Imagenes/spain.png",
+            : new BitmapImage(new Uri("/Recursos/Imagenes/spain.png",
             UriKind.Relative));
         }
 
@@ -115,6 +115,11 @@ namespace IPO1_AgenciadeViajes
         {
             lblEstado.Content = "Has pulsado la tecla << " + e.Key.ToString() + " >>";
             lblEstado.Foreground = Brushes.Black;
+        }
+
+        private void Enter_Presionado(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return) comprobarContraseña(pbxContraseña.Password);
         }
     }
 }
