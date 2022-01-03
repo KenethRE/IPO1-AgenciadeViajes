@@ -25,8 +25,8 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblCapacidadReservarParcela">Nº ocupantes:</sys:String>
     <sys:String x:Key="btnReservarParcela">Confirmar</sys:String>
     <sys:String x:Key="txtBoxEmailReservarParcela">(Opcional)</sys:String>
-    <sys:String x:Key="txtMonitores">Monitores</sys:String>
-    
+    <sys:String x:Key="lblMonitores">Monitores</sys:String>
+    <sys:String x:Key="lblCabanas">Cabañas</sys:String>
     
     
     

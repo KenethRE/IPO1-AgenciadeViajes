@@ -31,8 +31,8 @@
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
-                        <Image Name="imgMonitores" Height="50" Width="50" Source="/Recursos/Imagenes/icono_monitores.jpg"/>
-                        <TextBlock x:Name="txtMonitores" Text="{DynamicResource txtMonitores}" VerticalAlignment="Center"/>
+                        <Image Name="icoMonitores" Height="50" Width="50" Source="/Recursos/Imagenes/icono_monitores.jpg"/>
+                        <TextBlock x:Name="lblMonitores" Text="{DynamicResource lblMonitores}" VerticalAlignment="Center"/>
                     </StackPanel>
                 </TabItem.Header>
                 <Grid>
@@ -44,8 +44,8 @@
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
-                        <Image Name="imgMonitores" Height="50" Width="50" Source="/Recursos/Imagenes/icono_monitores.jpg"/>
-                        <TextBlock x:Name="txtMonitores" Text="{DynamicResource txtMonitores}" VerticalAlignment="Center"/>
+                        <Image Name="icoCabanas" Height="50" Width="50" Source="/Recursos/Imagenes/icono_monitores.jpg"/>
+                        <TextBlock x:Name="lbCabanas" Text="{DynamicResource lblMonitores}" VerticalAlignment="Center"/>
                     </StackPanel>
                 </TabItem.Header>
                 <Grid>
