@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:IPO1_AgenciadeViajes"
         mc:Ignorable="d"
         Title="MenuPrincipal" Height="450" Width="800">
-    <Grid Margin="0,0,-0.4,0">
+    <Grid Margin="0,0,0,0">
         <Grid HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" VerticalAlignment="Top" Width="774"/>
         <Menu Grid.Row="0" x:Name="miMenu" FontSize="16" FontWeight="Bold">
             <MenuItem Header="Archivo" >
@@ -28,32 +28,28 @@
             <TabControl x:Name="tcPestanas" Margin="0,27,-0.4,0">
                 <TabItem Header="Monitores" Margin="0,1,-41.6,-14.2">
                     <Grid>
-                        <DataGrid x:Name="dgMonitores" Margin="5,40,5,28.8" AutoGenerateColumns="False">
-                        </DataGrid>
+                        <DataGrid x:Name="dgMonitores" Margin="5,40,5,28.8" AutoGenerateColumns="False"/>
                         <ScrollBar HorizontalAlignment="Left" Height="296" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
                         <Button Margin="485,14,179,324.8" Content="Monitor" Click="btnMonitor_Click" />
                     </Grid>
                 </TabItem>
                 <TabItem Header="Parcelas" Margin="36.6,1,-95.2,-14.2">
                     <Grid>
-                        <DataGrid x:Name="dgParcelas" Margin="5,40,5,26.8" AutoGenerateColumns="False">
-                        </DataGrid>
+                        <DataGrid x:Name="dgParcelas" Margin="5,40,5,26.8" AutoGenerateColumns="False"/>
                         <ScrollBar HorizontalAlignment="Left" Height="298" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
                         <Button Margin="485,14,179,324.8" Content="Parcela" Click="btnParcela_Click" />
                     </Grid>
                 </TabItem>
                 <TabItem Header="Cabañas" Margin="81.2,1,-141.4,-14.2">
                     <Grid>
-                        <DataGrid x:Name="dgCabanas" Margin="5,40,5,26.8" AutoGenerateColumns="False">
-                        </DataGrid>
+                        <DataGrid x:Name="dgCabanas" Margin="5,40,5,26.8" AutoGenerateColumns="False"/>
                         <ScrollBar HorizontalAlignment="Left" Height="298" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
                         <Button Margin="485,14,179,324.8" Content="Cabaña" Click="btnCabana_Click" />
                     </Grid>
                 </TabItem>
                 <TabItem Header="Actividades" Margin="111.4,1,-180.6,-14.2">
                     <Grid>
-                        <DataGrid x:Name="dgActividades" Margin="5,79,5,26.8" AutoGenerateColumns="False">
-                        </DataGrid>
+                        <DataGrid x:Name="dgActividades" Margin="5,79,5,26.8" AutoGenerateColumns="False"/>
                         <ScrollBar HorizontalAlignment="Left" Height="259" Margin="765,79,0,0" VerticalAlignment="Top" Width="13"/>
                         <Button Margin="483,48,181,290.8" Content="Crear Ruta" Click="Button_Click" />
                         <Button Margin="332,48,332,290.8" Content="Actividad" Click="btnActividad_Click" />
@@ -62,15 +58,13 @@
                 </TabItem>
                 <TabItem Header="Historial de actividades" Margin="162.2,1,-254.8,-14.2">
                     <Grid>
-                        <DataGrid x:Name="dgHistorial" Margin="5,40,5,26.8" AutoGenerateColumns="False">
-                        </DataGrid>
+                        <DataGrid x:Name="dgHistorial" Margin="5,40,5,26.8" AutoGenerateColumns="False"/>
                         <ScrollBar HorizontalAlignment="Left" Height="298" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
                     </Grid>
                 </TabItem>
                 <TabItem Header="Promociones" Margin="253.2,-2,-317.2,-14.2">
                     <Grid Margin="0,17,0,-0.2">
-                        <DataGrid x:Name="dgPromociones" Margin="5,40,5,28" AutoGenerateColumns="False">
-                        </DataGrid>
+                        <DataGrid x:Name="dgPromociones" Margin="5,40,5,28" AutoGenerateColumns="False"/>
                         <ScrollBar HorizontalAlignment="Left" Height="280" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
                         <Button Margin="488,10,176,313" Content="Promocion" Click="btnPromocion_Click" />
                     </Grid>
