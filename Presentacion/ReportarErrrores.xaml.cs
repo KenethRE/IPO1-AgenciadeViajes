@@ -33,8 +33,7 @@ namespace IPO1_AgenciadeViajes.Presentacion
             }
             else {
                 MessageBox.Show("Mensaje enviado, Gracias");
-                EMail.Text = "";
-                Comentario.Text = "";
+                this.Close();
             }
         }
     }

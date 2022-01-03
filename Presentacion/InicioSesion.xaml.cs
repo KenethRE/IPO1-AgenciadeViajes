@@ -121,5 +121,19 @@ namespace IPO1_AgenciadeViajes
         {
             if (e.Key == Key.Return) comprobarContraseña(pbxContraseña.Password);
         }
+
+        private void Salir(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        private void miAcercaDe_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Aplicación realizada por ...", "Acerca de");
+
+        }
+        private void miError_Click(object sender, RoutedEventArgs e)
+        {
+            new Presentacion.ReportarErrrores().Show();
+        }
     }
 }
