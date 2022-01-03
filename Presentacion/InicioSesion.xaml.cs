@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace IPO1_AgenciadeViajes
 {
@@ -73,12 +74,16 @@ namespace IPO1_AgenciadeViajes
                     // restauramos estado normal del borde
                     pbxContraseña.BorderBrush = Brushes.Transparent;
                     // mostramos estado correcto
-                    lblEstado.Content = "¡Bienvenido!";
+                    lblEstado.Content = "¡Bienvenido! Iniciando Sesion...";
                     lblEstado.Foreground = Brushes.Green;
 
-                    ventana = new MenuPrincipal();
-                    ventana.Show();
-                    this.Hide();
+                    var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(2) };
+                    timer.Start();
+                    timer.Tick += (sender, args) =>
+                    {
+                        new MenuPrincipal().Show();
+                        this.Close();
+                    };
                 }
             }
         }
