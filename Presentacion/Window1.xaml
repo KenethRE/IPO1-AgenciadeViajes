@@ -22,8 +22,8 @@
                 <MenuItem x:Name="miSalir" Header="Salir"/>
             </MenuItem>
             <MenuItem Header="Ayuda">
-                <MenuItem x:Name="miAcercaDe" Header="Acerca de..." Click="miAcercaDe_Click" />
-                <MenuItem x:Name="miDocumentacion" Header="Documentacion" Click="miDocumentacion_Click" />
+                <MenuItem x:Name="miAcercaDe" Header="Acerca de..." Click="MiAcercaDe_Click" />
+                <MenuItem x:Name="miDocumentacion" Header="Documentacion" Click="MiDocumentacion_Click" />
                 <MenuItem x:Name="miError" Header="Reportar un Error" Click="miError_Click" />
             </MenuItem>
         </Menu>
@@ -38,27 +38,24 @@
                 <Grid>
                     <DataGrid x:Name="dgMonitores" Margin="5,40,5,28.8" AutoGenerateColumns="False"/>
                     <ScrollBar HorizontalAlignment="Left" Height="296" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
-                    <Button Margin="485,14,179,324.8" Content="Monitor" Click="btnMonitor_Click" />
                 </Grid>
             </TabItem>
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
-                        <Image Name="icoCabanas" Height="50" Width="50" Source="/Recursos/Imagenes/icono_monitores.jpg"/>
-                        <TextBlock x:Name="lbCabanas" Text="{DynamicResource lblMonitores}" VerticalAlignment="Center"/>
+                        <Image Name="icoCabanas" Height="50" Width="50" Source="/Recursos/Imagenes/icono_cabana.jpg"/>
+                        <TextBlock x:Name="lbCabanas" Text="{DynamicResource lblCabanas}" VerticalAlignment="Center"/>
                     </StackPanel>
                 </TabItem.Header>
                 <Grid>
                     <DataGrid x:Name="dgParcelas" Margin="5,40,5,26.8" AutoGenerateColumns="False"/>
                     <ScrollBar HorizontalAlignment="Left" Height="298" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
-                    <Button Margin="485,14,179,324.8" Content="Parcela" Click="btnParcela_Click" />
                 </Grid>
             </TabItem>
             <TabItem Header="Cabañas" Margin="81.2,1,-141.4,-14.2">
                 <Grid>
                     <DataGrid x:Name="dgCabanas" Margin="5,40,5,26.8" AutoGenerateColumns="False"/>
                     <ScrollBar HorizontalAlignment="Left" Height="298" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
-                    <Button Margin="485,14,179,324.8" Content="Cabaña" Click="btnCabana_Click" />
                 </Grid>
             </TabItem>
             <TabItem Header="Actividades" Margin="111.4,1,-180.6,-14.2">
@@ -66,8 +63,8 @@
                     <DataGrid x:Name="dgActividades" Margin="5,79,5,26.8" AutoGenerateColumns="False"/>
                     <ScrollBar HorizontalAlignment="Left" Height="259" Margin="765,79,0,0" VerticalAlignment="Top" Width="13"/>
                     <Button Margin="483,48,181,290.8" Content="Crear Ruta" Click="Button_Click" />
-                    <Button Margin="332,48,332,290.8" Content="Actividad" Click="btnActividad_Click" />
-                    <Button Margin="191,48,479,290.8" Content="Ruta senderista" Click="btnRutaSenderista_Click" />
+                    <Button Margin="332,48,332,290.8" Content="Actividad" Click="BtnActividad_Click" />
+                    <Button Margin="191,48,479,290.8" Content="Ruta senderista" Click="BtnRutaSenderista_Click" />
                 </Grid>
             </TabItem>
             <TabItem Header="Historial de actividades" Margin="162.2,1,-254.8,-14.2">
@@ -80,7 +77,7 @@
                 <Grid Margin="0,17,0,-0.2">
                     <DataGrid x:Name="dgPromociones" Margin="5,40,5,28" AutoGenerateColumns="False"/>
                     <ScrollBar HorizontalAlignment="Left" Height="280" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
-                    <Button Margin="488,10,176,313" Content="Promocion" Click="btnPromocion_Click" />
+                    <Button Margin="488,10,176,313" Content="Promocion" Click="BtnPromocion_Click" />
                 </Grid>
             </TabItem>
         </TabControl>
