@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IPO1_AgenciadeViajes"
         mc:Ignorable="d"
-        Title="Actividad" Height="848.924" Width="709.2">
+        Title="{DynamicResource LblActivida}" Height="848.924" Width="709.2">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="104*"/>
@@ -25,9 +25,9 @@
             <ColumnDefinition Width="220*"/>
             <ColumnDefinition Width="33*"/>
         </Grid.ColumnDefinitions>
-        <Label Content="Actividad" HorizontalAlignment="Left" VerticalAlignment="Top" Height="59" Width="314" Margin="1.4,29,0,0" FontSize="26" Grid.Column="1"/>
-        <Label Content="Monitor/es que la imparten:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1.4,0,0,0" FontSize="22" Height="43" Width="314" Grid.Column="1" Grid.Row="1"/>
-        <Label Content="Actividad para realizar en familia." HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="1.4,0,0,42.2" Width="374" FontSize="16" Height="63" Grid.RowSpan="2" Grid.Column="1"/>
+        <Label Content="{DynamicResource LblActivida}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="59" Width="314" Margin="1.4,29,0,0" FontSize="26" Grid.Column="1"/>
+        <Label Content="{DynamicResource LblMonActiv}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1.4,0,0,0" FontSize="22" Height="43" Width="314" Grid.Column="1" Grid.Row="1"/>
+        <Label Content="{DynamicResource LblActividafam}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="1.4,0,0,42.2" Width="374" FontSize="16" Height="63" Grid.RowSpan="2" Grid.Column="1"/>
         <Label Content="Horario" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1.4,0.8,0,0" FontSize="22" Height="42" Width="151" Grid.Row="2" Grid.Column="1"/>
         <Label Content="De Lunes a Viernes a las 18:00" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="2.4,0,0,0.6" Width="239" FontSize="16" Height="35" RenderTransformOrigin="0.5,0.5" Grid.Row="2" Grid.Column="1">
             <Label.RenderTransform>
@@ -67,7 +67,7 @@
             <ComboBoxItem x:Name="cbItem1" Content="ES"/>
             <ComboBoxItem x:Name="cbItem2" Content="EN"/>
         </ComboBox>
-        <Label Content="Nombre y Apellidos." HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="4.4,0,0,0.2" Width="215" FontSize="16" Height="38" RenderTransformOrigin="0.5,0.5" Grid.Row="1" Grid.Column="1">
+        <Label Content="{DynamicResource LblMonNomyApell}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="4.4,0,0,0.2" Width="215" FontSize="16" Height="38" RenderTransformOrigin="0.5,0.5" Grid.Row="1" Grid.Column="1">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

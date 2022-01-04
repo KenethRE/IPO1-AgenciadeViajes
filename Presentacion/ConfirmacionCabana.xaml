@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IPO1_AgenciadeViajes"
         mc:Ignorable="d"
-        Title="ConfirmacionCabana" Height="405.2" Width="560.8">
+        Title="{DynamicResource Confirmacioncabana}" Height="405.2" Width="560.8">
     <Grid Margin="0,0,3.6,2.4">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -42,7 +42,7 @@
         <Button x:Name="btnCancelarReservarCabana" HorizontalAlignment="Left" Margin="33,2,0,0" Grid.Row="8" FontSize="16" Content="{DynamicResource btnCancelarReservarCabana}" Grid.Column="3" Height="31" VerticalAlignment="Top" Width="98" RenderTransformOrigin="0.452,-3.352" />
         <Label x:Name="EmailReservarCabana" Content="Email:" Grid.Row="5" Margin="0,7.8,0.2,9.8" Grid.RowSpan="5" />
         <TextBox AcceptsReturn="True" Grid.Row="4" Grid.Column="1"
-            x:Name="txtBox" Margin="1.8,28.6,9.6,28" Text="(Opcional)" Grid.RowSpan="2" Grid.ColumnSpan="2" />
+            x:Name="txtBox" Margin="1.8,28.6,9.6,28" Text="{DynamicResource txtBoxopcional}" Grid.RowSpan="2" Grid.ColumnSpan="2" />
         <Label x:Name="CapacidadReservarCabana" Content="{DynamicResource CapacidadReservarCabana}" Grid.Row="6" Margin="1,4,1.2,1.6" Grid.RowSpan="3" />
         <TextBox AcceptsReturn="True" Grid.Row="6" Grid.Column="1"
             x:Name="_comentario_Copy2" Margin="3.8,6,37,9.8" Grid.RowSpan="4" />

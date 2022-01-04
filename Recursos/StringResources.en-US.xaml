@@ -16,7 +16,17 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="btnConfirmarReservarCabana">Confirm</sys:String>
     <sys:String x:Key="btnCancelarReservarCabana">Cancel</sys:String>
     <sys:String x:Key="lblEstado">Aplication Status</sys:String>
-    <sys:String x:Key="txtBoxSolicitudesReservarCabana">Enter here if you need any special request such as a cot, specific kitchenware, any special mobility circumstance of people staying or others.</sys:String>
-
+    <sys:String x:Key="txtBoxopcional">(Optional)</sys:String>
+    <sys:String x:Key="Confirmacioncabana">Cabin Confirmation</sys:String>
+    <sys:String x:Key="Confirmacionparcela">Parcel Confirmation</sys:String>
+    <sys:String x:Key="Crearruta">Create route</sys:String>
+    <sys:String x:Key="LblCrearruta">Here you can design your own route as you wish</sys:String>
+    <sys:String x:Key="LblGuardar">Save</sys:String>
+    <sys:String x:Key="LblHorainic">Start time:</sys:String>
+    <sys:String x:Key="LblHorafin">End time:</sys:String>
+    <sys:String x:Key="LblActivida">Activity</sys:String>
+    <sys:String x:Key="LblActividafam">Activity to do as a family.</sys:String>
+    <sys:String x:Key="LblMonActiv">Monitor/s who teach it:</sys:String>
+    <sys:String x:Key="LblMonNomyApell">Name and Shortname:</sys:String>
 
 </ResourceDictionary>

@@ -19,7 +19,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="txtBoxSolicitudesReservarCabana">Introduzca aquí si necesita alguna solicitud especial como por ejemplo cuna, menaje concreto, alguna circunstancia de movilidad especial de personas alojadas u otros.</sys:String>
     <sys:String x:Key="lblNombreReservarParcela">Nombre:</sys:String>
     <sys:String x:Key="lblTelefonoReservarParcela">Telefono:</sys:String>
-    <sys:String x:Key="CancelarReservarParcela">Cancelar:</sys:String>
+    <sys:String x:Key="CancelarReservarParcela">Cancelar</sys:String>
     <sys:String x:Key="lblEmailReservarParcela">Email:</sys:String>
     <sys:String x:Key="txtBoxTelefonoReservarParcela">(Opcional)</sys:String>
     <sys:String x:Key="lblCapacidadReservarParcela">Nº ocupantes:</sys:String>
@@ -28,11 +28,16 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblMonitores">Monitores</sys:String>
     <sys:String x:Key="lblCabanas">Cabañas</sys:String>
     <sys:String x:Key="lblEstado">Estado de la aplicacion</sys:String>
-
-
-
-
-
-
-
+    <sys:String x:Key="txtBoxopcional">(Opcional)</sys:String>
+    <sys:String x:Key="Confirmacioncabana">Confirmacion Cabaña</sys:String>
+    <sys:String x:Key="Confirmacionparcela">Confirmacion Parcela</sys:String>
+    <sys:String x:Key="Crearruta">Crear ruta</sys:String>
+    <sys:String x:Key="LblCrearruta">Aquí puede diseñar su propia ruta como desee.</sys:String>
+    <sys:String x:Key="LblGuardar">Guardar</sys:String>
+    <sys:String x:Key="LblHorainic">Hora de inicio:</sys:String>
+    <sys:String x:Key="LblHorafin">Hora de fin:</sys:String>
+    <sys:String x:Key="LblActivida">Actividad</sys:String> 
+    <sys:String x:Key="LblActividafam">Actividad para realizar en familia.</sys:String>
+    <sys:String x:Key="LblMonActiv">Monitor/es que la imparten:</sys:String>
+    <sys:String x:Key="LblMonNomyApell">Nombre y Apellidos:</sys:String>
 </ResourceDictionary>
