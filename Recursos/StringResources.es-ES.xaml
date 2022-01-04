@@ -27,6 +27,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="txtBoxEmailReservarParcela">(Opcional)</sys:String>
     <sys:String x:Key="lblMonitores">Monitores</sys:String>
     <sys:String x:Key="lblCabanas">Cabañas</sys:String>
+    <sys:String x:Key="lblActividades">Actividades</sys:String>
     <sys:String x:Key="lblEstado">Estado de la aplicacion</sys:String>
 
 
