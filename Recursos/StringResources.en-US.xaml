@@ -7,12 +7,13 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblLogin">Login</sys:String>
     <sys:String x:Key="lblRecordarContraseña">Forgot password?</sys:String>
     <sys:String x:Key="lblUsuario">User</sys:String>
-    <sys:String x:Key="txtMonitores">Guides</sys:String>
+    <sys:String x:Key="lblMonitores">Guides</sys:String>
+    <sys:String x:Key="lblCabanas">Cabins</sys:String>
+    <sys:String x:Key="lblActividades">Activities</sys:String>
     <sys:String x:Key="blNombreReservarCabana">Name:</sys:String>
     <sys:String x:Key="elefonoReservarCabana">Phone:</sys:String>
     <sys:String x:Key="CapacidadReservarCabana">Nº Occupants:</sys:String>
     <sys:String x:Key="SolicitudesReservarCabana">Special requests:</sys:String>
-    <sys:String x:Key="txtBoxSolicitudesReservarCabana">Enter here if you need any special request such as&#xD;&#xA;cradle, concrete utensils, some special mobility circumstance;&#xD;&#xA; people staying or others.</sys:String>
     <sys:String x:Key="btnConfirmarReservarCabana">Confirm</sys:String>
     <sys:String x:Key="btnCancelarReservarCabana">Cancel</sys:String>
     <sys:String x:Key="lblEstado">Aplication Status</sys:String>

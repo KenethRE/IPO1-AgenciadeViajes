@@ -31,32 +31,43 @@
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
-                        <Image Name="icoMonitores" Height="50" Width="50" Source="/Recursos/Imagenes/icono_monitores.jpg"/>
-                        <TextBlock x:Name="lblMonitores" Text="{DynamicResource lblMonitores}" VerticalAlignment="Center"/>
+                        <Image Name="icoMonitores" Height="50" Width="50" Source="/Recursos/Imagenes/icono_monitores.png"/>
+                        <TextBlock x:Name="lblMonitores" Margin="5,0,0,0" Text="{DynamicResource lblMonitores}" VerticalAlignment="Center"/>
                     </StackPanel>
                 </TabItem.Header>
-                <Grid>
-                    <DataGrid x:Name="dgMonitores" Margin="5,40,5,28.8" AutoGenerateColumns="False"/>
-                    <ScrollBar HorizontalAlignment="Left" Height="296" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
-                </Grid>
             </TabItem>
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
-                        <Image Name="icoCabanas" Height="50" Width="50" Source="/Recursos/Imagenes/icono_cabana.jpg"/>
-                        <TextBlock x:Name="lbCabanas" Text="{DynamicResource lblCabanas}" VerticalAlignment="Center"/>
+                        <Image Name="icoCabanas" Height="50" Width="50" Source="/Recursos/Imagenes/icono_cabana.png" RenderTransformOrigin="0.5,0.5">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="0.95" ScaleY="0.95"/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                        <TextBlock x:Name="lbCabanas" Margin="5,0,0,0" Text="{DynamicResource lblCabanas}" VerticalAlignment="Center"/>
                     </StackPanel>
                 </TabItem.Header>
-                <Grid>
-                    <DataGrid x:Name="dgParcelas" Margin="5,40,5,26.8" AutoGenerateColumns="False"/>
-                    <ScrollBar HorizontalAlignment="Left" Height="298" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
-                </Grid>
             </TabItem>
-            <TabItem Header="Cabañas" Margin="81.2,1,-141.4,-14.2">
-                <Grid>
-                    <DataGrid x:Name="dgCabanas" Margin="5,40,5,26.8" AutoGenerateColumns="False"/>
-                    <ScrollBar HorizontalAlignment="Left" Height="298" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
-                </Grid>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal" RenderTransformOrigin="0.5,0.5">
+                        <StackPanel.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="0.95" ScaleY="0.95"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </StackPanel.RenderTransform>
+                        <Image Name="icoActividades" Height="50" Width="50" Source="/Recursos/Imagenes/icono_actividad.png"/>
+                        <TextBlock x:Name="lbActividades" Text="{DynamicResource lblActividades}" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </TabItem.Header>
             </TabItem>
             <TabItem Header="Actividades" Margin="111.4,1,-180.6,-14.2">
                 <Grid>
