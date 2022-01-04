@@ -21,10 +21,10 @@
             <ColumnDefinition Width="75*"/>
         </Grid.ColumnDefinitions>
         <Grid HorizontalAlignment="Left" Margin="0,-26,-5.6,-0.2" VerticalAlignment="Top" Width="592" Height="783" Grid.ColumnSpan="4" Grid.RowSpan="5"/>
-        <Label Content="Parcela Deluxe" HorizontalAlignment="Left" VerticalAlignment="Top" Height="56" Width="230" Margin="8,28,0,0" FontSize="26" Grid.Column="1" Grid.RowSpan="2"/>
-        <Label Content="Precio por noche:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="10,22.8,0,0" FontSize="22" Height="40" Width="179" Grid.Row="1"/>
+        <Label x:Name="lblTituloParcela" Content="Parcela" HorizontalAlignment="Left" VerticalAlignment="Top" Height="56" Width="230" Margin="8,28,0,0" FontSize="26" Grid.Column="1" Grid.RowSpan="2"/>
+        <Label x:Name="lblPrecioParcela" Content="Precio por noche:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="10,22.8,0,0" FontSize="22" Height="40" Width="179" Grid.Row="1"/>
         <Label Content="El precio actual por noche es: 50€&#xD;&#xA;Temporada:Baja/Media/Alta" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,493.2" Grid.Column="1" Width="274" FontSize="16" Height="60" Grid.Row="1" Grid.ColumnSpan="2"/>
-        <Label Content="Ubicación:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="10,114.8,0,0" FontSize="22" Height="40" Width="111" Grid.Row="1"/>
+        <Label x:Name="lblUbicacionParcela" Content="Ubicación:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="10,114.8,0,0" FontSize="22" Height="40" Width="111" Grid.Row="1"/>
         <Label Content="Se encuentra situado cerca de:&#xA;Aseos o fregaderos.&#xA;La piscina o bar restaurante.&#xA;La entrada del complejo.&#xA;Etc.&#xA;Tamaño: 5000m^2" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,322.2" Grid.Column="1" Width="274" FontSize="16" Height="140" RenderTransformOrigin="0.5,0.5" Grid.Row="1" Grid.ColumnSpan="2">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -35,7 +35,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label Content="Servicios" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="8,289.8,0,0" FontSize="22" Height="40" Width="94" Grid.Row="1"/>
+        <Label x:Name="lblServiciosParcela" Content="Servicios" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="8,289.8,0,0" FontSize="22" Height="40" Width="94" Grid.Row="1"/>
         <Label Content="Tomas de agua.&#xD;&#xA;Luz.&#xD;&#xA;Desagüe.&#xD;&#xA;Si está delimitada o no por setos.&#xD;&#xA;Si está en la zona de sombra.&#xD;&#xA;Etc." HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,145.2" Grid.Column="1" Width="274" FontSize="16" Height="141" RenderTransformOrigin="0.5,0.5" Grid.Row="1" Grid.ColumnSpan="2">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -58,7 +58,7 @@
         </Label>
         <DatePicker Grid.Column="1" HorizontalAlignment="Left" Height="43" Margin="10,539.8,0,0" VerticalAlignment="Top" Width="188" FontSize="16" Grid.Row="1"/>
         <DatePicker Grid.Column="2" HorizontalAlignment="Left" Height="43" Margin="32.4,539.8,0,0" VerticalAlignment="Top" Width="188" FontSize="16" Grid.Row="1"/>
-        <Label Content="Fecha de inicio:" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="15,0,0,61.1" Grid.Column="1" Width="153" FontSize="16" Height="38" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+        <Label x:Name="lblFechaInicioParcela" Content="Fecha de inicio:" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="15,0,0,61.1" Grid.Column="1" Width="153" FontSize="16" Height="38" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -68,7 +68,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label Content="Fecha de fin:" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="32.4,0,0,63.1" Grid.Column="2" Width="114" FontSize="16" Height="38" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+        <Label x:Name="lblFechaFinParcela" Content="Fecha de fin:" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="32.4,0,0,63.1" Grid.Column="2" Width="114" FontSize="16" Height="38" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -78,8 +78,8 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Button HorizontalAlignment="Center" Margin="95.4,15.2,52.2,0" FontSize="16" Content="Cancelar" Grid.Column="2" Height="50" VerticalAlignment="Top" Width="102" RenderTransformOrigin="0.452,-3.352" Grid.Row="3" />
-        <Button HorizontalAlignment="Center" Margin="138,15.2,7.6,0.4" FontSize="16" Content="Reservar" Width="100" RenderTransformOrigin="0.452,-3.352" Grid.Column="1" Grid.Row="3" Click="ReservarParcela_Click" />
+        <Button x:Name="btnCancelarParcela" HorizontalAlignment="Center" Margin="95.4,15.2,52.2,0" FontSize="16" Content="Cancelar" Grid.Column="2" Height="50" VerticalAlignment="Top" Width="102" RenderTransformOrigin="0.452,-3.352" Grid.Row="3" />
+        <Button x:Name="btnReservarParcela" HorizontalAlignment="Center" Margin="138,15.2,7.6,0.4" FontSize="16" Content="Reservar" Width="100" RenderTransformOrigin="0.452,-3.352" Grid.Column="1" Grid.Row="3" Click="ReservarParcela_Click" />
         <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="163.4,-6,0,6.2" VerticalAlignment="Center" Source="/Recursos/Imagenes/spain.png" Height="39" Width="40" RenderTransformOrigin="0.572,1.906" Grid.Column="2"/>
         <ComboBox x:Name="cbIdiomas" Margin="208.4,2,0.2,10.2" VerticalAlignment="Center" Opacity="0.6" SelectedIndex="0" Background="Black" Height="27" Grid.Column="2" RenderTransformOrigin="0.077,0.142" >
             <ComboBoxItem x:Name="cbItem1" Content="ES"/>

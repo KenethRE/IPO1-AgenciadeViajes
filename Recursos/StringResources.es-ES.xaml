@@ -7,6 +7,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblLogin">Inicio de sesión</sys:String>
     <sys:String x:Key="lblRecordarContraseña">¿Olvidó su contraseña?</sys:String>
     <sys:String x:Key="lblUsuario">Usuario</sys:String>
+    
     <sys:String x:Key="lblNombreReservarCabana">Nombre:</sys:String>
     <sys:String x:Key="TelefonoReservarCabana">Telefono:</sys:String>
     <sys:String x:Key="btnCancelarReservarCabana">Cancelar</sys:String>
@@ -17,6 +18,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="txtBoxEmailOpcionalReservarCabana">(Opcional)</sys:String>
     <sys:String x:Key="SolicitudesReservarCabana">Solicitudes especiales:</sys:String>
     <sys:String x:Key="txtBoxSolicitudesReservarCabana">Introduzca aquí si necesita alguna solicitud especial como por ejemplo cuna, menaje concreto, alguna circunstancia de movilidad especial de personas alojadas u otros.</sys:String>
+    
     <sys:String x:Key="lblNombreReservarParcela">Nombre:</sys:String>
     <sys:String x:Key="lblTelefonoReservarParcela">Telefono:</sys:String>
     <sys:String x:Key="CancelarReservarParcela">Cancelar:</sys:String>
@@ -26,12 +28,76 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="btnReservarParcela">Confirmar</sys:String>
     <sys:String x:Key="txtBoxEmailReservarParcela">(Opcional)</sys:String>
     
-    
-    
-    
-    
-    
-    
+    <sys:String x:Key="lblInformacionCrearRuta">Aquí puede diseñar su propia ruta como desee.</sys:String>
+    <sys:String x:Key="lblHoraInicioCrearRuta">Hora de inicio:</sys:String>
+    <sys:String x:Key="lblHoraFinCrearRuta">Hora de fin:</sys:String>
+    <sys:String x:Key="btnCancelarCrearRuta">Cancelar</sys:String>
+    <sys:String x:Key="btnGuardarCrearRuta">Guardar</sys:String>
+    <sys:String x:Key="lblTituloActividad">Actividad</sys:String>
+    <sys:String x:Key="lblMonitorActividad">Monitor/es que la imparten:</sys:String>
+    <sys:String x:Key="lblHorarioActividad">Horario</sys:String>
+    <sys:String x:Key="lblCaracteristicasActividades">Caracteristicas de los destinatarios</sys:String>
+    <sys:String x:Key="btnCancelarActividad">Cancelar</sys:String>
+    <sys:String x:Key="btnDarActividad">Dar de Alta/Baja</sys:String>
+    <sys:String x:Key="lblCapacidadActividad">Cupo mínimo y máximo de inscritos</sys:String>
+    <sys:String x:Key="lblPrecioActividad">Precio</sys:String>
+    <sys:String x:Key="lblAreaActividad">Área del camping en el que se desarrolla la actividad</sys:String>
+    <sys:String x:Key="lblEquipamientoActividad">Equipamiento necesario</sys:String>
+    <sys:String x:Key="btnModificarActividad">Modificar información</sys:String>
+    <sys:String x:Key="btnGuardarActividad">Guardar cambios</sys:String>
+    <sys:String x:Key="btnInscritosActividad">Gestionar el listado de inscritos</sys:String>
+
+    <sys:String x:Key="lblPrecioCabana">Precio por noche:</sys:String>
+    <sys:String x:Key="lblCapacidadCabana">Capacidad máxima</sys:String>
+    <sys:String x:Key="lblRestriccionesCabana">Restricción de estancia mínima</sys:String>
+    <sys:String x:Key="lblTituloCabana">Cabaña</sys:String>
+    <sys:String x:Key="lblFechaInicioCabana">Fecha de inicio:</sys:String>
+    <sys:String x:Key="lblFechaFinCabana">Fecha de fin:</sys:String>
+    <sys:String x:Key="btnCancelarCabana">Cancelar</sys:String>
+    <sys:String x:Key="btnReservarCabana">Reservar</sys:String>
+    <sys:String x:Key="lblEquipamientoCabana">Equipamiento</sys:String>
+    <sys:String x:Key="lblImagenesCabana">Imágenes</sys:String>
+
+    <sys:String x:Key="lblCorreoInscrito">Correo:</sys:String>
+    <sys:String x:Key="lblTelefonoInscrito">Telefono:</sys:String>
+    <sys:String x:Key="lblInscripcionInscrito">Tipo Inscripcion:</sys:String>
+    <sys:String x:Key="btnCancelarInscrito">Cancelar</sys:String>
+    <sys:String x:Key="btnDarInscrito">Dar de Ata/Baja</sys:String>
+    <sys:String x:Key="btnModificarInscrito">Modificar información</sys:String>
+    <sys:String x:Key="btnGuardarInscrito">Guardar cambios</sys:String>
+
+    <sys:String x:Key="lblCorreoMonitor">Correo/s electrónicos:</sys:String>
+    <sys:String x:Key="lblTelefonoMonitor">Teléfono/s de contacto:</sys:String>
+    <sys:String x:Key="lblFormacionMonitor">Formación</sys:String>
+    <sys:String x:Key="btnCancelarMonitor">Cancelar</sys:String>
+    <sys:String x:Key="btnDarMonitor">Dar de Alta/Baja</sys:String>
+    <sys:String x:Key="lblIdiomasMonitor">Idiomas</sys:String>
+    <sys:String x:Key="lblRestriccionesMonitor">Restricciones de disponibilidad</sys:String>
+    <sys:String x:Key="btnModificarMonitor">Modificar información</sys:String>
+    <sys:String x:Key="btnGuardarMonitor">Guardar cambios</sys:String>
+
+    <sys:String x:Key="lblPrecioParcela">Precio por noche:</sys:String>
+    <sys:String x:Key="lblUbicacionParcela">Ubicación:</sys:String>
+    <sys:String x:Key="lblServiciosParcela">Servicios</sys:String>
+    <sys:String x:Key="lblFechaInicioParcela">Fecha de inicio:</sys:String>
+    <sys:String x:Key="lblFechaFinParcela">Fecha de fin:</sys:String>
+    <sys:String x:Key="btnCancelarParcela">Cancelar</sys:String>
+    <sys:String x:Key="btnReservarParcela">Reservar</sys:String>
+
+    <sys:String x:Key="lblFotosPromocion">Fotos</sys:String>
+    <sys:String x:Key="btnCancelarPromocion">Cancelar</sys:String>
+    <sys:String x:Key="btnDarPromocion">Dar de Alta/Baja</sys:String>
+    <sys:String x:Key="btnModificarPromocion">Modificar información</sys:String>
+    <sys:String x:Key="btnGuardarPromocion">Guardar cambios</sys:String>
+
+    <sys:String x:Key="lblMonitorRuta">Monitor/es</sys:String>
+    <sys:String x:Key="lblHorarioRuta">Horario de inicio y fin</sys:String>
+    <sys:String x:Key="btnCancelarRuta">Cancelar</sys:String>
+    <sys:String x:Key="lblEncuentroRuta">Punto de encuentro</sys:String>
+    <sys:String x:Key="lblCapacidadRuta">Número máximo y mínimo de personas</sys:String>
+    <sys:String x:Key="lblDificultadRuta">Grado de dificultad</sys:String>
+    <sys:String x:Key="lblMapaRuta">Mapa de la ruta</sys:String>
+
 
 
 </ResourceDictionary>
