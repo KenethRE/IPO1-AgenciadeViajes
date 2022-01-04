@@ -79,7 +79,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Button HorizontalAlignment="Center" Margin="276.2,147.8,78.4,0" FontSize="16" Content="Cancelar" Height="37" VerticalAlignment="Top" Width="104" RenderTransformOrigin="0.452,-3.352" Grid.Row="6" Grid.Column="1" />
+        <Button HorizontalAlignment="Center" Margin="276.2,147.8,78.4,0" FontSize="16" Content="{DynamicResource btnCancelarReservarCabana}" Height="37" VerticalAlignment="Top" Width="104" RenderTransformOrigin="0.452,-3.352" Grid.Row="6" Grid.Column="1" />
         <Button HorizontalAlignment="Center" Margin="73.2,147.8,287.4,0" FontSize="16" Content="Reservar" Height="37" VerticalAlignment="Top" Width="98" RenderTransformOrigin="0.452,-3.352" Grid.Row="6" Grid.Column="1" />
         <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="20.6,0,0,1" VerticalAlignment="Center" Source="/Recursos/Imagenes/spain.png" Height="39" Width="40" RenderTransformOrigin="0.572,1.906" Grid.Column="2"/>
         <ComboBox x:Name="cbIdiomas" Margin="60.6,9,21,4" VerticalAlignment="Center" Opacity="0.6" SelectedIndex="0" Background="Black" Height="27" RenderTransformOrigin="0.077,0.142" Grid.Column="2" >
@@ -113,7 +113,7 @@
         <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="3" Margin="21,10,9.8,0" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click">
             <Image Source="/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
         </Button>
-        <Label x:Name="lblEstado" Content="Estado de aplicación" Margin="0,204.8,-0.2,0.4" Grid.Row="6" Background="White" Opacity="0.7" Height="30" Grid.ColumnSpan="4"/>
+        <Label x:Name="lblEstado" Content="{DynamicResource lblEstado}" Margin="0,204.8,-0.2,0.4" Grid.Row="6" Background="White" Opacity="0.7" Height="30" Grid.ColumnSpan="4"/>
 
     </Grid>
 </Window>

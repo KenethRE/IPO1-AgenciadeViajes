@@ -29,5 +29,20 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="LblActividafam">Activity to do as a family.</sys:String>
     <sys:String x:Key="LblMonActiv">Monitor/s who teach it:</sys:String>
     <sys:String x:Key="LblMonNomyApell">Name and Shortname:</sys:String>
-
+    <sys:String x:Key="LblHorarioActiv">Schedule</sys:String>
+    <sys:String x:Key="LblHrLaV">Monday to Friday at 18:00</sys:String>
+    <sys:String x:Key="LblCupo">Minimum and maximum number of registrants</sys:String>
+    <sys:String x:Key="LblActPersonas">5 - 20 persons</sys:String>
+    <sys:String x:Key="LblActCaract">Characteristics of the recipients</sys:String>
+    <sys:String x:Key="LblActCaractNiAdul">For kids and adults.</sys:String>
+    <sys:String x:Key="LblActPrecio">Price</sys:String>
+    <sys:String x:Key="LblActPreciohora">5€ hour.</sys:String>
+    <sys:String x:Key="LblActArea">Area of ​​the campsite where the activity takes place</sys:String>
+    <sys:String x:Key="LblActpiscina">Pool</sys:String>
+    <sys:String x:Key="LblActequipamiento">Necessary equipment</sys:String>
+    <sys:String x:Key="LblActchanclas">flip blops</sys:String>
+    <sys:String x:Key="btnAltaBaja">Register/Cancel</sys:String>
+    <sys:String x:Key="btnmodificar">Modify information</sys:String>
+    <sys:String x:Key="btnguardarcambios">Save changes</sys:String>
+    <sys:String x:Key="btngestionar">Manage the list of registered changes</sys:String>
 </ResourceDictionary>

@@ -41,4 +41,20 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="LblActividafam">Actividad para realizar en familia.</sys:String>
     <sys:String x:Key="LblMonActiv">Monitor/es que la imparten:</sys:String>
     <sys:String x:Key="LblMonNomyApell">Nombre y Apellidos:</sys:String>
+    <sys:String x:Key="LblHorarioActiv">Horario</sys:String>
+    <sys:String x:Key="LblHrLaV">De Lunes a Viernes a las 18:00</sys:String>
+    <sys:String x:Key="LblCupo">Cupo mínimo y máximo de inscritos</sys:String>
+    <sys:String x:Key="LblActPersonas">5 - 20 personas</sys:String>
+    <sys:String x:Key="LblActCaract">Características de los destinatarios</sys:String>
+    <sys:String x:Key="LblActCaractNiAdul">Para niños y adultos.</sys:String>
+    <sys:String x:Key="LblActPrecio">Precio</sys:String>
+    <sys:String x:Key="LblActPreciohora">5€ la hora.</sys:String>
+    <sys:String x:Key="LblActArea">Área del camping en el que se desarrolla la actividad</sys:String>
+    <sys:String x:Key="LblActpiscina">Piscina</sys:String>
+    <sys:String x:Key="LblActequipamiento">Equipamiento necesario</sys:String>
+    <sys:String x:Key="LblActchanclas">chanclas</sys:String>
+    <sys:String x:Key="btnAltaBaja">Dar de Alta/Baja</sys:String>
+    <sys:String x:Key="btnmodificar">Modificar informacion</sys:String>
+    <sys:String x:Key="btnguardarcambios">Guardar cambios</sys:String>
+    <sys:String x:Key="btngestionar">Gestionar el listado de inscritos</sys:String>
 </ResourceDictionary>
