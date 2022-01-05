@@ -39,6 +39,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblHoraFinCrearRuta">Hora de fin:</sys:String>
     <sys:String x:Key="btnCancelarCrearRuta">Cancelar</sys:String>
     <sys:String x:Key="btnGuardarCrearRuta">Guardar</sys:String>
+    
     <sys:String x:Key="lblTituloActividad">Actividad</sys:String>
     <sys:String x:Key="lblMonitorActividad">Monitor/es que la imparten:</sys:String>
     <sys:String x:Key="lblHorarioActividad">Horario</sys:String>
@@ -53,10 +54,10 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="btnGuardarActividad">Guardar cambios</sys:String>
     <sys:String x:Key="btnInscritosActividad">Gestionar el listado de inscritos</sys:String>
 
+    <sys:String x:Key="lblTituloCabana">Cabaña</sys:String>
     <sys:String x:Key="lblPrecioCabana">Precio por noche:</sys:String>
     <sys:String x:Key="lblCapacidadCabana">Capacidad máxima</sys:String>
     <sys:String x:Key="lblRestriccionesCabana">Restricción de estancia mínima</sys:String>
-    <sys:String x:Key="lblTituloCabana">Cabaña</sys:String>
     <sys:String x:Key="lblFechaInicioCabana">Fecha de inicio:</sys:String>
     <sys:String x:Key="lblFechaFinCabana">Fecha de fin:</sys:String>
     <sys:String x:Key="btnCancelarCabana">Cancelar</sys:String>
@@ -64,6 +65,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblEquipamientoCabana">Equipamiento</sys:String>
     <sys:String x:Key="lblImagenesCabana">Imágenes</sys:String>
 
+    
     <sys:String x:Key="lblCorreoInscrito">Correo:</sys:String>
     <sys:String x:Key="lblTelefonoInscrito">Telefono:</sys:String>
     <sys:String x:Key="lblInscripcionInscrito">Tipo Inscripcion:</sys:String>
@@ -72,6 +74,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="btnModificarInscrito">Modificar información</sys:String>
     <sys:String x:Key="btnGuardarInscrito">Guardar cambios</sys:String>
 
+    
     <sys:String x:Key="lblCorreoMonitor">Correo/s electrónicos:</sys:String>
     <sys:String x:Key="lblTelefonoMonitor">Teléfono/s de contacto:</sys:String>
     <sys:String x:Key="lblFormacionMonitor">Formación</sys:String>
@@ -103,7 +106,5 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblCapacidadRuta">Número máximo y mínimo de personas</sys:String>
     <sys:String x:Key="lblDificultadRuta">Grado de dificultad</sys:String>
     <sys:String x:Key="lblMapaRuta">Mapa de la ruta</sys:String>
-
-
 
 </ResourceDictionary>
