@@ -22,14 +22,48 @@ namespace IPO1_AgenciadeViajes
             App.SelectCulture("es-ES");
         }
 
-        private void ComprobarInformacion(object sender, RoutedEventArgs e)
+
+        private void comprobarInformacion()
         {
-            string usuario = "Usuario1";
+            string usuario = "usuario1";
             if (!String.IsNullOrEmpty(tbxEmail.Text) && tbxEmail.Text.Equals(usuario, StringComparison.InvariantCultureIgnoreCase))
             {
                 // comprobación correcta
                 tbxEmail.BorderBrush = Brushes.Transparent;
-                comprobarContraseña(pbxContraseña.Password);
+
+                string pass_usuario = "1234";
+                if (pbxContraseña.IsEnabled && !String.IsNullOrEmpty(pbxContraseña.Password))
+                {
+                    if (!pbxContraseña.Password.Equals(pass_usuario))
+                    {
+                        // marcamos borde en rojo
+                        pbxContraseña.BorderBrush = Brushes.Red;
+                        pbxContraseña.BorderThickness = new Thickness(2);
+                        // mostramos estado incorrecto
+                        lblEstado.Content = "¡Contraseña incorrecta!";
+                        lblEstado.Foreground = Brushes.Red;
+                    }
+                    else
+                    {
+                        // restauramos estado normal del borde
+                        pbxContraseña.BorderBrush = Brushes.Transparent;
+                        // mostramos estado correcto
+                        lblEstado.Content = "¡Bienvenido! Iniciando Sesion...";
+                        lblEstado.Foreground = Brushes.Green;
+
+                        var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(2) };
+                        timer.Start();
+                        timer.Tick += (sender, args) =>
+                        {
+                            //new MenuPrincipal().Show();
+                            Uri uri = new Uri("/Recursos/Imagenes/Persona.png", UriKind.RelativeOrAbsolute);
+                            new MenuPrincipal(uri).Show();
+                            timer.Stop();
+                            this.Close();
+                        };
+                    }
+                }
+
             }
             else
             {
@@ -38,49 +72,8 @@ namespace IPO1_AgenciadeViajes
                 tbxEmail.BorderThickness = new Thickness(2);
                 lblEstado.Content = "Usuario Incorrecto!";
                 lblEstado.Foreground = Brushes.Red;
-                if (pbxContraseña.IsEnabled)
-                {
-                    pbxContraseña.IsEnabled = false;
-                }
             }
 
-
-        }
-
-        private void comprobarContraseña(string contraseña)
-        {
-            string pass_usuario = "1234";
-            if (pbxContraseña.IsEnabled && !String.IsNullOrEmpty(pbxContraseña.Password))
-            {
-                if (!pbxContraseña.Password.Equals(pass_usuario))
-                {
-                    // marcamos borde en rojo
-                    pbxContraseña.BorderBrush = Brushes.Red;
-                    pbxContraseña.BorderThickness = new Thickness(2);
-                    // mostramos estado incorrecto
-                    lblEstado.Content = "¡Contraseña incorrecta!";
-                    lblEstado.Foreground = Brushes.Red;
-                }
-                else
-                {
-                    // restauramos estado normal del borde
-                    pbxContraseña.BorderBrush = Brushes.Transparent;
-                    // mostramos estado correcto
-                    lblEstado.Content = "¡Bienvenido! Iniciando Sesion...";
-                    lblEstado.Foreground = Brushes.Green;
-
-                    var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(2) };
-                    timer.Start();
-                    timer.Tick += (sender, args) =>
-                    {
-                        //new MenuPrincipal().Show();
-                        Uri uri = new Uri("/Recursos/Imagenes/Persona.png", UriKind.RelativeOrAbsolute);
-                        new Window1(uri).Show();
-                        timer.Stop();
-                        this.Close();
-                    };
-                }
-            }
         }
 
 
@@ -111,15 +104,14 @@ namespace IPO1_AgenciadeViajes
             }
         }
 
-        private void mostrarLetraPulsada(object sender, KeyEventArgs e)
-        {
-            lblEstado.Content = "Has pulsado la tecla << " + e.Key.ToString() + " >>";
-            lblEstado.Foreground = Brushes.Black;
-        }
-
         private void Enter_Presionado(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Return) comprobarContraseña(pbxContraseña.Password);
+            if (e.Key == Key.Return) comprobarInformacion();
+        }
+
+        private void ComprobarInformacion(object sender, RoutedEventArgs e) {
+
+            comprobarInformacion();
         }
 
         private void Salir(object sender, RoutedEventArgs e)
@@ -128,7 +120,7 @@ namespace IPO1_AgenciadeViajes
         }
         private void miAcercaDe_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Aplicación realizada por ...", "Acerca de");
+            new Acercade().ShowDialog();
 
         }
         private void miError_Click(object sender, RoutedEventArgs e)

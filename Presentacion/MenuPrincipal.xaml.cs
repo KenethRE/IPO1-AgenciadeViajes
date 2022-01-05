@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IPO1_AgenciadeViajes.Dominio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,12 +14,11 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Xml;
 
-namespace IPO1_AgenciadeViajes
+namespace IPO1_AgenciadeViajes.Presentacion
 {
     /// <summary>
-    /// Lógica de interacción para MenuPrincipal.xaml
+    /// Interaction logic for Window1.xaml
     /// </summary>
-
     public partial class MenuPrincipal : Window
     {
         private CrearRuta ventana;
@@ -29,51 +29,61 @@ namespace IPO1_AgenciadeViajes
         private InfoPromocion ventanaPromocion;
         private InfoRutaSenderista ventanaRutaSenderista;
         private Presentacion.Documentacion ventanaDocumentacion;
-        private Presentacion.ReportarErrrores ventanaErrores;
+        private ReportarErrrores ventanaErrores;
+        private Usuario usuarioActual = new Usuario();
 
-        readonly List<Dominio.Monitor> listadoMonitores;
-        readonly List<Dominio.Parcela> listadoParcelas;
-        readonly List<Dominio.Cabana> listadoCabanas;
-        readonly List<Dominio.Actividad> listadoActividades;
-        readonly List<Dominio.Promocion> listadoPromociones;
+        List<Dominio.Monitor> listadoMonitores;
+        List<Dominio.Parcela> listadoParcelas;
+        List<Dominio.Cabana> listadoCabanas;
+        List<Dominio.Actividad> listadoActividades;
+        List<Dominio.Promocion> listadoPromociones;
 
-        public MenuPrincipal()
+        public MenuPrincipal(Uri uriUsuario)
         {
             InitializeComponent();
+            DataContext = usuarioActual;
+            if (uriUsuario == null) usuarioActual.ImgUsuario = new BitmapImage(new Uri("/Recursos/Imagenes/user.png", UriKind.RelativeOrAbsolute));
+            else usuarioActual.ImgUsuario = new BitmapImage(uriUsuario);
+
+            usuarioActual.Nombre = "José";
+            usuarioActual.ultimoInicio = DateTime.Now.ToString();
+
             // Crear el listado de monitores
             listadoMonitores = new List<Dominio.Monitor>();
             // Se cargarán los datos de prueba de un fichero XML
             CargarContenidoListaXMLMonitores();
             // Indicar que el origen de datos del ListBox es listadoMonitores
-            dgMonitores.ItemsSource = listadoMonitores;
+            //dgMonitores.ItemsSource = listadoMonitores;
 
             // Crear el listado de parcelas
             listadoParcelas = new List<Dominio.Parcela>();
             // Se cargarán los datos de prueba de un fichero XML
             CargarContenidoListaXMLParcelas();
             // Indicar que el origen de datos del ListBox es listadoParcelas
-            dgParcelas.ItemsSource = listadoParcelas;
+            //dgParcelas.ItemsSource = listadoParcelas;
 
             // Crear el listado de cabañas
             listadoCabanas = new List<Dominio.Cabana>();
             // Se cargarán los datos de prueba de un fichero XML
             CargarContenidoListaXMLCabanas();
             // Indicar que el origen de datos del ListBox es listadoParcelas
-            dgCabanas.ItemsSource = listadoCabanas;
+            //dgCabanas.ItemsSource = listadoCabanas;
 
             // Crear el listado de actividades
             listadoActividades = new List<Dominio.Actividad>();
             // Se cargarán los datos de prueba de un fichero XML
             CargarContenidoListaXMLActividades();
             // Indicar que el origen de datos del ListBox es listadoParcelas
-            dgActividades.ItemsSource = listadoActividades;
+            //dgActividades.ItemsSource = listadoActividades;
 
             // Crear el listado de actividades
             listadoPromociones = new List<Dominio.Promocion>();
             // Se cargarán los datos de prueba de un fichero XML
             CargarContenidoListaXMLPromociones();
             // Indicar que el origen de datos del ListBox es listadoParcelas
-            dgPromociones.ItemsSource = listadoPromociones;
+            //dgPromociones.ItemsSource = listadoPromociones;
+
+
         }
         private void CargarContenidoListaXMLMonitores()
         {
@@ -191,6 +201,10 @@ namespace IPO1_AgenciadeViajes
 
         }
 
+
+
+
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             ventana = new CrearRuta();
@@ -240,17 +254,17 @@ namespace IPO1_AgenciadeViajes
         }
         private void MiAcercaDe_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Aplicación realizada por ...", "Acerca de");
+            new Acercade().ShowDialog();
 
         }
         private void MiDocumentacion_Click(object sender, RoutedEventArgs e)
         {
             ventanaDocumentacion = new Presentacion.Documentacion();
             ventanaDocumentacion.Show();
-        
+
         }
 
-        private void MiError_Click(object sender, RoutedEventArgs e)
+        private void miError_Click(object sender, RoutedEventArgs e)
         {
 
             ventanaErrores = new Presentacion.ReportarErrrores();

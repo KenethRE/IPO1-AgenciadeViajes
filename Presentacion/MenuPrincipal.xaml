@@ -1,14 +1,22 @@
-﻿<Window x:Class="IPO1_AgenciadeViajes.MenuPrincipal"
+﻿<Window x:Class="IPO1_AgenciadeViajes.Presentacion.MenuPrincipal"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:IPO1_AgenciadeViajes"
+        xmlns:local="clr-namespace:IPO1_AgenciadeViajes.Presentacion"
         mc:Ignorable="d"
-        Title="MenuPrincipal" Height="450" Width="800">
-    <Grid Margin="0,0,0,0">
-        <Grid HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" VerticalAlignment="Top" Width="774"/>
-        <Menu Grid.Row="0" x:Name="miMenu" FontSize="16" FontWeight="Bold">
+        Title="Window1" Height="450" Width="800" Background="#FFD0CCCC">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="247*"/>
+            <ColumnDefinition Width="153*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="174*"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" x:Name="miMenu" FontSize="16" FontWeight="Bold" Grid.ColumnSpan="2" Background="#FF908D8D" BorderBrush="Black">
             <MenuItem Header="Archivo" >
                 <MenuItem x:Name="miGuardar" Header="Guardar">
                     <MenuItem.Icon>
@@ -18,76 +26,93 @@
                 <Separator/>
                 <MenuItem x:Name="miSalir" Header="Salir"/>
             </MenuItem>
-            <MenuItem Header="Ayuda" FontSize="14">
+            <MenuItem Header="Ayuda">
                 <MenuItem x:Name="miAcercaDe" Header="Acerca de..." Click="MiAcercaDe_Click" />
                 <MenuItem x:Name="miDocumentacion" Header="Documentacion" Click="MiDocumentacion_Click" />
-                <MenuItem x:Name="miError" Header="Reportar un Error" Click="MiError_Click" />
+                <MenuItem x:Name="miError" Header="Reportar un Error" Click="miError_Click" />
             </MenuItem>
         </Menu>
-        <Grid>
-            <TabControl x:Name="tcPestanas" Margin="0,27,-0.4,0">
-                <TabItem Header="Monitores" Margin="0,1,-41.6,-14.2">
-                    <Grid>
-                        <DataGrid x:Name="dgMonitores" Margin="5,40,5,28.8" AutoGenerateColumns="False"/>
-                        <ScrollBar HorizontalAlignment="Left" Height="296" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
-                        <Button Margin="485,14,179,324.8" Content="Monitor" Click="btnMonitor_Click" />
-                    </Grid>
-                </TabItem>
-                <TabItem Header="Parcelas" Margin="36.6,1,-95.2,-14.2">
-                    <Grid>
-                        <DataGrid x:Name="dgParcelas" Margin="5,40,5,26.8" AutoGenerateColumns="False"/>
-                        <ScrollBar HorizontalAlignment="Left" Height="298" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
-                        <Button Margin="485,14,179,324.8" Content="Parcela" Click="BtnParcela_Click" />
-                    </Grid>
-                </TabItem>
-                <TabItem Header="Cabañas" Margin="81.2,1,-141.4,-14.2">
-                    <Grid>
-                        <DataGrid x:Name="dgCabanas" Margin="5,40,5,26.8" AutoGenerateColumns="False"/>
-                        <ScrollBar HorizontalAlignment="Left" Height="298" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
-                        <Button Margin="485,14,179,324.8" Content="Cabaña" Click="BtnCabana_Click" />
-                    </Grid>
-                </TabItem>
-                <TabItem Header="Actividades" Margin="111.4,1,-180.6,-14.2">
-                    <Grid>
-                        <DataGrid x:Name="dgActividades" Margin="5,79,5,26.8" AutoGenerateColumns="False"/>
-                        <ScrollBar HorizontalAlignment="Left" Height="259" Margin="765,79,0,0" VerticalAlignment="Top" Width="13"/>
-                        <Button Margin="483,48,181,290.8" Content="Crear Ruta" Click="Button_Click" />
-                        <Button Margin="332,48,332,290.8" Content="Actividad" Click="BtnActividad_Click" />
-                        <Button Margin="191,48,479,290.8" Content="Ruta senderista" Click="BtnRutaSenderista_Click" />
-                    </Grid>
-                </TabItem>
-                <TabItem Header="Historial de actividades" Margin="162.2,1,-254.8,-14.2">
-                    <Grid>
-                        <DataGrid x:Name="dgHistorial" Margin="5,40,5,26.8" AutoGenerateColumns="False"/>
-                        <ScrollBar HorizontalAlignment="Left" Height="298" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
-                    </Grid>
-                </TabItem>
-                <TabItem Header="Promociones" Margin="253.2,-2,-317.2,-14.2">
-                    <Grid Margin="0,17,0,-0.2">
-                        <DataGrid x:Name="dgPromociones" Margin="5,40,5,28" AutoGenerateColumns="False"/>
-                        <ScrollBar HorizontalAlignment="Left" Height="280" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
-                        <Button Margin="488,10,176,313" Content="Promocion" Click="BtnPromocion_Click" />
-                    </Grid>
-                </TabItem>
-            </TabControl>
+        <TabControl x:Name="tcPestanas" Margin="2,2,2,2" Padding="2,2,2,2" Grid.Row="1" BorderBrush="#FF1D144C" Grid.ColumnSpan="2" Grid.RowSpan="2" Background="#FFD0CCCC">
+            <TabControl.Resources>
+                <Style TargetType="{x:Type TabPanel}">
+                    <Setter Property="HorizontalAlignment" Value="Left" />
+                </Style>
+            </TabControl.Resources>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Name="icoMonitores" Height="50" Width="50" Source="/Recursos/Imagenes/icono_monitores.png"/>
+                        <TextBlock x:Name="lblMonitores" Margin="5,0,0,0" Text="{DynamicResource lblMonitores}" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </TabItem.Header>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Name="icoCabanas" Height="50" Width="50" Source="/Recursos/Imagenes/icono_cabana.png" RenderTransformOrigin="0.5,0.5">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="0.95" ScaleY="0.95"/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                        <TextBlock x:Name="lbCabanas" Margin="5,0,0,0" Text="{DynamicResource lblCabanas}" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </TabItem.Header>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal" RenderTransformOrigin="0.5,0.5">
+                        <StackPanel.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="0.95" ScaleY="0.95"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </StackPanel.RenderTransform>
+                        <Image Name="icoActividades1" Height="50" Width="50" Source="/Recursos/Imagenes/icono_parcela.png"/>
+                        <TextBlock x:Name="lbActividades1" Text="{DynamicResource lblParcelas}" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </TabItem.Header>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal" RenderTransformOrigin="0.5,0.5">
+                        <StackPanel.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="0.95" ScaleY="0.95"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </StackPanel.RenderTransform>
+                        <Image Name="icoActividades" Height="50" Width="50" Source="/Recursos/Imagenes/icono_actividad.png"/>
+                        <TextBlock x:Name="lbActividades" Text="{DynamicResource lblActividades}" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </TabItem.Header>
+            </TabItem>
+        </TabControl>
+        <Grid Grid.Row="1" Grid.Column="1" Margin="100,1,0,4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="78*"/>
+                <ColumnDefinition Width="25*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="1" Margin="8,3,0,2" Width="50" Source="{Binding ImgUsuario}" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Grid.RowSpan="4"/>
+            <TextBlock x:Name="lblUsuario" Text="{DynamicResource lblUsuario}" Grid.Row="0" FontSize="10" FontWeight="Bold" Margin="0,0,0,0"/>
+            <TextBlock Text="{Binding Nombre}" FontSize="10" Margin="0,10,0,0" Grid.RowSpan="3"/>
+            <TextBlock x:Name="lblUltInicio" Text="{DynamicResource lblUltInicio}" Grid.Row="2" FontSize="10" FontWeight="Bold" Margin="0,0,0,0" Grid.RowSpan="2"/>
+            <TextBlock Text="{Binding ultimoInicio}" Grid.Row="2" FontSize="10" Margin="0,14,0,0" Grid.RowSpan="2"/>
+
         </Grid>
-        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="514,0,0,390" VerticalAlignment="Center" Source="/Recursos/Imagenes/spain.png" Height="30" Width="50" RenderTransformOrigin="0.572,1.906"/>
-        <Image x:Name="imgIconoMonitores" />
-        <ComboBox x:Name="cbIdiomas" Margin="550,4,195,0" VerticalAlignment="Top" Opacity="0.6" SelectedIndex="0" Background="Black" Height="20" RenderTransformOrigin="0.077,0.142" >
-            <ComboBoxItem x:Name="cbItem1" Content="ES"/>
-            <ComboBoxItem x:Name="cbItem2" Content="EN"/>
-        </ComboBox>
-        <Button x:Name="btnSalir" ToolTip="Salir" Margin="751,3,10,397" RenderTransformOrigin="0.5,0.707" Click="BtnSalir_Click">
-            <Image Source="/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
-        </Button>
-        <Label x:Name="lblEstado" Content="Estado de aplicación" Margin="0,390,0,0" Background="White" Opacity="0.7" Height="30"/>
-        <Image HorizontalAlignment="Left" Height="27" Margin="0,33,0,0" VerticalAlignment="Top" Width="31" Source="/Recursos/Imagenes/icono_monitores.jpg"/>
-        <Image HorizontalAlignment="Left" Height="27" Margin="107,33,0,0" VerticalAlignment="Top" Width="33" Source="/Recursos/Imagenes/icono_parcela.jpg"/>
-        <Image HorizontalAlignment="Left" Height="29" Margin="212,31,0,0" VerticalAlignment="Top" Width="30" Source="/Recursos/Imagenes/icono_cabana.png"/>
-        <Image HorizontalAlignment="Left" Height="27" Margin="300,33,0,0" VerticalAlignment="Top" Width="37" Source="/Recursos/Imagenes/icono_actividad.png"/>
-        <Image HorizontalAlignment="Left" Height="29" Margin="446,33,0,0" VerticalAlignment="Top" Width="26" Source="/Recursos/Imagenes/icono_comentario.png"/>
-        <Image HorizontalAlignment="Left" Height="26" Margin="651,34,0,0" VerticalAlignment="Top" Width="35" Source="/Recursos/Imagenes/icono_promocion.png"/>
-
-
     </Grid>
 </Window>

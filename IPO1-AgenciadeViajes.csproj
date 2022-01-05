@@ -173,10 +173,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Presentacion\MenuPrincipal.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Presentacion\InfoMonitor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -197,7 +193,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Presentacion\Window1.xaml">
+    <Page Include="Presentacion\MenuPrincipal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -215,9 +211,6 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Presentacion\MenuPrincipal.xaml.cs">
-      <DependentUpon>MenuPrincipal.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Presentacion\InfoMonitor.xaml.cs">
       <DependentUpon>InfoMonitor.xaml</DependentUpon>
     </Compile>
@@ -227,8 +220,8 @@
     <Compile Include="Presentacion\ReportarErrrores.xaml.cs">
       <DependentUpon>ReportarErrrores.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Window1.xaml.cs">
-      <DependentUpon>Window1.xaml</DependentUpon>
+    <Compile Include="Presentacion\MenuPrincipal.xaml.cs">
+      <DependentUpon>MenuPrincipal.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

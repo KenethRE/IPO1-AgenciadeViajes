@@ -104,7 +104,11 @@ namespace IPO1_AgenciadeViajes.Presentacion
 
         private void AboutBox1_Load(object sender, EventArgs e)
         {
-
+            this.textBoxDescription.Text = "Descripción: Sofware para la gestion de reservas de cabañas y parcelas. "+ Environment.NewLine + 
+             Environment.NewLine + "Diseñador por: " + 
+             Environment.NewLine + " - Keneth Rodriguez" +
+             Environment.NewLine + " - David Arriero " + 
+             Environment.NewLine + " - Piedad de la Fuente";
         }
 
         private void labelProductName_Click(object sender, EventArgs e)
