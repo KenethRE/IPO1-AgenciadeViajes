@@ -128,7 +128,7 @@ namespace IPO1_AgenciadeViajes
         }
         private void miAcercaDe_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Aplicación realizada por ...", "Acerca de");
+            new Acercade().ShowDialog();
 
         }
         private void miError_Click(object sender, RoutedEventArgs e)

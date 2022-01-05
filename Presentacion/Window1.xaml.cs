@@ -44,6 +44,10 @@ namespace IPO1_AgenciadeViajes.Presentacion
             DataContext = usuarioActual;
             if (uriUsuario == null) usuarioActual.ImgUsuario = new BitmapImage(new Uri("/Recursos/Imagenes/user.png", UriKind.RelativeOrAbsolute));
             else usuarioActual.ImgUsuario = new BitmapImage(uriUsuario);
+
+            usuarioActual.Nombre = "José";
+            usuarioActual.ultimoInicio = DateTime.Now.ToString();
+
             // Crear el listado de monitores
             listadoMonitores = new List<Dominio.Monitor>();
             // Se cargarán los datos de prueba de un fichero XML
@@ -250,7 +254,7 @@ namespace IPO1_AgenciadeViajes.Presentacion
         }
         private void MiAcercaDe_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Aplicación realizada por ...", "Acerca de");
+            new Acercade().ShowDialog();
 
         }
         private void MiDocumentacion_Click(object sender, RoutedEventArgs e)

@@ -10,6 +10,8 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblMonitores">Guides</sys:String>
     <sys:String x:Key="lblCabanas">Cabins</sys:String>
     <sys:String x:Key="lblActividades">Activities</sys:String>
+    <sys:String x:Key="lblUltInicio">Last Login:</sys:String>
+    
     <sys:String x:Key="blNombreReservarCabana">Name:</sys:String>
     <sys:String x:Key="elefonoReservarCabana">Phone:</sys:String>
     <sys:String x:Key="CapacidadReservarCabana">Nº Occupants:</sys:String>
