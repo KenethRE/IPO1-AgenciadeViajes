@@ -21,7 +21,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     
     <sys:String x:Key="lblNombreReservarParcela">Nombre:</sys:String>
     <sys:String x:Key="lblTelefonoReservarParcela">Telefono:</sys:String>
-    <sys:String x:Key="CancelarReservarParcela">Cancelar:</sys:String>
+    <sys:String x:Key="CancelarReservarParcela">Cancelar</sys:String>
     <sys:String x:Key="lblEmailReservarParcela">Email:</sys:String>
     <sys:String x:Key="txtBoxTelefonoReservarParcela">(Opcional)</sys:String>
     <sys:String x:Key="lblCapacidadReservarParcela">Nº ocupantes:</sys:String>

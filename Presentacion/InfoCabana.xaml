@@ -113,7 +113,7 @@
         <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="3" Margin="21,10,9.8,0" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click">
             <Image Source="/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
         </Button>
-        <Label x:Name="lblEstado" Content="Estado de aplicación" Margin="0,204.8,-0.2,0.4" Grid.Row="6" Background="White" Opacity="0.7" Height="30" Grid.ColumnSpan="4"/>
+        <Label x:Name="lblEstado" Content="{DynamicResource lblEstado}" Margin="0,204.8,-0.2,0.4" Grid.Row="6" Background="White" Opacity="0.7" Height="30" Grid.ColumnSpan="4"/>
 
     </Grid>
 </Window>

@@ -64,6 +64,7 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -99,6 +100,12 @@
     <Compile Include="Dominio\Parcela.cs" />
     <Compile Include="Dominio\Promocion.cs" />
     <Compile Include="Dominio\RutaSenderista.cs" />
+    <Compile Include="Presentacion\Acercade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Acercade.Designer.cs">
+      <DependentUpon>Acercade.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Documentacion.xaml.cs">
       <DependentUpon>Documentacion.xaml</DependentUpon>
     </Compile>
@@ -189,6 +196,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Presentacion\Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Resource Include="Recursos\StringResources.en-US.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -215,6 +226,9 @@
     <Compile Include="Presentacion\ReportarErrrores.xaml.cs">
       <DependentUpon>ReportarErrrores.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -228,11 +242,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Presentacion\Acercade.resx">
+      <DependentUpon>Acercade.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Presentacion\input.pdf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -266,10 +284,6 @@
     <Resource Include="Recursos\Imagenes\icono_comentario.png" />
     <Resource Include="Recursos\Imagenes\icono_promocion.png" />
     <Resource Include="Recursos\Imagenes\icono_parcela.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Recursos\Imagenes\icono_actividad.png" />
-    <Resource Include="Recursos\Imagenes\icono_monitores.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Persistencia\Monitores.xml">
@@ -307,12 +321,12 @@
     <Resource Include="Recursos\Imagenes\Monitor.png" />
     <Resource Include="Recursos\Imagenes\Monitor1.png" />
     <Resource Include="Recursos\Imagenes\Monitor2.png" />
-    <Resource Include="Recursos\Imagenes\multiple-users-silhouette.png" />
+    <Resource Include="Recursos\Imagenes\icono_monitores.png" />
     <Resource Include="Recursos\Imagenes\Persona.png" />
     <Resource Include="Recursos\Imagenes\plot.png" />
     <Resource Include="Recursos\Imagenes\promotions.png" />
     <Resource Include="Recursos\Imagenes\user.png" />
-    <Resource Include="Recursos\Imagenes\walk.png" />
+    <Resource Include="Recursos\Imagenes\icono_actividad.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Recursos\Imagenes\Portada.png" />

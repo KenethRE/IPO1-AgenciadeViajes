@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace IPO1_AgenciadeViajes
 {
@@ -21,7 +15,6 @@ namespace IPO1_AgenciadeViajes
     public partial class InicioSesion : Window
 
     {
-        private MenuPrincipal ventana;
         public InicioSesion()
         {
             InitializeComponent();
@@ -73,19 +66,23 @@ namespace IPO1_AgenciadeViajes
                     // restauramos estado normal del borde
                     pbxContraseña.BorderBrush = Brushes.Transparent;
                     // mostramos estado correcto
-                    lblEstado.Content = "¡Bienvenido!";
+                    lblEstado.Content = "¡Bienvenido! Iniciando Sesion...";
                     lblEstado.Foreground = Brushes.Green;
 
-                    ventana = new MenuPrincipal();
-                    ventana.Show();
-                    this.Hide();
+                    var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(2) };
+                    timer.Start();
+                    timer.Tick += (sender, args) =>
+                    {
+                        new MenuPrincipal().Show();
+                        this.Close();
+                    };
                 }
             }
         }
 
 
         private void cambiarBandera(string idioma)
-        {   
+        {
             imgIdioma.Source = idioma.Equals("en-US")
             ? new BitmapImage(new Uri("/Recursos/Imagenes/united-states.png",
             UriKind.Relative))

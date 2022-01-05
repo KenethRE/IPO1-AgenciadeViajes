@@ -13,13 +13,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Xml;
 
-namespace IPO1_AgenciadeViajes
+namespace IPO1_AgenciadeViajes.Presentacion
 {
     /// <summary>
-    /// Lógica de interacción para MenuPrincipal.xaml
+    /// Interaction logic for Window1.xaml
     /// </summary>
-
-    public partial class MenuPrincipal : Window
+    public partial class Window1 : Window
     {
         private CrearRuta ventana;
         private InfoMonitor ventanaMonitor;
@@ -31,13 +30,13 @@ namespace IPO1_AgenciadeViajes
         private Presentacion.Documentacion ventanaDocumentacion;
         private Presentacion.ReportarErrrores ventanaErrores;
 
-        readonly List<Dominio.Monitor> listadoMonitores;
-        readonly List<Dominio.Parcela> listadoParcelas;
-        readonly List<Dominio.Cabana> listadoCabanas;
-        readonly List<Dominio.Actividad> listadoActividades;
-        readonly List<Dominio.Promocion> listadoPromociones;
+        List<Dominio.Monitor> listadoMonitores;
+        List<Dominio.Parcela> listadoParcelas;
+        List<Dominio.Cabana> listadoCabanas;
+        List<Dominio.Actividad> listadoActividades;
+        List<Dominio.Promocion> listadoPromociones;
 
-        public MenuPrincipal()
+        public Window1()
         {
             InitializeComponent();
             // Crear el listado de monitores
@@ -191,6 +190,10 @@ namespace IPO1_AgenciadeViajes
 
         }
 
+
+
+
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             ventana = new CrearRuta();
@@ -247,10 +250,10 @@ namespace IPO1_AgenciadeViajes
         {
             ventanaDocumentacion = new Presentacion.Documentacion();
             ventanaDocumentacion.Show();
-        
+
         }
 
-        private void MiError_Click(object sender, RoutedEventArgs e)
+        private void miError_Click(object sender, RoutedEventArgs e)
         {
 
             ventanaErrores = new Presentacion.ReportarErrrores();

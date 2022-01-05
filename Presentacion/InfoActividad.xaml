@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IPO1_AgenciadeViajes"
         mc:Ignorable="d"
-        Title="Actividad" Height="848.924" Width="709.2">
+        Title="{DynamicResource LblActivida}" Height="848.924" Width="709.2">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="104*"/>
@@ -50,7 +50,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label Content="Piscina." HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="3.4,0,0,0.6" Width="358" FontSize="16" Height="41" RenderTransformOrigin="0.5,0.5" Grid.Row="6" Grid.Column="1">
+        <Label Content="{DynamicResource LblActpiscina}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="3.4,0,0,0.6" Width="358" FontSize="16" Height="41" RenderTransformOrigin="0.5,0.5" Grid.Row="6" Grid.Column="1">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -67,7 +67,7 @@
             <ComboBoxItem x:Name="cbItem1" Content="ES"/>
             <ComboBoxItem x:Name="cbItem2" Content="EN"/>
         </ComboBox>
-        <Label Content="Nombre y Apellidos." HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="4.4,0,0,0.2" Width="215" FontSize="16" Height="38" RenderTransformOrigin="0.5,0.5" Grid.Row="1" Grid.Column="1">
+        <Label Content="{DynamicResource LblMonNomyApell}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="4.4,0,0,0.2" Width="215" FontSize="16" Height="38" RenderTransformOrigin="0.5,0.5" Grid.Row="1" Grid.Column="1">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -117,6 +117,6 @@
         <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="2" Margin="36.8,10,10.4,52" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click">
             <Image Source="/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
         </Button>
-        <Label x:Name="lblEstado" Content="Estado de aplicación" Margin="0,24.2,0.4,0.2" Grid.Row="10" Background="White" Opacity="0.7" Height="30" Grid.ColumnSpan="3"/>
+        <Label x:Name="lblEstado" Content="{DynamicResource lblEstado}" Margin="0,24.2,0.4,0.2" Grid.Row="10" Background="White" Opacity="0.7" Height="30" Grid.ColumnSpan="3"/>
     </Grid>
 </Window>

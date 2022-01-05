@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:IPO1_AgenciadeViajes"
         mc:Ignorable="d"
         Title="MenuPrincipal" Height="450" Width="800">
-    <Grid Margin="0,0,-0.4,0">
+    <Grid Margin="0,0,0,0">
         <Grid HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" VerticalAlignment="Top" Width="774"/>
         <Menu Grid.Row="0" x:Name="miMenu" FontSize="16" FontWeight="Bold">
             <MenuItem Header="Archivo" >
@@ -19,60 +19,54 @@
                 <MenuItem x:Name="miSalir" Header="Salir"/>
             </MenuItem>
             <MenuItem Header="Ayuda" FontSize="14">
-                <MenuItem x:Name="miAcercaDe" Header="Acerca de..." Click="miAcercaDe_Click" />
-                <MenuItem x:Name="miDocumentacion" Header="Documentacion" Click="miDocumentacion_Click" />
-                <MenuItem x:Name="miError" Header="Reportar un Error" Click="miError_Click" />
+                <MenuItem x:Name="miAcercaDe" Header="Acerca de..." Click="MiAcercaDe_Click" />
+                <MenuItem x:Name="miDocumentacion" Header="Documentacion" Click="MiDocumentacion_Click" />
+                <MenuItem x:Name="miError" Header="Reportar un Error" Click="MiError_Click" />
             </MenuItem>
         </Menu>
         <Grid>
             <TabControl x:Name="tcPestanas" Margin="0,27,-0.4,0">
                 <TabItem Header="Monitores" Margin="0,1,-41.6,-14.2">
                     <Grid>
-                        <DataGrid x:Name="dgMonitores" Margin="5,40,5,28.8" AutoGenerateColumns="False">
-                        </DataGrid>
+                        <DataGrid x:Name="dgMonitores" Margin="5,40,5,28.8" AutoGenerateColumns="False"/>
                         <ScrollBar HorizontalAlignment="Left" Height="296" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
                         <Button Margin="485,14,179,324.8" Content="Monitor" Click="btnMonitor_Click" />
                     </Grid>
                 </TabItem>
                 <TabItem Header="Parcelas" Margin="36.6,1,-95.2,-14.2">
                     <Grid>
-                        <DataGrid x:Name="dgParcelas" Margin="5,40,5,26.8" AutoGenerateColumns="False">
-                        </DataGrid>
+                        <DataGrid x:Name="dgParcelas" Margin="5,40,5,26.8" AutoGenerateColumns="False"/>
                         <ScrollBar HorizontalAlignment="Left" Height="298" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
-                        <Button Margin="485,14,179,324.8" Content="Parcela" Click="btnParcela_Click" />
+                        <Button Margin="485,14,179,324.8" Content="Parcela" Click="BtnParcela_Click" />
                     </Grid>
                 </TabItem>
                 <TabItem Header="Cabañas" Margin="81.2,1,-141.4,-14.2">
                     <Grid>
-                        <DataGrid x:Name="dgCabanas" Margin="5,40,5,26.8" AutoGenerateColumns="False">
-                        </DataGrid>
+                        <DataGrid x:Name="dgCabanas" Margin="5,40,5,26.8" AutoGenerateColumns="False"/>
                         <ScrollBar HorizontalAlignment="Left" Height="298" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
-                        <Button Margin="485,14,179,324.8" Content="Cabaña" Click="btnCabana_Click" />
+                        <Button Margin="485,14,179,324.8" Content="Cabaña" Click="BtnCabana_Click" />
                     </Grid>
                 </TabItem>
                 <TabItem Header="Actividades" Margin="111.4,1,-180.6,-14.2">
                     <Grid>
-                        <DataGrid x:Name="dgActividades" Margin="5,79,5,26.8" AutoGenerateColumns="False">
-                        </DataGrid>
+                        <DataGrid x:Name="dgActividades" Margin="5,79,5,26.8" AutoGenerateColumns="False"/>
                         <ScrollBar HorizontalAlignment="Left" Height="259" Margin="765,79,0,0" VerticalAlignment="Top" Width="13"/>
                         <Button Margin="483,48,181,290.8" Content="Crear Ruta" Click="Button_Click" />
-                        <Button Margin="332,48,332,290.8" Content="Actividad" Click="btnActividad_Click" />
-                        <Button Margin="191,48,479,290.8" Content="Ruta senderista" Click="btnRutaSenderista_Click" />
+                        <Button Margin="332,48,332,290.8" Content="Actividad" Click="BtnActividad_Click" />
+                        <Button Margin="191,48,479,290.8" Content="Ruta senderista" Click="BtnRutaSenderista_Click" />
                     </Grid>
                 </TabItem>
                 <TabItem Header="Historial de actividades" Margin="162.2,1,-254.8,-14.2">
                     <Grid>
-                        <DataGrid x:Name="dgHistorial" Margin="5,40,5,26.8" AutoGenerateColumns="False">
-                        </DataGrid>
+                        <DataGrid x:Name="dgHistorial" Margin="5,40,5,26.8" AutoGenerateColumns="False"/>
                         <ScrollBar HorizontalAlignment="Left" Height="298" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
                     </Grid>
                 </TabItem>
                 <TabItem Header="Promociones" Margin="253.2,-2,-317.2,-14.2">
                     <Grid Margin="0,17,0,-0.2">
-                        <DataGrid x:Name="dgPromociones" Margin="5,40,5,28" AutoGenerateColumns="False">
-                        </DataGrid>
+                        <DataGrid x:Name="dgPromociones" Margin="5,40,5,28" AutoGenerateColumns="False"/>
                         <ScrollBar HorizontalAlignment="Left" Height="280" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
-                        <Button Margin="488,10,176,313" Content="Promocion" Click="btnPromocion_Click" />
+                        <Button Margin="488,10,176,313" Content="Promocion" Click="BtnPromocion_Click" />
                     </Grid>
                 </TabItem>
             </TabControl>
@@ -83,7 +77,7 @@
             <ComboBoxItem x:Name="cbItem1" Content="ES"/>
             <ComboBoxItem x:Name="cbItem2" Content="EN"/>
         </ComboBox>
-        <Button x:Name="btnSalir" ToolTip="Salir" Margin="751,3,10,397" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click">
+        <Button x:Name="btnSalir" ToolTip="Salir" Margin="751,3,10,397" RenderTransformOrigin="0.5,0.707" Click="BtnSalir_Click">
             <Image Source="/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
         </Button>
         <Label x:Name="lblEstado" Content="Estado de aplicación" Margin="0,390,0,0" Background="White" Opacity="0.7" Height="30"/>
