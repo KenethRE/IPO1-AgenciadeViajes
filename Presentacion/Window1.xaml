@@ -5,13 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IPO1_AgenciadeViajes.Presentacion"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800">
+        Title="Window1" Height="450" Width="800" Background="#FFD0CCCC">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="247*"/>
+            <ColumnDefinition Width="153*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="13*"/>
-            <RowDefinition Height="204*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="174*"/>
         </Grid.RowDefinitions>
-        <Menu Grid.Row="0" x:Name="miMenu" FontSize="16" FontWeight="Bold" Background="{x:Null}">
+        <Menu Grid.Row="0" x:Name="miMenu" FontSize="16" FontWeight="Bold" Grid.ColumnSpan="2" Background="#FFD0CCCC">
             <MenuItem Header="Archivo" >
                 <MenuItem x:Name="miGuardar" Header="Guardar">
                     <MenuItem.Icon>
@@ -27,7 +32,12 @@
                 <MenuItem x:Name="miError" Header="Reportar un Error" Click="miError_Click" />
             </MenuItem>
         </Menu>
-        <TabControl x:Name="tcPestanas" Margin="0,0,0,0" Grid.Row="1">
+        <TabControl x:Name="tcPestanas" Margin="2,2,2,2" Padding="2,2,2,2" Grid.Row="1" BorderBrush="#FF1D144C" Grid.ColumnSpan="2" Grid.RowSpan="2" Background="#FFD0CCCC">
+            <TabControl.Resources>
+                <Style TargetType="{x:Type TabPanel}">
+                    <Setter Property="HorizontalAlignment" Value="Left" />
+                </Style>
+            </TabControl.Resources>
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
@@ -64,33 +74,31 @@
                                 <TranslateTransform/>
                             </TransformGroup>
                         </StackPanel.RenderTransform>
+                        <Image Name="icoActividades1" Height="50" Width="50" Source="/Recursos/Imagenes/icono_parcela.png"/>
+                        <TextBlock x:Name="lbActividades1" Text="{DynamicResource lblParcelas}" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </TabItem.Header>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal" RenderTransformOrigin="0.5,0.5">
+                        <StackPanel.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="0.95" ScaleY="0.95"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </StackPanel.RenderTransform>
                         <Image Name="icoActividades" Height="50" Width="50" Source="/Recursos/Imagenes/icono_actividad.png"/>
                         <TextBlock x:Name="lbActividades" Text="{DynamicResource lblActividades}" VerticalAlignment="Center"/>
                     </StackPanel>
                 </TabItem.Header>
             </TabItem>
-            <TabItem Header="Actividades" Margin="111.4,1,-180.6,-14.2">
-                <Grid>
-                    <DataGrid x:Name="dgActividades" Margin="5,79,5,26.8" AutoGenerateColumns="False"/>
-                    <ScrollBar HorizontalAlignment="Left" Height="259" Margin="765,79,0,0" VerticalAlignment="Top" Width="13"/>
-                    <Button Margin="483,48,181,290.8" Content="Crear Ruta" Click="Button_Click" />
-                    <Button Margin="332,48,332,290.8" Content="Actividad" Click="BtnActividad_Click" />
-                    <Button Margin="191,48,479,290.8" Content="Ruta senderista" Click="BtnRutaSenderista_Click" />
-                </Grid>
-            </TabItem>
-            <TabItem Header="Historial de actividades" Margin="162.2,1,-254.8,-14.2">
-                <Grid>
-                    <DataGrid x:Name="dgHistorial" Margin="5,40,5,26.8" AutoGenerateColumns="False"/>
-                    <ScrollBar HorizontalAlignment="Left" Height="298" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
-                </Grid>
-            </TabItem>
-            <TabItem Header="Promociones" Margin="253.2,-2,-317.2,-14.2">
-                <Grid Margin="0,17,0,-0.2">
-                    <DataGrid x:Name="dgPromociones" Margin="5,40,5,28" AutoGenerateColumns="False"/>
-                    <ScrollBar HorizontalAlignment="Left" Height="280" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
-                    <Button Margin="488,10,176,313" Content="Promocion" Click="BtnPromocion_Click" />
-                </Grid>
-            </TabItem>
         </TabControl>
+        <Grid Grid.Row="1" Grid.Column="1" Margin="0,1,0,4" HorizontalAlignment="Stretch">
+            <Image Margin="0,1,0,0" Height="50" Width="50" Source="{Binding ImgUsuario}" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" VerticalAlignment="Stretch"/>
+            <TextBlock x:Name="lblUsuario" Text="{DynamicResource lblUsuario}"/>
+        </Grid>
     </Grid>
 </Window>

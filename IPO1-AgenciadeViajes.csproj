@@ -94,6 +94,7 @@
     </ApplicationDefinition>
     <Compile Include="Dominio\Actividad.cs" />
     <Compile Include="Dominio\Cabana.cs" />
+    <Compile Include="Dominio\Usuario.cs" />
     <Compile Include="Dominio\reservacabaña.cs" />
     <Compile Include="Dominio\Inscrito.cs" />
     <Compile Include="Dominio\Monitor.cs" />
@@ -283,7 +284,6 @@
     <Resource Include="Recursos\Imagenes\icono_cabana.png" />
     <Resource Include="Recursos\Imagenes\icono_comentario.png" />
     <Resource Include="Recursos\Imagenes\icono_promocion.png" />
-    <Resource Include="Recursos\Imagenes\icono_parcela.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Persistencia\Monitores.xml">
@@ -330,6 +330,10 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Recursos\Imagenes\Portada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\Imagenes\vctmp1516_1907.navigation.7f3888c8.png" />
+    <Resource Include="Recursos\Imagenes\icono_parcela.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\GemBox.Pdf.17.0.1072\build\netstandard2.0\GemBox.Pdf.targets" Condition="Exists('packages\GemBox.Pdf.17.0.1072\build\netstandard2.0\GemBox.Pdf.targets')" />

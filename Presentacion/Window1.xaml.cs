@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IPO1_AgenciadeViajes.Dominio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,7 +29,8 @@ namespace IPO1_AgenciadeViajes.Presentacion
         private InfoPromocion ventanaPromocion;
         private InfoRutaSenderista ventanaRutaSenderista;
         private Presentacion.Documentacion ventanaDocumentacion;
-        private Presentacion.ReportarErrrores ventanaErrores;
+        private ReportarErrrores ventanaErrores;
+        private Usuario usuarioActual = new Usuario();
 
         List<Dominio.Monitor> listadoMonitores;
         List<Dominio.Parcela> listadoParcelas;
@@ -36,43 +38,48 @@ namespace IPO1_AgenciadeViajes.Presentacion
         List<Dominio.Actividad> listadoActividades;
         List<Dominio.Promocion> listadoPromociones;
 
-        public Window1()
+        public Window1(Uri uriUsuario)
         {
             InitializeComponent();
+            DataContext = usuarioActual;
+            if (uriUsuario == null) usuarioActual.ImgUsuario = new BitmapImage(new Uri("/Recursos/Imagenes/user.png", UriKind.RelativeOrAbsolute));
+            else usuarioActual.ImgUsuario = new BitmapImage(uriUsuario);
             // Crear el listado de monitores
             listadoMonitores = new List<Dominio.Monitor>();
             // Se cargarán los datos de prueba de un fichero XML
             CargarContenidoListaXMLMonitores();
             // Indicar que el origen de datos del ListBox es listadoMonitores
-            dgMonitores.ItemsSource = listadoMonitores;
+            //dgMonitores.ItemsSource = listadoMonitores;
 
             // Crear el listado de parcelas
             listadoParcelas = new List<Dominio.Parcela>();
             // Se cargarán los datos de prueba de un fichero XML
             CargarContenidoListaXMLParcelas();
             // Indicar que el origen de datos del ListBox es listadoParcelas
-            dgParcelas.ItemsSource = listadoParcelas;
+            //dgParcelas.ItemsSource = listadoParcelas;
 
             // Crear el listado de cabañas
             listadoCabanas = new List<Dominio.Cabana>();
             // Se cargarán los datos de prueba de un fichero XML
             CargarContenidoListaXMLCabanas();
             // Indicar que el origen de datos del ListBox es listadoParcelas
-            dgCabanas.ItemsSource = listadoCabanas;
+            //dgCabanas.ItemsSource = listadoCabanas;
 
             // Crear el listado de actividades
             listadoActividades = new List<Dominio.Actividad>();
             // Se cargarán los datos de prueba de un fichero XML
             CargarContenidoListaXMLActividades();
             // Indicar que el origen de datos del ListBox es listadoParcelas
-            dgActividades.ItemsSource = listadoActividades;
+            //dgActividades.ItemsSource = listadoActividades;
 
             // Crear el listado de actividades
             listadoPromociones = new List<Dominio.Promocion>();
             // Se cargarán los datos de prueba de un fichero XML
             CargarContenidoListaXMLPromociones();
             // Indicar que el origen de datos del ListBox es listadoParcelas
-            dgPromociones.ItemsSource = listadoPromociones;
+            //dgPromociones.ItemsSource = listadoPromociones;
+
+
         }
         private void CargarContenidoListaXMLMonitores()
         {

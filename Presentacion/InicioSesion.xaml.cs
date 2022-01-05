@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IPO1_AgenciadeViajes.Presentacion;
+using System;
 using System.Globalization;
 using System.Windows;
 using System.Windows.Controls;
@@ -27,7 +28,6 @@ namespace IPO1_AgenciadeViajes
             if (!String.IsNullOrEmpty(tbxEmail.Text) && tbxEmail.Text.Equals(usuario, StringComparison.InvariantCultureIgnoreCase))
             {
                 // comprobación correcta
-                pbxContraseña.IsEnabled = true;
                 tbxEmail.BorderBrush = Brushes.Transparent;
                 comprobarContraseña(pbxContraseña.Password);
             }
@@ -49,7 +49,7 @@ namespace IPO1_AgenciadeViajes
 
         private void comprobarContraseña(string contraseña)
         {
-            string pass_usuario = "12345678";
+            string pass_usuario = "1234";
             if (pbxContraseña.IsEnabled && !String.IsNullOrEmpty(pbxContraseña.Password))
             {
                 if (!pbxContraseña.Password.Equals(pass_usuario))
@@ -73,7 +73,10 @@ namespace IPO1_AgenciadeViajes
                     timer.Start();
                     timer.Tick += (sender, args) =>
                     {
-                        new MenuPrincipal().Show();
+                        //new MenuPrincipal().Show();
+                        Uri uri = new Uri("/Recursos/Imagenes/Persona.png", UriKind.RelativeOrAbsolute);
+                        new Window1(uri).Show();
+                        timer.Stop();
                         this.Close();
                     };
                 }
