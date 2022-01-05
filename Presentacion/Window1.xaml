@@ -69,27 +69,25 @@
                     </StackPanel>
                 </TabItem.Header>
             </TabItem>
-            <TabItem Header="Actividades" Margin="111.4,1,-180.6,-14.2">
-                <Grid>
-                    <DataGrid x:Name="dgActividades" Margin="5,79,5,26.8" AutoGenerateColumns="False"/>
-                    <ScrollBar HorizontalAlignment="Left" Height="259" Margin="765,79,0,0" VerticalAlignment="Top" Width="13"/>
-                    <Button Margin="483,48,181,290.8" Content="Crear Ruta" Click="Button_Click" />
-                    <Button Margin="332,48,332,290.8" Content="Actividad" Click="BtnActividad_Click" />
-                    <Button Margin="191,48,479,290.8" Content="Ruta senderista" Click="BtnRutaSenderista_Click" />
-                </Grid>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal" RenderTransformOrigin="0.5,0.5">
+                        <StackPanel.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="0.95" ScaleY="0.95"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </StackPanel.RenderTransform>
+                        <Image Name="icoActividades1" Height="50" Width="50" Source="/Recursos/Imagenes/icono_parcela.jpg"/>
+                        <TextBlock x:Name="lbActividades1" Text="{DynamicResource lblParcelas}" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </TabItem.Header>
             </TabItem>
             <TabItem Header="Historial de actividades" Margin="162.2,1,-254.8,-14.2">
-                <Grid>
-                    <DataGrid x:Name="dgHistorial" Margin="5,40,5,26.8" AutoGenerateColumns="False"/>
-                    <ScrollBar HorizontalAlignment="Left" Height="298" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
-                </Grid>
             </TabItem>
             <TabItem Header="Promociones" Margin="253.2,-2,-317.2,-14.2">
-                <Grid Margin="0,17,0,-0.2">
-                    <DataGrid x:Name="dgPromociones" Margin="5,40,5,28" AutoGenerateColumns="False"/>
-                    <ScrollBar HorizontalAlignment="Left" Height="280" Margin="765,40,0,0" VerticalAlignment="Top" Width="13"/>
-                    <Button Margin="488,10,176,313" Content="Promocion" Click="BtnPromocion_Click" />
-                </Grid>
             </TabItem>
         </TabControl>
     </Grid>
