@@ -1,14 +1,32 @@
 ﻿<Parcelas>
-	<Parcela Titulo="Parcela" Precio="800" Temporada="Alta"
-	Ubicacion="Se encuentra cerca de una piscina"
+	<Parcela Titulo="Parcela rústica" Precio="800" Temporada="Alta"
+	Ubicacion="Se encuentra cerca de la playa"
 	Tamano="5000"
-	Servicios ="Luz"
-	MinCapacidad ="10"
+	Servicios ="Luz
+	Agua
+	Gas"
+	MinCapacidad ="13"
 	Disponibilidad ="true"/>
-	<Parcela Titulo="Parcela" Precio="800" Temporada="Alta"
-	Ubicacion="Se encuentra cerca de una piscina"
-	Tamano="5000"
+	
+	<Parcela Titulo="Parcela montaña" Precio="1000" Temporada="Baja"
+	Ubicacion="Se encuentra cerca de la montaña"
+	Tamano="10000"
 	Servicios ="Luz"
-	MinCapacidad ="10"
+	MinCapacidad ="5"
+	Disponibilidad ="false"/>
+
+	<Parcela Titulo="Parcela no urbañizable agrícola" Precio="5000" Temporada="Media"
+	Ubicacion="Se encuentra a las afueras del poblado"
+	Tamano="10000"
+	Servicios ="Agua"
+	MinCapacidad ="25"
 	Disponibilidad ="true"/>
+
+	<Parcela Titulo="Parcela rústica" Precio="1600" Temporada="Alta"
+	Ubicacion="Terreno perfecto para constuir un chalet"
+	Tamano="1000"
+	Servicios ="Agua"
+	MinCapacidad ="12"
+	Disponibilidad ="true"/>
+	
 </Parcelas>

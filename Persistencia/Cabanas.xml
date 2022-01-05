@@ -1,14 +1,29 @@
 ﻿<Cabanas>
-	<Cabana Titulo="Cabaña" Precio="90" Capacidad="65456545"
-	Descripcion="Cabaña acogedora"
-	Imagen="Imagenes/icono_cabana.png"
+	<Cabana Titulo="Cabaña con piscina" Precio="100" Capacidad="6"
+	Descripcion="Cabaña acogedora con piscina cercanada"
+	Imagen="/Recursos/Imagenes/Cabaña2.png"
 	Restriccion="Entrada a partir de las 14:00"
-	Equipamiento="Tele"
+	Equipamiento="Televisión
+	Wi-Fi
+	Ropa de baño
+	Horno
+	Microondas"
 	Disponibilidad="true" />
-	<Cabana Titulo="Cabaña" Precio="90" Capacidad="65456545"
-	Descripcion="Cabaña acogedora"
-	Imagen="Imagenes/icono_cabana.png"
-	Restriccion="Entrada a partir de las 14:00"
-	Equipamiento="Tele"
+	
+	<Cabana Titulo="Cabaña bosque" Precio="150" Capacidad="2"
+	Descripcion="Cabaña ubicada en reserva forestal con vistas al bosque y arroyo"
+	Imagen="/Recursos/Imagenes/Cabaña1.png"
+	Restriccion="Entrada a partir de las 10:00
+	Salida a antes de las 14:00"
+	Equipamiento="Horno
+	Ropa de cama y toallas"
 	Disponibilidad="true" />
+
+	<Cabana Titulo="Cabaña montaña" Precio="80" Capacidad="5"
+	Descripcion="Cabaña con vistas a la montaña y se encuentra cerca una famosa ruta "
+	Imagen="/Recursos/Imagenes/Cabaña.png"
+	Restriccion="Entrada a partir de las 9:00"
+	Equipamiento="Horno
+	Microondas"
+	Disponibilidad="false" />
 </Cabanas>

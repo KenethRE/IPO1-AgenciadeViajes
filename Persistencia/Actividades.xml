@@ -1,20 +1,45 @@
 ﻿<Actividades>
-	<Actividad Titulo="Actividad" Descripcion="Actividad" Monitor="Nombre"
+	<Actividad Titulo="Actividad en la playa" Descripcion="Actividad de montar a caballo para adultos " 
+	Monitor="Lucía García Sánchez"
 	Horario="De 18:00 a 19:30"
 	Niños="false"
 	MaxCapacidad ="30"
 	MinCapacidad ="10"
 	Precio ="10"
+	Area ="Alrdededor de la playa"
+	Equipamiento="Zapatillas adecuadas para montar a caballo"
+	Estado ="true"/>
+
+	<Actividad Titulo="Actividad en la piscina" Descripcion="Actividad en la piscina para la familia" 
+	Monitor="Fernando Gómez López"
+	Horario="De 9:00 a 12:30"
+	Niños="true"
+	MaxCapacidad ="20"
+	MinCapacidad ="5"
+	Precio ="20"
 	Area ="En la piscina"
 	Equipamiento="Chanclas"
 	Estado ="true"/>
-	<Actividad Titulo="Actividad" Descripcion="Actividad" Monitor="Nombre"
-	Horario="De 18:00 a 19:30"
-	Niños="false"
+
+	<Actividad Titulo="Actividad tiro con arco" Descripcion="Actividad en alrededores de tiro con arco para toda la familia" 
+	Monitor="Luisa Murillo Murillo"
+	Horario="De 10:00 a 14:00"
+	Niños="true"
 	MaxCapacidad ="30"
-	MinCapacidad ="10"
-	Precio ="10"
-	Area ="En la piscina"
-	Equipamiento="Chanclas"
+	MinCapacidad ="15"
+	Precio ="30"
+	Area ="Alrededor del camping"
+	Equipamiento="Nada"
+	Estado ="true"/>
+
+	<Actividad Titulo="Actividad para niños" Descripcion="Actividad para niños en un parque de aventuras" 
+	Monitor="María Díaz Jiménez"
+	Horario="De 17:00 a 19:00"
+	Niños="true"
+	MaxCapacidad ="40"
+	MinCapacidad ="20"
+	Precio ="18"
+	Area ="Alrededor del camping"
+	Equipamiento="Chándal"
 	Estado ="true"/>
 </Actividades>

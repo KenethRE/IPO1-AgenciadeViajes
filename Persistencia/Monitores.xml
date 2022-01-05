@@ -1,14 +1,37 @@
 ﻿<Monitores>
-	<Monitor Nombre="Lucia" Correo="lucia@gmail.com" Telefono="65456545"
-	Idioma="Español"
-	Foto="Imagenes/icono_usuario.png" 
+	<Monitor Nombre="Lucía García Sánchez" Correo="luciagsanchez@gmail.com" Telefono="693530933"
+	Idioma="Español
+	Inglés
+	Francés
+	Alemán"
+	Foto="/Recursos/Imagenes/Monitor.png" 
 	Restricciones ="Fines de semana"
 	Estado ="Disponible"
-	Formacion="Bachillerato"/>
-	<Monitor Nombre="Lucia" Correo="lucia@gmail.com" Telefono="65456545"
-	Idioma="Español"
-	Foto="Imagenes/icono_usuario.png"
-	Restricciones ="Fines de semana"
+	Formacion="Grado Superior en Guía, Información y Asistencia Turística"/>
+	
+	<Monitor Nombre="Fernando Gómez López" Correo="fergomezlopezz@yahoo.es" Telefono="678332003"
+	Idioma="Español
+	Inglés"
+	Foto="/Recursos/Imagenes/Monitor1.png"
+	Restricciones ="Lunes y miércoles"
 	Estado ="Disponible"
+	Formacion="Grado en Ciencias de la Actividad Física y del Deporte"/>
+
+	<Monitor Nombre="Luisa Murillo Murillo" Correo="luisammurillo@yahoo.es" Telefono="698374738"
+	Idioma="Español
+	Inglés
+	Francés"
+	Foto="/Recursos/Imagenes/Monitor2.png"
+	Restricciones ="Martes y viernes"
+	Estado ="No disponible"
 	Formacion="Bachillerato"/>
+
+	<Monitor Nombre="María Díaz Jiménez" Correo="mariadiazjimenez@gmail.com" Telefono="659879649"
+	Idioma="Español"
+	Foto="/Recursos/Imagenes/icono_usuario.png"
+	Restricciones ="Lunes y miércoles"
+	Estado ="Disponible"
+	Formacion="Grado en Ciencias de la Actividad Física y del Deporte
+	Grado Superior en Guía, Información y Asistencia Turística"/>
+	
 </Monitores>
