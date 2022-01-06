@@ -7,44 +7,104 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblLogin">Login</sys:String>
     <sys:String x:Key="lblRecordarContraseña">Forgot password?</sys:String>
     <sys:String x:Key="lblUsuario">User</sys:String>
-    <sys:String x:Key="lblMonitores">Guides</sys:String>
     <sys:String x:Key="lblCabanas">Cabins</sys:String>
     <sys:String x:Key="lblActividades">Activities</sys:String>
     <sys:String x:Key="lblUltInicio">Last Login:</sys:String>
-    
-    <sys:String x:Key="blNombreReservarCabana">Name:</sys:String>
-    <sys:String x:Key="elefonoReservarCabana">Phone:</sys:String>
-    <sys:String x:Key="CapacidadReservarCabana">Nº Occupants:</sys:String>
-    <sys:String x:Key="SolicitudesReservarCabana">Special requests:</sys:String>
-    <sys:String x:Key="btnConfirmarReservarCabana">Confirm</sys:String>
+
+    <sys:String x:Key="lblMonitores">Monitors</sys:String>
+    <sys:String x:Key="lblParcelas">Plots</sys:String>
+
+    <sys:String x:Key="lblNombreReservarCabana">Name:</sys:String>
+    <sys:String x:Key="TelefonoReservarCabana">Phone:</sys:String>
     <sys:String x:Key="btnCancelarReservarCabana">Cancel</sys:String>
-    <sys:String x:Key="lblEstado">Aplication Status</sys:String>
-    <sys:String x:Key="txtBoxopcional">(Optional)</sys:String>
-    <sys:String x:Key="Confirmacioncabana">Cabin Confirmation</sys:String>
-    <sys:String x:Key="Confirmacionparcela">Parcel Confirmation</sys:String>
-    <sys:String x:Key="Crearruta">Create route</sys:String>
-    <sys:String x:Key="LblCrearruta">Here you can design your own route as you wish</sys:String>
-    <sys:String x:Key="LblGuardar">Save</sys:String>
-    <sys:String x:Key="LblHorainic">Start time:</sys:String>
-    <sys:String x:Key="LblHorafin">End time:</sys:String>
-    <sys:String x:Key="LblActivida">Activity</sys:String>
-    <sys:String x:Key="LblActividafam">Activity to do as a family.</sys:String>
-    <sys:String x:Key="LblMonActiv">Monitor/s who teach it:</sys:String>
-    <sys:String x:Key="LblMonNomyApell">Name and Shortname:</sys:String>
-    <sys:String x:Key="LblHorarioActiv">Schedule</sys:String>
-    <sys:String x:Key="LblHrLaV">Monday to Friday at 18:00</sys:String>
-    <sys:String x:Key="LblCupo">Minimum and maximum number of registrants</sys:String>
-    <sys:String x:Key="LblActPersonas">5 - 20 persons</sys:String>
-    <sys:String x:Key="LblActCaract">Characteristics of the recipients</sys:String>
-    <sys:String x:Key="LblActCaractNiAdul">For kids and adults.</sys:String>
-    <sys:String x:Key="LblActPrecio">Price</sys:String>
-    <sys:String x:Key="LblActPreciohora">5€ hour.</sys:String>
-    <sys:String x:Key="LblActArea">Area of ​​the campsite where the activity takes place</sys:String>
-    <sys:String x:Key="LblActpiscina">Pool</sys:String>
-    <sys:String x:Key="LblActequipamiento">Necessary equipment</sys:String>
-    <sys:String x:Key="LblActchanclas">flip blops</sys:String>
-    <sys:String x:Key="btnAltaBaja">Register/Cancel</sys:String>
-    <sys:String x:Key="btnmodificar">Modify information</sys:String>
-    <sys:String x:Key="btnguardarcambios">Save changes</sys:String>
-    <sys:String x:Key="btngestionar">Manage the list of registered changes</sys:String>
+    <sys:String x:Key="EmailReservarCabana">Email:</sys:String>
+    <sys:String x:Key="txtBox">(Optional):</sys:String>
+    <sys:String x:Key="CapacidadReservarCabana">Nº vacants:</sys:String>
+    <sys:String x:Key="btnConfirmarReservarCabana">Confirm</sys:String>
+    <sys:String x:Key="txtBoxEmailOpcionalReservarCabana">(Optional)</sys:String>
+    <sys:String x:Key="SolicitudesReservarCabana">Special requests:</sys:String>
+    <sys:String x:Key="txtBoxSolicitudesReservarCabana">Enter here if you need any special request such as a cot, specific kitchenware, any special mobility circumstance of people staying or others.</sys:String>
+
+    <sys:String x:Key="lblNombreReservarParcela">Name:</sys:String>
+    <sys:String x:Key="lblTelefonoReservarParcela">Phone:</sys:String>
+    <sys:String x:Key="CancelarReservarParcela">Cancel</sys:String>
+    <sys:String x:Key="lblEmailReservarParcela">Email:</sys:String>
+    <sys:String x:Key="txtBoxTelefonoReservarParcela">(Optional)</sys:String>
+    <sys:String x:Key="lblCapacidadReservarParcela">Nº vacants:</sys:String>
+    <sys:String x:Key="btnConfirmar">Confirm</sys:String>
+    <sys:String x:Key="txtBoxEmailReservarParcela">(Optional)</sys:String>
+
+    <sys:String x:Key="lblInformacionCrearRuta">Here you can design your own route as you wish.</sys:String>
+    <sys:String x:Key="lblHoraInicioCrearRuta">Start time:</sys:String>
+    <sys:String x:Key="lblHoraFinCrearRuta">End Time:</sys:String>
+    <sys:String x:Key="btnCancelarCrearRuta">Cancel</sys:String>
+    <sys:String x:Key="btnGuardarCrearRuta">Save</sys:String>
+
+    <sys:String x:Key="lblTituloActividad">Activity</sys:String>
+    <sys:String x:Key="lblMonitorActividad">Monitor/s who teach it:</sys:String>
+    <sys:String x:Key="lblHorarioActividad">Schedule</sys:String>
+    <sys:String x:Key="lblCaracteristicasActividades">Characteristics of the recipients</sys:String>
+    <sys:String x:Key="btnCancelarActividad">Cancel</sys:String>
+    <sys:String x:Key="btnDarActividad">Register/Cancel</sys:String>
+    <sys:String x:Key="lblCapacidadActividad">Minimum and maximum number of registrants</sys:String>
+    <sys:String x:Key="lblPrecioActividad">Price</sys:String>
+    <sys:String x:Key="lblAreaActividad">Area of ​​the campsite where the activity takes place</sys:String>
+    <sys:String x:Key="lblEquipamientoActividad">Necessary equipment</sys:String>
+    <sys:String x:Key="btnModificarActividad">Modify information</sys:String>
+    <sys:String x:Key="btnGuardarActividad">Save information</sys:String>
+    <sys:String x:Key="btnInscritosActividad">Gestionar el listado de inscritos</sys:String>
+
+    <sys:String x:Key="lblTituloCabana">Cabins</sys:String>
+    <sys:String x:Key="lblPrecioCabana">Price per night:</sys:String>
+    <sys:String x:Key="lblCapacidadCabana">Maximum capacity</sys:String>
+    <sys:String x:Key="lblRestriccionesCabana">Minimum stay restriction</sys:String>
+    <sys:String x:Key="lblFechaInicioCabana">Start date:</sys:String>
+    <sys:String x:Key="lblFechaFinCabana">End date:</sys:String>
+    <sys:String x:Key="btnCancelarCabana">Cancel</sys:String>
+    <sys:String x:Key="btnReservarCabana">Reserve</sys:String>
+    <sys:String x:Key="lblEquipamientoCabana">Equipment</sys:String>
+    <sys:String x:Key="lblImagenesCabana">Images</sys:String>
+
+
+    <sys:String x:Key="lblCorreoInscrito">Mail:</sys:String>
+    <sys:String x:Key="lblTelefonoInscrito">Phone:</sys:String>
+    <sys:String x:Key="lblInscripcionInscrito">Registration type:</sys:String>
+    <sys:String x:Key="btnCancelarInscrito">Cancel</sys:String>
+    <sys:String x:Key="btnDarInscrito">Register/Cancel</sys:String>
+    <sys:String x:Key="btnModificarInscrito">Modify information</sys:String>
+    <sys:String x:Key="btnGuardarInscrito">Save changes</sys:String>
+
+
+    <sys:String x:Key="lblCorreoMonitor">E-Mails:</sys:String>
+    <sys:String x:Key="lblTelefonoMonitor">Phone contact:</sys:String>
+    <sys:String x:Key="lblFormacionMonitor">Training</sys:String>
+    <sys:String x:Key="btnCancelarMonitor">Cancel</sys:String>
+    <sys:String x:Key="btnDarMonitor">Register/Cancel</sys:String>
+    <sys:String x:Key="lblIdiomasMonitor">Idiom</sys:String>
+    <sys:String x:Key="lblRestriccionesMonitor">Availability restrictions</sys:String>
+    <sys:String x:Key="btnModificarMonitor">Modify information</sys:String>
+    <sys:String x:Key="btnGuardarMonitor">Save changes</sys:String>
+
+    <sys:String x:Key="lblPrecioParcela">>Price per night:</sys:String>
+    <sys:String x:Key="lblUbicacionParcela">Location:</sys:String>
+    <sys:String x:Key="lblServiciosParcela">Services</sys:String>
+    <sys:String x:Key="lblFechaInicioParcela">Start date:</sys:String>
+    <sys:String x:Key="lblFechaFinParcela">End date:</sys:String>
+    <sys:String x:Key="btnCancelarParcela">Cancel</sys:String>
+    <sys:String x:Key="btnReservarParcela">Reserve</sys:String>
+
+    <sys:String x:Key="lblFotosPromocion">Images</sys:String>
+    <sys:String x:Key="btnCancelarPromocion">Cancel</sys:String>
+    <sys:String x:Key="btnDarPromocion">Register/Cancel</sys:String>
+    <sys:String x:Key="btnModificarPromocion">Modify information</sys:String>
+    <sys:String x:Key="btnGuardarPromocion">Save changes</sys:String>
+
+    <sys:String x:Key="lblMonitorRuta">Monitor/ss</sys:String>
+    <sys:String x:Key="lblHorarioRuta">Start and end Schelude</sys:String>
+    <sys:String x:Key="btnCancelarRuta">Cancel</sys:String>
+    <sys:String x:Key="lblEncuentroRuta">Meeting point</sys:String>
+    <sys:String x:Key="lblCapacidadRuta">Maximum and minimum number of people</sys:String>
+    <sys:String x:Key="lblDificultadRuta">Degree of difficulty</sys:String>
+    <sys:String x:Key="lblMapaRuta">Route map</sys:String>
+
 </ResourceDictionary>
