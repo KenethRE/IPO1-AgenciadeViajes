@@ -337,6 +337,10 @@
   <ItemGroup>
     <Resource Include="Persistencia\RutaSenderista.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\Imagenes\imagen_ruta1.jpg" />
+    <Resource Include="Recursos\Imagenes\imagen_ruta2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\GemBox.Pdf.17.0.1072\build\netstandard2.0\GemBox.Pdf.targets" Condition="Exists('packages\GemBox.Pdf.17.0.1072\build\netstandard2.0\GemBox.Pdf.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
