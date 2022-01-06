@@ -1,0 +1,30 @@
+﻿<RutasSenderistas>
+	<RutaSenderista Titulo="Ruta alrededor del camping" Descripcion="Ruta agradable para toda la familia"
+	Mapa="/Recursos/Imagenes/imagen_ruta.jpg"
+	Horario="16:00 - 19:00"
+	Monitor="Lucía García Sánchez
+	Fernando Gómez López"
+	Encuentro="En la entrada del camping"
+	Capacidadmax="30"
+	Capacidadmin="10"
+	Dificultad="Baja"/>
+
+	<RutaSenderista Titulo="Ruta montaña" Descripcion="Ruta con dificultad con grandes vistas desde lo alto de la montaña"
+	Mapa="/Recursos/Imagenes/imagen_ruta1.jpg"
+	Horario="8:00 - 14:00"
+	Monitor="Luisa Murillo Murillo"
+	Encuentro="En la entrada del camping"
+	Capacidadmax="10"
+	Capacidadmin="3"
+	Dificultad="Alta"/>
+
+	<RutaSenderista Titulo="Ruta cueva" Descripcion="Esta ruta es la más famosa del camping por los encantos que esconde esta cueva"
+	Mapa="/Recursos/Imagenes/imagen_ruta2.png"
+	Horario="15:30 - 16:15"
+	Monitor="Maria Díaz Jiménez"
+	Encuentro="En la entrada del camping"
+	Capacidadmax="5"
+	Capacidadmin="1"
+	Dificultad="Media"/>
+
+</RutasSenderistas>
