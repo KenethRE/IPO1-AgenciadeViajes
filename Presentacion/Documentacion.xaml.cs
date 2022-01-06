@@ -1,4 +1,6 @@
 ﻿using GemBox.Pdf;
+using GemBox.Pdf.Content;
+using NuGet.Protocol.Plugins;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,9 +23,11 @@ namespace IPO1_AgenciadeViajes.Presentacion
     /// </summary>
     public partial class Documentacion : Window
     {
+        
         XpsDocument xpsDocument;
         public Documentacion()
         {
+            ComponentInfo.SetLicense("FREE-LIMITED-KEY");
             InitializeComponent();
             using (var document = PdfDocument.Load("input.pdf"))
             {
