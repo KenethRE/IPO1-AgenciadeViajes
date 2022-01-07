@@ -60,7 +60,19 @@
         </ComboBox>
         <Menu Grid.Row="0" x:Name="miMenu" FontSize="16" FontWeight="Bold" Margin="0,0,0,73" Grid.ColumnSpan="8" HorizontalAlignment="Left" Width="800">
             <MenuItem Header="Archivo" >
-                <MenuItem x:Name="miSalir" Header="Salir" Click="Salir"/>
+                <MenuItem Header="Cambiar Idioma">
+                    <MenuItem x:Name="spanish" Header="Español" Click="spanish_Click">
+                        <MenuItem.Icon>
+                            <Image Source="/Recursos/Imagenes/spain.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem x:Name="english" Header="English" Click="english_Click">
+                        <MenuItem.Icon>
+                            <Image Source="/Recursos/Imagenes/united-states.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem x:Name="miSalir" Header="Salir" Click="miSalir_Click"/>
             </MenuItem>
             <MenuItem Header="Ayuda">
                 <MenuItem x:Name="miAcercaDe" Header="Acerca de..." Click="miAcercaDe_Click" />

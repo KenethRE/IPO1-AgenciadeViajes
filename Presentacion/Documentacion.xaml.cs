@@ -1,8 +1,6 @@
-﻿using GemBox.Pdf;
-using GemBox.Pdf.Content;
-using NuGet.Protocol.Plugins;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,13 +25,11 @@ namespace IPO1_AgenciadeViajes.Presentacion
         XpsDocument xpsDocument;
         public Documentacion()
         {
-            ComponentInfo.SetLicense("FREE-LIMITED-KEY");
+
             InitializeComponent();
-            using (var document = PdfDocument.Load("input.pdf"))
-            {
-                this.xpsDocument = document.ConvertToXpsDocument(SaveOptions.Xps);
-                this.docViewer.Document = this.xpsDocument.GetFixedDocumentSequence();
-            }
+            xpsDocument = new XpsDocument("/Recursos/Documentacion.xps", FileAccess.Read);
+            FixedDocumentSequence fds = xpsDocument.GetFixedDocumentSequence();
+            docViewer.Document = fds;
         }
     }
 }

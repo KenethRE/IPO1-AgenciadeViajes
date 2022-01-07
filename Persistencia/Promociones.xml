@@ -1,22 +1,22 @@
 ﻿<Promociones>
 	<Promocion Titulo="3x2 en actividades" Descripcion="La pomoción de 3x2 en actividades realizadas en el camping hasta fin de año" 
 	Foto="/Recursos/Imagenes/Actividad.png"
-	Estado ="true"/>
+	Estado ="True"/>
 	
-	<Promocion Titulo="Desyuno gratis" Descripcion="Desayuno gratis todos los días diarios en todo el mes de enero" 
+	<Promocion Titulo="Desayuno gratis" Descripcion="Desayuno gratis todos los días diarios en todo el mes de enero" 
 	Foto="/Recursos/Imagenes/Promocion1.png"
-	Estado ="false"/>
+	Estado ="False"/>
 
 	<Promocion Titulo="Regalo niños" Descripcion="Para la consumición de 3 noches, se les ofrece a los niños un pequeño recuerdo de la estancia" 
 	Foto="/Recursos/Imagenes/Promocion3.png"
-	Estado ="true"/>
+	Estado ="True"/>
 	
 	<Promocion Titulo="2 noches gratis" Descripcion="Reserva 5 noches y pagas 3 noches" 
 	Foto="/Recursos/Imagenes/Promocion2.png"
-	Estado ="true"/>
+	Estado ="True"/>
 
 	<Promocion Titulo="50% de descuento" Descripcion="50% de descuento en todo el camping" 
 	Foto="/Recursos/Imagenes/Promocion.png"
-	Estado ="true"/>
+	Estado ="True"/>
 	
 </Promociones>

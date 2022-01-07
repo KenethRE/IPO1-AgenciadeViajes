@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IPO1_AgenciadeViajes.Dominio
 {
-    class RutaSenderista
+    public class RutaSenderista
     {
         public string Titulo { set; get; }
         public string Descripcion { set; get; }

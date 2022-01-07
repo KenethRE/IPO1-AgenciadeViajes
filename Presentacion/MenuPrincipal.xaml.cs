@@ -1,6 +1,7 @@
 ﻿using IPO1_AgenciadeViajes.Dominio;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,26 +29,23 @@ namespace IPO1_AgenciadeViajes.Presentacion
         private InfoActividad ventanaActividad;
         private InfoPromocion ventanaPromocion;
         private InfoRutaSenderista ventanaRutaSenderista;
-        private Presentacion.Documentacion ventanaDocumentacion;
-        private ReportarErrrores ventanaErrores;
-        private Usuario usuarioActual = new Usuario();
+        
+        public Usuario usuarioActual { get; set; }
 
-        List<Dominio.Monitor> listadoMonitores;
-        List<Dominio.Parcela> listadoParcelas;
-        List<Dominio.Cabana> listadoCabanas;
-        List<Dominio.Actividad> listadoActividades;
-        List<Dominio.Promocion> listadoPromociones;
+        public List<Dominio.Monitor> listadoMonitores { get; set;}
+        public List<Parcela> listadoParcelas { get; set; }
+        public List<Cabana> listadoCabanas { get; set; }
+        public List<Dominio.Actividad> listadoActividades { get; set; }
+        public ObservableCollection<Promocion> listadoPromociones { get; set; }
 
         public MenuPrincipal(Uri uriUsuario)
         {
-            InitializeComponent();
-            DataContext = usuarioActual;
+            this.usuarioActual = new Usuario();
             if (uriUsuario == null) usuarioActual.ImgUsuario = new BitmapImage(new Uri("/Recursos/Imagenes/user.png", UriKind.RelativeOrAbsolute));
             else usuarioActual.ImgUsuario = new BitmapImage(uriUsuario);
 
             usuarioActual.Nombre = "José";
             usuarioActual.ultimoInicio = DateTime.Now.ToString();
-
             // Crear el listado de monitores
             listadoMonitores = new List<Dominio.Monitor>();
             // Se cargarán los datos de prueba de un fichero XML
@@ -77,13 +75,13 @@ namespace IPO1_AgenciadeViajes.Presentacion
             //dgActividades.ItemsSource = listadoActividades;
 
             // Crear el listado de actividades
-            listadoPromociones = new List<Dominio.Promocion>();
+            listadoPromociones = new ObservableCollection<Promocion>();
             // Se cargarán los datos de prueba de un fichero XML
             CargarContenidoListaXMLPromociones();
             // Indicar que el origen de datos del ListBox es listadoParcelas
             //dgPromociones.ItemsSource = listadoPromociones;
 
-
+            InitializeComponent();
         }
         private void CargarContenidoListaXMLMonitores()
         {
@@ -259,16 +257,29 @@ namespace IPO1_AgenciadeViajes.Presentacion
         }
         private void MiDocumentacion_Click(object sender, RoutedEventArgs e)
         {
-            ventanaDocumentacion = new Presentacion.Documentacion();
-            ventanaDocumentacion.Show();
+            new Documentacion().Show();
 
         }
 
         private void miError_Click(object sender, RoutedEventArgs e)
         {
 
-            ventanaErrores = new Presentacion.ReportarErrrores();
-            ventanaErrores.Show();
+            new ReportarErrrores().Show();
+        }
+
+        private void spanish_Click(object sender, RoutedEventArgs e)
+        {
+            App.SelectCulture("es-ES");
+        }
+
+        private void english_Click(object sender, RoutedEventArgs e)
+        {
+            App.SelectCulture("en-US");
+        }
+
+        private void miSalir_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

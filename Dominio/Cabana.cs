@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 
 namespace IPO1_AgenciadeViajes.Dominio
 {
-    class Cabana : ValidationRule
+    public class Cabana : ValidationRule
     {
         public string Titulo { set; get; }
         public double Precio { set; get; }

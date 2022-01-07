@@ -9,7 +9,7 @@ using Xunit.Sdk;
 
 namespace IPO1_AgenciadeViajes.Dominio
 {
-    internal class reservacabaña {
+    public class reservacabaña {
         public string Nombre { get; set; }
         public string Telefono { get; set; }
         public string Email { get; set; }

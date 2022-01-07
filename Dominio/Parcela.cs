@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IPO1_AgenciadeViajes.Dominio
 {
-    class Parcela
+    public class Parcela
     {
         public string Titulo { set; get; }
         public double Precio { set; get; }

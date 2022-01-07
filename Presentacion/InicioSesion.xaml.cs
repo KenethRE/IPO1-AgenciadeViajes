@@ -127,5 +127,20 @@ namespace IPO1_AgenciadeViajes
         {
             new Presentacion.ReportarErrrores().Show();
         }
+
+        private void spanish_Click(object sender, RoutedEventArgs e)
+        {
+            App.SelectCulture("es-ES");
+        }
+
+        private void english_Click(object sender, RoutedEventArgs e)
+        {
+            App.SelectCulture("en-US");
+        }
+
+        private void miSalir_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
