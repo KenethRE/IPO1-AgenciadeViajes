@@ -17,20 +17,18 @@
                     </LinearGradientBrush>
                 </Border.Background>
                 <Grid>
-                    <TextBlock Text="{Binding Titulo}" Margin="10,80,-4,10" Height="20"></TextBlock>
-                    <WrapPanel Orientation="Vertical">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="50*"/>
+                        <RowDefinition Height="10*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="{Binding Titulo}" Margin="0,0,0,0" Height="20"></TextBlock>
+                    <WrapPanel Grid.Row="1" Margin="0,0,0,10" Orientation="Vertical">
                         <Image Source="{Binding Foto}">
-                            <Image.RenderTransform>
-                                <TransformGroup>
-                                    <ScaleTransform ScaleX="0.60" ScaleY="0.60"/>
-                                    <SkewTransform/>
-                                    <RotateTransform/>
-                                    <TranslateTransform/>
-                                </TransformGroup>
-                            </Image.RenderTransform>
+                            
                         </Image>
-                        <CheckBox IsChecked="{Binding Estado}"/>
                     </WrapPanel>
+                    <CheckBox Grid.Row="2" Content="Disponible" Margin="0,0,0,0" IsChecked="{Binding Estado}" IsEnabled="False"/>
                 </Grid>
             </Border>
         </DataTemplate>
@@ -112,6 +110,20 @@
                         <TextBlock x:Name="lbCabanas" Margin="5,0,0,0" Text="{DynamicResource lblCabanas}" VerticalAlignment="Center"/>
                     </StackPanel>
                 </TabItem.Header>
+                <Grid>
+                    <ItemsControl
+
+                    Width="Auto"
+                    Height="Auto"
+              ItemsSource="{Binding ElementName=mainMenu, Path=listadoCabanas}"
+              ItemTemplate="{StaticResource PlantillaItemsMenu}"  Background="#FF424242">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Grid>
             </TabItem>
             <TabItem>
                 <TabItem.Header>
@@ -150,7 +162,21 @@
                         <RowDefinition Height="154*"/>
                     </Grid.RowDefinitions>
                     <Button x:Name="histActividades" Content="Historial de Actividades" Grid.Row="0" Margin="494,0,115,0"></Button>
-                    <Button x:Name="mngMonit" Content="Monitores" Grid.Row="0" Margin="108,0,504,0" ></Button> 
+                    <Button x:Name="mngMonit" Content="Monitores" Grid.Row="0" Margin="108,0,504,0" ></Button>
+                    <Grid Grid.Row="1">
+                        <ItemsControl
+
+                    Width="Auto"
+                    Height="Auto"
+              ItemsSource="{Binding ElementName=mainMenu, Path=listadoCabanas}"
+              ItemTemplate="{StaticResource PlantillaItemsMenu}"  Background="#FF424242">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel Orientation="Horizontal" />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+                    </Grid>
                 </Grid>
             </TabItem>
         </TabControl>

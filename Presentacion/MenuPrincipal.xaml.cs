@@ -32,10 +32,10 @@ namespace IPO1_AgenciadeViajes.Presentacion
         
         public Usuario usuarioActual { get; set; }
 
-        public List<Dominio.Monitor> listadoMonitores { get; set;}
-        public List<Parcela> listadoParcelas { get; set; }
-        public List<Cabana> listadoCabanas { get; set; }
-        public List<Dominio.Actividad> listadoActividades { get; set; }
+        public ObservableCollection<Dominio.Monitor> listadoMonitores { get; set;}
+        public ObservableCollection<Parcela> listadoParcelas { get; set; }
+        public ObservableCollection<Cabana> listadoCabanas { get; set; }
+        public ObservableCollection<Dominio.Actividad> listadoActividades { get; set; }
         public ObservableCollection<Promocion> listadoPromociones { get; set; }
 
         public MenuPrincipal(Uri uriUsuario)
@@ -47,28 +47,28 @@ namespace IPO1_AgenciadeViajes.Presentacion
             usuarioActual.Nombre = "José";
             usuarioActual.ultimoInicio = DateTime.Now.ToString();
             // Crear el listado de monitores
-            listadoMonitores = new List<Dominio.Monitor>();
+            listadoMonitores = new ObservableCollection<Dominio.Monitor>();
             // Se cargarán los datos de prueba de un fichero XML
             CargarContenidoListaXMLMonitores();
             // Indicar que el origen de datos del ListBox es listadoMonitores
             //dgMonitores.ItemsSource = listadoMonitores;
 
             // Crear el listado de parcelas
-            listadoParcelas = new List<Dominio.Parcela>();
+            listadoParcelas = new ObservableCollection<Dominio.Parcela>();
             // Se cargarán los datos de prueba de un fichero XML
             CargarContenidoListaXMLParcelas();
             // Indicar que el origen de datos del ListBox es listadoParcelas
             //dgParcelas.ItemsSource = listadoParcelas;
 
             // Crear el listado de cabañas
-            listadoCabanas = new List<Dominio.Cabana>();
+            listadoCabanas = new ObservableCollection<Dominio.Cabana>();
             // Se cargarán los datos de prueba de un fichero XML
             CargarContenidoListaXMLCabanas();
             // Indicar que el origen de datos del ListBox es listadoParcelas
             //dgCabanas.ItemsSource = listadoCabanas;
 
             // Crear el listado de actividades
-            listadoActividades = new List<Dominio.Actividad>();
+            listadoActividades = new ObservableCollection<Dominio.Actividad>();
             // Se cargarán los datos de prueba de un fichero XML
             CargarContenidoListaXMLActividades();
             // Indicar que el origen de datos del ListBox es listadoParcelas
@@ -143,10 +143,10 @@ namespace IPO1_AgenciadeViajes.Presentacion
                     Precio = Convert.ToInt32(node.Attributes["Precio"].Value),
                     Capacidad = Convert.ToInt32(node.Attributes["Capacidad"].Value),
                     Descripcion = node.Attributes["Descripcion"].Value,
-                    Imagen = new Uri(node.Attributes["Imagen"].Value, UriKind.Relative),
+                    Foto = new Uri(node.Attributes["Imagen"].Value, UriKind.Relative),
                     Restriccion = node.Attributes["Restriccion"].Value,
                     Equipamiento = node.Attributes["Equipamiento"].Value,
-                    Disponibilidad = Convert.ToBoolean(node.Attributes["Disponibilidad"].Value)
+                    Estado = Convert.ToBoolean(node.Attributes["Disponibilidad"].Value)
                 };
                 listadoCabanas.Add(nuevaCabana);
             }

@@ -21,10 +21,10 @@ namespace IPO1_AgenciadeViajes.Dominio
         public double Precio { set; get; }
         public int Capacidad { set; get; }
         public string Descripcion { set; get; }
-        public Uri Imagen { set; get; }
+        public Uri Foto { set; get; }
         public string Restriccion { set; get; }
         public string Equipamiento { set; get; }
-        public bool Disponibilidad { set; get; }
+        public bool Estado { set; get; }
         public int MinimoCaracteres { set; get; }
         public int MaximoCaracteres { set; get; }
 
@@ -34,10 +34,10 @@ namespace IPO1_AgenciadeViajes.Dominio
             Precio = precio;
             Capacidad = capacidad;
             Descripcion = descripcion;
-            Imagen = imagen;
+            Foto = imagen;
             Restriccion = restriccion;
             Equipamiento = equipamiento;
-            Disponibilidad = disponibilidad;
+            Estado = disponibilidad;
         }
         public override ValidationResult Validate(object value, CultureInfo cultureInfo)
         {
