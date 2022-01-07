@@ -7,14 +7,23 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblLogin">Inicio de sesión</sys:String>
     <sys:String x:Key="lblRecordarContraseña">¿Olvidó su contraseña?</sys:String>
     <sys:String x:Key="lblUsuario">Usuario</sys:String>
-    <sys:String x:Key="lblUltInicio">Último Inicio: </sys:String>
+    <sys:String x:Key="lblUltInicio">Último Inicio:</sys:String>
 
     <sys:String x:Key="lblMonitores">Monitores</sys:String>
     <sys:String x:Key="lblCabanas">Cabañas</sys:String>
     <sys:String x:Key="lblActividades">Actividades</sys:String>
     <sys:String x:Key="lblParcelas">Parcelas</sys:String>
     <sys:String x:Key="lblPromociones">Promociones</sys:String>
-
+    <sys:String x:Key="LlbMenuPrincipal">Menu Principal</sys:String>
+    <sys:String x:Key="LlbArchivo">Archivo</sys:String>
+    <sys:String x:Key="LlbIdioma">Cambiar de idioma</sys:String>
+    <sys:String x:Key="LlbEspañol">Español</sys:String>
+    <sys:String x:Key="LlbIngles">Ingles</sys:String>
+    <sys:String x:Key="LlbSalir">Salir</sys:String>
+    <sys:String x:Key="LlbAcercade">Acerca de...</sys:String>
+    <sys:String x:Key="LlbDocumentacion">Documentacion</sys:String>
+    <sys:String x:Key="LlbError">Reportar un Error</sys:String>
+    
     <sys:String x:Key="lblNombreReservarCabana">Nombre:</sys:String>
     <sys:String x:Key="TelefonoReservarCabana">Telefono:</sys:String>
     <sys:String x:Key="btnCancelarReservarCabana">Cancelar</sys:String>

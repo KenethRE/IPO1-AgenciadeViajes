@@ -14,6 +14,15 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblMonitores">Monitors</sys:String>
     <sys:String x:Key="lblParcelas">Plots</sys:String>
     <sys:String x:Key="lblPromociones">Promotions</sys:String>
+    <sys:String x:Key="LlbMenuPrincipal">Principal Main</sys:String>
+    <sys:String x:Key="LlbArchivo">File</sys:String>
+    <sys:String x:Key="LlbIdioma">Change language</sys:String>
+    <sys:String x:Key="LlbEspañol">Spanish</sys:String>
+    <sys:String x:Key="LlbIngles">English</sys:String>
+    <sys:String x:Key="LlbSalir">Exit</sys:String>
+    <sys:String x:Key="LlbAcercade">About...</sys:String>
+    <sys:String x:Key="LlbDocumentacion">Documentation</sys:String>
+    <sys:String x:Key="LlbError">Report Error</sys:String>
 
     <sys:String x:Key="lblNombreReservarCabana">Name:</sys:String>
     <sys:String x:Key="TelefonoReservarCabana">Phone:</sys:String>

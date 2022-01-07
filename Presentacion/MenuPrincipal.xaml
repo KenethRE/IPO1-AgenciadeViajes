@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IPO1_AgenciadeViajes.Presentacion"
         mc:Ignorable="d"
-        Title="Menu Principal" Height="450" Width="800" Background="#FFCCCCCC"
+        Title="{StaticResource LlbMenuPrincipal}" Height="450" Width="800" Background="#FFCCCCCC"
         Name="mainMenu">
     <Window.Resources>
         <DataTemplate x:Key="PlantillaItemsMenu">
@@ -45,25 +45,25 @@
             <RowDefinition Height="174*"/>
         </Grid.RowDefinitions>
         <Menu Grid.Row="0" x:Name="miMenu" FontSize="16" FontWeight="Bold" Grid.ColumnSpan="2" Background="#FFF0F0F0" BorderBrush="Black">
-            <MenuItem Header="Archivo" >
-                <MenuItem Header="Cambiar Idioma">
-                    <MenuItem x:Name="spanish" Header="Español" Click="spanish_Click">
+            <MenuItem Header="{StaticResource LlbArchivo}" >
+                <MenuItem Header="{StaticResource LlbIdioma}">
+                    <MenuItem x:Name="spanish" Header="{StaticResource LlbEspañol}" Click="spanish_Click">
                         <MenuItem.Icon>
                             <Image Source="/Recursos/Imagenes/spain.png"/>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem x:Name="english" Header="English" Click="english_Click">
+                    <MenuItem x:Name="Inlges" Header="{StaticResource LlbIngles}" Click="english_Click">
                         <MenuItem.Icon>
                             <Image Source="/Recursos/Imagenes/united-states.png"/>
                         </MenuItem.Icon>
                     </MenuItem>
                 </MenuItem>
-                <MenuItem x:Name="miSalir" Header="Salir" Click="miSalir_Click"/>
+                <MenuItem x:Name="miSalir" Header="{StaticResource LlbSalir}" Click="miSalir_Click"/>
             </MenuItem>
             <MenuItem Header="Ayuda">
-                <MenuItem x:Name="miAcercaDe" Header="Acerca de..." Click="MiAcercaDe_Click" />
-                <MenuItem x:Name="miDocumentacion" Header="Documentacion" Click="MiDocumentacion_Click" />
-                <MenuItem x:Name="miError" Header="Reportar un Error" Click="miError_Click" />
+                <MenuItem x:Name="miAcercaDe" Header="{StaticResource LlbAcercade}" Click="MiAcercaDe_Click" />
+                <MenuItem x:Name="miDocumentacion" Header="{StaticResource LlbDocumentacion}" Click="MiDocumentacion_Click" />
+                <MenuItem x:Name="miError" Header="{StaticResource LlbError}" Click="miError_Click" />
             </MenuItem>
         </Menu>
         <TabControl x:Name="tcPestanas" Margin="2,2,2,2" Padding="2,2,2,2" Grid.Row="1" BorderBrush="#FF1D144C" Grid.ColumnSpan="2" Grid.RowSpan="2" Background="#FF424242">

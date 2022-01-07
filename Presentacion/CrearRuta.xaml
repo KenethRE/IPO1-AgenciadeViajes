@@ -15,10 +15,32 @@
             <RowDefinition Height="349*"/>
             <RowDefinition Height="70*"/>
         </Grid.RowDefinitions>
+        <Menu Grid.Row="0" x:Name="miMenu" FontSize="16" FontWeight="Bold" Grid.ColumnSpan="2" Background="#FFF0F0F0" BorderBrush="Black">
+            <MenuItem Header="Archivo" >
+                <MenuItem Header="Cambiar Idioma">
+                    <MenuItem x:Name="spanish" Header="Español" Click="spanish_Click">
+                        <MenuItem.Icon>
+                            <Image Source="/Recursos/Imagenes/spain.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem x:Name="english" Header="English" Click="english_Click">
+                        <MenuItem.Icon>
+                            <Image Source="/Recursos/Imagenes/united-states.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem x:Name="miSalir" Header="Salir" Click="miSalir_Click"/>
+            </MenuItem>
+            <MenuItem Header="Ayuda">
+                <MenuItem x:Name="miAcercaDe" Header="Acerca de..." Click="MiAcercaDe_Click" />
+                <MenuItem x:Name="miDocumentacion" Header="Documentacion" Click="MiDocumentacion_Click" />
+                <MenuItem x:Name="miError" Header="Reportar un Error" Click="miError_Click" />
+            </MenuItem>
+        </Menu>
         <Grid HorizontalAlignment="Left" Height="450" Margin="0,-31,0,0" VerticalAlignment="Top" Width="800" Grid.ColumnSpan="2">
-            <Label x:Name="lblInformacionCrearRuta" Content="{DynamicResource lblInformacionCrearRuta}" HorizontalAlignment="Left" Height="55" Margin="18,42,0,0" VerticalAlignment="Top" Width="459" FontSize="16"/>
+            <Label x:Name="lblInformacionCrearRuta" Content="{DynamicResource lblInformacionCrearRuta}" HorizontalAlignment="Left" Height="55" Margin="10,69,0,0" VerticalAlignment="Top" Width="459" FontSize="16"/>
         </Grid>
-        <Image Source="https://cr00.epimg.net/radio/imagenes/2018/05/28/tecnologia/1527526175_206265_1527526294_noticia_normal.jpg" Grid.ColumnSpan="2" Margin="10,-13,262.6,40.6" Grid.RowSpan="2"/>
+        <Image Source="https://cr00.epimg.net/radio/imagenes/2018/05/28/tecnologia/1527526175_206265_1527526294_noticia_normal.jpg" Grid.ColumnSpan="2" Margin="10,44,263,41" Grid.RowSpan="2"/>
         <Label x:Name="lblHoraInicioCrearRuta" Content="{DynamicResource lblHoraInicioCrearRuta}" HorizontalAlignment="Left" Height="41" Margin="166,34.6,0,0" VerticalAlignment="Top" Width="117" FontSize="16" Grid.Row="1" Grid.ColumnSpan="2"/>
         <Label x:Name="lblHoraFinCrearRuta" Content="{DynamicResource lblHoraFinCrearRuta}" HorizontalAlignment="Left" Height="32" Margin="166,4.6,0,0" VerticalAlignment="Top" Width="103" Grid.Row="1" Grid.ColumnSpan="2" FontSize="16"/>
         <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="20" Margin="53,10.6,0,0" Grid.Row="1" TextWrapping="Wrap" Text="&#xD;&#xA;" VerticalAlignment="Top" Width="73"/>
