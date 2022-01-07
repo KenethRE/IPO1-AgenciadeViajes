@@ -23,9 +23,12 @@
                         <RowDefinition Height="10*"/>
                     </Grid.RowDefinitions>
                     <TextBlock Grid.Row="0" Text="{Binding Titulo}" Margin="0,0,0,0" Height="20"></TextBlock>
+                    <TextBlock Grid.Row="1" Text="{Binding Precio}" Margin="0,-60,0,0" Height="20"></TextBlock>
+
                     <WrapPanel Grid.Row="1" Margin="0,0,0,10" Orientation="Vertical">
+                        
                         <Image Source="{Binding Foto}">
-                            
+
                         </Image>
                     </WrapPanel>
                     <CheckBox Grid.Row="2" Content="Disponible" Margin="0,0,0,0" IsChecked="{Binding Estado}" IsEnabled="False"/>
@@ -33,7 +36,7 @@
             </Border>
         </DataTemplate>
     </Window.Resources>
-    
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="247*"/>
@@ -140,6 +143,20 @@
                         <TextBlock x:Name="lbActividades1" Text="{DynamicResource lblParcelas}" VerticalAlignment="Center"/>
                     </StackPanel>
                 </TabItem.Header>
+                <Grid>
+                    <ItemsControl
+
+                    Width="Auto"
+                    Height="Auto"
+              ItemsSource="{Binding ElementName=mainMenu, Path=listadoParcelas}"
+              ItemTemplate="{StaticResource PlantillaItemsMenu}"  Background="#FF424242">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Grid>
             </TabItem>
             <TabItem>
                 <TabItem.Header>
@@ -168,7 +185,7 @@
 
                     Width="Auto"
                     Height="Auto"
-              ItemsSource="{Binding ElementName=mainMenu, Path=listadoCabanas}"
+              ItemsSource="{Binding ElementName=mainMenu, Path=listadoActividades}"
               ItemTemplate="{StaticResource PlantillaItemsMenu}"  Background="#FF424242">
                             <ItemsControl.ItemsPanel>
                                 <ItemsPanelTemplate>
@@ -180,23 +197,26 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <Grid Grid.Row="1" Grid.Column="1" Margin="100,1,0,4">
+        <Grid Grid.Row="1" Grid.Column="1" Margin="20,1,0,4">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" MinHeight="14"/>
+                <RowDefinition Height="Auto" MinHeight="14"/>
+                <RowDefinition Height="Auto" MinHeight="14"/>
+                <RowDefinition Height="Auto" MinHeight="14"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="78*"/>
-                <ColumnDefinition Width="25*"/>
+                <ColumnDefinition Width="168*"/>
+                <ColumnDefinition Width="115*"/>
             </Grid.ColumnDefinitions>
-            <Image Grid.Column="1" Margin="8,3,0,2" Width="50" Source="{Binding ElementName=mainMenu, Path=usuarioActual.ImgUsuario}" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Grid.RowSpan="4"/>
-            <TextBlock x:Name="lblUsuario" Text="{DynamicResource lblUsuario}" Grid.Row="0" FontSize="10" FontWeight="Bold" Margin="0,0,0,0"/>
-            <TextBlock Text="{Binding ElementName=mainMenu, Path=usuarioActual.Nombre}" FontSize="10" Margin="0,10,0,0" Grid.RowSpan="3"/>
-            <TextBlock x:Name="lblUltInicio" Text="{DynamicResource lblUltInicio}" Grid.Row="2" FontSize="10" FontWeight="Bold" Margin="0,0,0,0" Grid.RowSpan="2"/>
-            <TextBlock Text="{Binding ElementName=mainMenu, Path=usuarioActual.ultimoInicio}" Grid.Row="2" FontSize="10" Margin="0,14,0,0" Grid.RowSpan="2"/>
+            <Image Grid.Column="1" Margin="-55,3,0,1.2" Width="50" Source="{Binding ElementName=mainMenu, Path=usuarioActual.ImgUsuario}" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Grid.RowSpan="3"/>
+            <TextBlock x:Name="lblUsuario" Text="{DynamicResource lblUsuario}" Grid.Row="0" FontSize="10" FontWeight="Bold" Margin="0,0,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+            <TextBlock Text="{Binding ElementName=mainMenu, Path=usuarioActual.Nombre}" FontSize="10" Margin="0,-7,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Row="1"/>
+            <TextBlock x:Name="lblUltInicio" Text="{DynamicResource lblUltInicio}" Grid.Row="2" FontSize="10" FontWeight="Bold" Margin="0,-12,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+            <TextBlock x:Name="contect" Text="{Binding ElementName=mainMenu, Path=usuarioActual.ultimoInicio}" Grid.Row="2" FontSize="10" Margin="0,0,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
 
         </Grid>
+        <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="1" Margin="257.6,2.2,9.6,36.2" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click" Grid.Row="1">
+            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
+        </Button>
     </Grid>
 </Window>

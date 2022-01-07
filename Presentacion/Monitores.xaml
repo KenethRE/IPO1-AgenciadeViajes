@@ -1,0 +1,76 @@
+﻿<Window x:Class="IPO1_AgenciadeViajes.Presentacion.Monitores"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IPO1_AgenciadeViajes.Presentacion"
+        mc:Ignorable="d"
+        Title="Monitores" Height="450" Width="800">
+    <Window.Resources>
+        <DataTemplate x:Key="PlantillaItemsMenu">
+            <Border Width="150" Height="150" CornerRadius="10,10,10,10" Margin="4,4,0,0" Padding="4,4,4,4">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                        <GradientStop Color="AliceBlue" Offset="0"/>
+                        <GradientStop Color="#FF9CAF4A" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="50*"/>
+                        <RowDefinition Height="10*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="{Binding Nombre}" Margin="0,0,0,0" Height="20"></TextBlock>
+
+                    <WrapPanel Grid.Row="1" Margin="0,0,0,10" Orientation="Vertical">
+
+                        <Image Source="{Binding Foto}">
+
+                        </Image>
+                    </WrapPanel>
+                    <CheckBox Grid.Row="2" Content="Disponible" Margin="0,0,0,0" IsChecked="{Binding Estado}" IsEnabled="False"/>
+                </Grid>
+            </Border>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="800"/>
+                <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" x:Name="miMenu" FontSize="16" FontWeight="Bold" Grid.ColumnSpan="2" Background="#FFF0F0F0" BorderBrush="Black">
+            <MenuItem Header="Archivo" >
+                <MenuItem Header="Cambiar Idioma">
+                    <MenuItem x:Name="spanish" Header="Español" Click="spanish_Click">
+                        <MenuItem.Icon>
+                            <Image Source="/Recursos/Imagenes/spain.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem x:Name="english" Header="English" Click="english_Click">
+                        <MenuItem.Icon>
+                            <Image Source="/Recursos/Imagenes/united-states.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem x:Name="miSalir" Header="Salir" Click="miSalir_Click"/>
+            </MenuItem>
+            <MenuItem Header="Editar">
+            </MenuItem>
+            <MenuItem Header="Ayuda">
+                <MenuItem x:Name="miAcercaDe" Header="Acerca de..." Click="MiAcercaDe_Click" />
+                <MenuItem x:Name="miDocumentacion" Header="Documentacion" Click="MiDocumentacion_Click" />
+                <MenuItem x:Name="miError" Header="Reportar un Error" Click="miError_Click" />
+            </MenuItem>
+        </Menu>
+
+        
+
+
+    </Grid>
+</Window>

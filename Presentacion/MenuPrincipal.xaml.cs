@@ -23,7 +23,7 @@ namespace IPO1_AgenciadeViajes.Presentacion
     public partial class MenuPrincipal : Window
     {
         private CrearRuta ventana;
-        private InfoMonitor ventanaMonitor;
+        private Monitores ventanaMonitores;
         private InfoParcela ventanaParcela;
         private InfoCabana ventanaCabana;
         private InfoActividad ventanaActividad;
@@ -121,7 +121,7 @@ namespace IPO1_AgenciadeViajes.Presentacion
                     Temporada = node.Attributes["Temporada"].Value,
                     Ubicacion = node.Attributes["Ubicacion"].Value,
                     Servicios = node.Attributes["Servicios"].Value,
-                    Disponibilidad = Convert.ToBoolean(node.Attributes["Disponibilidad"].Value)
+                    Estado = Convert.ToBoolean(node.Attributes["Disponibilidad"].Value)
                 };
                 listadoParcelas.Add(nuevaParcela);
             }
@@ -209,16 +209,23 @@ namespace IPO1_AgenciadeViajes.Presentacion
             ventana.Show();
         }
 
-        private void BtnSalir_Click(object sender, RoutedEventArgs e)
+        private void btnSalir_Click(object sender, RoutedEventArgs e)
         {
-            this.Visibility = Visibility.Hidden;
+            MessageBoxResult result;
+            result = MessageBox.Show("¿Estás seguro de cerrar la sesión?", "Cerrar Sesión", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if (result == MessageBoxResult.Yes)
+            {
+                Visibility = Visibility.Hidden;
+                new InicioSesion().Show();
+                this.Close();
+            }
 
         }
 
         private void btnMonitor_Click(object sender, RoutedEventArgs e)
         {
-            ventanaMonitor = new InfoMonitor();
-            ventanaMonitor.Show();
+            ventanaMonitores = new Monitores();
+            ventanaMonitores.Show();
         }
 
         private void BtnParcela_Click(object sender, RoutedEventArgs e)
