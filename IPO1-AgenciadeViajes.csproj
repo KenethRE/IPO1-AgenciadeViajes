@@ -217,6 +217,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Presentacion\Monitores.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Presentacion\ReportarErrrores.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -244,6 +248,9 @@
     </Compile>
     <Compile Include="Presentacion\InfoParcela.xaml.cs">
       <DependentUpon>InfoParcela.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Monitores.xaml.cs">
+      <DependentUpon>Monitores.xaml</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\ReportarErrrores.xaml.cs">
       <DependentUpon>ReportarErrrores.xaml</DependentUpon>
