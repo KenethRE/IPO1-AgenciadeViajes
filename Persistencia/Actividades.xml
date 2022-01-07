@@ -6,6 +6,7 @@
 	MaxCapacidad ="30"
 	MinCapacidad ="10"
 	Precio ="10"
+	Foto="/Recursos/Imagenes/Actividad.png"
 	Area ="Alrdededor de la playa"
 	Equipamiento="Zapatillas adecuadas para montar a caballo"
 	Estado ="true"/>
@@ -16,6 +17,7 @@
 	Niños="true"
 	MaxCapacidad ="20"
 	MinCapacidad ="5"
+	Foto="/Recursos/Imagenes/Actividad.png"
 	Precio ="20"
 	Area ="En la piscina"
 	Equipamiento="Chanclas"
@@ -28,6 +30,7 @@
 	MaxCapacidad ="30"
 	MinCapacidad ="15"
 	Precio ="30"
+	Foto="/Recursos/Imagenes/Actividad1.png"
 	Area ="Alrededor del camping"
 	Equipamiento="Nada"
 	Estado ="true"/>
@@ -38,6 +41,7 @@
 	Niños="true"
 	MaxCapacidad ="40"
 	MinCapacidad ="20"
+	Foto="/Recursos/Imagenes/Actividad2.png"
 	Precio ="18"
 	Area ="Alrededor del camping"
 	Equipamiento="Chándal"

@@ -23,7 +23,6 @@ namespace IPO1_AgenciadeViajes.Presentacion
     public partial class MenuPrincipal : Window
     {
         private CrearRuta ventana;
-        private Monitores ventanaMonitores;
         private InfoParcela ventanaParcela;
         private InfoCabana ventanaCabana;
         private InfoActividad ventanaActividad;
@@ -91,7 +90,7 @@ namespace IPO1_AgenciadeViajes.Presentacion
             doc.Load(fichero.Stream);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
-                var nuevoMonitor = new Dominio.Monitor("", 0, "", "", null, "", "", "")
+                var nuevoMonitor = new Dominio.Monitor("", 0, "", "", null, "", "", false)
                 {
                     Nombre = node.Attributes["Nombre"].Value,
                     Telefono = Convert.ToInt32(node.Attributes["Telefono"].Value),
@@ -99,7 +98,7 @@ namespace IPO1_AgenciadeViajes.Presentacion
                     Foto = new Uri(node.Attributes["Foto"].Value, UriKind.Relative),
                     Formacion = node.Attributes["Formacion"].Value,
                     Restricciones = node.Attributes["Restricciones"].Value,
-                    Estado = node.Attributes["Estado"].Value
+                    Estado = Convert.ToBoolean(node.Attributes["Estado"].Value)
                 };
                 listadoMonitores.Add(nuevoMonitor);
             }
@@ -121,7 +120,8 @@ namespace IPO1_AgenciadeViajes.Presentacion
                     Temporada = node.Attributes["Temporada"].Value,
                     Ubicacion = node.Attributes["Ubicacion"].Value,
                     Servicios = node.Attributes["Servicios"].Value,
-                    Estado = Convert.ToBoolean(node.Attributes["Disponibilidad"].Value)
+                    Estado = Convert.ToBoolean(node.Attributes["Disponibilidad"].Value),
+                    Tamano = Convert.ToInt32(node.Attributes["Tamano"].Value)
                 };
                 listadoParcelas.Add(nuevaParcela);
             }
@@ -172,7 +172,8 @@ namespace IPO1_AgenciadeViajes.Presentacion
                     Precio = Convert.ToInt32(node.Attributes["Precio"].Value),
                     Area = node.Attributes["Area"].Value,
                     Equipamiento = node.Attributes["Equipamiento"].Value,
-                    Estado = Convert.ToBoolean(node.Attributes["Estado"].Value)
+                    Estado = Convert.ToBoolean(node.Attributes["Estado"].Value),
+                    Foto = new Uri(node.Attributes["Foto"].Value, UriKind.Relative)
                 };
                 listadoActividades.Add(nuevaActividad);
             }
@@ -199,10 +200,6 @@ namespace IPO1_AgenciadeViajes.Presentacion
 
         }
 
-
-
-
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             ventana = new CrearRuta();
@@ -222,11 +219,6 @@ namespace IPO1_AgenciadeViajes.Presentacion
 
         }
 
-        private void btnMonitor_Click(object sender, RoutedEventArgs e)
-        {
-            ventanaMonitores = new Monitores();
-            ventanaMonitores.Show();
-        }
 
         private void BtnParcela_Click(object sender, RoutedEventArgs e)
         {
@@ -282,11 +274,22 @@ namespace IPO1_AgenciadeViajes.Presentacion
         private void english_Click(object sender, RoutedEventArgs e)
         {
             App.SelectCulture("en-US");
+
         }
 
         private void miSalir_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void crearRuta_Click(object sender, RoutedEventArgs e)
+        {
+            new CrearRuta().ShowDialog();
+        }
+
+        private void mngMonit_Click(object sender, RoutedEventArgs e)
+        {
+            new Monitores(listadoMonitores).ShowDialog();
         }
     }
 }

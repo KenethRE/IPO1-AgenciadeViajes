@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IPO1_AgenciadeViajes"
         mc:Ignorable="d"
-        Title="Inicio" Width="800" Height="500" >
+        Title="Inicio" Width="800" Height="500" 
+        ResizeMode="NoResize"
+        >
     <Window.Resources>
         <ControlTemplate x:Key="plantillaFeedbackError">
             <Border BorderBrush="Red" BorderThickness="2" >

@@ -6,7 +6,7 @@
 	Alemán"
 	Foto="/Recursos/Imagenes/Monitor.png" 
 	Restricciones ="Fines de semana"
-	Estado ="Disponible"
+	Estado ="true"
 	Formacion="Grado Superior en Guía, Información y Asistencia Turística"/>
 	
 	<Monitor Nombre="Fernando Gómez López" Correo="fergomezlopezz@yahoo.es" Telefono="678332003"
@@ -14,7 +14,7 @@
 	Inglés"
 	Foto="/Recursos/Imagenes/Monitor1.png"
 	Restricciones ="Lunes y miércoles"
-	Estado ="Disponible"
+	Estado ="true"
 	Formacion="Grado en Ciencias de la Actividad Física y del Deporte"/>
 
 	<Monitor Nombre="Luisa Murillo Murillo" Correo="luisammurillo@yahoo.es" Telefono="698374738"
@@ -23,14 +23,14 @@
 	Francés"
 	Foto="/Recursos/Imagenes/Monitor2.png"
 	Restricciones ="Martes y viernes"
-	Estado ="No disponible"
+	Estado ="false"
 	Formacion="Bachillerato"/>
 
 	<Monitor Nombre="María Díaz Jiménez" Correo="mariadiazjimenez@gmail.com" Telefono="659879649"
 	Idioma="Español"
 	Foto="/Recursos/Imagenes/icono_usuario.png"
 	Restricciones ="Lunes y miércoles"
-	Estado ="Disponible"
+	Estado ="true"
 	Formacion="Grado en Ciencias de la Actividad Física y del Deporte
 	Grado Superior en Guía, Información y Asistencia Turística"/>
 	

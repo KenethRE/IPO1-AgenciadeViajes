@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IPO1_AgenciadeViajes.Presentacion"
         mc:Ignorable="d"
-        Title="{StaticResource LlbMenuPrincipal}" Height="450" Width="800" Background="#FFCCCCCC"
+        Title="{DynamicResource LlbMenuPrincipal}" Height="450" Width="800" Background="#FFCCCCCC"
         Name="mainMenu">
     <Window.Resources>
         <DataTemplate x:Key="PlantillaItemsMenu">
@@ -21,20 +21,73 @@
                         <RowDefinition Height="20"/>
                         <RowDefinition Height="50*"/>
                         <RowDefinition Height="10*"/>
+                        <RowDefinition Height="15*"/>
                     </Grid.RowDefinitions>
                     <TextBlock Grid.Row="0" Text="{Binding Titulo}" Margin="0,0,0,0" Height="20"></TextBlock>
-                    <TextBlock Grid.Row="1" Text="{Binding Precio}" Margin="0,-60,0,0" Height="20"></TextBlock>
-
                     <WrapPanel Grid.Row="1" Margin="0,0,0,10" Orientation="Vertical">
-                        
-                        <Image Source="{Binding Foto}">
-
-                        </Image>
+                        <Image Source="{Binding Foto}"/>
                     </WrapPanel>
                     <CheckBox Grid.Row="2" Content="Disponible" Margin="0,0,0,0" IsChecked="{Binding Estado}" IsEnabled="False"/>
+                    <Button IsEnabled="{Binding Estado}" Content="{DynamicResource lblMasInfo}" Grid.Row="3" Click="BtnPromocion_Click"/>
                 </Grid>
             </Border>
         </DataTemplate>
+
+        <DataTemplate x:Key="PlantillaItemsMenuCabanas">
+            <Border Width="150" Height="150" CornerRadius="10,10,10,10" Margin="4,4,0,0" Padding="4,4,4,4">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                        <GradientStop Color="AliceBlue" Offset="0"/>
+                        <GradientStop Color="#FF9CAF4A" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="50*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="15*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="{Binding Titulo}" Margin="0,0,0,0" Height="20"></TextBlock>
+                    <WrapPanel Grid.Row="1" Margin="0,0,0,10" Orientation="Vertical">
+                        <Image Source="{Binding Foto}"/>
+                    </WrapPanel>
+                    <CheckBox Grid.Row="2" Content="Disponible" Margin="0,0,0,0" IsChecked="{Binding Estado}" IsEnabled="False"/>
+                    <Button IsEnabled="{Binding Estado}" Content="{DynamicResource btnReservarCabana}" Grid.Row="3" Click="BtnPromocion_Click"/>
+                </Grid>
+            </Border>
+        </DataTemplate>
+
+        <DataTemplate x:Key="PlantillaItemsMenuParcelas">
+            <Border Width="150" Height="150" CornerRadius="10,10,10,10" Margin="4,4,0,0" Padding="4,4,4,4">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                        <GradientStop Color="AliceBlue" Offset="0"/>
+                        <GradientStop Color="#FF9CAF4A" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="15*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="{Binding Titulo}" Margin="0,0,0,0" Height="40" TextWrapping="Wrap"></TextBlock>
+                    <TextBlock Grid.Row="1" Text="Precio " Margin="0,0,0,0" Height="20" FontWeight="Bold" ></TextBlock>
+                    <TextBlock Grid.Row="2" Text="{Binding Precio}" Margin="0,0,0,0" Height="20"></TextBlock>
+                    <TextBlock Grid.Row="3" Text="Tamaño (en m2)" Margin="0,0,0,0" Height="20" FontWeight="Bold" ></TextBlock>
+                    <TextBlock Grid.Row="4" Text="{Binding Tamano}" Margin="0,0,0,0" Height="20"></TextBlock>
+                    <CheckBox Grid.Row="5" Content="Disponible" Margin="0,0,0,0" IsChecked="{Binding Estado}" IsEnabled="False"/>
+                    <Button IsEnabled="{Binding Estado}" Content="{DynamicResource btnReservarCabana}" Grid.Row="6" Click="BtnPromocion_Click"/>
+                </Grid>
+            </Border>
+        </DataTemplate>
+
+
     </Window.Resources>
 
     <Grid>
@@ -48,25 +101,25 @@
             <RowDefinition Height="174*"/>
         </Grid.RowDefinitions>
         <Menu Grid.Row="0" x:Name="miMenu" FontSize="16" FontWeight="Bold" Grid.ColumnSpan="2" Background="#FFF0F0F0" BorderBrush="Black">
-            <MenuItem Header="{StaticResource LlbArchivo}" >
-                <MenuItem Header="{StaticResource LlbIdioma}">
-                    <MenuItem x:Name="spanish" Header="{StaticResource LlbEspañol}" Click="spanish_Click">
+            <MenuItem Header="{DynamicResource LlbArchivo}" >
+                <MenuItem Header="{DynamicResource LlbIdioma}">
+                    <MenuItem x:Name="spanish" Header="{DynamicResource LlbEspañol}" Click="spanish_Click">
                         <MenuItem.Icon>
                             <Image Source="/Recursos/Imagenes/spain.png"/>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem x:Name="Inlges" Header="{StaticResource LlbIngles}" Click="english_Click">
+                    <MenuItem x:Name="Inlges" Header="{DynamicResource LlbIngles}" Click="english_Click">
                         <MenuItem.Icon>
                             <Image Source="/Recursos/Imagenes/united-states.png"/>
                         </MenuItem.Icon>
                     </MenuItem>
                 </MenuItem>
-                <MenuItem x:Name="miSalir" Header="{StaticResource LlbSalir}" Click="miSalir_Click"/>
+                <MenuItem x:Name="miSalir" Header="{DynamicResource LlbSalir}" Click="miSalir_Click"/>
             </MenuItem>
-            <MenuItem Header="Ayuda">
-                <MenuItem x:Name="miAcercaDe" Header="{StaticResource LlbAcercade}" Click="MiAcercaDe_Click" />
-                <MenuItem x:Name="miDocumentacion" Header="{StaticResource LlbDocumentacion}" Click="MiDocumentacion_Click" />
-                <MenuItem x:Name="miError" Header="{StaticResource LlbError}" Click="miError_Click" />
+            <MenuItem Header="{DynamicResource lbAyuda}">
+                <MenuItem x:Name="miAcercaDe" Header="{DynamicResource LlbAcercade}" Click="MiAcercaDe_Click" />
+                <MenuItem x:Name="miDocumentacion" Header="{DynamicResource LlbDocumentacion}" Click="MiDocumentacion_Click" />
+                <MenuItem x:Name="miError" Header="{DynamicResource LlbError}" Click="miError_Click" />
             </MenuItem>
         </Menu>
         <TabControl x:Name="tcPestanas" Margin="2,2,2,2" Padding="2,2,2,2" Grid.Row="1" BorderBrush="#FF1D144C" Grid.ColumnSpan="2" Grid.RowSpan="2" Background="#FF424242">
@@ -83,12 +136,16 @@
                     </StackPanel>
                 </TabItem.Header>
                 <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="39*"/>
+                        <ColumnDefinition Width="40*"/>
+                    </Grid.ColumnDefinitions>
                     <ItemsControl
 
                     Width="Auto"
                     Height="Auto"
               ItemsSource="{Binding ElementName=mainMenu, Path=listadoPromociones}"
-              ItemTemplate="{StaticResource PlantillaItemsMenu}"  Background="#FF424242">
+              ItemTemplate="{StaticResource PlantillaItemsMenu}"  Background="#FF424242" Grid.ColumnSpan="2">
                         <ItemsControl.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <WrapPanel Orientation="Horizontal" />
@@ -119,7 +176,7 @@
                     Width="Auto"
                     Height="Auto"
               ItemsSource="{Binding ElementName=mainMenu, Path=listadoCabanas}"
-              ItemTemplate="{StaticResource PlantillaItemsMenu}"  Background="#FF424242">
+              ItemTemplate="{StaticResource PlantillaItemsMenuCabanas}"  Background="#FF424242">
                         <ItemsControl.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <WrapPanel Orientation="Horizontal" />
@@ -149,7 +206,7 @@
                     Width="Auto"
                     Height="Auto"
               ItemsSource="{Binding ElementName=mainMenu, Path=listadoParcelas}"
-              ItemTemplate="{StaticResource PlantillaItemsMenu}"  Background="#FF424242">
+              ItemTemplate="{StaticResource PlantillaItemsMenuParcelas}"  Background="#FF424242">
                         <ItemsControl.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <WrapPanel Orientation="Horizontal" />
@@ -178,8 +235,9 @@
                         <RowDefinition Height="17*"/>
                         <RowDefinition Height="154*"/>
                     </Grid.RowDefinitions>
-                    <Button x:Name="histActividades" Content="Historial de Actividades" Grid.Row="0" Margin="494,0,115,0"></Button>
-                    <Button x:Name="mngMonit" Content="Monitores" Grid.Row="0" Margin="108,0,504,0" ></Button>
+                    <Button x:Name="histActividades" Content="Historial de Actividades" Grid.Row="0" Margin="541,0,68,0"></Button>
+                    <Button x:Name="mngMonit" Content="Monitores" Grid.Row="0" Margin="58,0,554,0" Click="mngMonit_Click" ></Button>
+                    <Button x:Name="crearRuta" Content="Crear Ruta" Grid.Row="0" Margin="306,0,306,0" Click="crearRuta_Click" ></Button>
                     <Grid Grid.Row="1">
                         <ItemsControl
 
@@ -198,25 +256,28 @@
             </TabItem>
         </TabControl>
         <Grid Grid.Row="1" Grid.Column="1" Margin="20,1,0,4">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" MinHeight="14"/>
-                <RowDefinition Height="Auto" MinHeight="14"/>
-                <RowDefinition Height="Auto" MinHeight="14"/>
-                <RowDefinition Height="Auto" MinHeight="14"/>
-            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="168*"/>
-                <ColumnDefinition Width="115*"/>
+                <ColumnDefinition Width="170*"/>
+                <ColumnDefinition Width="89*"/>
+                <ColumnDefinition Width="27*"/>
             </Grid.ColumnDefinitions>
-            <Image Grid.Column="1" Margin="-55,3,0,1.2" Width="50" Source="{Binding ElementName=mainMenu, Path=usuarioActual.ImgUsuario}" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Grid.RowSpan="3"/>
-            <TextBlock x:Name="lblUsuario" Text="{DynamicResource lblUsuario}" Grid.Row="0" FontSize="10" FontWeight="Bold" Margin="0,0,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-            <TextBlock Text="{Binding ElementName=mainMenu, Path=usuarioActual.Nombre}" FontSize="10" Margin="0,-7,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Row="1"/>
-            <TextBlock x:Name="lblUltInicio" Text="{DynamicResource lblUltInicio}" Grid.Row="2" FontSize="10" FontWeight="Bold" Margin="0,-12,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-            <TextBlock x:Name="contect" Text="{Binding ElementName=mainMenu, Path=usuarioActual.ultimoInicio}" Grid.Row="2" FontSize="10" Margin="0,0,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-
+            <Grid Grid.ColumnSpan="2" Margin="0,0,89,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" MinHeight="14"/>
+                    <RowDefinition Height="Auto" MinHeight="14"/>
+                    <RowDefinition Height="Auto" MinHeight="14"/>
+                    <RowDefinition Height="Auto" MinHeight="14"/>
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="lblUsuario" Text="{DynamicResource lblUsuario}" Grid.Row="0" FontSize="10" FontWeight="Bold" Margin="0,0,0,0"/>
+                <TextBlock Text="{Binding ElementName=mainMenu, Path=usuarioActual.Nombre}" FontSize="10" Margin="0,0,0,0" Grid.Row="1"/>
+                <TextBlock x:Name="lblUltInicio" Text="{DynamicResource lblUltInicio}" Grid.Row="2" FontSize="10" FontWeight="Bold" Margin="0,0,0,0"/>
+                <TextBlock x:Name="contect" Text="{Binding ElementName=mainMenu, Path=usuarioActual.ultimoInicio}" Grid.Row="3" FontSize="10" Margin="0,0,0,0"/>
+            </Grid>
+            <Image Grid.Column="1" Margin="0,0,0,0" Width="50" Source="{Binding ElementName=mainMenu, Path=usuarioActual.ImgUsuario}" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right"/>
+            <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="2" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click">
+                <Image Source="/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
+            </Button>
         </Grid>
-        <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="1" Margin="257.6,2.2,9.6,36.2" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click" Grid.Row="1">
-            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
-        </Button>
+
     </Grid>
 </Window>

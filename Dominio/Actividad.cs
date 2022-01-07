@@ -20,6 +20,8 @@ namespace IPO1_AgenciadeViajes.Dominio
         public string Equipamiento { set; get; }
         public bool Estado { set; get; }
 
+        public Uri Foto { set; get; }
+
         public Actividad(string titulo, string descripcion, string monitor, string horario,bool niños, int maxcapacidad,int mincapacidad, double precio, string area, string equipamiento, bool estado)
         {
             Titulo = titulo;

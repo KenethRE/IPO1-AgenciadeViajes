@@ -10,6 +10,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblUltInicio">Último Inicio:</sys:String>
 
     <sys:String x:Key="lblMonitores">Monitores</sys:String>
+    <sys:String x:Key="lblMasInfo">Más Información</sys:String>
     <sys:String x:Key="lblCabanas">Cabañas</sys:String>
     <sys:String x:Key="lblActividades">Actividades</sys:String>
     <sys:String x:Key="lblParcelas">Parcelas</sys:String>
@@ -23,6 +24,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="LlbAcercade">Acerca de...</sys:String>
     <sys:String x:Key="LlbDocumentacion">Documentacion</sys:String>
     <sys:String x:Key="LlbError">Reportar un Error</sys:String>
+    <sys:String x:Key="lbAyuda">Ayuda</sys:String>
     
     <sys:String x:Key="lblNombreReservarCabana">Nombre:</sys:String>
     <sys:String x:Key="TelefonoReservarCabana">Telefono:</sys:String>

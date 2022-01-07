@@ -10,6 +10,8 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblCabanas">Cabins</sys:String>
     <sys:String x:Key="lblActividades">Activities</sys:String>
     <sys:String x:Key="lblUltInicio">Last Login:</sys:String>
+    <sys:String x:Key="lblMasInfo">More Info</sys:String>
+    <sys:String x:Key="lbAyuda">Help</sys:String>
 
     <sys:String x:Key="lblMonitores">Monitors</sys:String>
     <sys:String x:Key="lblParcelas">Plots</sys:String>
@@ -71,7 +73,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblFechaInicioCabana">Start date:</sys:String>
     <sys:String x:Key="lblFechaFinCabana">End date:</sys:String>
     <sys:String x:Key="btnCancelarCabana">Cancel</sys:String>
-    <sys:String x:Key="btnReservarCabana">Reserve</sys:String>
+    <sys:String x:Key="btnReservarCabana">Book</sys:String>
     <sys:String x:Key="lblEquipamientoCabana">Equipment</sys:String>
     <sys:String x:Key="lblImagenesCabana">Images</sys:String>
 

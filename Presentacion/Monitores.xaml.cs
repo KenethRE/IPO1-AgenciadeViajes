@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,9 +19,12 @@ namespace IPO1_AgenciadeViajes.Presentacion
     /// Lógica de interacción para Monitores.xaml
     /// </summary>
     public partial class Monitores : Window
+
     {
-        public Monitores()
+        public ObservableCollection<Dominio.Monitor> listadoMonitores { get; set; }
+        public Monitores(ObservableCollection<Dominio.Monitor> listadoMonitores)
         {
+            this.listadoMonitores = listadoMonitores;
             InitializeComponent();
         }
 
@@ -54,6 +58,11 @@ namespace IPO1_AgenciadeViajes.Presentacion
         private void miSalir_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void Masinfo_Click(object sender, RoutedEventArgs e)
+        {
+            new InfoMonitor().ShowDialog();
         }
     }
    

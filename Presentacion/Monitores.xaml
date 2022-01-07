@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IPO1_AgenciadeViajes.Presentacion"
         mc:Ignorable="d"
-        Title="Monitores" Height="450" Width="800">
+        Title="Monitores" Height="450" Width="800"
+        Name="wdMonitor"
+        >
     <Window.Resources>
         <DataTemplate x:Key="PlantillaItemsMenu">
             <Border Width="150" Height="150" CornerRadius="10,10,10,10" Margin="4,4,0,0" Padding="4,4,4,4">
@@ -17,9 +19,10 @@
                 </Border.Background>
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20*"/>
                         <RowDefinition Height="50*"/>
                         <RowDefinition Height="10*"/>
+                        <RowDefinition Height="15*"/>
                     </Grid.RowDefinitions>
                     <TextBlock Grid.Row="0" Text="{Binding Nombre}" Margin="0,0,0,0" Height="20"></TextBlock>
 
@@ -30,6 +33,7 @@
                         </Image>
                     </WrapPanel>
                     <CheckBox Grid.Row="2" Content="Disponible" Margin="0,0,0,0" IsChecked="{Binding Estado}" IsEnabled="False"/>
+                    <Button x:Name="Masinfo" Content="{DynamicResource lblMasInfo}" Grid.Row="3" Click="Masinfo_Click" />
                 </Grid>
             </Border>
         </DataTemplate>
@@ -60,16 +64,27 @@
                 </MenuItem>
                 <MenuItem x:Name="miSalir" Header="Salir" Click="miSalir_Click"/>
             </MenuItem>
-            <MenuItem Header="Editar">
-            </MenuItem>
             <MenuItem Header="Ayuda">
                 <MenuItem x:Name="miAcercaDe" Header="Acerca de..." Click="MiAcercaDe_Click" />
                 <MenuItem x:Name="miDocumentacion" Header="Documentacion" Click="MiDocumentacion_Click" />
                 <MenuItem x:Name="miError" Header="Reportar un Error" Click="miError_Click" />
             </MenuItem>
         </Menu>
+        <Grid Grid.Row="1">
+            <ItemsControl
 
-        
+                    Width="Auto"
+                    Height="Auto"
+              ItemsSource="{Binding ElementName=wdMonitor, Path=listadoMonitores}"
+              ItemTemplate="{StaticResource PlantillaItemsMenu}"  Background="#FF424242">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </Grid>
+
 
 
     </Grid>

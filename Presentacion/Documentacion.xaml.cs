@@ -27,7 +27,7 @@ namespace IPO1_AgenciadeViajes.Presentacion
         {
 
             InitializeComponent();
-            xpsDocument = new XpsDocument("/Recursos/Documentacion.xps", FileAccess.Read);
+            xpsDocument = new XpsDocument("./IPO.xps", FileAccess.Read);
             FixedDocumentSequence fds = xpsDocument.GetFixedDocumentSequence();
             docViewer.Document = fds;
         }
