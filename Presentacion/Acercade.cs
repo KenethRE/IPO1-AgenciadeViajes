@@ -108,7 +108,7 @@ namespace IPO1_AgenciadeViajes.Presentacion
              Environment.NewLine + "Diseñador por: " + 
              Environment.NewLine + " - Keneth Rodriguez" +
              Environment.NewLine + " - David Arriero " + 
-             Environment.NewLine + " - Piedad de la Fuente";
+             Environment.NewLine + " - Piedad Lambea";
         }
 
         private void labelProductName_Click(object sender, EventArgs e)
