@@ -32,6 +32,30 @@
                 </Grid>
             </Border>
         </DataTemplate>
+        <DataTemplate x:Key="PlantillaItemsMenuActividades">
+            <Border Width="150" Height="150" CornerRadius="10,10,10,10" Margin="4,4,0,0" Padding="4,4,4,4">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                        <GradientStop Color="AliceBlue" Offset="0"/>
+                        <GradientStop Color="#FF9CAF4A" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="50*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="15*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="{Binding Titulo}" Margin="0,0,0,0" Height="20"></TextBlock>
+                    <WrapPanel Grid.Row="1" Margin="0,0,0,10" Orientation="Vertical">
+                        <Image Source="{Binding Foto}"/>
+                    </WrapPanel>
+                    <CheckBox Grid.Row="2" Content="Disponible" Margin="0,0,0,0" IsChecked="{Binding Estado}" IsEnabled="False"/>
+                    <Button IsEnabled="{Binding Estado}" Content="{DynamicResource lblMasInfo}" Grid.Row="3" Click="BtnPromocion_Click"/>
+                </Grid>
+            </Border>
+        </DataTemplate>
 
         <DataTemplate x:Key="PlantillaItemsMenuCabanas">
             <Border Width="150" Height="150" CornerRadius="10,10,10,10" Margin="4,4,0,0" Padding="4,4,4,4">
@@ -59,7 +83,7 @@
         </DataTemplate>
 
         <DataTemplate x:Key="PlantillaItemsMenuParcelas">
-            <Border Width="150" Height="150" CornerRadius="10,10,10,10" Margin="4,4,0,0" Padding="4,4,4,4">
+            <Border Width="200" Height="200" CornerRadius="10,10,10,10" Margin="4,4,0,0" Padding="4,4,4,4">
                 <Border.Background>
                     <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
                         <GradientStop Color="AliceBlue" Offset="0"/>
@@ -69,19 +93,23 @@
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="30*"/>
-                        <RowDefinition Height="10*"/>
-                        <RowDefinition Height="10*"/>
-                        <RowDefinition Height="10*"/>
-                        <RowDefinition Height="10*"/>
-                        <RowDefinition Height="10*"/>
-                        <RowDefinition Height="15*"/>
+                        <RowDefinition Height="50*"/>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="1*"/>
                     </Grid.RowDefinitions>
                     <TextBlock Grid.Row="0" Text="{Binding Titulo}" Margin="0,0,0,0" Height="40" TextWrapping="Wrap"></TextBlock>
-                    <TextBlock Grid.Row="1" Text="Precio " Margin="0,0,0,0" Height="20" FontWeight="Bold" ></TextBlock>
-                    <TextBlock Grid.Row="2" Text="{Binding Precio}" Margin="0,0,0,0" Height="20"></TextBlock>
-                    <TextBlock Grid.Row="3" Text="Tamaño (en m2)" Margin="0,0,0,0" Height="20" FontWeight="Bold" ></TextBlock>
-                    <TextBlock Grid.Row="4" Text="{Binding Tamano}" Margin="0,0,0,0" Height="20"></TextBlock>
-                    <CheckBox Grid.Row="5" Content="Disponible" Margin="0,0,0,0" IsChecked="{Binding Estado}" IsEnabled="False"/>
+                    <WrapPanel Grid.Row="1" Margin="0,0,0,10" Orientation="Vertical">
+                        <Image Source="{Binding Foto}"/>
+                    </WrapPanel>
+                    <TextBlock Grid.Row="2" Text="Precio " Margin="0,0,0,0" Height="20" FontWeight="Bold" ></TextBlock>
+                    <TextBlock Grid.Row="3" Text="{Binding Precio}" Margin="0,0,0,0" Height="20"></TextBlock>
+                    <TextBlock Grid.Row="4" Text="Tamaño (en m2)" Margin="0,0,0,0" Height="20" FontWeight="Bold" ></TextBlock>
+                    <TextBlock Grid.Row="5" Text="{Binding Tamano}" Margin="0,0,0,0" Height="20"></TextBlock>
+                    <CheckBox Grid.Row="6" Content="Disponible" Margin="0,0,0,0" IsChecked="{Binding Estado}" IsEnabled="False"/>
                     <Button IsEnabled="{Binding Estado}" Content="{DynamicResource btnReservarCabana}" Grid.Row="6" Click="BtnPromocion_Click"/>
                 </Grid>
             </Border>
@@ -244,7 +272,7 @@
                     Width="Auto"
                     Height="Auto"
               ItemsSource="{Binding ElementName=mainMenu, Path=listadoActividades}"
-              ItemTemplate="{StaticResource PlantillaItemsMenu}"  Background="#FF424242">
+              ItemTemplate="{StaticResource PlantillaItemsMenuActividades}"  Background="#FF424242">
                             <ItemsControl.ItemsPanel>
                                 <ItemsPanelTemplate>
                                     <WrapPanel Orientation="Horizontal" />

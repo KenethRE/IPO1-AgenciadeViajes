@@ -113,7 +113,7 @@ namespace IPO1_AgenciadeViajes.Presentacion
             doc.Load(fichero.Stream);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
-                var nuevaParcela = new Dominio.Parcela("", 0, "", "", 0, "", false)
+                var nuevaParcela = new Dominio.Parcela("", 0, "", "", 0, "", false,null)
                 {
                     Titulo = node.Attributes["Titulo"].Value,
                     Precio = Convert.ToInt32(node.Attributes["Precio"].Value),
@@ -121,7 +121,8 @@ namespace IPO1_AgenciadeViajes.Presentacion
                     Ubicacion = node.Attributes["Ubicacion"].Value,
                     Servicios = node.Attributes["Servicios"].Value,
                     Estado = Convert.ToBoolean(node.Attributes["Disponibilidad"].Value),
-                    Tamano = Convert.ToInt32(node.Attributes["Tamano"].Value)
+                    Tamano = Convert.ToInt32(node.Attributes["Tamano"].Value),
+                    Foto = new Uri(node.Attributes["Foto"].Value, UriKind.Relative)
                 };
                 listadoParcelas.Add(nuevaParcela);
             }
@@ -147,6 +148,7 @@ namespace IPO1_AgenciadeViajes.Presentacion
                     Restriccion = node.Attributes["Restriccion"].Value,
                     Equipamiento = node.Attributes["Equipamiento"].Value,
                     Estado = Convert.ToBoolean(node.Attributes["Disponibilidad"].Value)
+
                 };
                 listadoCabanas.Add(nuevaCabana);
             }
@@ -240,8 +242,8 @@ namespace IPO1_AgenciadeViajes.Presentacion
 
         private void BtnPromocion_Click(object sender, RoutedEventArgs e)
         {
-            ventanaPromocion = new InfoPromocion();
-            ventanaPromocion.Show();
+            ventanaActividad = new InfoActividad();
+            ventanaActividad.Show();
         }
 
         private void BtnRutaSenderista_Click(object sender, RoutedEventArgs e)
