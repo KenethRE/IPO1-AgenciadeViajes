@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IPO1_AgenciadeViajes.Presentacion"
         mc:Ignorable="d"
-        Title="{DynamicResource LlbMenuPrincipal}" Height="450" Width="800" Background="#FFCCCCCC"
+        Title="{DynamicResource LlbMenuPrincipal}" Height="500" Width="800" Background="#FFCCCCCC"
         Name="mainMenu">
     <Window.Resources>
         <DataTemplate x:Key="PlantillaItemsMenu">

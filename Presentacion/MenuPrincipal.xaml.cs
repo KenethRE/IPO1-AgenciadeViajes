@@ -63,21 +63,21 @@ namespace IPO1_AgenciadeViajes.Presentacion
             listadoCabanas = new ObservableCollection<Dominio.Cabana>();
             // Se cargarán los datos de prueba de un fichero XML
             CargarContenidoListaXMLCabanas();
-            // Indicar que el origen de datos del ListBox es listadoParcelas
+            // Indicar que el origen de datos del ListBox es listadoCabanas
             //dgCabanas.ItemsSource = listadoCabanas;
 
             // Crear el listado de actividades
             listadoActividades = new ObservableCollection<Dominio.Actividad>();
             // Se cargarán los datos de prueba de un fichero XML
             CargarContenidoListaXMLActividades();
-            // Indicar que el origen de datos del ListBox es listadoParcelas
+            // Indicar que el origen de datos del ListBox es listadoActividades
             //dgActividades.ItemsSource = listadoActividades;
 
             // Crear el listado de actividades
             listadoPromociones = new ObservableCollection<Promocion>();
             // Se cargarán los datos de prueba de un fichero XML
             CargarContenidoListaXMLPromociones();
-            // Indicar que el origen de datos del ListBox es listadoParcelas
+            // Indicar que el origen de datos del ListBox es listadoPromociones
             //dgPromociones.ItemsSource = listadoPromociones;
 
             InitializeComponent();

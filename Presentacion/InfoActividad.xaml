@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         ResizeMode="NoResize"
         Title="{DynamicResource LblActivida}" Height="848.924" Width="709.2">
-    <Grid d:IsLocked="True">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0*"/>
             <RowDefinition Height="106*"/>
@@ -30,11 +30,11 @@
             <ColumnDefinition Width="67*"/>
             <ColumnDefinition Width="88*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="lblTituloActividad" Content="{DynamicResource lblTituloActividad}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="59" Width="314" Margin="1,29,0,0" FontSize="26" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2" d:IsLocked="True"/>
-        <Label x:Name="lblMonitorActividad" Content="{DynamicResource lblMonitorActividad}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,106,0,0" FontSize="22" Height="43" Width="314" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2" d:IsLocked="True"/>
-        <Label Content="Actividad para realizar en familia." HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="1,0,0,42" Width="374" FontSize="16" Height="63" Grid.RowSpan="3" Grid.Column="2" Grid.ColumnSpan="2" d:IsLocked="True"/>
-        <Label x:Name="lblHorarioActividad" Content="{DynamicResource lblHorarioActividad}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,1,0,0" FontSize="22" Height="42" Width="151" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" d:IsLocked="True"/>
-        <Label Content="De Lunes a Viernes a las 18:00" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="2,0,0,77" Width="239" FontSize="16" Height="35" RenderTransformOrigin="0.5,0.5" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2" d:IsLocked="True">
+        <Label x:Name="lblTituloActividad" Content="{DynamicResource lblTituloActividad}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="59" Width="314" Margin="1,29,0,0" FontSize="26" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Label x:Name="lblMonitorActividad" Content="{DynamicResource lblMonitorActividad}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,106,0,0" FontSize="22" Height="43" Width="314" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Label Content="Actividad para realizar en familia." HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="1,0,0,42" Width="374" FontSize="16" Height="63" Grid.RowSpan="3" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblHorarioActividad" Content="{DynamicResource lblHorarioActividad}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,1,0,0" FontSize="22" Height="42" Width="151" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <Label Content="De Lunes a Viernes a las 18:00" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="2,0,0,77" Width="239" FontSize="16" Height="35" RenderTransformOrigin="0.5,0.5" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -44,8 +44,8 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="lblCaracteristicasActividades" Content="{DynamicResource lblCaracteristicasActividades}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,7,0,0" FontSize="22" Height="43" Width="374" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" d:IsLocked="True"/>
-        <Label Content="Para niños y adultos." HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="7,0,0,8" Width="375" FontSize="16" Height="33" RenderTransformOrigin="0.5,0.5" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" d:IsLocked="True">
+        <Label x:Name="lblCaracteristicasActividades" Content="{DynamicResource lblCaracteristicasActividades}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,7,0,0" FontSize="22" Height="43" Width="374" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <Label Content="Para niños y adultos." HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="7,0,0,8" Width="375" FontSize="16" Height="33" RenderTransformOrigin="0.5,0.5" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -55,7 +55,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label Content="Piscina" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="3,0,0,0" Width="358" FontSize="16" Height="41" RenderTransformOrigin="0.5,0.5" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" d:IsLocked="True">
+        <Label Content="Piscina" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="3,0,0,0" Width="358" FontSize="16" Height="41" RenderTransformOrigin="0.5,0.5" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -65,9 +65,9 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Button x:Name="btnCancelarActividad" HorizontalAlignment="Left" Margin="342,10,0,0" FontSize="16" Content="{DynamicResource btnCancelarActividad}" Height="52" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.452,-3.352" Grid.Row="10" Grid.Column="3" Grid.ColumnSpan="2" d:IsLocked="True" />
-        <Button x:Name="btnDarActividad" HorizontalAlignment="Left" Margin="4,25,0,0" FontSize="16" Content="{DynamicResource btnDarActividad}" Height="52" VerticalAlignment="Top" Width="166" RenderTransformOrigin="0.452,-3.352" Grid.Row="9" Grid.Column="2" Grid.ColumnSpan="2" d:IsLocked="True" />
-        <Label Content="Nombre Apellidos" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="4,0,0,75" Width="215" FontSize="16" Height="38" RenderTransformOrigin="0.5,0.5" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2" d:IsLocked="True">
+        <Button x:Name="btnCancelarActividad" HorizontalAlignment="Left" Margin="342,10,0,0" FontSize="16" Content="{DynamicResource btnCancelarActividad}" Height="52" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.452,-3.352" Grid.Row="10" Grid.Column="3" Grid.ColumnSpan="2" />
+        <Button x:Name="btnDarActividad" HorizontalAlignment="Left" Margin="4,25,0,0" FontSize="16" Content="{DynamicResource btnDarActividad}" Height="52" VerticalAlignment="Top" Width="166" RenderTransformOrigin="0.452,-3.352" Grid.Row="9" Grid.Column="2" Grid.ColumnSpan="2" />
+        <Label Content="Nombre Apellidos" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="4,0,0,75" Width="215" FontSize="16" Height="38" RenderTransformOrigin="0.5,0.5" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -77,8 +77,8 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="lblCapacidadActividad" Content="{DynamicResource lblCapacidadActividad}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,4,0,0" FontSize="22" Height="41" Width="374" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" d:IsLocked="True"/>
-        <Label Content="5 - 20 personas" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="8,0,0,1" Width="239" FontSize="16" Height="34" RenderTransformOrigin="0.5,0.5" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" d:IsLocked="True">
+        <Label x:Name="lblCapacidadActividad" Content="{DynamicResource lblCapacidadActividad}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,4,0,0" FontSize="22" Height="41" Width="374" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <Label Content="5 - 20 personas" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="8,0,0,1" Width="239" FontSize="16" Height="34" RenderTransformOrigin="0.5,0.5" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -88,8 +88,8 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="lblPrecioActividad" Content="Precio" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,6,0,0" FontSize="22" Height="43" Width="374" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" d:IsLocked="True"/>
-        <Label Content="5€ la hora." HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="7,0,0,1" Width="375" FontSize="16" Height="34" RenderTransformOrigin="0.5,0.5" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" d:IsLocked="True">
+        <Label x:Name="lblPrecioActividad" Content="Precio" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,6,0,0" FontSize="22" Height="43" Width="374" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <Label Content="5€ la hora." HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="7,0,0,1" Width="375" FontSize="16" Height="34" RenderTransformOrigin="0.5,0.5" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -99,9 +99,9 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="lblAreaActividad" Content="{DynamicResource lblAreaActividad}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,6,0,0" FontSize="22" Height="42" Width="564" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="4" d:IsLocked="True"/>
-        <Label x:Name="lblEquipamientoActividad" Content="{DynamicResource lblEquipamientoActividad}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,7,0,0" FontSize="22" Height="42" Width="564" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="4" d:IsLocked="True"/>
-        <Label Content="Chanclas." HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="3,0,0,71" Width="358" FontSize="16" Height="40" RenderTransformOrigin="0.5,0.5" Grid.Row="8" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2" d:IsLocked="True">
+        <Label x:Name="lblAreaActividad" Content="{DynamicResource lblAreaActividad}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,6,0,0" FontSize="22" Height="42" Width="564" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="4"/>
+        <Label x:Name="lblEquipamientoActividad" Content="{DynamicResource lblEquipamientoActividad}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,7,0,0" FontSize="22" Height="42" Width="564" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="4"/>
+        <Label Content="Chanclas." HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="3,0,0,71" Width="358" FontSize="16" Height="40" RenderTransformOrigin="0.5,0.5" Grid.Row="8" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -111,24 +111,24 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Button x:Name="bntModificarActividad" HorizontalAlignment="Left" Margin="150,25,0,0" FontSize="16" Content="{DynamicResource btnModificarActividad}" Height="52" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.452,-3.352" Grid.Row="9" Grid.Column="3" d:IsLocked="True" />
-        <Button x:Name="btnGuardarActividad" HorizontalAlignment="Right" Margin="0,25,10,0" FontSize="16" Content="{DynamicResource btnGuardarActividad}" Height="52" VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.452,-3.352" Grid.Row="9" Grid.Column="3" Grid.ColumnSpan="2" d:IsLocked="True" />
-        <Button x:Name="btnInscritosActividad" HorizontalAlignment="Left" Margin="37,0,0,0" FontSize="16" Content="{DynamicResource btnInscritosActividad}" VerticalAlignment="Center" RenderTransformOrigin="0.452,-3.352" Grid.Row="10" Grid.Column="3" Click="Button_Click" Height="43" d:IsLocked="True" />
-        <Label x:Name="lblEstado" Content="{DynamicResource lblEstado}" Margin="0,25,0,0" Grid.Row="11" Background="White" Opacity="0.7" Height="30" Grid.ColumnSpan="6" d:IsLocked="True"/>
-        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="410,0,0,0" VerticalAlignment="Top" Source="/Recursos/Imagenes/spain.png" Height="39" Width="40" RenderTransformOrigin="0.572,1.906" Grid.Column="3" Grid.RowSpan="2" d:IsLocked="True"/>
-        <ComboBox x:Name="cbIdiomas" Margin="450,9,25,0" VerticalAlignment="Top" Opacity="0.6" SelectedIndex="0" Background="Black" Height="27" RenderTransformOrigin="0.077,0.142" Grid.Column="3" Grid.RowSpan="2" Grid.ColumnSpan="2" d:IsLocked="True" >
-            <ComboBoxItem x:Name="cbItem1" Content="ES" d:IsLocked="True"/>
-            <ComboBoxItem x:Name="cbItem2" Content="EN" d:IsLocked="True"/>
+        <Button x:Name="bntModificarActividad" HorizontalAlignment="Left" Margin="150,25,0,0" FontSize="16" Content="{DynamicResource btnModificarActividad}" Height="52" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.452,-3.352" Grid.Row="9" Grid.Column="3" />
+        <Button x:Name="btnGuardarActividad" HorizontalAlignment="Right" Margin="0,25,10,0" FontSize="16" Content="{DynamicResource btnGuardarActividad}" Height="52" VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.452,-3.352" Grid.Row="9" Grid.Column="3" Grid.ColumnSpan="2" />
+        <Button x:Name="btnInscritosActividad" HorizontalAlignment="Left" Margin="37,0,0,0" FontSize="16" Content="{DynamicResource btnInscritosActividad}" VerticalAlignment="Center" RenderTransformOrigin="0.452,-3.352" Grid.Row="10" Grid.Column="3" Click="Button_Click" Height="43" />
+        <Label x:Name="lblEstado" Content="{DynamicResource lblEstado}" Margin="0,25,0,0" Grid.Row="11" Background="White" Opacity="0.7" Height="30" Grid.ColumnSpan="6"/>
+        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="410,0,0,0" VerticalAlignment="Top" Source="/Recursos/Imagenes/spain.png" Height="39" Width="40" RenderTransformOrigin="0.572,1.906" Grid.Column="3" Grid.RowSpan="2"/>
+        <ComboBox x:Name="cbIdiomas" Margin="450,9,25,0" VerticalAlignment="Top" Opacity="0.6" SelectedIndex="0" Background="Black" Height="27" RenderTransformOrigin="0.077,0.142" Grid.Column="3" Grid.RowSpan="2" Grid.ColumnSpan="2" >
+            <ComboBoxItem x:Name="cbItem1" Content="ES"/>
+            <ComboBoxItem x:Name="cbItem2" Content="EN"/>
         </ComboBox>
-        <Grid HorizontalAlignment="Left" Margin="0,-26,0,15" Width="673" Grid.ColumnSpan="6" Grid.RowSpan="11" d:IsLocked="True">
+        <Grid HorizontalAlignment="Left" Margin="0,-26,0,15" Width="673" Grid.ColumnSpan="6" Grid.RowSpan="11">
             <Grid.RowDefinitions>
                 <RowDefinition Height="123*"/>
                 <RowDefinition Height="652*"/>
             </Grid.RowDefinitions>
-            <Image HorizontalAlignment="Left" Height="59" Margin="459,63.8,0,0" Grid.Row="1" VerticalAlignment="Top" Width="94" d:IsLocked="True"/>
+            <Image HorizontalAlignment="Left" Height="59" Margin="459,63.8,0,0" Grid.Row="1" VerticalAlignment="Top" Width="94"/>
         </Grid>
-        <Button x:Name="btnSalir_Copy" ToolTip="Salir" Grid.Column="5" Margin="17,10,40,66" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click" Grid.RowSpan="2" d:IsLocked="True">
-            <Image Source="/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" Height="30" Width="22" d:IsLocked="True" />
+        <Button x:Name="btnSalir_Copy" ToolTip="Salir" Grid.Column="5" Margin="17,10,40,66" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click" Grid.RowSpan="2">
+            <Image Source="/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" Height="30" Width="22" />
         </Button>
     </Grid>
 </Window>
