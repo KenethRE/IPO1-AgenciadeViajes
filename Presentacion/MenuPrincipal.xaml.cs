@@ -28,7 +28,8 @@ namespace IPO1_AgenciadeViajes.Presentacion
         private InfoActividad ventanaActividad;
         private InfoPromocion ventanaPromocion;
         private InfoRutaSenderista ventanaRutaSenderista;
-        
+        private Actividad ActividaActual = new Actividad("", "", "", "", false, 0, 0, 0, "", "", false);
+
         public Usuario usuarioActual { get; set; }
 
         public ObservableCollection<Dominio.Monitor> listadoMonitores { get; set;}
@@ -237,12 +238,14 @@ namespace IPO1_AgenciadeViajes.Presentacion
         private void BtnActividad_Click(object sender, RoutedEventArgs e)
         {
             ventanaActividad = new InfoActividad();
+            
             ventanaActividad.Show();
         }
 
         private void BtnPromocion_Click(object sender, RoutedEventArgs e)
         {
             ventanaActividad = new InfoActividad();
+
             ventanaActividad.Show();
         }
 

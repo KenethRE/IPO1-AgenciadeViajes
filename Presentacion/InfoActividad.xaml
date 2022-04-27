@@ -120,13 +120,6 @@
             <ComboBoxItem x:Name="cbItem1" Content="ES"/>
             <ComboBoxItem x:Name="cbItem2" Content="EN"/>
         </ComboBox>
-        <Grid HorizontalAlignment="Left" Margin="0,-26,0,15" Width="673" Grid.ColumnSpan="6" Grid.RowSpan="11">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="123*"/>
-                <RowDefinition Height="652*"/>
-            </Grid.RowDefinitions>
-            <Image HorizontalAlignment="Left" Height="59" Margin="459,63.8,0,0" Grid.Row="1" VerticalAlignment="Top" Width="94"/>
-        </Grid>
         <Button x:Name="btnSalir_Copy" ToolTip="Salir" Grid.Column="5" Margin="17,10,40,66" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click" Grid.RowSpan="2">
             <Image Source="/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" Height="30" Width="22" />
         </Button>

@@ -19,11 +19,13 @@ namespace IPO1_AgenciadeViajes
     /// <summary>
     /// Lógica de interacción para InfoActividad.xaml
     /// </summary>
-    public ObservableCollection<Dominio.Actividad> ListadoActividades2 { get; set; }
+  
 
     public partial class InfoActividad : Window
     {
         private InfoInscrito ventanaInscrito;
+        private ObservableCollection<Dominio.Actividad> listadoActividades;
+
         public InfoActividad()
         {
             listadoActividades = new ObservableCollection<Dominio.Actividad>();
