@@ -237,16 +237,19 @@ namespace IPO1_AgenciadeViajes.Presentacion
 
         private void BtnActividad_Click(object sender, RoutedEventArgs e)
         {
-            ventanaActividad = new InfoActividad();
-            
+
+           Actividad actividad = sender as Actividad;
+            ventanaActividad = new InfoActividad(actividad)
+            {
+                Owner = this
+            };
             ventanaActividad.Show();
         }
-
         private void BtnPromocion_Click(object sender, RoutedEventArgs e)
         {
-            ventanaActividad = new InfoActividad();
+            ventanaPromocion = new InfoPromocion();
 
-            ventanaActividad.Show();
+            ventanaPromocion.Show();
         }
 
         private void BtnRutaSenderista_Click(object sender, RoutedEventArgs e)
@@ -296,5 +299,6 @@ namespace IPO1_AgenciadeViajes.Presentacion
         {
             new Monitores(listadoMonitores).ShowDialog();
         }
+
     }
 }

@@ -26,11 +26,12 @@ namespace IPO1_AgenciadeViajes
         private InfoInscrito ventanaInscrito;
         private ObservableCollection<Dominio.Actividad> listadoActividades;
 
-        public InfoActividad()
+        public InfoActividad(Dominio.Actividad actividad)
         {
             listadoActividades = new ObservableCollection<Dominio.Actividad>();
             // Se cargarán los datos de prueba de un fichero XML
             CargarContenidoListaXMLActividades();
+            DescipcionAct.Content = actividad.Descripcion;
             InitializeComponent();
         }
 

@@ -47,12 +47,12 @@
                         <RowDefinition Height="10*"/>
                         <RowDefinition Height="15*"/>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="{Binding Titulo}" Margin="0,0,0,0" Height="20"></TextBlock>
+                    <TextBlock x:Name="tituloActividad" Grid.Row="0" Text="{Binding Titulo}" Margin="0,0,0,0" Height="20"/>
                     <WrapPanel Grid.Row="1" Margin="0,0,0,10" Orientation="Vertical">
                         <Image Source="{Binding Foto}"/>
                     </WrapPanel>
                     <CheckBox Grid.Row="2" Content="Disponible" Margin="0,0,0,0" IsChecked="{Binding Estado}" IsEnabled="False"/>
-                    <Button IsEnabled="{Binding Estado}" Content="{DynamicResource lblMasInfo}" Grid.Row="3" Click="BtnPromocion_Click"/>
+                    <Button IsEnabled="{Binding Estado}" Content="{DynamicResource lblMasInfo}" Grid.Row="3" Click="BtnActividad_Click" CommandParameter="{Binding}" />
                 </Grid>
             </Border>
         </DataTemplate>
