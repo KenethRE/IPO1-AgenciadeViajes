@@ -31,7 +31,7 @@ namespace IPO1_AgenciadeViajes
             listadoActividades = new ObservableCollection<Dominio.Actividad>();
             // Se cargarán los datos de prueba de un fichero XML
             CargarContenidoListaXMLActividades();
-            DescipcionAct.Content = actividad.Descripcion;
+            //DescipcionAct.Content = actividad.Descripcion;
             InitializeComponent();
         }
 
