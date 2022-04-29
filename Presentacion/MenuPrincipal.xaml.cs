@@ -28,7 +28,8 @@ namespace IPO1_AgenciadeViajes.Presentacion
         private InfoActividad ventanaActividad;
         private InfoPromocion ventanaPromocion;
         private InfoRutaSenderista ventanaRutaSenderista;
-        
+        private Actividad ActividaActual = new Actividad("", "", "", "", false, 0, 0, 0, "", "", false);
+
         public Usuario usuarioActual { get; set; }
 
         public ObservableCollection<Dominio.Monitor> listadoMonitores { get; set;}
@@ -63,21 +64,21 @@ namespace IPO1_AgenciadeViajes.Presentacion
             listadoCabanas = new ObservableCollection<Dominio.Cabana>();
             // Se cargarán los datos de prueba de un fichero XML
             CargarContenidoListaXMLCabanas();
-            // Indicar que el origen de datos del ListBox es listadoParcelas
+            // Indicar que el origen de datos del ListBox es listadoCabanas
             //dgCabanas.ItemsSource = listadoCabanas;
 
             // Crear el listado de actividades
             listadoActividades = new ObservableCollection<Dominio.Actividad>();
             // Se cargarán los datos de prueba de un fichero XML
             CargarContenidoListaXMLActividades();
-            // Indicar que el origen de datos del ListBox es listadoParcelas
+            // Indicar que el origen de datos del ListBox es listadoActividades
             //dgActividades.ItemsSource = listadoActividades;
 
             // Crear el listado de actividades
             listadoPromociones = new ObservableCollection<Promocion>();
             // Se cargarán los datos de prueba de un fichero XML
             CargarContenidoListaXMLPromociones();
-            // Indicar que el origen de datos del ListBox es listadoParcelas
+            // Indicar que el origen de datos del ListBox es listadoPromociones
             //dgPromociones.ItemsSource = listadoPromociones;
 
             InitializeComponent();
@@ -113,7 +114,7 @@ namespace IPO1_AgenciadeViajes.Presentacion
             doc.Load(fichero.Stream);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
-                var nuevaParcela = new Dominio.Parcela("", 0, "", "", 0, "", false)
+                var nuevaParcela = new Dominio.Parcela("", 0, "", "", 0, "", false,null)
                 {
                     Titulo = node.Attributes["Titulo"].Value,
                     Precio = Convert.ToInt32(node.Attributes["Precio"].Value),
@@ -121,7 +122,8 @@ namespace IPO1_AgenciadeViajes.Presentacion
                     Ubicacion = node.Attributes["Ubicacion"].Value,
                     Servicios = node.Attributes["Servicios"].Value,
                     Estado = Convert.ToBoolean(node.Attributes["Disponibilidad"].Value),
-                    Tamano = Convert.ToInt32(node.Attributes["Tamano"].Value)
+                    Tamano = Convert.ToInt32(node.Attributes["Tamano"].Value),
+                    Foto = new Uri(node.Attributes["Foto"].Value, UriKind.Relative)
                 };
                 listadoParcelas.Add(nuevaParcela);
             }
@@ -147,6 +149,7 @@ namespace IPO1_AgenciadeViajes.Presentacion
                     Restriccion = node.Attributes["Restriccion"].Value,
                     Equipamiento = node.Attributes["Equipamiento"].Value,
                     Estado = Convert.ToBoolean(node.Attributes["Disponibilidad"].Value)
+
                 };
                 listadoCabanas.Add(nuevaCabana);
             }
@@ -234,13 +237,18 @@ namespace IPO1_AgenciadeViajes.Presentacion
 
         private void BtnActividad_Click(object sender, RoutedEventArgs e)
         {
-            ventanaActividad = new InfoActividad();
+
+           Actividad actividad = sender as Actividad;
+            ventanaActividad = new InfoActividad(actividad)
+            {
+                Owner = this
+            };
             ventanaActividad.Show();
         }
-
         private void BtnPromocion_Click(object sender, RoutedEventArgs e)
         {
             ventanaPromocion = new InfoPromocion();
+
             ventanaPromocion.Show();
         }
 
@@ -290,6 +298,11 @@ namespace IPO1_AgenciadeViajes.Presentacion
         private void mngMonit_Click(object sender, RoutedEventArgs e)
         {
             new Monitores(listadoMonitores).ShowDialog();
+        }
+
+        private void histActividades_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

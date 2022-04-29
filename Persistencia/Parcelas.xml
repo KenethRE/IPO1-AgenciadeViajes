@@ -5,6 +5,7 @@
 	Servicios ="Luz
 	Agua
 	Gas"
+	Foto="/Recursos/Imagenes/parcela1.png"
 	MinCapacidad ="13"
 	Disponibilidad ="true"/>
 	
@@ -13,6 +14,7 @@
 	Tamano="10000"
 	Servicios ="Luz"
 	MinCapacidad ="5"
+	Foto="/Recursos/Imagenes/parcela2.png"
 	Disponibilidad ="false"/>
 
 	<Parcela Titulo="Parcela no urbañizable agrícola" Precio="5000" Temporada="Media"
@@ -20,6 +22,7 @@
 	Tamano="10000"
 	Servicios ="Agua"
 	MinCapacidad ="25"
+	Foto="/Recursos/Imagenes/parcela3.png"
 	Disponibilidad ="true"/>
 
 	<Parcela Titulo="Parcela rústica" Precio="1600" Temporada="Alta"
@@ -27,6 +30,7 @@
 	Tamano="1000"
 	Servicios ="Agua"
 	MinCapacidad ="12"
+	Foto="/Recursos/Imagenes/parcela4.png"
 	Disponibilidad ="true"/>
 	
 </Parcelas>

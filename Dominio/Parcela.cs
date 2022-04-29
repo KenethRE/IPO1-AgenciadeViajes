@@ -14,9 +14,10 @@ namespace IPO1_AgenciadeViajes.Dominio
         public string Ubicacion { set; get; }
         public int Tamano { set; get; }
         public string Servicios { set; get; }
+        public Uri Foto { set; get; }
         public bool Estado { set; get; }
 
-        public Parcela(string titulo, double precio, string temporada, string ubicacion, int tamano, string servicios, bool disponibilidad)
+        public Parcela(string titulo, double precio, string temporada, string ubicacion, int tamano, string servicios, bool disponibilidad, Uri foto)
         {
             Titulo = titulo;
             Precio = precio;
@@ -25,6 +26,7 @@ namespace IPO1_AgenciadeViajes.Dominio
             Tamano = tamano;
             Servicios = servicios;
             Estado = disponibilidad;
+            Foto = foto;
         }
     }
 }
