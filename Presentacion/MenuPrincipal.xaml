@@ -144,6 +144,10 @@
                 </MenuItem>
                 <MenuItem x:Name="miSalir" Header="{DynamicResource LlbSalir}" Click="miSalir_Click"/>
             </MenuItem>
+            <MenuItem Header="{DynamicResource lblEditar}">
+                <MenuItem x:Name="miNuevo" Header="{DynamicResource lblNuevo}" Click="MiAcercaDe_Click" />
+                <MenuItem x:Name="miMofificar" Header="{DynamicResource lblModificar}" Click="MiAcercaDe_Click" />
+            </MenuItem>
             <MenuItem Header="{DynamicResource lbAyuda}">
                 <MenuItem x:Name="miAcercaDe" Header="{DynamicResource LlbAcercade}" Click="MiAcercaDe_Click" />
                 <MenuItem x:Name="miDocumentacion" Header="{DynamicResource LlbDocumentacion}" Click="MiDocumentacion_Click" />
@@ -263,7 +267,7 @@
                         <RowDefinition Height="17*"/>
                         <RowDefinition Height="154*"/>
                     </Grid.RowDefinitions>
-                    <Button x:Name="histActividades" Content="Historial de Actividades" Grid.Row="0" Margin="541,0,68,0"></Button>
+                    <Button x:Name="histActividades" Content="Historial de Actividades" Grid.Row="0" Margin="541,0,68,0" Click="histActividades_Click"></Button>
                     <Button x:Name="mngMonit" Content="Monitores" Grid.Row="0" Margin="58,0,554,0" Click="mngMonit_Click" ></Button>
                     <Button x:Name="crearRuta" Content="Crear Ruta" Grid.Row="0" Margin="306,0,306,0" Click="crearRuta_Click" ></Button>
                     <Grid Grid.Row="1">

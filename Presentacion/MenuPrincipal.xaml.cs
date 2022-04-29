@@ -300,5 +300,9 @@ namespace IPO1_AgenciadeViajes.Presentacion
             new Monitores(listadoMonitores).ShowDialog();
         }
 
+        private void histActividades_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
