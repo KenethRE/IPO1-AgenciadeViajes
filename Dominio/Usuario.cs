@@ -10,11 +10,18 @@ namespace IPO1_AgenciadeViajes.Dominio
     public class Usuario
     {
         public string Nombre { set; get; }
-        public string ultimoInicio { set; get; }
-        public BitmapImage ImgUsuario { set; get; }
-
-        public Usuario()
-        { 
+        public string UltimoInicio { set; get; }
+        public Uri ImgUsuario { set; get; }
+        public string Pass { set; get; }
+        public Usuario(string nombre, string ultimoInicio,string pass, Uri imgUsuario)
+        {
+            Nombre = nombre;
+            UltimoInicio = ultimoInicio;
+            ImgUsuario = imgUsuario;
+            Pass = pass;
         }
+
+       
+
     }
 }

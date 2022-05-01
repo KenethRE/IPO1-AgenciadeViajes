@@ -1,5 +1,6 @@
 ﻿using IPO1_AgenciadeViajes.Presentacion;
 using System;
+using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Windows;
 using System.Windows.Controls;
@@ -7,6 +8,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
+using System.Xml;
 
 namespace IPO1_AgenciadeViajes
 {
@@ -16,25 +18,46 @@ namespace IPO1_AgenciadeViajes
     public partial class InicioSesion : Window
 
     {
+        public ObservableCollection<Dominio.Usuario> ListadoUsuarios { get; set; }
         public InicioSesion()
         {
             InitializeComponent();
+            ListadoUsuarios = new ObservableCollection<Dominio.Usuario>();
+            CargarContenidoUsuarios();
             App.SelectCulture("es-ES");
         }
 
 
         private void comprobarInformacion()
         {
-            string usuario = "usuario1";
-            if (!String.IsNullOrEmpty(tbxEmail.Text) && tbxEmail.Text.Equals(usuario, StringComparison.InvariantCultureIgnoreCase))
+            string usuarioacomprobar = tbxEmail.Text;
+            var nuevousuarioactual = new Dominio.Usuario("", "", "", null);
+
+
+            for (int i = 0; i < ListadoUsuarios.Count; i++)
+            {
+                if (usuarioacomprobar == ListadoUsuarios[i].Nombre)
+                {
+                    nuevousuarioactual = ListadoUsuarios[i];
+                }
+                else
+                {
+                    // comprobación errónea
+                    tbxEmail.BorderBrush = Brushes.Red;
+                    tbxEmail.BorderThickness = new Thickness(2);
+                    lblEstado.Content = "Usuario no existe!";
+                    lblEstado.Foreground = Brushes.Red;
+                }
+
+            }
+            if (!String.IsNullOrEmpty(tbxEmail.Text) && tbxEmail.Text.Equals(nuevousuarioactual.Nombre, StringComparison.InvariantCultureIgnoreCase))
             {
                 // comprobación correcta
                 tbxEmail.BorderBrush = Brushes.Transparent;
 
-                string pass_usuario = "1234";
                 if (pbxContraseña.IsEnabled && !String.IsNullOrEmpty(pbxContraseña.Password))
                 {
-                    if (!pbxContraseña.Password.Equals(pass_usuario))
+                    if (!pbxContraseña.Password.Equals(nuevousuarioactual.Pass))
                     {
                         // marcamos borde en rojo
                         pbxContraseña.BorderBrush = Brushes.Red;
@@ -56,8 +79,7 @@ namespace IPO1_AgenciadeViajes
                         timer.Tick += (sender, args) =>
                         {
                             //new MenuPrincipal().Show();
-                            Uri uri = new Uri("/Recursos/Imagenes/Persona.png", UriKind.RelativeOrAbsolute);
-                            new MenuPrincipal(uri).Show();
+                            new MenuPrincipal(nuevousuarioactual.Nombre,nuevousuarioactual.UltimoInicio,nuevousuarioactual.Pass,nuevousuarioactual.ImgUsuario).Show();
                             timer.Stop();
                             this.Close();
                         };
@@ -142,5 +164,26 @@ namespace IPO1_AgenciadeViajes
         {
             this.Close();
         }
+        private void CargarContenidoUsuarios()
+        {
+            // Cargar contenido de prueba
+            XmlDocument doc = new XmlDocument();
+            var fichero = Application.GetResourceStream(new Uri("Persistencia/usuarios.xml", UriKind.Relative));
+            doc.Load(fichero.Stream);
+            foreach (XmlNode node in doc.DocumentElement.ChildNodes)
+            {
+                var nuevousuario = new Dominio.Usuario("","","",null)
+                {
+                    Nombre = node.Attributes["Nombre"].Value,
+                    UltimoInicio = node.Attributes["ultinic"].Value,
+                    Pass = node.Attributes["pass"].Value,
+                    ImgUsuario = new Uri(node.Attributes["Foto"].Value, UriKind.Relative)
+                   
+                };
+                ListadoUsuarios.Add(nuevousuario);
+            }
+
+        }
+
     }
 }
