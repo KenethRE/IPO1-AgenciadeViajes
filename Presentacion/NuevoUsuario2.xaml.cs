@@ -55,29 +55,15 @@ namespace IPO1_AgenciadeViajes.Presentacion
                 var fichero = Application.GetResourceStream(new Uri("Persistencia/usuarios.xml", UriKind.Relative));
                 doc.Load(fichero.Stream);
                 string Nombre = NombreTxt.Text;
-                string ultinic = DateTime.Now.ToString();
+                string ultinic = DateTime.Now.ToString("d");
                 string Foto = Imgtxt.Text;
                 string pass = PassTxt.Text;
-
                 XmlElement NuevoUsuario = doc.CreateElement("Usuario");
                 NuevoUsuario.SetAttribute("Nombre", Nombre);
                 NuevoUsuario.SetAttribute("ultinic", ultinic);
                 NuevoUsuario.SetAttribute("Foto", Foto);
                 NuevoUsuario.SetAttribute("pass",pass);
-                /*XmlAttribute Nombreatrib = doc.CreateAttribute("Nombre");
-                Nombreatrib.Value = Nombre;
-                NuevoUsuario.Attributes.Append(Nombreatrib);
-                XmlAttribute ultinicatrib = doc.CreateAttribute("ultinic");
-                ultinicatrib.Value = ultinic;
-                NuevoUsuario.Attributes.Append(ultinicatrib);
-                XmlAttribute fotoatrib = doc.CreateAttribute("Foto");
-                ultinicatrib.Value = Foto;
-                NuevoUsuario.Attributes.Append(fotoatrib);
-                XmlAttribute passatrib = doc.CreateAttribute("Pass");
-                passatrib.Value = pass;
-                NuevoUsuario.Attributes.Append(passatrib);*/
-                //XmlNode refElem = doc.DocumentElement.LastChild;
-                //doc.InsertAfter(NuevoUsuario, refElem);
+                
                 doc.DocumentElement.AppendChild(NuevoUsuario);
                 doc.Save("C:/Users/plati/Source/Repos/KenethRE/IPO1-AgenciadeViajes/Persistencia/usuarios.xml");
                 this.Close();
