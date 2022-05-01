@@ -28,6 +28,7 @@ namespace IPO1_AgenciadeViajes.Presentacion
         private InfoActividad ventanaActividad;
         private InfoPromocion ventanaPromocion;
         private InfoRutaSenderista ventanaRutaSenderista;
+        private NuevoUsuario2 ventananuevousuario;
         private Actividad ActividaActual = new Actividad("", "", "", "", false, 0, 0, 0, "", "", false);
 
         public Usuario usuarioActual { get; set; }
@@ -299,6 +300,11 @@ namespace IPO1_AgenciadeViajes.Presentacion
         private void histActividades_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+        private void NuevoUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            ventananuevousuario = new NuevoUsuario2();
+            ventananuevousuario.Show();
         }
     }
 }
