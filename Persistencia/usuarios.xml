@@ -1,0 +1,6 @@
+﻿<Usuarios>
+	<Usuario Nombre="usuario1"
+	ultinic="12/05/22"
+	Foto="/Recursos/Imagenes/user.png"
+	pass ="1234"/>
+</Usuarios>
