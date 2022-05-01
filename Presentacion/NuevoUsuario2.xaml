@@ -22,10 +22,10 @@
         <Label Grid.Column="1" Content="Pass" HorizontalAlignment="Left" Margin="15,20,0,0" Grid.Row="1" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Grid.Column="1" Content="Imagen" HorizontalAlignment="Left" Margin="15,20,0,0" Grid.Row="2" VerticalAlignment="Top" FontWeight="Bold"/>
 
-        <TextBox x:Name="PassTxt" Grid.Column="2" HorizontalAlignment="Left" Margin="50,25,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="184"/>
-        <TextBox x:Name="NombreTxt" Grid.Column="2" HorizontalAlignment="Left" Margin="50,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184"/>
+        <TextBox x:Name="PassTxt" Grid.Column="2" HorizontalAlignment="Left" Margin="50,25,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" TabIndex="2"/>
+        <TextBox x:Name="NombreTxt" Grid.Column="2" HorizontalAlignment="Left" Margin="50,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" TabIndex="1"/>
         <TextBox x:Name="Imgtxt" Grid.Column="2" HorizontalAlignment="Left" Margin="50,25,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="184"/>
-        <Button x:Name="Btn_Cargarimagen" Grid.Column="2" Content="Cargar Imagen" HorizontalAlignment="Left" Margin="250,15,0,0" Grid.Row="2" VerticalAlignment="Top" Click="Button_Click" Height="32" Width="136"/>
+        <Button x:Name="Btn_Cargarimagen" Grid.Column="2" Content="Cargar Imagen" HorizontalAlignment="Left" Margin="250,15,0,0" Grid.Row="2" VerticalAlignment="Top" Click="Button_Click" Height="32" Width="136" TabIndex="3"/>
         <Image x:Name="Imagen" Grid.Column="2" HorizontalAlignment="Left" Height="55" Margin="365,7,0,0" VerticalAlignment="Top" Width="61" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
@@ -36,6 +36,6 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Button x:Name="Btn_Cargarimagen_Copy" Grid.Column="2" Content="Guardar Usuario" HorizontalAlignment="Left" Margin="148,0,0,0" Grid.Row="3" VerticalAlignment="Center" Click="Button_ClickGuardar" Height="32" Width="136"/>
+        <Button x:Name="Btn_Cargarimagen_Copy" Grid.Column="2" Content="Guardar Usuario" HorizontalAlignment="Left" Margin="148,0,0,0" Grid.Row="3" VerticalAlignment="Center" Click="Button_ClickGuardar" Height="32" Width="136" TabIndex="4"/>
     </Grid>
 </Window>
