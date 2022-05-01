@@ -79,7 +79,7 @@ namespace IPO1_AgenciadeViajes
                         timer.Tick += (sender, args) =>
                         {
                             //new MenuPrincipal().Show();
-                            new MenuPrincipal(nuevousuarioactual.Nombre,nuevousuarioactual.UltimoInicio,nuevousuarioactual.Pass,nuevousuarioactual.ImgUsuario).Show();
+                            new MenuPrincipal(nuevousuarioactual).Show();
                             timer.Stop();
                             this.Close();
                         };

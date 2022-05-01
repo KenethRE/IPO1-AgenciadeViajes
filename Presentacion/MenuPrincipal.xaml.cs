@@ -38,19 +38,11 @@ namespace IPO1_AgenciadeViajes.Presentacion
         public ObservableCollection<Dominio.Actividad> listadoActividades { get; set; }
         public ObservableCollection<Promocion> listadoPromociones { get; set; }
 
-        public MenuPrincipal(string nombreusuario,string ultimoinic,String pass,Uri uriUsuario)
+        public MenuPrincipal(Usuario usuarioactual)
         {
-            this.usuarioActual = new Usuario(nombreusuario,ultimoinic,pass,uriUsuario);
-            if (uriUsuario == null)
-            {
-                Uri imagen = new Uri("/Recursos/Imagenes/user.png");
-                usuarioActual.ImgUsuario = imagen;
-            }
-            else usuarioActual.ImgUsuario = uriUsuario;
-
-            usuarioActual.Nombre = "José";
-            usuarioActual.UltimoInicio = DateTime.Now.ToString();
-            // Crear el listado de monitores
+            this.usuarioActual = usuarioactual;
+             listadoMonitores = new ObservableCollection<Dominio.Monitor>();
+           // Crear el listado de monitores
             listadoMonitores = new ObservableCollection<Dominio.Monitor>();
             // Se cargarán los datos de prueba de un fichero XML
             CargarContenidoListaXMLMonitores();
