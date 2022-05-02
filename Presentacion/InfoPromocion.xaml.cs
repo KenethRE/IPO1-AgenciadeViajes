@@ -19,7 +19,7 @@ namespace IPO1_AgenciadeViajes
     /// </summary>
     public partial class InfoPromocion : Window
     {
-        public InfoPromocion()
+        public InfoPromocion(Dominio.Promocion promocion)
         {
             InitializeComponent();
         }

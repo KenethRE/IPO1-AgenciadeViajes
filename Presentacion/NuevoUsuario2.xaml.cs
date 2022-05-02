@@ -65,7 +65,8 @@ namespace IPO1_AgenciadeViajes.Presentacion
                 NuevoUsuario.SetAttribute("pass",pass);
                 
                 doc.DocumentElement.AppendChild(NuevoUsuario);
-                doc.Save("C:/Users/plati/Source/Repos/KenethRE/IPO1-AgenciadeViajes/Persistencia/usuarios.xml");
+                doc.Save(fichero.Stream);
+                MessageBox.Show("Usuario Guardado");
                 this.Close();
             }
             catch (Exception ex)

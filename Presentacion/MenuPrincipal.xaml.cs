@@ -234,8 +234,7 @@ namespace IPO1_AgenciadeViajes.Presentacion
 
         private void BtnActividad_Click(object sender, RoutedEventArgs e)
         {
-
-           Actividad actividad = sender as Actividad;
+            Actividad actividad = sender as Actividad;
             ventanaActividad = new InfoActividad(actividad)
             {
                 Owner = this
@@ -244,7 +243,7 @@ namespace IPO1_AgenciadeViajes.Presentacion
         }
         private void BtnPromocion_Click(object sender, RoutedEventArgs e)
         {
-            ventanaPromocion = new InfoPromocion();
+            //ventanaPromocion = new InfoPromocion();
 
             ventanaPromocion.Show();
         }
@@ -305,6 +304,14 @@ namespace IPO1_AgenciadeViajes.Presentacion
         {
             ventananuevousuario = new NuevoUsuario2();
             ventananuevousuario.Show();
+        }
+        private void ContentControl_PreviewMouseLeftButtonDown1(object sender, MouseButtonEventArgs e)
+        {
+            var promocion = ((FrameworkElement)sender).DataContext as Promocion;
+            ventanaPromocion = new InfoPromocion(promocion);
+
+            ventanaPromocion.Show();
+
         }
     }
 }
