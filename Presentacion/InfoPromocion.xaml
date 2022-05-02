@@ -28,16 +28,6 @@
             <ComboBoxItem x:Name="cbItem1" Content="ES"/>
             <ComboBoxItem x:Name="cbItem2" Content="EN"/>
         </ComboBox>
-        <Label Content="Descripción" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="9.6,0,0,229.8" Width="216" FontSize="16" Height="54" RenderTransformOrigin="0.5,0.5" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="-0.492"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="-0.393"/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
         <Button x:Name="btnModificarPromocion" HorizontalAlignment="Center" Margin="68.6,198.525,333.8,0" FontSize="16" Content="Modificar información" Height="53" VerticalAlignment="Top" Width="180" RenderTransformOrigin="0.452,-3.352" Grid.Row="2" Grid.Column="2" Grid.RowSpan="2" />
         <Button x:Name="btnGuardarPromocion" HorizontalAlignment="Right" Margin="0,198.525,143.8,0" FontSize="16" Content="Guardar cambios" Height="53" VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.452,-3.352" Grid.Row="2" Grid.Column="2" Grid.RowSpan="2" />
         <Image Grid.Column="1" HorizontalAlignment="Left" Height="102" Margin="9.6,66.4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="122" Source="/Recursos/Imagenes/icono_imagen.png" />
@@ -46,5 +36,6 @@
             <Image Source="/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
         </Button>
         <Label x:Name="lblEstado" Content="Estado de aplicación" Margin="0,33.2,-0.4,0" Grid.Row="3" Background="White" Opacity="0.7" Height="30" Grid.ColumnSpan="4"/>
+        <TextBlock x:Name="TxtDescripcion" Grid.Column="1" HorizontalAlignment="Left" Margin="12,48,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="35" Width="306" Grid.RowSpan="2" IsEnabled="False"/>
     </Grid>
 </Window>

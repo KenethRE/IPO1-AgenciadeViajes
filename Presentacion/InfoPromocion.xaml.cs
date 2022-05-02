@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IPO1_AgenciadeViajes.Dominio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,14 @@ namespace IPO1_AgenciadeViajes
     /// </summary>
     public partial class InfoPromocion : Window
     {
-        public InfoPromocion(Dominio.Promocion promocion)
+        public Promocion promocion;
+        public InfoPromocion(Dominio.Promocion promocion)  
         {
+            this.promocion = promocion;
             InitializeComponent();
+            String descipcion = promocion.Descripcion;
+            TxtDescripcion.Text= descipcion;
+            
         }
         private void btnSalir_Click(object sender, RoutedEventArgs e)
         {

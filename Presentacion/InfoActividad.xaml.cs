@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IPO1_AgenciadeViajes.Dominio;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -25,6 +26,7 @@ namespace IPO1_AgenciadeViajes
     {
         private InfoInscrito ventanaInscrito;
         private ObservableCollection<Dominio.Actividad> listadoActividades;
+        private Actividad actividad;
 
         public InfoActividad(Dominio.Actividad actividad)
         {
