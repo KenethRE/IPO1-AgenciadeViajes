@@ -29,6 +29,7 @@ namespace IPO1_AgenciadeViajes.Presentacion
         private InfoPromocion ventanaPromocion;
         private InfoRutaSenderista ventanaRutaSenderista;
         private NuevoUsuario2 ventananuevousuario;
+        private Monitores ventanaMonitores;
         
 
         public Usuario usuarioActual { get; set; }
@@ -241,14 +242,12 @@ namespace IPO1_AgenciadeViajes.Presentacion
 
         private void BtnParcela_Click(object sender, RoutedEventArgs e)
         {
-            ventanaParcela = new InfoParcela();
-            ventanaParcela.Show();
+           
         }
 
         private void BtnCabana_Click(object sender, RoutedEventArgs e)
         {
-            //ventanaCabana = new InfoCabana();
-            //ventanaCabana.Show();
+            
         }
 
         private void BtnActividad_Click(object sender, RoutedEventArgs e)
@@ -312,7 +311,8 @@ namespace IPO1_AgenciadeViajes.Presentacion
 
         private void mngMonit_Click(object sender, RoutedEventArgs e)
         {
-            new Monitores(listadoMonitores).ShowDialog();
+            ventanaMonitores = new Monitores(listadoMonitores);
+            ventanaMonitores.Show();
         }
 
         private void histActividades_Click(object sender, RoutedEventArgs e)
@@ -327,10 +327,16 @@ namespace IPO1_AgenciadeViajes.Presentacion
         private void ContentControl_PreviewMouseLeftButtonDown1(object sender, MouseButtonEventArgs e)
         {
             var promocion = ((FrameworkElement)sender).DataContext as Promocion;
-            ventanaPromocion = new InfoPromocion(promocion);
+            if (promocion.Estado == true)
+            {
+                ventanaPromocion = new InfoPromocion(promocion);
+                ventanaPromocion.Show();
+            }
+            else
+                MessageBox.Show("promocion no disponible");
             
-
-            ventanaPromocion.Show();
+            
+                      
 
         }
         private void ContentControl_PreviewMouseLeftButtonDown2(object sender, MouseButtonEventArgs e)
@@ -346,6 +352,21 @@ namespace IPO1_AgenciadeViajes.Presentacion
                 MessageBox.Show("Cabaña no disponible");
 
             
+
+        }
+        private void ContentControl_PreviewMouseLeftButtonDown3(object sender, MouseButtonEventArgs e)
+        {
+            var parcela = ((FrameworkElement)sender).DataContext as Parcela;
+
+            if (parcela.Estado == true)
+            {
+                ventanaParcela = new InfoParcela(parcela);
+                ventanaParcela.Show();
+            }
+            else
+                MessageBox.Show("Parcela no disponible");
+
+
 
         }
     }

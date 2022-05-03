@@ -23,9 +23,17 @@ namespace IPO1_AgenciadeViajes
     public partial class InfoParcela : Window
     {
         private ConfirmacionParcela ventanaConfirmacionParcela;
-        public InfoParcela()
+        public InfoParcela(Dominio.Parcela parcela)
         {
             InitializeComponent();
+            titparcela.Text = parcela.Titulo;
+            txtprecpac.Content = parcela.Precio;
+            txtUbicParcela.Content = parcela.Ubicacion + "\nTamaño: "+ parcela.Tamano+ "\nTemporada: "+parcela.Temporada;
+            txtServicparcela.Content = parcela.Servicios;
+            disp_parcela.Content = parcela.Estado;
+            var bitmap = new BitmapImage(parcela.Foto);
+           Img_parcela.Source = bitmap;
+
         }
 
         private void ReservarParcela_Click(object sender, RoutedEventArgs e)

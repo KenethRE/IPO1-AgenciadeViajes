@@ -19,9 +19,17 @@ namespace IPO1_AgenciadeViajes
     /// </summary>
     public partial class InfoMonitor : Window
     {
-        public InfoMonitor()
+        public InfoMonitor(Dominio.Monitor monitor)
         {
             InitializeComponent();
+            txtNomMon.Content = monitor.Nombre;
+            lblTelefonoMonitor.Content = monitor.Telefono;
+            txtcorreosmonitor.Content = monitor.Correo;
+            txtidiomamonitor.Content = monitor.Idioma;
+            txtformacionmonitor.Content = monitor.Formacion;
+            txtrestriccionesmonitor.Content = monitor.Restricciones;
+            var bitmap = new BitmapImage(monitor.Foto);
+            img_monitor.Source = bitmap;
         }
         private void btnSalir_Click(object sender, RoutedEventArgs e)
         {

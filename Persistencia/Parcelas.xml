@@ -2,9 +2,7 @@
 	<Parcela Titulo="Parcela rústica" Precio="800" Temporada="Alta"
 	Ubicacion="Se encuentra cerca de la playa"
 	Tamano="5000"
-	Servicios ="Luz
-	Agua
-	Gas"
+	Servicios ="Luz,Agua,Gas"
 	Foto="/Recursos/Imagenes/parcela1.png"
 	MinCapacidad ="13"
 	Disponibilidad ="true"/>
