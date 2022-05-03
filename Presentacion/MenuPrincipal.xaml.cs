@@ -226,6 +226,7 @@ namespace IPO1_AgenciadeViajes.Presentacion
                     {
                         node.SelectSingleNode("@ultinic").InnerText = UltimoInicio;
                         String path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+                        
                         doc.Save("C:/Users/plati/source/repos/KenethRE/IPO1-AgenciadeViajes/Persistencia/usuarios.xml");
                     }
 
@@ -325,6 +326,8 @@ namespace IPO1_AgenciadeViajes.Presentacion
             ventananuevousuario = new NuevoUsuario2();
             ventananuevousuario.Show();
         }
+
+
         private void ContentControl_PreviewMouseLeftButtonDown1(object sender, MouseButtonEventArgs e)
         {
             var promocion = ((FrameworkElement)sender).DataContext as Promocion;
@@ -383,6 +386,55 @@ namespace IPO1_AgenciadeViajes.Presentacion
                 MessageBox.Show("Actividad no disponible");
 
 
+
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void EditarUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void BorrarUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            XmlDocument doc = new XmlDocument();
+            var fichero = Application.GetResourceStream(new Uri("Persistencia/usuarios.xml", UriKind.Relative));
+            doc.Load(fichero.Stream);
+            XmlElement usuariomodificado = doc.DocumentElement;
+            var listanodos = usuariomodificado.SelectNodes("/Usuarios/Usuario");
+            if (listanodos.Count <= 1)
+            {
+                MessageBox.Show("No se puede borrar el usuario al ser el unico existente");
+            }
+            else
+            {
+                foreach (XmlNode node in listanodos)
+                {
+                    var nombre = node.SelectSingleNode("@Nombre").InnerText;
+                    if (nombre == usuarioActual.Nombre)
+                    {
+                        XmlElement el = (XmlElement)node;
+                        try
+                        {
+                           el.ParentNode.RemoveChild(el);
+                           doc.Save("C:/Users/plati/source/repos/KenethRE/IPO1-AgenciadeViajes/Persistencia/usuarios.xml");
+                           MessageBox.Show("usuario "+usuarioActual.Nombre + "  borrado correctamente" );
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error al borrar el usuario " + ex.Message);
+                            
+                        }
+
+                        
+                    }
+
+                }
+            }
 
         }
     }

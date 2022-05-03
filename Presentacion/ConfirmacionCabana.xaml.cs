@@ -20,17 +20,19 @@ namespace IPO1_AgenciadeViajes
     /// </summary>
     public partial class ConfirmacionCabana : Window
     {
-        public ConfirmacionCabana()
+        private Dominio.Cabana cabana;
+        public ConfirmacionCabana(Dominio.Cabana cabana,DatePicker fechainicio, DatePicker fechafin)
         {
+            this.cabana = cabana;   
             InitializeComponent();
+            Lblconfirmacion.Text= "Para reservar la cabaña "+ cabana.Titulo + " \n para las fechas "+ fechainicio.ToString() + " a " + fechafin.ToString()+ " \n debe rellenar estos datos";
         }
 
     
 
         private void AceptarConfirmacionCabana_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(string.Format("El usuario: {0}, Ha reservado la cabaña {1}{2}", _nombre.Text,
-            Environment.NewLine, _comentario.Text));
+            MessageBox.Show("Se Ha reservado " + cabana.Titulo);
         }
         private void btnSalir_Click(object sender, RoutedEventArgs e)
         {
@@ -38,5 +40,14 @@ namespace IPO1_AgenciadeViajes
 
         }
 
+        private void btnCancelarReservarCabana_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result;
+            result = MessageBox.Show("¿Estás seguro de cancelar la reserva?", "Cancelar reserva", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if (result == MessageBoxResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }
