@@ -19,8 +19,8 @@
             <ColumnDefinition Width="583*"/>
             <ColumnDefinition Width="49*"/>
         </Grid.ColumnDefinitions>
-        <Label Content="Promoción" HorizontalAlignment="Left" VerticalAlignment="Top" Height="60" Width="314" Margin="7.6,32,0,0" FontSize="26" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <Label x:Name="lblFotosPromocion" Content="Fotos" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="9.6,23.4,0,0" FontSize="22" Height="43" Width="314" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Label Content="Promoción" HorizontalAlignment="Left" VerticalAlignment="Top" Height="60" Width="133" Margin="8,32,0,0" FontSize="26" Grid.RowSpan="2" Grid.Column="1"/>
+        <Label x:Name="lblFotosPromocion" Content="Fotos" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,23,0,0" FontSize="22" Height="43" Width="91" Grid.Row="2" Grid.Column="1"/>
         <Button x:Name="btnCancelarPromocion" HorizontalAlignment="Center" Margin="477.6,198.525,22.8,0" FontSize="16" Content="Cancelar" Height="53" VerticalAlignment="Top" Width="82" RenderTransformOrigin="0.452,-3.352" Grid.Row="2" Grid.Column="2" Grid.RowSpan="2" />
         <Button x:Name="btnDarPromocion" HorizontalAlignment="Center" Margin="29.6,198.525,556.8,0" FontSize="16" Content="Dar de Alta/Baja" Height="53" VerticalAlignment="Top" Width="136" RenderTransformOrigin="0.452,-3.352" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" />
         <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="440.6,-1,0,6.2" VerticalAlignment="Center" Source="/Recursos/Imagenes/spain.png" Height="42" Width="56" RenderTransformOrigin="0.572,1.906" Grid.Column="2"/>
@@ -30,12 +30,11 @@
         </ComboBox>
         <Button x:Name="btnModificarPromocion" HorizontalAlignment="Center" Margin="68.6,198.525,333.8,0" FontSize="16" Content="Modificar información" Height="53" VerticalAlignment="Top" Width="180" RenderTransformOrigin="0.452,-3.352" Grid.Row="2" Grid.Column="2" Grid.RowSpan="2" />
         <Button x:Name="btnGuardarPromocion" HorizontalAlignment="Right" Margin="0,198.525,143.8,0" FontSize="16" Content="Guardar cambios" Height="53" VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.452,-3.352" Grid.Row="2" Grid.Column="2" Grid.RowSpan="2" />
-        <Image Grid.Column="1" HorizontalAlignment="Left" Height="102" Margin="9.6,66.4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="122" Source="/Recursos/Imagenes/icono_imagen.png" />
-        <Image Grid.Column="1" HorizontalAlignment="Left" Height="122" Margin="115.6,66.4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="112" Source="/Recursos/Imagenes/icono_imagen.png" Grid.ColumnSpan="2" />
+        <Image x:Name="ImPromo" Grid.Column="1" HorizontalAlignment="Left" Height="102" Margin="9.6,66.4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="122" Source="/Recursos/Imagenes/icono_imagen.png" />
         <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="3" Margin="8.2,0,9.6,10.2" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click">
             <Image Source="/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
         </Button>
-        <Label x:Name="lblEstado" Content="Estado de aplicación" Margin="0,33.2,-0.4,0" Grid.Row="3" Background="White" Opacity="0.7" Height="30" Grid.ColumnSpan="4"/>
-        <TextBlock x:Name="TxtDescripcion" Grid.Column="1" HorizontalAlignment="Left" Margin="12,48,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="35" Width="306" Grid.RowSpan="2" IsEnabled="False"/>
+        <TextBlock x:Name="TxtDescripcion" Grid.Column="2" HorizontalAlignment="Left" Margin="71,27,0,0" Grid.Row="2" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="103" Width="327" IsEnabled="False"/>
+        <TextBlock x:Name="txtgitulo" Grid.Column="2" HorizontalAlignment="Left" Margin="24,0,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="16"/>
     </Grid>
 </Window>

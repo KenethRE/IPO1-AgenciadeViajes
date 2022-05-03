@@ -247,8 +247,8 @@ namespace IPO1_AgenciadeViajes.Presentacion
 
         private void BtnCabana_Click(object sender, RoutedEventArgs e)
         {
-            ventanaCabana = new InfoCabana();
-            ventanaCabana.Show();
+            //ventanaCabana = new InfoCabana();
+            //ventanaCabana.Show();
         }
 
         private void BtnActividad_Click(object sender, RoutedEventArgs e)
@@ -331,6 +331,21 @@ namespace IPO1_AgenciadeViajes.Presentacion
             
 
             ventanaPromocion.Show();
+
+        }
+        private void ContentControl_PreviewMouseLeftButtonDown2(object sender, MouseButtonEventArgs e)
+        {
+            var cabana = ((FrameworkElement)sender).DataContext as Cabana;
+
+            if (cabana.Estado == true)
+            {
+                ventanaCabana = new InfoCabana(cabana);
+                ventanaCabana.Show();
+            }
+            else
+                MessageBox.Show("Cabaña no disponible");
+
+            
 
         }
     }

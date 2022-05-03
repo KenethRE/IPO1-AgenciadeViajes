@@ -19,9 +19,19 @@ namespace IPO1_AgenciadeViajes
     /// </summary>
     public partial class InfoCabana : Window
     {
-        public InfoCabana()
+        public InfoCabana(Dominio.Cabana cabana)
         {
             InitializeComponent();
+            titcabna.Content = cabana.Titulo;
+            txtprecio.Content = cabana.Precio;
+            txtrestric.Content = cabana.Restriccion;
+            txt_equip.Content = cabana.Equipamiento;
+            txtdipon.Content = cabana.Estado;
+            var bitmap = new BitmapImage(cabana.Foto);
+            img_cabana.Source = bitmap;
+
+
+
         }
 
 

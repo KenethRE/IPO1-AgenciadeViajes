@@ -25,8 +25,10 @@ namespace IPO1_AgenciadeViajes
         {
             this.promocion = promocion;
             InitializeComponent();
-            String descipcion = promocion.Descripcion;
-            TxtDescripcion.Text= descipcion;
+            txtgitulo.Text = promocion.Titulo;
+            var bitmap = new BitmapImage(promocion.Foto);
+            ImPromo.Source = bitmap;
+            TxtDescripcion.Text= promocion.Descripcion;
             
         }
         private void btnSalir_Click(object sender, RoutedEventArgs e)
