@@ -32,7 +32,7 @@ namespace IPO1_AgenciadeViajes
             txtServicparcela.Content = parcela.Servicios;
             disp_parcela.Content = parcela.Estado;
             var bitmap = new BitmapImage(parcela.Foto);
-           Img_parcela.Source = bitmap;
+            Img_parcela.Source = bitmap;
 
         }
 

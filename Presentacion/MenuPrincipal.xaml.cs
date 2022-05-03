@@ -162,11 +162,12 @@ namespace IPO1_AgenciadeViajes.Presentacion
             doc.Load(fichero.Stream);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
-                var nuevaActividad = new Dominio.Actividad("", "", "", "", false, 0, 0, 0, "", "", false)
+                var nuevaActividad = new Dominio.Actividad("", "", "", "", false, 0, 0, 0, "", "", false,null)
                 {
                     Titulo = node.Attributes["Titulo"].Value,
                     Descripcion = node.Attributes["Descripcion"].Value,
                     Monitor = node.Attributes["Monitor"].Value,
+                    Horario = node.Attributes["Horario"].Value,
                     Niños = Convert.ToBoolean(node.Attributes["Niños"].Value),
                     MaxCapacidad = Convert.ToInt32(node.Attributes["MaxCapacidad"].Value),
                     MinCapacidad = Convert.ToInt32(node.Attributes["MinCapacidad"].Value),
@@ -365,6 +366,21 @@ namespace IPO1_AgenciadeViajes.Presentacion
             }
             else
                 MessageBox.Show("Parcela no disponible");
+
+
+
+        }
+        private void ContentControl_PreviewMouseLeftButtonDown4(object sender, MouseButtonEventArgs e)
+        {
+            var actividad = ((FrameworkElement)sender).DataContext as Actividad;
+
+            if (actividad.Estado == true)
+            {
+                ventanaActividad = new InfoActividad(actividad);
+                ventanaActividad.Show();
+            }
+            else
+                MessageBox.Show("Actividad no disponible");
 
 
 

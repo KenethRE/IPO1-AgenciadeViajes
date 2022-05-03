@@ -59,8 +59,8 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <DatePicker Grid.Column="1" HorizontalAlignment="Left" Height="43" Margin="10,539.8,0,0" VerticalAlignment="Top" Width="188" FontSize="16" Grid.Row="1"/>
-        <DatePicker Grid.Column="2" HorizontalAlignment="Left" Height="43" Margin="32.4,539.8,0,0" VerticalAlignment="Top" Width="188" FontSize="16" Grid.Row="1"/>
+        <DatePicker Grid.Column="1" HorizontalAlignment="Left" Height="43" Margin="6,561,0,0" VerticalAlignment="Top" Width="188" FontSize="16" Grid.Row="1"/>
+        <DatePicker Grid.Column="2" HorizontalAlignment="Left" Height="43" Margin="15,561,0,0" VerticalAlignment="Top" Width="188" FontSize="16" Grid.Row="1"/>
         <Label x:Name="lblFechaInicioParcela" Content="Fecha de inicio:" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="15,0,0,61.1" Grid.Column="1" Width="153" FontSize="16" Height="38" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -91,7 +91,6 @@
         <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="3" Margin="38.8,0,10.4,10.2" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click">
             <Image Source="/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
         </Button>
-        <Label x:Name="lblEstado" Content="Estado de aplicación" Margin="0,4.8,0.4,6.8" Grid.Row="4" Background="White" Opacity="0.7" Height="30" Grid.ColumnSpan="4"/>
         <Label x:Name="lblDispparc" Content="{DynamicResource lblDisponibilidad}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="16,474,0,0" FontSize="22" Height="40" Width="147" Grid.Row="1" Grid.ColumnSpan="2"/>
 
     </Grid>

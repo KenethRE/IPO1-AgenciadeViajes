@@ -25,44 +25,24 @@ namespace IPO1_AgenciadeViajes
     public partial class InfoActividad : Window
     {
         private InfoInscrito ventanaInscrito;
-        private ObservableCollection<Dominio.Actividad> listadoActividades;
-        private Actividad actividad;
+       
+        
 
         public InfoActividad(Dominio.Actividad actividad)
         {
-            listadoActividades = new ObservableCollection<Dominio.Actividad>();
-            // Se cargarán los datos de prueba de un fichero XML
-            CargarContenidoListaXMLActividades();
-            //DescipcionAct.Content = actividad.Descripcion;
+           
             InitializeComponent();
-        }
-
-        private void CargarContenidoListaXMLActividades()
-        {
-            // Cargar contenido de prueba
-            XmlDocument doc = new XmlDocument();
-            var fichero = Application.GetResourceStream(new Uri("Persistencia/Actividades.xml", UriKind.Relative));
-            doc.Load(fichero.Stream);
-            foreach (XmlNode node in doc.DocumentElement.ChildNodes)
-            {
-                var nuevaActividad = new Dominio.Actividad("", "", "", "", false, 0, 0, 0, "", "", false)
-                {
-                    Titulo = node.Attributes["Titulo"].Value,
-                    Descripcion = node.Attributes["Descripcion"].Value,
-                    Monitor = node.Attributes["Monitor"].Value,
-                    Niños = Convert.ToBoolean(node.Attributes["Niños"].Value),
-                    MaxCapacidad = Convert.ToInt32(node.Attributes["MaxCapacidad"].Value),
-                    MinCapacidad = Convert.ToInt32(node.Attributes["MinCapacidad"].Value),
-                    Precio = Convert.ToInt32(node.Attributes["Precio"].Value),
-                    Area = node.Attributes["Area"].Value,
-                    Equipamiento = node.Attributes["Equipamiento"].Value,
-                    Estado = Convert.ToBoolean(node.Attributes["Estado"].Value),
-                    Foto = new Uri(node.Attributes["Foto"].Value, UriKind.Relative)
-                };
-                listadoActividades.Add(nuevaActividad);
-            }
+            LblTitulo.Content = actividad.Titulo;
+            DescipcionAct.Content = actividad.Descripcion;
+            lbnommonitor.Content = actividad.Monitor;
+            lblhorario.Content=actividad.Horario;
+            lblCupoactividad.Content = "Entre "+actividad.MinCapacidad+ " y " + actividad.MaxCapacidad +" personas";
+            lblPrecioActividad.Content = actividad.Precio + " € la hora";
+            lblAreaActividad.Content = actividad.Area;
+            lblequipactividad1.Content = actividad.Equipamiento;
 
         }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -102,6 +82,11 @@ namespace IPO1_AgenciadeViajes
         }
 
         private void miSalir_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnCancelarActividad_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
