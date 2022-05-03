@@ -22,14 +22,15 @@ namespace IPO1_AgenciadeViajes
         public InicioSesion()
         {
             InitializeComponent();
-            ListadoUsuarios = new ObservableCollection<Dominio.Usuario>();
-            CargarContenidoUsuarios();
+           
             App.SelectCulture("es-ES");
         }
 
 
         private void comprobarInformacion()
         {
+            ListadoUsuarios = new ObservableCollection<Dominio.Usuario>();
+            CargarContenidoUsuarios();
             string usuarioacomprobar = tbxEmail.Text;
             var nuevousuarioactual = new Dominio.Usuario("", "", "", null);
 

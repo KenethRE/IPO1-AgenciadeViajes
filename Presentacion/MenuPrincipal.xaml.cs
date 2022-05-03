@@ -29,7 +29,7 @@ namespace IPO1_AgenciadeViajes.Presentacion
         private InfoPromocion ventanaPromocion;
         private InfoRutaSenderista ventanaRutaSenderista;
         private NuevoUsuario2 ventananuevousuario;
-        private Actividad ActividaActual = new Actividad("", "", "", "", false, 0, 0, 0, "", "", false);
+        
 
         public Usuario usuarioActual { get; set; }
 
@@ -212,9 +212,28 @@ namespace IPO1_AgenciadeViajes.Presentacion
             result = MessageBox.Show("¿Estás seguro de cerrar la sesión?", "Cerrar Sesión", MessageBoxButton.YesNo, MessageBoxImage.Warning);
             if (result == MessageBoxResult.Yes)
             {
+                string UltimoInicio = DateTime.Now.ToString("d");
+                XmlDocument doc = new XmlDocument();
+                var fichero = Application.GetResourceStream(new Uri("Persistencia/usuarios.xml", UriKind.Relative));
+                doc.Load(fichero.Stream);
+                XmlElement usuariomodificado = doc.DocumentElement;
+                var listanodos = usuariomodificado.SelectNodes("/Usuarios/Usuario");
+                foreach (XmlNode node in listanodos) {
+                    var nombre = node.SelectSingleNode("@Nombre").InnerText;
+                    if (nombre == usuarioActual.Nombre)
+                    {
+                        node.SelectSingleNode("@ultinic").InnerText = UltimoInicio;
+                        String path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+                        doc.Save("C:/Users/plati/source/repos/KenethRE/IPO1-AgenciadeViajes/Persistencia/usuarios.xml");
+                    }
+
+                }
+               
                 Visibility = Visibility.Hidden;
                 new InicioSesion().Show();
                 this.Close();
+                //var fichero2 = Application.GetResourceStream(new Uri("Persistencia/usuarios.xml", UriKind.Relative));
+                //doc.Save(fichero2.Stream);
             }
 
         }
@@ -309,6 +328,7 @@ namespace IPO1_AgenciadeViajes.Presentacion
         {
             var promocion = ((FrameworkElement)sender).DataContext as Promocion;
             ventanaPromocion = new InfoPromocion(promocion);
+            
 
             ventanaPromocion.Show();
 
