@@ -31,9 +31,8 @@
             <ColumnDefinition Width="67*"/>
             <ColumnDefinition Width="88*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="lblTituloActividad" Content="{DynamicResource lblTituloActividad}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="59" Width="129" Margin="1,29,0,0" FontSize="26" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Label x:Name="lblTituloActividad" Content="{DynamicResource lblTituloActividad}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="129" Margin="1,29,0,0" FontSize="26" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
         <Label x:Name="lblMonitorActividad" Content="{DynamicResource lblMonitorActividad}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,106,0,0" FontSize="22" Height="43" Width="314" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
-        <Label x:Name="DescipcionAct" Content="Actividad " HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="1,0,0,56" Width="374" FontSize="16" Height="49" Grid.RowSpan="3" Grid.Column="2" Grid.ColumnSpan="3"/>
         <Label x:Name="lblHorarioActividad" Content="{DynamicResource lblHorarioActividad}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,1,0,0" FontSize="22" Height="42" Width="151" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="3"/>
         <Label x:Name="lblCaracteristicasActividades" Content="{DynamicResource lblCaracteristicasActividades}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,7,0,0" FontSize="22" Height="43" Width="374" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3"/>
         <Label x:Name="lblCaracteristicasactividad" Content="Para niños y adultos." HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="7,0,0,8" Width="375" FontSize="16" Height="33" RenderTransformOrigin="0.5,0.5" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3">
@@ -46,62 +45,12 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="lablareaActividad" Content="Area" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="3,0,0,0" Width="358" FontSize="16" Height="41" RenderTransformOrigin="0.5,0.5" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="3">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="-0.497"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="-0.393"/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
         <Button x:Name="btnCancelarActividad" HorizontalAlignment="Left" Margin="265,10,0,0" FontSize="16" Content="{DynamicResource btnCancelarActividad}" Height="52" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.452,-3.352" Grid.Row="10" Grid.Column="4" Grid.ColumnSpan="2" Click="btnCancelarActividad_Click" />
         <Button x:Name="btnDarActividad" HorizontalAlignment="Left" Margin="4,25,0,0" FontSize="16" Content="{DynamicResource btnDarActividad}" Height="52" VerticalAlignment="Top" Width="166" RenderTransformOrigin="0.452,-3.352" Grid.Row="9" Grid.Column="2" Grid.ColumnSpan="3" />
-        <Label x:Name="lbnommonitor" Content="Nombre Apellidos" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="4,0,0,75" Width="215" FontSize="16" Height="38" RenderTransformOrigin="0.5,0.5" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="3" Grid.RowSpan="2">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="-0.497"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="-0.393"/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
         <Label x:Name="cupo" Content="{DynamicResource lblCapacidadActividad}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,4,0,0" FontSize="22" Height="41" Width="374" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3"/>
-        <Label x:Name="lblCupoactividad" Content="Cupo" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="8,0,0,1" Width="239" FontSize="16" Height="34" RenderTransformOrigin="0.5,0.5" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="-0.497"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="-0.393"/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
         <Label x:Name="lblPrecioActividad" Content="Precio" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,6,0,0" FontSize="22" Height="43" Width="374" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="3"/>
-        <Label x:Name="lblsprecioactividad" Content="Precio" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="7,0,0,1" Width="375" FontSize="16" Height="34" RenderTransformOrigin="0.5,0.5" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="3">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="-0.497"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="-0.393"/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
-        <Label x:Name="lblAreaActividad" Content="{DynamicResource lblAreaActividad}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,6,0,0" FontSize="22" Height="42" Width="564" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="5"/>
-        <Label x:Name="lblEquipamientoActividad" Content="{DynamicResource lblEquipamientoActividad}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,7,0,0" FontSize="22" Height="42" Width="564" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="5"/>
-        <Label x:Name="lblequipactividad1" Content="Equipamiento" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="3,0,0,71" Width="358" FontSize="16" Height="40" RenderTransformOrigin="0.5,0.5" Grid.Row="8" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="3">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="-0.497"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="-0.393"/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
+        <Label x:Name="lblAreaActividad" Content="{DynamicResource lblAreaActividad}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,6,0,0" FontSize="22" Height="34" Width="564" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="4"/>
+        <Label x:Name="lblEquipamientoActividad" Content="{DynamicResource lblEquipamientoActividad}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,80,0,0" FontSize="22" Height="39" Width="564" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="4" Grid.RowSpan="2"/>
         <Button x:Name="bntModificarActividad" HorizontalAlignment="Left" Margin="73,25,0,0" FontSize="16" Content="{DynamicResource btnModificarActividad}" Height="52" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.452,-3.352" Grid.Row="9" Grid.Column="4" />
         <Button x:Name="btnGuardarActividad" HorizontalAlignment="Right" Margin="0,25,10,0" FontSize="16" Content="{DynamicResource btnGuardarActividad}" Height="52" VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.452,-3.352" Grid.Row="9" Grid.Column="4" Grid.ColumnSpan="2" />
         <Button x:Name="btnInscritosActividad" HorizontalAlignment="Left" Margin="37,0,0,0" FontSize="16" Content="{DynamicResource btnInscritosActividad}" VerticalAlignment="Center" RenderTransformOrigin="0.452,-3.352" Grid.Row="10" Grid.Column="3" Click="Button_Click" Height="43" Grid.ColumnSpan="2" />
@@ -114,7 +63,13 @@
         <Button x:Name="btnSalir_Copy" ToolTip="Salir" Grid.Column="6" Margin="17,10,40,66" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click" Grid.RowSpan="2">
             <Image Source="/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" Height="30" Width="22" />
         </Button>
-        <Label x:Name="lblhorario" Grid.Column="2" Content="Horario" HorizontalAlignment="Left" Margin="14,38,0,0" Grid.Row="3" VerticalAlignment="Top" Width="278" Grid.ColumnSpan="3" FontSize="16"/>
-        <Label x:Name="LblTitulo" Grid.Column="4" Content="Label" HorizontalAlignment="Left" Margin="5,32,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="273" FontSize="20"/>
+        <TextBox x:Name="txtTitulo" Grid.Column="4" HorizontalAlignment="Left" Margin="12,40,0,0" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" BorderBrush="{x:Null}" Height="29" FontSize="16"/>
+        <TextBox x:Name="txtDescripcionActiv" Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="4,78,0,0" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" BorderBrush="{x:Null}" Height="18"/>
+        <TextBox x:Name="xtnommonitor" Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="5,40,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" BorderBrush="{x:Null}" Height="18"/>
+        <TextBox x:Name="txthorario" Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="6,43,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" BorderBrush="{x:Null}" Height="23"/>
+        <TextBox x:Name="txtcupo" Grid.Column="2" HorizontalAlignment="Left" Margin="6,50,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="309" BorderBrush="{x:Null}" Grid.ColumnSpan="3" Height="17"/>
+        <TextBox x:Name="txtprecio" Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="4,49,0,0" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Top" Width="197" BorderBrush="{x:Null}"/>
+        <TextBox x:Name="txtAreaActividad" Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="6,52,0,0" Grid.Row="7" TextWrapping="Wrap" VerticalAlignment="Top" Width="324" BorderBrush="{x:Null}"/>
+        <TextBox x:Name="txtEquipActividad" Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="5,44,0,0" Grid.Row="8" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" BorderBrush="{x:Null}" Height="18"/>
     </Grid>
 </Window>

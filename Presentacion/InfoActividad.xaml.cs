@@ -32,14 +32,14 @@ namespace IPO1_AgenciadeViajes
         {
            
             InitializeComponent();
-            LblTitulo.Content = actividad.Titulo;
-            DescipcionAct.Content = actividad.Descripcion;
-            lbnommonitor.Content = actividad.Monitor;
-            lblhorario.Content=actividad.Horario;
-            lblCupoactividad.Content = "Entre "+actividad.MinCapacidad+ " y " + actividad.MaxCapacidad +" personas";
-            lblPrecioActividad.Content = actividad.Precio + " € la hora";
-            lblAreaActividad.Content = actividad.Area;
-            lblequipactividad1.Content = actividad.Equipamiento;
+            txtTitulo.Text = actividad.Titulo;
+            txtDescripcionActiv.Text = actividad.Descripcion;
+            xtnommonitor.Text = actividad.Monitor;
+            txthorario.Text =actividad.Horario;
+            txtcupo.Text = "Entre "+actividad.MinCapacidad+ " y " + actividad.MaxCapacidad +" personas";
+            txtprecio.Text = actividad.Precio + " € la hora";
+            txtAreaActividad.Text = actividad.Area;
+            txtEquipActividad.Text = actividad.Equipamiento;
 
         }
 

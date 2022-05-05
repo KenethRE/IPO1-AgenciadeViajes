@@ -27,10 +27,10 @@ namespace IPO1_AgenciadeViajes
         {
             InitializeComponent();
             titparcela.Text = parcela.Titulo;
-            txtprecpac.Content = parcela.Precio;
-            txtUbicParcela.Content = parcela.Ubicacion + "\nTamaño: "+ parcela.Tamano+ "\nTemporada: "+parcela.Temporada;
-            txtServicparcela.Content = parcela.Servicios;
-            disp_parcela.Content = parcela.Estado;
+            txtprecio.Text = parcela.Precio.ToString()+ " €";
+            txtUbicParcela.Text = parcela.Ubicacion + "\nTamaño: "+ parcela.Tamano+ "\nTemporada: "+parcela.Temporada;
+            txtServicparcela.Text = parcela.Servicios;
+            disp_parcela.Text = parcela.Estado.ToString();
             var bitmap = new BitmapImage(parcela.Foto);
             Img_parcela.Source = bitmap;
 
