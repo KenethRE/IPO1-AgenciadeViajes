@@ -21,15 +21,15 @@ namespace IPO1_AgenciadeViajes
     public partial class InfoPromocion : Window
     {
         public Promocion promocion;
-        public InfoPromocion(Dominio.Promocion promocion)  
+        public InfoPromocion(Dominio.Promocion promocion)
         {
             this.promocion = promocion;
             InitializeComponent();
             txtgitulo.Text = promocion.Titulo;
             var bitmap = new BitmapImage(promocion.Foto);
             ImPromo.Source = bitmap;
-            TxtDescripcion.Text= promocion.Descripcion;
-            
+            TxtDescripcion.Text = promocion.Descripcion;
+
         }
         private void btnSalir_Click(object sender, RoutedEventArgs e)
         {
@@ -37,6 +37,14 @@ namespace IPO1_AgenciadeViajes
 
         }
 
-      
+        private void btnCancelarPromocion_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result;
+            result = MessageBox.Show("¿Estás seguro de cerrar la ventana?", "Cerrar Sesión", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if (result == MessageBoxResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }
