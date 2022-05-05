@@ -222,7 +222,6 @@ namespace IPO1_AgenciadeViajes.Presentacion
                 String outputpath2 = outputpaht.Replace("\\bin\\Debug", "");
                 var xmpath = Path.Combine(outputpath2, "Persistencia/usuarios.xml");
                 string xmpath2 = new Uri(xmpath).LocalPath;
-                //var fichero = Application.GetResourceStream(new Uri("Persistencia/usuarios.xml", UriKind.Relative));
                 doc.Load(xmpath2);
                 XmlElement usuariomodificado = doc.DocumentElement;
                 var listanodos = usuariomodificado.SelectNodes("/Usuarios/Usuario");
@@ -231,10 +230,6 @@ namespace IPO1_AgenciadeViajes.Presentacion
                     if (nombre == usuarioActual.Nombre)
                     {
                         node.SelectSingleNode("@ultinic").InnerText = UltimoInicio;
-                        //String outputpaht = Environment.CurrentDirectory;
-                        //String outputpath2=outputpaht.Replace("\\bin\\Debug", "");
-                        //var xmpath = Path.Combine(outputpath2, "Persistencia/usuarios.xml");
-                        //string xmpath2 = new Uri(xmpath).LocalPath;
                         doc.Save(xmpath2);
                     }
 

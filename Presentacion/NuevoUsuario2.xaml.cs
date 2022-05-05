@@ -52,8 +52,11 @@ namespace IPO1_AgenciadeViajes.Presentacion
             try
             {
                 XmlDocument doc = new XmlDocument();
-                var fichero = Application.GetResourceStream(new Uri("Persistencia/usuarios.xml", UriKind.Relative));
-                doc.Load(fichero.Stream);
+                String outputpaht = Environment.CurrentDirectory;
+                String outputpath2 = outputpaht.Replace("\\bin\\Debug", "");
+                var xmpath = Path.Combine(outputpath2, "Persistencia/usuarios.xml");
+                string xmpath2 = new Uri(xmpath).LocalPath;
+                doc.Load(xmpath2);
                 string Nombre = NombreTxt.Text;
                 string ultinic = DateTime.Now.ToString("d");
                 string Foto = Imgtxt.Text;
@@ -63,10 +66,9 @@ namespace IPO1_AgenciadeViajes.Presentacion
                 NuevoUsuario.SetAttribute("Nombre", Nombre);
                 NuevoUsuario.SetAttribute("ultinic", ultinic);
                 NuevoUsuario.SetAttribute("Foto", Foto);
-                NuevoUsuario.SetAttribute("pass",pass);
-                prueba.Content=fichero.ToString();
+                NuevoUsuario.SetAttribute("pass", pass);
                 doc.DocumentElement.AppendChild(NuevoUsuario);
-                doc.Save(fichero.ToString());
+                doc.Save(xmpath2);
                 MessageBox.Show("Usuario Guardado");
                 this.Close();
             }
