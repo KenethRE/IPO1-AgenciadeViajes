@@ -8,10 +8,10 @@
         Title="Promocion" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="47*"/>
-            <RowDefinition Height="58*"/>
-            <RowDefinition Height="251*"/>
-            <RowDefinition Height="63*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="296*"/>
+            <RowDefinition Height="29*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="22*"/>
@@ -35,6 +35,6 @@
             <Image Source="/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
         </Button>
         <TextBlock x:Name="TxtDescripcion" Grid.Column="2" HorizontalAlignment="Left" Margin="57,39,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="103" Width="327" IsEnabled="False"/>
-        <TextBlock x:Name="txtgitulo" Grid.Column="2" HorizontalAlignment="Left" Margin="24,0,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Height="43" Width="438"/>
+        <TextBlock x:Name="txtgitulo" Grid.Column="2" HorizontalAlignment="Left" Margin="24,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Height="43" Width="438" IsEnabled="False" Grid.RowSpan="2"/>
     </Grid>
 </Window>
