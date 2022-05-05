@@ -2,6 +2,7 @@
 using System;
 using System.Collections.ObjectModel;
 using System.Globalization;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -169,8 +170,12 @@ namespace IPO1_AgenciadeViajes
         {
             // Cargar contenido de prueba
             XmlDocument doc = new XmlDocument();
-            var fichero = Application.GetResourceStream(new Uri("Persistencia/usuarios.xml", UriKind.Relative));
-            doc.Load(fichero.Stream);
+            //var fichero = Application.GetResourceStream(new Uri("Persistencia/usuarios.xml", UriKind.Relative));
+            String outputpaht = Environment.CurrentDirectory;
+            String outputpath2 = outputpaht.Replace("\\bin\\Debug", "");
+            var xmpath = Path.Combine(outputpath2, "Persistencia/usuarios.xml");
+            string xmpath2 = new Uri(xmpath).LocalPath;
+            doc.Load(xmpath2);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
                 var nuevousuario = new Dominio.Usuario("","","",null)

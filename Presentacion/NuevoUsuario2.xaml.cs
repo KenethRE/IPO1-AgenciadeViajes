@@ -58,14 +58,15 @@ namespace IPO1_AgenciadeViajes.Presentacion
                 string ultinic = DateTime.Now.ToString("d");
                 string Foto = Imgtxt.Text;
                 string pass = PassTxt.Text;
+
                 XmlElement NuevoUsuario = doc.CreateElement("Usuario");
                 NuevoUsuario.SetAttribute("Nombre", Nombre);
                 NuevoUsuario.SetAttribute("ultinic", ultinic);
                 NuevoUsuario.SetAttribute("Foto", Foto);
                 NuevoUsuario.SetAttribute("pass",pass);
-                
+                prueba.Content=fichero.ToString();
                 doc.DocumentElement.AppendChild(NuevoUsuario);
-                doc.Save(fichero.Stream);
+                doc.Save(fichero.ToString());
                 MessageBox.Show("Usuario Guardado");
                 this.Close();
             }

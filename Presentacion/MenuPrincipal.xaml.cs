@@ -14,6 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Xml;
+using System.IO;
+using Path = System.IO.Path;
 
 namespace IPO1_AgenciadeViajes.Presentacion
 {
@@ -216,8 +218,12 @@ namespace IPO1_AgenciadeViajes.Presentacion
             {
                 string UltimoInicio = DateTime.Now.ToString("d");
                 XmlDocument doc = new XmlDocument();
-                var fichero = Application.GetResourceStream(new Uri("Persistencia/usuarios.xml", UriKind.Relative));
-                doc.Load(fichero.Stream);
+                String outputpaht = Environment.CurrentDirectory;
+                String outputpath2 = outputpaht.Replace("\\bin\\Debug", "");
+                var xmpath = Path.Combine(outputpath2, "Persistencia/usuarios.xml");
+                string xmpath2 = new Uri(xmpath).LocalPath;
+                //var fichero = Application.GetResourceStream(new Uri("Persistencia/usuarios.xml", UriKind.Relative));
+                doc.Load(xmpath2);
                 XmlElement usuariomodificado = doc.DocumentElement;
                 var listanodos = usuariomodificado.SelectNodes("/Usuarios/Usuario");
                 foreach (XmlNode node in listanodos) {
@@ -225,9 +231,11 @@ namespace IPO1_AgenciadeViajes.Presentacion
                     if (nombre == usuarioActual.Nombre)
                     {
                         node.SelectSingleNode("@ultinic").InnerText = UltimoInicio;
-                        String path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-                        
-                        doc.Save("C:/Users/plati/source/repos/KenethRE/IPO1-AgenciadeViajes/Persistencia/usuarios.xml");
+                        //String outputpaht = Environment.CurrentDirectory;
+                        //String outputpath2=outputpaht.Replace("\\bin\\Debug", "");
+                        //var xmpath = Path.Combine(outputpath2, "Persistencia/usuarios.xml");
+                        //string xmpath2 = new Uri(xmpath).LocalPath;
+                        doc.Save(xmpath2);
                     }
 
                 }
