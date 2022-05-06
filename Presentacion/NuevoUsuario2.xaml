@@ -38,6 +38,5 @@
             </Image.RenderTransform>
         </Image>
         <Button x:Name="Btn_Cargarimagen_Copy" Grid.Column="2" Content="Guardar Usuario" HorizontalAlignment="Center" Margin="82,0,0,0" Grid.Row="3" VerticalAlignment="Center" Click="Button_ClickGuardar" Height="32" Width="136" TabIndex="4"/>
-        <Label x:Name="prueba" Grid.Column="1" Content="Label" HorizontalAlignment="Left" Margin="18,10,0,0" Grid.Row="3" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="153"/>
     </Grid>
 </Window>

@@ -9,7 +9,7 @@
         Name="mainMenu">
     <Window.Resources>
         <DataTemplate x:Key="PlantillaItemsMenu">
-            <Border Width="150" Height="150" CornerRadius="10,10,10,10" Margin="4,4,0,0" Padding="4,4,4,4">
+            <Border  Width="150" Height="150" CornerRadius="10,10,10,10" Margin="4,4,0,0" Padding="4,4,4,4">
                 <Border.Background>
                     <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
                         <GradientStop Color="AliceBlue" Offset="0"/>

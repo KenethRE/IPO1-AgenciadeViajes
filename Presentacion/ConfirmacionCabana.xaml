@@ -1,4 +1,4 @@
-﻿<Window x:Class="IPO1_AgenciadeViajes.ConfirmacionCabana"
+﻿<Window x:Name="Confirmacion_Reserv" x:Class="IPO1_AgenciadeViajes.ConfirmacionCabana"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -22,42 +22,34 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" MinWidth="87.2" />
-            <ColumnDefinition Width="381*" />
+            <ColumnDefinition Width="247*" />
+            <ColumnDefinition Width="134*"/>
             <ColumnDefinition Width="47*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock x:Name="Lblconfirmacion" FontSize="11" Margin="10,-3,0,35" HorizontalAlignment="Left" Width="454" Grid.ColumnSpan="2" Grid.RowSpan="4" FontWeight="Bold" ><Run Text="Para reservar la "/><Run Text="cabaña"/><Run Text=" &quot;"/><Run Text="cabaña"/><Run Text="&quot; "/><Run Text="para las fechas "/><LineBreak/><Run Text="12/12/2001 al 16/12/2001 debe rellenar"/><Run Text=" "/><Run Text="los siguientes datos"/><Run Text=":"/></TextBlock>
-        <Label x:Name="lblNombreReservarCabana" Content ="{DynamicResource lblNombreReservarCabana}" Grid.Row="3" Margin="5,9,45,15"/>
+        <TextBlock x:Name="Lblconfirmacion" FontSize="11" Margin="10,-3,0,35" HorizontalAlignment="Left" Width="454" Grid.ColumnSpan="3" Grid.RowSpan="4" FontWeight="Bold" ><Run Text="Para reservar la "/><Run Text="cabaña"/><Run Text=" &quot;"/><Run Text="cabaña"/><Run Text="&quot; "/><Run Text="para las fechas "/><LineBreak/><Run Text="12/12/2001 al 16/12/2001 debe rellenar"/><Run Text=" "/><Run Text="los siguientes datos"/><Run Text=":"/></TextBlock>
+        <Label x:Name="lblNombreReservarCabana" Content ="{DynamicResource lblNombreReservarCabana}" Grid.Row="3" Margin="5,3,45,10"/>
         <TextBox Grid.Row="3" Grid.Column="1" x:Name="_nombre" Margin="2,13,100,16"
             Text="{Binding Path=cabaña.Name, 
                 ValidatesOnExceptions=True, 
                 ValidatesOnDataErrors=True,
                 UpdateSourceTrigger=PropertyChanged,
-                NotifyOnValidationError=True}" />
-        <Label x:Name="TelefonoReservarCabana" Content="{DynamicResource TelefonoReservarCabana}" Grid.Row="4" Margin="4,9,378,9" Grid.ColumnSpan="2" />
+                NotifyOnValidationError=True}" Grid.ColumnSpan="2" />
+        <Label x:Name="TelefonoReservarCabana" Content="{DynamicResource TelefonoReservarCabana}" Grid.Row="4" Margin="4,9,244,9" Grid.ColumnSpan="2" />
         <TextBox AcceptsReturn="True" Grid.Row="4" Grid.Column="1"
-            x:Name="_comentario" Margin="1,11,203,15" />
-        <Button x:Name="btnCancelarReservarCabana" HorizontalAlignment="Left" Margin="221,2,0,0" Grid.Row="8" FontSize="16" Content="{DynamicResource btnCancelarReservarCabana}" Grid.Column="1" Height="31" VerticalAlignment="Top" Width="98" RenderTransformOrigin="0.452,-3.352" Click="btnCancelarReservarCabana_Click" />
+            x:Name="_comentario" Margin="1,11,69,15" />
+        <Button x:Name="btnCancelarReservarCabana" HorizontalAlignment="Left" Margin="221,2,0,0" Grid.Row="8" FontSize="16" Content="{DynamicResource btnCancelarReservarCabana}" Grid.Column="1" Height="31" VerticalAlignment="Top" Width="98" RenderTransformOrigin="0.452,-3.352" Click="btnCancelarReservarCabana_Click" Grid.ColumnSpan="2" />
         <Label x:Name="EmailReservarCabana" Content="Email:" Grid.Row="5" Margin="0,8,1,1" />
         <Label x:Name="CapacidadReservarCabana" Content="{DynamicResource CapacidadReservarCabana}" Grid.Row="6" Margin="1,4,2,0" />
         <TextBox AcceptsReturn="True" Grid.Row="6" Grid.Column="1"
-            x:Name="_comentario_Copy2" Margin="3,6,378,10" Grid.RowSpan="4" />
+            x:Name="_comentario_Copy2" Margin="3,6,244,10" Grid.RowSpan="4" />
         <Button x:Name="btnConfirmarReservaCabana" HorizontalAlignment="Left" Margin="54,2,0,6" Grid.Row="8" FontSize="16" Content="{DynamicResource btnConfirmarReservarCabana}" Click="AceptarConfirmacionCabana_Click" Width="108" RenderTransformOrigin="0.452,-3.352" Grid.Column="1" />
         <TextBox AcceptsReturn="True" Grid.Row="5"
-            x:Name="txtBoxEmailOpcionalReservarCabana" Margin="2,8,131,1" Text="(Opcional)" Grid.Column="1" />
+            x:Name="txtBoxEmailOpcionalReservarCabana" Margin="2,8,131,1" Text="(Opcional)" Grid.Column="1" Grid.ColumnSpan="2" />
         <TextBox AcceptsReturn="True" Grid.Row="6" Grid.Column="1"
-            x:Name="_comentario_Copy1" Margin="1,6,351,8" />
-        <Label x:Name="SolicitudesReservarCabana" Content="{DynamicResource SolicitudesReservarCabana}" Grid.Row="6" Margin="1,32,2,84" Grid.RowSpan="2" />
+            x:Name="_comentario_Copy1" Margin="1,6,194,8" />
+        <Label x:Name="SolicitudesReservarCabana" Content="{DynamicResource SolicitudesReservarCabana}" Grid.Row="7" Margin="0,6,3,68" />
         <TextBox AcceptsReturn="True" Grid.Row="7" Grid.Column="1"
-            x:Name="txtBoxSolicitudesReservarCabana" Margin="3,6,28,9" Text="{DynamicResource txtBoxSolicitudesReservarCabana}" />
-        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="3,11,0,0" VerticalAlignment="Top" Source="/Recursos/Imagenes/spain.png" Height="36" Grid.Row="8" Width="60" Grid.RowSpan="2"/>
-        <ComboBox x:Name="cbIdiomas" Margin="49,19,0,0" VerticalAlignment="Top" Opacity="0.6" SelectedIndex="0" Background="Black" Height="22" Grid.Row="8" Grid.RowSpan="2" >
-            <ComboBoxItem x:Name="cbItem1" Content="ES"/>
-            <ComboBoxItem x:Name="cbItem2" Content="EN"/>
-        </ComboBox>
-        <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="2" Margin="10,10,14,0" RenderTransformOrigin="0.5,0.707" Grid.RowSpan="3" Click="btnSalir_Click">
-
-            <Image Source="/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
-        </Button>
+            x:Name="txtBoxSolicitudesReservarCabana" Margin="3,6,28,9" Text="{DynamicResource txtBoxSolicitudesReservarCabana}" Grid.ColumnSpan="2" />
     </Grid>
 </Window>

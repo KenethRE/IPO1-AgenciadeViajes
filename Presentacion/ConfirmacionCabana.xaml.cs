@@ -33,6 +33,7 @@ namespace IPO1_AgenciadeViajes
         private void AceptarConfirmacionCabana_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Se Ha reservado " + cabana.Titulo);
+            this.Close();
         }
         private void btnSalir_Click(object sender, RoutedEventArgs e)
         {
