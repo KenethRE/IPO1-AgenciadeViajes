@@ -43,12 +43,13 @@ namespace IPO1_AgenciadeViajes
             doc.Load(fichero.Stream);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
-                var nuevoInscrito = new Inscrito("", "", 0, false, "");
+                var nuevoInscrito = new Inscrito("", "", 0, false, "",null);
                 nuevoInscrito.Nombre = node.Attributes["Nombre"].Value;
                 nuevoInscrito.Correo = node.Attributes["Correo"].Value;
                 nuevoInscrito.Telefono = Convert.ToInt32(node.Attributes["Telefono"].Value);
                 nuevoInscrito.Pago = Convert.ToBoolean(node.Attributes["Pago"].Value);
                 nuevoInscrito.Inscripcion = node.Attributes["Inscripcion"].Value;
+                nuevoInscrito.Foto = new Uri(node.Attributes["Foto"].Value, UriKind.Relative);
                 listadoInscritos.Add(nuevoInscrito);
             }
         }
@@ -60,7 +61,7 @@ namespace IPO1_AgenciadeViajes
 
         private void miAniadirItemLB_Click(object sender, RoutedEventArgs e)
         {
-            var nuevoInscrito = new Inscrito("...", "...", 0, false, "...");
+            var nuevoInscrito = new Inscrito("...", "...", 0, false, "...",null);
             // Añadimos una nueva película a la lista de películas (listadoPeliculas)
             listadoInscritos.Add(nuevoInscrito);
             //nuevoInscrito.AltaEnVideoteca = DateTime.Today;

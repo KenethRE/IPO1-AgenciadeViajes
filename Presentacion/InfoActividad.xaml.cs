@@ -40,6 +40,8 @@ namespace IPO1_AgenciadeViajes
             txtprecio.Text = actividad.Precio + " € la hora";
             txtAreaActividad.Text = actividad.Area;
             txtEquipActividad.Text = actividad.Equipamiento;
+            btnGuardarActividad.Visibility = Visibility.Hidden;
+            btnCancelarActividad.Visibility = Visibility.Hidden;
 
         }
 
@@ -71,24 +73,58 @@ namespace IPO1_AgenciadeViajes
             new Presentacion.ReportarErrrores().Show();
         }
 
-        private void spanish_Click(object sender, RoutedEventArgs e)
-        {
-            App.SelectCulture("es-ES");
-        }
-
-        private void english_Click(object sender, RoutedEventArgs e)
-        {
-            App.SelectCulture("en-US");
-        }
-
-        private void miSalir_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-
+        
         private void btnCancelarActividad_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            MessageBoxResult result;
+            result = MessageBox.Show("¿Estás seguro de cancelar Edicion?", "Cancelar Edicion", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if (result == MessageBoxResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void bntModificarActividad_Click(object sender, RoutedEventArgs e)
+        {
+            txtTitulo.IsEnabled = true;
+            txtcupo.IsEnabled = true;
+            txtDescripcionActiv.IsEnabled = true;
+            txthorario.IsEnabled = true;
+            txtprecio.IsEnabled = true;
+            txtAreaActividad.IsEnabled = true;
+            txtEquipActividad.IsEnabled = true;
+            btnGuardarActividad.Visibility = Visibility.Visible;
+            btnBorrarActividad.Visibility = Visibility.Hidden;
+            btnCancelarActividad.Visibility = Visibility.Visible;
+            btnnuevaactividad.Visibility = Visibility.Hidden;
+            btnInscritosActividad.Visibility = Visibility.Hidden;
+            bntModificarActividad.Visibility = Visibility.Hidden;
+
+        }
+
+        private void btnGuardarActividad_Click(object sender, RoutedEventArgs e)
+        {
+            txtTitulo.IsEnabled = false;
+            txtprecio.IsEnabled = false;
+            txtDescripcionActiv.IsEnabled = false;
+            txtcupo.IsEnabled = false;
+            txthorario.IsEnabled = false;
+            txtAreaActividad.IsEnabled = false;
+            txtEquipActividad.IsEnabled=false;
+            btnGuardarActividad.Visibility = Visibility.Visible;
+            btnBorrarActividad.Visibility = Visibility.Visible;
+            btnCancelarActividad.Visibility = Visibility.Hidden;
+            btnInscritosActividad .Visibility = Visibility.Visible;
+            btnnuevaactividad.Visibility = Visibility.Visible;
+            bntModificarActividad .Visibility = Visibility.Visible;
+            
+
+            MessageBox.Show("Cabaña guardada correctamente");
+        }
+
+        private void btnDarActividad_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

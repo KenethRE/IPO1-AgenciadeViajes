@@ -41,6 +41,15 @@ namespace IPO1_AgenciadeViajes
             this.Visibility = Visibility.Hidden;
 
         }
+        private void btnCancelarReservarParcela_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result;
+            result = MessageBox.Show("¿Estás seguro de cancelar la reserva?", "Cancelar reserva", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if (result == MessageBoxResult.Yes)
+            {
+                this.Close();
+            }
+        }
 
     }
 

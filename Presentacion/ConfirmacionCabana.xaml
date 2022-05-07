@@ -50,6 +50,6 @@
             x:Name="_comentario_Copy1" Margin="1,6,194,8" />
         <Label x:Name="SolicitudesReservarCabana" Content="{DynamicResource SolicitudesReservarCabana}" Grid.Row="7" Margin="0,6,3,68" />
         <TextBox AcceptsReturn="True" Grid.Row="7" Grid.Column="1"
-            x:Name="txtBoxSolicitudesReservarCabana" Margin="3,6,28,9" Text="{DynamicResource txtBoxSolicitudesReservarCabana}" Grid.ColumnSpan="2" />
+            x:Name="txtBoxSolicitudesReservarCabana" Margin="3,6,0,9" Text="Introduzca aquí si necesita alguna solicitud especial como &#xD;&#xA;por ejemplo cuna, menaje concreto,&#xD;&#xA;alguna circunstancia de movilidad especial de personas alojadas &#xD;&#xA;u otros." Grid.ColumnSpan="2" />
     </Grid>
 </Window>
