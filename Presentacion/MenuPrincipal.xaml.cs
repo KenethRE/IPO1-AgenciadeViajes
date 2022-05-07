@@ -32,6 +32,7 @@ namespace IPO1_AgenciadeViajes.Presentacion
         private InfoRutaSenderista ventanaRutaSenderista;
         private NuevoUsuario2 ventananuevousuario;
         private Monitores ventanaMonitores;
+        private HistActividades historialactividades;
         
 
         public Usuario usuarioActual { get; set; }
@@ -323,7 +324,8 @@ namespace IPO1_AgenciadeViajes.Presentacion
 
         private void histActividades_Click(object sender, RoutedEventArgs e)
         {
-
+            historialactividades = new HistActividades();
+            historialactividades.Show();
         }
         private void NuevoUsuario_Click(object sender, RoutedEventArgs e)
         {
