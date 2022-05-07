@@ -44,6 +44,7 @@ namespace IPO1_AgenciadeViajes.Presentacion
 
         public MenuPrincipal(Usuario usuarioactual)
         {
+            this.SizeToContent = SizeToContent.Height;
             this.usuarioActual = usuarioactual;
              listadoMonitores = new ObservableCollection<Dominio.Monitor>();
            // Crear el listado de monitores

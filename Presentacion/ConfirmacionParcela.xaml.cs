@@ -19,16 +19,21 @@ namespace IPO1_AgenciadeViajes
     /// </summary>
     public partial class ConfirmacionParcela : Window
     {
-        public ConfirmacionParcela()
+        private Dominio.Parcela Parcela;
+        public ConfirmacionParcela(Dominio.Parcela parcela, DatePicker fechainicio, DatePicker fechafin)
+            
         {
+            this.Parcela = parcela;
             InitializeComponent();
+            lblconfirmacion.Text = "Para reservar la parcel  " + Parcela.Titulo + " \n para las fechas " + fechainicio.ToString() + " a " + fechafin.ToString() + " \n debe rellenar estos datos";
+
 
         }
 
         private void AceptarConfirmacionParcela(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(string.Format("El usuario: {0}, Ha reservado la parcela {1}{2}", _nombre.Text,
-            Environment.NewLine, _comentario.Text));
+            MessageBox.Show("Se Ha reservado " + Parcela.Titulo);
+            this.Close();
         }
 
         private void btnSalir_Click(object sender, RoutedEventArgs e)
