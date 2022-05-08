@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IPO1_AgenciadeViajes.Presentacion"
         mc:Ignorable="d"
-        Title="ReportarErrrores" Height="450" Width="800" WindowStartupLocation="CenterScreen">
-    <Grid>
+        Title="ReportarErrrores" Height="323" Width="626" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,20,8">
         <Grid.RowDefinitions>
             <RowDefinition Height="94*"/>
             <RowDefinition Height="81*"/>
@@ -14,10 +14,10 @@
             <RowDefinition Height="98*"/>
         </Grid.RowDefinitions>
         <Label Content="Reportar un error" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Height="40" Width="778" Padding="5,5,5,5" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
-        <Label Content="E-Mail:" HorizontalAlignment="Left" Margin="77,31,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="52"/>
-        <TextBox x:Name="EMail" HorizontalAlignment="Left" Margin="139,36,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="213" Height="17"/>
+        <Label Content="E-Mail:" HorizontalAlignment="Left" Margin="77,0,0,0" Grid.Row="1" VerticalAlignment="Center" Height="26" Width="52"/>
+        <TextBox x:Name="EMail" HorizontalAlignment="Left" Margin="139,14,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="213" Height="17"/>
         <Label Content="Comentario:" HorizontalAlignment="Left" Margin="58,16,0,0" Grid.Row="2" VerticalAlignment="Top" Height="26" Width="77"/>
-        <TextBox x:Name="Comentario" HorizontalAlignment="Left" Margin="139,10,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="519" Height="132"/>
+        <TextBox x:Name="Comentario" HorizontalAlignment="Left" Margin="139,0,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="386" Height="75"/>
         <Button Content="ENVIAR" HorizontalAlignment="Center" Margin="0,30,0,0" Grid.Row="3" VerticalAlignment="Top" Height="29" Width="103" Click="Button_Click"/>
 
     </Grid>

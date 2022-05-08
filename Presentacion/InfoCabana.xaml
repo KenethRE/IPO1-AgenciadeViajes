@@ -8,13 +8,13 @@
         Title="Cabana" Height="780" Width="679.2">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="40*"/>
-            <RowDefinition Height="51*"/>
-            <RowDefinition Height="70*"/>
-            <RowDefinition Height="93*"/>
-            <RowDefinition Height="104*"/>
-            <RowDefinition Height="157*"/>
-            <RowDefinition Height="235*"/>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="52*"/>
+            <RowDefinition Height="71*"/>
+            <RowDefinition Height="95*"/>
+            <RowDefinition Height="106*"/>
+            <RowDefinition Height="199*"/>
+            <RowDefinition Height="200*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="25*"/>
@@ -22,11 +22,14 @@
             <ColumnDefinition Width="129*"/>
             <ColumnDefinition Width="61*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="lblTituloCabana" Content="{DynamicResource lblTituloCabana}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="56" Width="230" Margin="24,28,0,0" FontSize="26" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-        <Label x:Name="lblPrecioCabana" Content="{DynamicResource lblPrecioCabana}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1.2,12.8,0,0" FontSize="22" Height="40" Width="179" Grid.Row="2" Grid.Column="1"/>
-        <Label Content="Cabaña acogedora" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="1.2,0,0,63.6" Width="274" FontSize="16" Height="37" Grid.Row="1" Grid.RowSpan="2" Grid.Column="1"/>
-        <Label x:Name="lblCapacidadCabana" Content="{DynamicResource lblCapacidadCabana}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1.2,14.4,0,0" FontSize="22" Height="40" Width="211" Grid.Row="3" Grid.Column="1"/>
-        <Label Content="7 personas&#xD;&#xA;Tamaño: 156m^2" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="1.2,0,0,92.4" Width="274" FontSize="16" Height="58" RenderTransformOrigin="0.5,0.5" Grid.Row="3" Grid.Column="1" Grid.RowSpan="2">
+        <Label x:Name="lblTituloCabana" Content="{DynamicResource lblTituloCabana}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="56" Width="230" Margin="4,1,0,0" FontSize="26" Grid.RowSpan="2" Grid.Column="1"/>
+        <Label x:Name="lblPrecioCabana" Content="{DynamicResource lblPrecioCabana}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,13,0,0" FontSize="22" Height="40" Width="179" Grid.Row="2" Grid.Column="1"/>
+        <Label x:Name="lblCapacidadCabana" Content="{DynamicResource lblCapacidadCabana}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,14,0,0" FontSize="22" Height="40" Width="211" Grid.Row="3" Grid.Column="1"/>
+        <Label x:Name="lblRestriccionesCabana" Content="{DynamicResource lblRestriccionesCabana}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,17,0,0" FontSize="22" Height="40" Width="313" Grid.Row="4" Grid.ColumnSpan="2"/>
+        <DatePicker x:Name="fechainic" HorizontalAlignment="Left" Height="43" Margin="1,0,0,0" VerticalAlignment="Center" Width="188" FontSize="16" Grid.Row="6" Grid.Column="1">
+        </DatePicker>
+        <DatePicker x:Name="fechafin" HorizontalAlignment="Left" Height="43" Margin="265,0,0,0" VerticalAlignment="Center" Width="188" FontSize="16" Grid.Row="6" Grid.Column="1"/>
+        <Label x:Name="lblFechaInicioCabana" Content="{DynamicResource lblFechaInicioCabana}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="2,0,0,131" Width="153" FontSize="16" Height="28" RenderTransformOrigin="0.5,0.5" Grid.Row="6" Grid.Column="1">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -36,8 +39,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="lblRestriccionesCabana" Content="{DynamicResource lblRestriccionesCabana}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0.2,16.6,0,0" FontSize="22" Height="40" Width="313" Grid.Row="4" Grid.Column="1"/>
-        <Label Content="Entrada a partir de las 14:00&#xD;&#xA;Salida antes de las 12:00" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="2.2,0,0,145.2" Width="274" FontSize="16" Height="67" RenderTransformOrigin="0.5,0.5" Grid.Row="4" Grid.Column="1" Grid.RowSpan="2">
+        <Label x:Name="lblFechaFinCabana" Content="{DynamicResource lblFechaFinCabana}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="265,0,0,122" Width="114" FontSize="16" Height="28" RenderTransformOrigin="0.5,0.5" Grid.Row="6" Grid.Column="1">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -47,73 +49,29 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label Content="Disponibilidad: Ocupada/lLibre/En reparación/A espera de limpiar/Etc" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="3.2,0,0,175.4" Width="560" FontSize="16" Height="38" RenderTransformOrigin="0.5,0.5" Grid.Row="6" Grid.ColumnSpan="2" Grid.Column="1">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="-0.382"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="-0.393"/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
-        <DatePicker HorizontalAlignment="Left" Height="43" Margin="1.2,85.8,0,0" VerticalAlignment="Top" Width="188" FontSize="16" Grid.Row="6" Grid.Column="1"/>
-        <DatePicker HorizontalAlignment="Left" Height="43" Margin="265.2,85.8,0,0" VerticalAlignment="Top" Width="188" FontSize="16" Grid.Row="6" Grid.Column="1"/>
-        <Label x:Name="lblFechaInicioCabana" Content="{DynamicResource lblFechaInicioCabana}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="2.2,0,0,141.4" Width="153" FontSize="16" Height="38" RenderTransformOrigin="0.5,0.5" Grid.Row="6" Grid.Column="1">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="-0.382"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="-0.393"/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
-        <Label x:Name="lblFechaFinCabana" Content="{DynamicResource lblFechaFinCabana}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="265.2,0,0,143.4" Width="114" FontSize="16" Height="38" RenderTransformOrigin="0.5,0.5" Grid.Row="6" Grid.Column="1">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="-0.382"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="-0.393"/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
-        <Button x:Name="btnCancelarCabana" HorizontalAlignment="Center" Margin="276.2,147.8,78.4,0" FontSize="16" Content="{DynamicResource btnCancelarCabana}" Height="37" VerticalAlignment="Top" Width="104" RenderTransformOrigin="0.452,-3.352" Grid.Row="6" Grid.Column="1" />
-        <Button x:Name="btnReservarCabana" HorizontalAlignment="Center" Margin="73.2,147.8,287.4,0" FontSize="16" Content="{DynamicResource btnReservarCabana}" Height="37" VerticalAlignment="Top" Width="98" RenderTransformOrigin="0.452,-3.352" Grid.Row="6" Grid.Column="1" />
-        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="20.6,0,0,1" VerticalAlignment="Center" Source="/Recursos/Imagenes/spain.png" Height="39" Width="40" RenderTransformOrigin="0.572,1.906" Grid.Column="2"/>
-        <ComboBox x:Name="cbIdiomas" Margin="60.6,9,21,4" VerticalAlignment="Center" Opacity="0.6" SelectedIndex="0" Background="Black" Height="27" RenderTransformOrigin="0.077,0.142" Grid.Column="2" >
+        <Button x:Name="btnCancelarCabana" Margin="287,147,72,0" FontSize="16" Content="{DynamicResource btnCancelarCabana}" Height="37" VerticalAlignment="Top" RenderTransformOrigin="0.452,-3.352" Grid.Row="6" Grid.Column="1" Click="btnCancelarCabana_Click" />
+        <Button x:Name="btnReservarCabana" HorizontalAlignment="Left" Margin="95,147,0,0" FontSize="16" Content="{DynamicResource btnReservarCabana}" Height="37" VerticalAlignment="Top" Width="98" RenderTransformOrigin="0.452,-3.352" Grid.Row="6" Grid.Column="1" Click="btnReservarCabana_Click" />
+        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="16,0,0,0" VerticalAlignment="Center" Source="/Recursos/Imagenes/spain.png" Height="39" Width="40" RenderTransformOrigin="0.572,1.906" Grid.Column="2"/>
+        <ComboBox x:Name="cbIdiomas" Margin="60,0,21,0" VerticalAlignment="Center" Opacity="0.6" SelectedIndex="0" Background="Black" Height="27" RenderTransformOrigin="0.077,0.142" Grid.Column="2" >
             <ComboBoxItem x:Name="cbItem1" Content="ES"/>
             <ComboBoxItem x:Name="cbItem2" Content="EN"/>
         </ComboBox>
-        <Grid HorizontalAlignment="Left" Margin="0,-26,-0.2,1.4" Width="673" Grid.ColumnSpan="4" Grid.RowSpan="7">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="123*"/>
-                <RowDefinition Height="652*"/>
-            </Grid.RowDefinitions>
-            <Image HorizontalAlignment="Left" Height="59" Margin="459,63.8,0,0" Grid.Row="1" VerticalAlignment="Top" Width="94"/>
-            <Image HorizontalAlignment="Left" Height="59" Margin="500,63.8,0,0" Grid.Row="1" VerticalAlignment="Top" Width="53" Source="/Recursos/Imagenes/icono_imagen.png" />
-            <Image HorizontalAlignment="Left" Height="75" Margin="440,109.8,0,0" Grid.Row="1" VerticalAlignment="Top" Width="94" Source="/Recursos/Imagenes/icono_imagen.png" />
-        </Grid>
-        <Label Content="El precio actual por noche es 30€" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="24,0,0,86.4" Width="274" FontSize="16" Height="37" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-        <Label x:Name="lblEquipamientoCabana" Content="{DynamicResource lblEquipamientoCabana}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1.2,9.6,0,0" FontSize="22" Height="40" Width="313" Grid.Row="5" Grid.Column="1"/>
-        <Label Content="Menaje&#xD;&#xA;Microondas&#xD;&#xA;Ropa de cama y toallas&#xD;&#xA;Wi-Fi&#xD;&#xA;Etc" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="4.2,0,0,222.4" Width="274" FontSize="16" Height="123" RenderTransformOrigin="0.5,0.5" Grid.Row="5" Grid.Column="1" Grid.RowSpan="2">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="-0.382"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="-0.393"/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
-        <Label x:Name="lblImagenesCabana" Content="Imágenes" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="416.2,25.8,0,0" FontSize="22" Height="40" Width="179" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"/>
-        <Image HorizontalAlignment="Left" Height="59" Margin="416.2,0.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="94" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <Image HorizontalAlignment="Left" Height="54" Margin="416.2,0.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="56" Grid.Column="1" Source="/Recursos/Imagenes/icono_imagen.png" Grid.ColumnSpan="2"/>
-        <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="3" Margin="21,10,9.8,0" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click">
-            <Image Source="/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
-        </Button>
-        <Label x:Name="lblEstado" Content="{DynamicResource lblEstado}" Margin="0,204.8,-0.2,0.4" Grid.Row="6" Background="White" Opacity="0.7" Height="30" Grid.ColumnSpan="4"/>
+        <Label x:Name="lblEquipamientoCabana" Content="{DynamicResource lblEquipamientoCabana}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,10,0,0" FontSize="22" Height="40" Width="313" Grid.Row="5" Grid.Column="1"/>
+        <Label x:Name="lblImagenesCabana" Content="Imágenes" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="416,26,0,0" FontSize="22" Height="40" Width="179" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"/>
+        <Image HorizontalAlignment="Left" Height="59" Margin="416,71,0,0" Grid.Row="2" VerticalAlignment="Top" Width="94" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Image x:Name="img_cabana" HorizontalAlignment="Left" Height="95" Margin="416,0,0,0" Grid.Row="3" VerticalAlignment="Center" Width="169" Grid.Column="1" Source="/Recursos/Imagenes/icono_imagen.png" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblEquipamientoCabana_Copy" Content="{DynamicResource lblDisponibilidad}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="24,5,0,0" FontSize="22" Height="38" Width="154" Grid.Row="6" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtTitulo" Grid.Column="1" HorizontalAlignment="Left" Margin="4,15,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="269" BorderBrush="{x:Null}" Height="26" FontSize="18" IsEnabled="False"/>
+        <TextBox x:Name="txtprecio" Grid.Column="1" HorizontalAlignment="Left" Margin="10,46,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="268" BorderBrush="{x:Null}" Height="25" FontSize="16" IsEnabled="False"/>
+        <TextBox x:Name="txtcapacidad" Grid.Column="1" HorizontalAlignment="Left" Margin="19,54,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" BorderBrush="White" FontSize="16" IsEnabled="False" Height="23"/>
+        <TextBox x:Name="txtrestriccion" HorizontalAlignment="Left" Margin="25,56,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="315" BorderBrush="{x:Null}" Grid.ColumnSpan="2" Height="54" Grid.RowSpan="2" FontSize="16" IsEnabled="False"/>
+        <TextBox x:Name="txtequipamiento" Grid.Column="1" HorizontalAlignment="Left" Margin="10,54,0,0" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Top" Width="286" BorderBrush="{x:Null}" Height="96" IsEnabled="False"/>
+        <TextBox x:Name="txtdispon" Grid.Column="1" HorizontalAlignment="Left" Margin="172,14,0,0" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Top" Width="151" Height="20" BorderBrush="{x:Null}" FontSize="16" IsEnabled="False"/>
+        <Button x:Name="btnModificar" Grid.Column="2" Content="Modificar" HorizontalAlignment="Center" Margin="0,12,0,0" Grid.Row="6" VerticalAlignment="Top" Height="51" Width="110" FontSize="16" Click="btnModificar_Click"/>
+        <Button x:Name="btnNuevo" Grid.Column="2" Content="Nuevo" HorizontalAlignment="Center" Margin="0,79,0,0" Grid.Row="6" VerticalAlignment="Top" Height="51" Width="110" FontSize="16" Click="btnNuevo_Click"/>
+        <Button x:Name="btnBorrar" Grid.Column="2" Content="Borrar" HorizontalAlignment="Center" Margin="0,139,0,0" Grid.Row="6" VerticalAlignment="Top" Height="51" Width="110" FontSize="16" Click="btnBorrar_Click"/>
+        <Button x:Name="Btn_img" Grid.Column="2" Content="Imagen" HorizontalAlignment="Left" Margin="76,21,0,0" Grid.Row="3" VerticalAlignment="Top" Height="43" Width="84" Grid.ColumnSpan="2" FontSize="16" Click="Btn_img_Click"/>
+        <Button x:Name="Guardar" Grid.Column="2" Content="Guardar" HorizontalAlignment="Center" Margin="0,143,0,0" Grid.Row="5" VerticalAlignment="Top" FontSize="16" Height="46" Width="110" Click="Guardar_Click"/>
 
     </Grid>
 </Window>

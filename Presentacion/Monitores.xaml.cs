@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Xml;
 
 namespace IPO1_AgenciadeViajes.Presentacion
 {
@@ -19,8 +20,9 @@ namespace IPO1_AgenciadeViajes.Presentacion
     /// Lógica de interacción para Monitores.xaml
     /// </summary>
     public partial class Monitores : Window
-
+       
     {
+        private InfoMonitor ventanaMonitor;
         public ObservableCollection<Dominio.Monitor> listadoMonitores { get; set; }
         public Monitores(ObservableCollection<Dominio.Monitor> listadoMonitores)
         {
@@ -62,8 +64,24 @@ namespace IPO1_AgenciadeViajes.Presentacion
 
         private void Masinfo_Click(object sender, RoutedEventArgs e)
         {
-            new InfoMonitor().ShowDialog();
+            
         }
+        private void ContentControl_PreviewMouseLeftButtonDown1(object sender, MouseButtonEventArgs e)
+        {
+            var monitor = ((FrameworkElement)sender).DataContext as Dominio.Monitor;
+            if (monitor.Estado == true)
+            {
+                ventanaMonitor = new InfoMonitor(monitor);
+                ventanaMonitor.Show();
+            }
+            else
+                MessageBox.Show("Monitor no disponible");
+
+
+
+
+        }
+
     }
    
 }

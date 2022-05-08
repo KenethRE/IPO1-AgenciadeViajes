@@ -1,6 +1,4 @@
-﻿<Usuarios>
-	<Usuario Nombre="usuario1"
-	ultinic="12/05/22"
-	Foto="/Recursos/Imagenes/user.png"
-	pass ="1234"/>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Usuarios>
+  <Usuario Nombre="usuario1" ultinic="07/05/2022" Foto="/Recursos/Imagenes/user.png" pass="1234" />
 </Usuarios>

@@ -8,7 +8,7 @@
         Title="InfoInscrito" Height="450" Width="800">
     <Grid Height="410" Margin="0,0,-0.4,0" VerticalAlignment="Bottom">
         <StackPanel Orientation="Horizontal" Margin="5,10,4.6,5">
-            <ListBox x:Name="lstListaInscritos" SelectedIndex="0" Width="200" Margin="5,5,5,32.4" AlternationCount="2">
+            <ListBox x:Name="lstListaInscritos" SelectedIndex="0" Width="200" Margin="5,5,5,32.4" AlternationCount="2" d:ItemsSource="{d:SampleData ItemCount=5}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Height="30" Orientation="Horizontal">
@@ -16,7 +16,7 @@
                             <TextBlock Padding="2" Margin="10,0,0,0" />
                         </StackPanel>
                     </DataTemplate>
-                    
+
                 </ListBox.ItemTemplate>
 
                 <ListBox.ItemContainerStyle>
@@ -56,29 +56,27 @@
                 <Image x:Name="imgFoto" Height="120" Width="100" HorizontalAlignment="Left" Margin="5,5,5,5" Stretch="Fill"
                     Source="{Binding ElementName=lstListaInscritos, Path=SelectedItem.Foto}"/>
                 <Label x:Name="lblCorreoInscrito" FontWeight="Bold">Correo:</Label>
-                <Label x:Name="lblCorreo" Content="{Binding ElementName=lstListaInscritos, Path=SelectedItem.Correo}"/>
+                <TextBox x:Name="txtcorreo" TextWrapping="Wrap" Text="{Binding ElementName=lstListaInscritos, Path=SelectedItem.Correo}" Width="120" Height="24" BorderBrush="{x:Null}"/>
                 <Label x:Name="lblTelefonoInscrito" FontWeight="Bold">Telefono:</Label>
-                <Label x:Name="lblTelefono" Content="{Binding ElementName=lstListaInscritos, Path=SelectedItem.Telefono}"/>
+                <TextBox x:Name="txttelefono" TextWrapping="Wrap" Text="{Binding ElementName=lstListaInscritos, Path=SelectedItem.Telefono}" Width="120" Height="29" BorderBrush="{x:Null}"/>
                 <Label FontWeight="Bold">
                     <CheckBox Content="Pagado" HorizontalAlignment="Left"/>
                 </Label>
                 <Label x:Name="lblInscripcionInscrito" FontWeight="Bold">Tipo Inscripcion:</Label>
-                <TextBlock x:Name="txtInscripcion" Margin="5" Text="{Binding ElementName=lstListaInscritos, Path=SelectedItem.Inscripcion}"/>
+                <TextBlock x:Name="txtInscripcion" Margin="5" Text="{Binding ElementName=lstListaInscritos, Path=SelectedItem.Inscripcion}" Height="53"/>
             </StackPanel>
+
+
         </StackPanel>
-        
-        <Button x:Name="btnCancelarInscrito" HorizontalAlignment="Center" Margin="597,317,114,0" FontSize="16" Content="Cancelar" Height="39" VerticalAlignment="Top" Width="83" RenderTransformOrigin="0.452,-3.352" />
-        <Button x:Name="btnDarInscrito" HorizontalAlignment="Center" Margin="569,140,88,0" FontSize="16" Content="Dar de Alta/Baja" Height="44" VerticalAlignment="Top" Width="137" RenderTransformOrigin="0.452,-3.352" />
+
+        <Button x:Name="btnCancelarInscrito" HorizontalAlignment="Left" Margin="620,318,0,0" FontSize="16" Content="Cancelar" Height="39" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.452,-3.352" />
+        <Button x:Name="btnEliminar" HorizontalAlignment="Center" Margin="569,140,88,0" FontSize="16" Content="Eliminar" Height="44" VerticalAlignment="Top" Width="137" RenderTransformOrigin="0.452,-3.352" Click="miEliminarItemLB_Click" />
         <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="599,0,0,368" VerticalAlignment="Center" Source="/Recursos/Imagenes/spain.png" Height="42" Width="55" RenderTransformOrigin="0.572,1.906"/>
-        <ComboBox x:Name="cbIdiomas" Margin="663,10,78,372" VerticalAlignment="Center" Opacity="0.6" SelectedIndex="0" Background="Black" Height="28" RenderTransformOrigin="0.077,0.142" >
+        <ComboBox x:Name="cbIdiomas" Margin="663,7,78,0" VerticalAlignment="Top" Opacity="0.6" SelectedIndex="0" Background="Black" Height="28" RenderTransformOrigin="0.077,0.142" >
             <ComboBoxItem x:Name="cbItem1" Content="ES"/>
             <ComboBoxItem x:Name="cbItem2" Content="EN"/>
         </ComboBox>
-        <Button x:Name="btnModificarInscrito" HorizontalAlignment="Center" Margin="550,203,64,0" FontSize="16" Content="Modificar información" Height="39" VerticalAlignment="Top" Width="180" RenderTransformOrigin="0.452,-3.352" />
-        <Button x:Name="btnGuardarInscrito" HorizontalAlignment="Right" Margin="0,261,88,0" FontSize="16" Content="Guardar cambios" Height="37" VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.452,-3.352" />
-        <Button x:Name="btnSalir" ToolTip="Salir" Margin="739,10,11,375" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click">
-            <Image Source="/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
-        </Button>
-        <Label x:Name="lblEstado" Content="Estado de aplicación" Margin="0,380,0,0" Background="White" Opacity="0.7" Height="30"/>
+        <Button x:Name="btnModificarInscrito" HorizontalAlignment="Center" Margin="550,203,64,0" FontSize="16" Content="Modificar información" Height="39" VerticalAlignment="Top" Width="180" RenderTransformOrigin="0.452,-3.352" Click="btnModificarInscrito_Click" />
+        <Button x:Name="btnGuardarInscrito" HorizontalAlignment="Right" Margin="0,261,88,0" FontSize="16" Content="Guardar cambios" Height="37" VerticalAlignment="Top" Width="140" RenderTransformOrigin="0.452,-3.352" Click="btnGuardarInscrito_Click" />
     </Grid>
 </Window>

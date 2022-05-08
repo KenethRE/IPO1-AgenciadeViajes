@@ -9,7 +9,7 @@
         Name="mainMenu">
     <Window.Resources>
         <DataTemplate x:Key="PlantillaItemsMenu">
-            <Border Width="150" Height="150" CornerRadius="10,10,10,10" Margin="4,4,0,0" Padding="4,4,4,4">
+            <Border  Width="150" Height="150" CornerRadius="10,10,10,10" Margin="4,4,0,0" Padding="4,4,4,4">
                 <Border.Background>
                     <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
                         <GradientStop Color="AliceBlue" Offset="0"/>
@@ -144,9 +144,13 @@
                 </MenuItem>
                 <MenuItem x:Name="miSalir" Header="{DynamicResource LlbSalir}" Click="miSalir_Click"/>
             </MenuItem>
-            <MenuItem Header="{DynamicResource lblEditar}">
-                <MenuItem x:Name="miNuevo" Header="{DynamicResource lblNuevo}" Click="MiAcercaDe_Click" />
-                <MenuItem x:Name="miMofificar" Header="{DynamicResource lblModificar}" Click="MiAcercaDe_Click" />
+            <MenuItem Header="{DynamicResource lblEditar}" Click="MenuItem_Click">
+                <MenuItem x:Name="miUsuario" Header="{DynamicResource lblUsuarios}">
+                    <MenuItem x:Name="minuevo" Header="{DynamicResource lblNuevoUsuario}" Click="NuevoUsuario_Click" />
+                    <MenuItem x:Name="mieditar" Header="{DynamicResource lblEditarUsuario}" Click="EditarUsuario_Click" />
+                    <MenuItem x:Name="miborrar" Header="{DynamicResource lblBorrarUsuario}" Click="BorrarUsuario_Click" />
+                </MenuItem>
+
             </MenuItem>
             <MenuItem Header="{DynamicResource lbAyuda}">
                 <MenuItem x:Name="miAcercaDe" Header="{DynamicResource LlbAcercade}" Click="MiAcercaDe_Click" />
@@ -178,6 +182,11 @@
                     Height="Auto"
               ItemsSource="{Binding ElementName=mainMenu, Path=listadoPromociones}"
               ItemTemplate="{StaticResource PlantillaItemsMenu}"  Background="#FF424242" Grid.ColumnSpan="2">
+                        <ItemsControl.ItemContainerStyle>
+                            <Style TargetType="ContentPresenter">
+                                <EventSetter Event="PreviewMouseLeftButtonDown" Handler="ContentControl_PreviewMouseLeftButtonDown1" />
+                            </Style>
+                        </ItemsControl.ItemContainerStyle>
                         <ItemsControl.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <WrapPanel Orientation="Horizontal" />
@@ -209,6 +218,11 @@
                     Height="Auto"
               ItemsSource="{Binding ElementName=mainMenu, Path=listadoCabanas}"
               ItemTemplate="{StaticResource PlantillaItemsMenuCabanas}"  Background="#FF424242">
+                        <ItemsControl.ItemContainerStyle>
+                            <Style TargetType="ContentPresenter">
+                                <EventSetter Event="PreviewMouseLeftButtonDown" Handler="ContentControl_PreviewMouseLeftButtonDown2" />
+                            </Style>
+                        </ItemsControl.ItemContainerStyle>
                         <ItemsControl.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <WrapPanel Orientation="Horizontal" />
@@ -239,6 +253,11 @@
                     Height="Auto"
               ItemsSource="{Binding ElementName=mainMenu, Path=listadoParcelas}"
               ItemTemplate="{StaticResource PlantillaItemsMenuParcelas}"  Background="#FF424242">
+                        <ItemsControl.ItemContainerStyle>
+                            <Style TargetType="ContentPresenter">
+                                <EventSetter Event="PreviewMouseLeftButtonDown" Handler="ContentControl_PreviewMouseLeftButtonDown3" />
+                            </Style>
+                        </ItemsControl.ItemContainerStyle>
                         <ItemsControl.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <WrapPanel Orientation="Horizontal" />
@@ -277,6 +296,11 @@
                     Height="Auto"
               ItemsSource="{Binding ElementName=mainMenu, Path=listadoActividades}"
               ItemTemplate="{StaticResource PlantillaItemsMenuActividades}"  Background="#FF424242">
+                            <ItemsControl.ItemContainerStyle>
+                                <Style TargetType="ContentPresenter">
+                                    <EventSetter Event="PreviewMouseLeftButtonDown" Handler="ContentControl_PreviewMouseLeftButtonDown4" />
+                                </Style>
+                            </ItemsControl.ItemContainerStyle>
                             <ItemsControl.ItemsPanel>
                                 <ItemsPanelTemplate>
                                     <WrapPanel Orientation="Horizontal" />
@@ -289,11 +313,11 @@
         </TabControl>
         <Grid Grid.Row="1" Grid.Column="1" Margin="20,1,0,4">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="170*"/>
-                <ColumnDefinition Width="89*"/>
-                <ColumnDefinition Width="27*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="0*"/>
+                <ColumnDefinition Width="0*"/>
             </Grid.ColumnDefinitions>
-            <Grid Grid.ColumnSpan="2" Margin="0,0,89,0">
+            <Grid Margin="0,0,1,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" MinHeight="14"/>
                     <RowDefinition Height="Auto" MinHeight="14"/>
@@ -304,11 +328,11 @@
                 <TextBlock Text="{Binding ElementName=mainMenu, Path=usuarioActual.Nombre}" FontSize="10" Margin="0,0,0,0" Grid.Row="1"/>
                 <TextBlock x:Name="lblUltInicio" Text="{DynamicResource lblUltInicio}" Grid.Row="2" FontSize="10" FontWeight="Bold" Margin="0,0,0,0"/>
                 <TextBlock x:Name="contect" Text="{Binding ElementName=mainMenu, Path=usuarioActual.UltimoInicio}" Grid.Row="3" FontSize="10" Margin="0,0,0,0"/>
+                <Image Margin="194,2,50,10" Source="{Binding usuarioActual.ImgUsuario, ElementName=mainMenu}" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="4"/>
+                <Button x:Name="btnSalir" ToolTip="Salir" Margin="249,4,10,7" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click" Grid.RowSpan="4">
+                    <Image Source="/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
+                </Button>
             </Grid>
-            <Image Grid.Column="1" Margin="0,0,0,0" Width="50" Source="{Binding ElementName=mainMenu, Path=usuarioActual.ImgUsuario}" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right"/>
-            <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="2" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click">
-                <Image Source="/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
-            </Button>
         </Grid>
 
     </Grid>

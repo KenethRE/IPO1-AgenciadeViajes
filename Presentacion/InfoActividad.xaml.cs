@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IPO1_AgenciadeViajes.Dominio;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -24,43 +25,26 @@ namespace IPO1_AgenciadeViajes
     public partial class InfoActividad : Window
     {
         private InfoInscrito ventanaInscrito;
-        private ObservableCollection<Dominio.Actividad> listadoActividades;
+       
+        
 
         public InfoActividad(Dominio.Actividad actividad)
         {
-            listadoActividades = new ObservableCollection<Dominio.Actividad>();
-            // Se cargarán los datos de prueba de un fichero XML
-            CargarContenidoListaXMLActividades();
-            //DescipcionAct.Content = actividad.Descripcion;
+           
             InitializeComponent();
-        }
-
-        private void CargarContenidoListaXMLActividades()
-        {
-            // Cargar contenido de prueba
-            XmlDocument doc = new XmlDocument();
-            var fichero = Application.GetResourceStream(new Uri("Persistencia/Actividades.xml", UriKind.Relative));
-            doc.Load(fichero.Stream);
-            foreach (XmlNode node in doc.DocumentElement.ChildNodes)
-            {
-                var nuevaActividad = new Dominio.Actividad("", "", "", "", false, 0, 0, 0, "", "", false)
-                {
-                    Titulo = node.Attributes["Titulo"].Value,
-                    Descripcion = node.Attributes["Descripcion"].Value,
-                    Monitor = node.Attributes["Monitor"].Value,
-                    Niños = Convert.ToBoolean(node.Attributes["Niños"].Value),
-                    MaxCapacidad = Convert.ToInt32(node.Attributes["MaxCapacidad"].Value),
-                    MinCapacidad = Convert.ToInt32(node.Attributes["MinCapacidad"].Value),
-                    Precio = Convert.ToInt32(node.Attributes["Precio"].Value),
-                    Area = node.Attributes["Area"].Value,
-                    Equipamiento = node.Attributes["Equipamiento"].Value,
-                    Estado = Convert.ToBoolean(node.Attributes["Estado"].Value),
-                    Foto = new Uri(node.Attributes["Foto"].Value, UriKind.Relative)
-                };
-                listadoActividades.Add(nuevaActividad);
-            }
+            txtTitulo.Text = actividad.Titulo;
+            txtDescripcionActiv.Text = actividad.Descripcion;
+            xtnommonitor.Text = actividad.Monitor;
+            txthorario.Text =actividad.Horario;
+            txtcupo.Text = "Entre "+actividad.MinCapacidad+ " y " + actividad.MaxCapacidad +" personas";
+            txtprecio.Text = actividad.Precio + " € la hora";
+            txtAreaActividad.Text = actividad.Area;
+            txtEquipActividad.Text = actividad.Equipamiento;
+            btnGuardarActividad.Visibility = Visibility.Hidden;
+            btnCancelarActividad.Visibility = Visibility.Hidden;
 
         }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -89,19 +73,58 @@ namespace IPO1_AgenciadeViajes
             new Presentacion.ReportarErrrores().Show();
         }
 
-        private void spanish_Click(object sender, RoutedEventArgs e)
+        
+        private void btnCancelarActividad_Click(object sender, RoutedEventArgs e)
         {
-            App.SelectCulture("es-ES");
+            MessageBoxResult result;
+            result = MessageBox.Show("¿Estás seguro de cancelar Edicion?", "Cancelar Edicion", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if (result == MessageBoxResult.Yes)
+            {
+                this.Close();
+            }
         }
 
-        private void english_Click(object sender, RoutedEventArgs e)
+        private void bntModificarActividad_Click(object sender, RoutedEventArgs e)
         {
-            App.SelectCulture("en-US");
+            txtTitulo.IsEnabled = true;
+            txtcupo.IsEnabled = true;
+            txtDescripcionActiv.IsEnabled = true;
+            txthorario.IsEnabled = true;
+            txtprecio.IsEnabled = true;
+            txtAreaActividad.IsEnabled = true;
+            txtEquipActividad.IsEnabled = true;
+            btnGuardarActividad.Visibility = Visibility.Visible;
+            btnBorrarActividad.Visibility = Visibility.Hidden;
+            btnCancelarActividad.Visibility = Visibility.Visible;
+            btnnuevaactividad.Visibility = Visibility.Hidden;
+            btnInscritosActividad.Visibility = Visibility.Hidden;
+            bntModificarActividad.Visibility = Visibility.Hidden;
+
         }
 
-        private void miSalir_Click(object sender, RoutedEventArgs e)
+        private void btnGuardarActividad_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            txtTitulo.IsEnabled = false;
+            txtprecio.IsEnabled = false;
+            txtDescripcionActiv.IsEnabled = false;
+            txtcupo.IsEnabled = false;
+            txthorario.IsEnabled = false;
+            txtAreaActividad.IsEnabled = false;
+            txtEquipActividad.IsEnabled=false;
+            btnGuardarActividad.Visibility = Visibility.Visible;
+            btnBorrarActividad.Visibility = Visibility.Visible;
+            btnCancelarActividad.Visibility = Visibility.Hidden;
+            btnInscritosActividad .Visibility = Visibility.Visible;
+            btnnuevaactividad.Visibility = Visibility.Visible;
+            bntModificarActividad .Visibility = Visibility.Visible;
+            
+
+            MessageBox.Show("Cabaña guardada correctamente");
+        }
+
+        private void btnDarActividad_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

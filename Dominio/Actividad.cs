@@ -22,7 +22,7 @@ namespace IPO1_AgenciadeViajes.Dominio
 
         public Uri Foto { set; get; }
 
-        public Actividad(string titulo, string descripcion, string monitor, string horario,bool niños, int maxcapacidad,int mincapacidad, double precio, string area, string equipamiento, bool estado)
+        public Actividad(string titulo, string descripcion, string monitor, string horario,bool niños, int maxcapacidad,int mincapacidad, double precio, string area, string equipamiento, bool estado, Uri foto)
         {
             Titulo = titulo;
             Descripcion = descripcion;
@@ -35,6 +35,7 @@ namespace IPO1_AgenciadeViajes.Dominio
             Area = area;
             Equipamiento = equipamiento;
             Estado = estado;
+            Foto = foto;
         }
     }
 }

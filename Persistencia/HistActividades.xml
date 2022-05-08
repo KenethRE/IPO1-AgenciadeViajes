@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Actividades>
+	<Actividad Titulo="Actividad en la playa" 
+	Hora="11:00"
+	Niños="0"/>
+
+	<Actividad Titulo="Actividad en la piscina" 
+	Hora="10:00"
+	Niños="2"/>
+
+	<Actividad Titulo="Actividad tiro con arco" 
+	Hora="12:00"
+	Niños="1"/>
+
+	<Actividad Titulo="Actividad para niños" 
+	Hora="10:30"
+	Niños="2"/>
+</Actividades>
+

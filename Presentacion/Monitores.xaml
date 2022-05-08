@@ -70,13 +70,17 @@
                 <MenuItem x:Name="miError" Header="Reportar un Error" Click="miError_Click" />
             </MenuItem>
         </Menu>
-        <Grid Grid.Row="1">
+        <Grid Margin="0,23,0,-411" Grid.RowSpan="3">
             <ItemsControl
-
                     Width="Auto"
                     Height="Auto"
               ItemsSource="{Binding ElementName=wdMonitor, Path=listadoMonitores}"
               ItemTemplate="{StaticResource PlantillaItemsMenu}"  Background="#FF424242">
+                <ItemsControl.ItemContainerStyle>
+                    <Style TargetType="ContentPresenter">
+                        <EventSetter Event="PreviewMouseLeftButtonDown" Handler="ContentControl_PreviewMouseLeftButtonDown1" />
+                    </Style>
+                </ItemsControl.ItemContainerStyle>
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <WrapPanel Orientation="Horizontal" />

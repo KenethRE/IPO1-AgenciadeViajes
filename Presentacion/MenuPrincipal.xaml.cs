@@ -14,6 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Xml;
+using System.IO;
+using Path = System.IO.Path;
 
 namespace IPO1_AgenciadeViajes.Presentacion
 {
@@ -28,7 +30,10 @@ namespace IPO1_AgenciadeViajes.Presentacion
         private InfoActividad ventanaActividad;
         private InfoPromocion ventanaPromocion;
         private InfoRutaSenderista ventanaRutaSenderista;
-        private Actividad ActividaActual = new Actividad("", "", "", "", false, 0, 0, 0, "", "", false);
+        private NuevoUsuario2 ventananuevousuario;
+        private Monitores ventanaMonitores;
+        private HistActividades historialactividades;
+        
 
         public Usuario usuarioActual { get; set; }
 
@@ -40,6 +45,7 @@ namespace IPO1_AgenciadeViajes.Presentacion
 
         public MenuPrincipal(Usuario usuarioactual)
         {
+            this.SizeToContent = SizeToContent.Height;
             this.usuarioActual = usuarioactual;
              listadoMonitores = new ObservableCollection<Dominio.Monitor>();
            // Crear el listado de monitores
@@ -160,11 +166,12 @@ namespace IPO1_AgenciadeViajes.Presentacion
             doc.Load(fichero.Stream);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
-                var nuevaActividad = new Dominio.Actividad("", "", "", "", false, 0, 0, 0, "", "", false)
+                var nuevaActividad = new Dominio.Actividad("", "", "", "", false, 0, 0, 0, "", "", false,null)
                 {
                     Titulo = node.Attributes["Titulo"].Value,
                     Descripcion = node.Attributes["Descripcion"].Value,
                     Monitor = node.Attributes["Monitor"].Value,
+                    Horario = node.Attributes["Horario"].Value,
                     Niños = Convert.ToBoolean(node.Attributes["Niños"].Value),
                     MaxCapacidad = Convert.ToInt32(node.Attributes["MaxCapacidad"].Value),
                     MinCapacidad = Convert.ToInt32(node.Attributes["MinCapacidad"].Value),
@@ -211,9 +218,30 @@ namespace IPO1_AgenciadeViajes.Presentacion
             result = MessageBox.Show("¿Estás seguro de cerrar la sesión?", "Cerrar Sesión", MessageBoxButton.YesNo, MessageBoxImage.Warning);
             if (result == MessageBoxResult.Yes)
             {
+                string UltimoInicio = DateTime.Now.ToString("d");
+                XmlDocument doc = new XmlDocument();
+                String outputpaht = Environment.CurrentDirectory;
+                String outputpath2 = outputpaht.Replace("\\bin\\Debug", "");
+                var xmpath = Path.Combine(outputpath2, "Persistencia/usuarios.xml");
+                string xmpath2 = new Uri(xmpath).LocalPath;
+                doc.Load(xmpath2);
+                XmlElement usuariomodificado = doc.DocumentElement;
+                var listanodos = usuariomodificado.SelectNodes("/Usuarios/Usuario");
+                foreach (XmlNode node in listanodos) {
+                    var nombre = node.SelectSingleNode("@Nombre").InnerText;
+                    if (nombre == usuarioActual.Nombre)
+                    {
+                        node.SelectSingleNode("@ultinic").InnerText = UltimoInicio;
+                        doc.Save(xmpath2);
+                    }
+
+                }
+               
                 Visibility = Visibility.Hidden;
                 new InicioSesion().Show();
                 this.Close();
+                //var fichero2 = Application.GetResourceStream(new Uri("Persistencia/usuarios.xml", UriKind.Relative));
+                //doc.Save(fichero2.Stream);
             }
 
         }
@@ -221,20 +249,17 @@ namespace IPO1_AgenciadeViajes.Presentacion
 
         private void BtnParcela_Click(object sender, RoutedEventArgs e)
         {
-            ventanaParcela = new InfoParcela();
-            ventanaParcela.Show();
+           
         }
 
         private void BtnCabana_Click(object sender, RoutedEventArgs e)
         {
-            ventanaCabana = new InfoCabana();
-            ventanaCabana.Show();
+            
         }
 
         private void BtnActividad_Click(object sender, RoutedEventArgs e)
         {
-
-           Actividad actividad = sender as Actividad;
+            Actividad actividad = sender as Actividad;
             ventanaActividad = new InfoActividad(actividad)
             {
                 Owner = this
@@ -243,7 +268,7 @@ namespace IPO1_AgenciadeViajes.Presentacion
         }
         private void BtnPromocion_Click(object sender, RoutedEventArgs e)
         {
-            ventanaPromocion = new InfoPromocion();
+            //ventanaPromocion = new InfoPromocion();
 
             ventanaPromocion.Show();
         }
@@ -293,11 +318,129 @@ namespace IPO1_AgenciadeViajes.Presentacion
 
         private void mngMonit_Click(object sender, RoutedEventArgs e)
         {
-            new Monitores(listadoMonitores).ShowDialog();
+            ventanaMonitores = new Monitores(listadoMonitores);
+            ventanaMonitores.Show();
         }
 
         private void histActividades_Click(object sender, RoutedEventArgs e)
         {
+            historialactividades = new HistActividades();
+            historialactividades.Show();
+        }
+        private void NuevoUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            ventananuevousuario = new NuevoUsuario2();
+            ventananuevousuario.Show();
+        }
+
+
+        private void ContentControl_PreviewMouseLeftButtonDown1(object sender, MouseButtonEventArgs e)
+        {
+            var promocion = ((FrameworkElement)sender).DataContext as Promocion;
+            if (promocion.Estado == true)
+            {
+                ventanaPromocion = new InfoPromocion(promocion);
+                ventanaPromocion.Show();
+            }
+            else
+                MessageBox.Show("promocion no disponible");
+            
+            
+                      
+
+        }
+        private void ContentControl_PreviewMouseLeftButtonDown2(object sender, MouseButtonEventArgs e)
+        {
+            var cabana = ((FrameworkElement)sender).DataContext as Cabana;
+
+            if (cabana.Estado == true)
+            {
+                ventanaCabana = new InfoCabana(cabana);
+                ventanaCabana.Show();
+            }
+            else
+                MessageBox.Show("Cabaña no disponible");
+
+            
+
+        }
+        private void ContentControl_PreviewMouseLeftButtonDown3(object sender, MouseButtonEventArgs e)
+        {
+            var parcela = ((FrameworkElement)sender).DataContext as Parcela;
+
+            if (parcela.Estado == true)
+            {
+                ventanaParcela = new InfoParcela(parcela);
+                ventanaParcela.Show();
+            }
+            else
+                MessageBox.Show("Parcela no disponible");
+
+
+
+        }
+        private void ContentControl_PreviewMouseLeftButtonDown4(object sender, MouseButtonEventArgs e)
+        {
+            var actividad = ((FrameworkElement)sender).DataContext as Actividad;
+
+            if (actividad.Estado == true)
+            {
+                ventanaActividad = new InfoActividad(actividad);
+                ventanaActividad.Show();
+            }
+            else
+                MessageBox.Show("Actividad no disponible");
+
+
+
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void EditarUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void BorrarUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            XmlDocument doc = new XmlDocument();
+            var fichero = Application.GetResourceStream(new Uri("Persistencia/usuarios.xml", UriKind.Relative));
+            doc.Load(fichero.Stream);
+            XmlElement usuariomodificado = doc.DocumentElement;
+            var listanodos = usuariomodificado.SelectNodes("/Usuarios/Usuario");
+            if (listanodos.Count <= 1)
+            {
+                MessageBox.Show("No se puede borrar el usuario al ser el unico existente");
+            }
+            else
+            {
+                foreach (XmlNode node in listanodos)
+                {
+                    var nombre = node.SelectSingleNode("@Nombre").InnerText;
+                    if (nombre == usuarioActual.Nombre)
+                    {
+                        XmlElement el = (XmlElement)node;
+                        try
+                        {
+                           el.ParentNode.RemoveChild(el);
+                           doc.Save("C:/Users/plati/source/repos/KenethRE/IPO1-AgenciadeViajes/Persistencia/usuarios.xml");
+                           MessageBox.Show("usuario "+usuarioActual.Nombre + "  borrado correctamente" );
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error al borrar el usuario " + ex.Message);
+                            
+                        }
+
+                        
+                    }
+
+                }
+            }
 
         }
     }

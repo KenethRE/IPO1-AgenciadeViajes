@@ -32,8 +32,8 @@ namespace IPO1_AgenciadeViajes
         private void mostrarCoordenadas(object sender, MouseButtonEventArgs e)
         {
             Point p = e.GetPosition(this);
-            lblEstado.Content = "Coordenadas pulsadas: (" + p.X + ", " + p.Y + ")";
-            lblEstado.Foreground = Brushes.Black;
+            //lblEstado.Content = "Coordenadas pulsadas: (" + p.X + ", " + p.Y + ")";
+            //lblEstado.Foreground = Brushes.Black;
         }
         private void MiAcercaDe_Click(object sender, RoutedEventArgs e)
         {
