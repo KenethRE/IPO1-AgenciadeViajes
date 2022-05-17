@@ -1,0 +1,30 @@
+﻿<RutasSenderistas>
+	<RutaSenderista Titulo="Route around the campsite" Descripcion="Pleasant route for the whole family"
+	Mapa="/Recursos/Imagenes/imagen_ruta.jpg"
+	Horario="16:00 - 19:00"
+	Monitor="Lucía García Sánchez
+	Fernando Gómez López"
+	Encuentro="At the campsite entrance"
+	Capacidadmax="30"
+	Capacidadmin="10"
+	Dificultad="Low"/>
+
+	<RutaSenderista Titulo="Mountain route" Descripcion="Difficult route with great views from the top of the mountain."
+	Mapa="/Recursos/Imagenes/imagen_ruta1.jpg"
+	Horario="8:00 - 14:00"
+	Monitor="Luisa Murillo Murillo"
+	Encuentro="At the campsite entrance"
+	Capacidadmax="10"
+	Capacidadmin="3"
+	Dificultad="High"/>
+
+	<RutaSenderista Titulo="Cave route" Descripcion="This route is the most famous of the campsite for the charms hidden in this cave."
+	Mapa="/Recursos/Imagenes/imagen_ruta2.png"
+	Horario="15:30 - 16:15"
+	Monitor="Maria Díaz Jiménez"
+	Encuentro="At the campsite entrance"
+	Capacidadmax="5"
+	Capacidadmin="1"
+	Dificultad="Media"/>
+
+</RutasSenderistas>

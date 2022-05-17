@@ -1,0 +1,27 @@
+﻿<Inscritos>
+	<Inscrito Nombre="Carolina Muñoz Pérez" Correo="carolinamuñoz@yahoo.es" Telefono="611834366"
+	Pago="false"
+	Foto="/Recursos/Imagenes/Inscrito2.png"
+	Inscripcion="Monthly" />
+
+	<Inscrito Nombre="Sara Fernández Rodríguez" Correo="sara1999@gmail.com" Telefono="698344776"
+	Pago="false"
+	Foto="/Recursos/Imagenes/Inscrito.png"
+	Inscripcion="Monthly" />
+
+	<Inscrito Nombre="Pedro Moreno Martínez" Correo="pedrooMoreeno@gmail.com" Telefono="600345887"
+	Pago="true"
+	Foto="/Recursos/Imagenes/Inscrito1.png"
+	Inscripcion="Per hour" />
+	
+	<Inscrito Nombre="Patricia Domínguez Flores" Correo="pdominguezflores@yahoo.es" Telefono="698323435"
+	Pago="true"
+	Foto="/Recursos/Imagenes/icono_usuario.png"
+	Inscripcion="Per hour" />
+
+	<Inscrito Nombre="Juan Jesús Ramos Hidalgo" Correo="jjramos@yahoo.es" Telefono="688734954"
+	Pago="true"
+	Foto="/Recursos/Imagenes/icono_usuario.png"
+	Inscripcion="Per hour" />
+	
+</Inscritos>

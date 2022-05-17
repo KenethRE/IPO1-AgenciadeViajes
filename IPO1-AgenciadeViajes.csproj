@@ -416,6 +416,29 @@
   <ItemGroup>
     <Resource Include="Persistencia\Actividades_EN.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Persistencia\Cabanas_EN.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Persistencia\HistActividades_EN.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Persistencia\Inscritos_EN.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Persistencia\Monitores_EN.xml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Persistencia\Parcelas_EN.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Persistencia\Promociones_EN.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Persistencia\RutaSenderista_EN.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\GemBox.Pdf.17.0.1072\build\netstandard2.0\GemBox.Pdf.targets" Condition="Exists('packages\GemBox.Pdf.17.0.1072\build\netstandard2.0\GemBox.Pdf.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

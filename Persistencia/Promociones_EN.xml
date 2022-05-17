@@ -1,0 +1,22 @@
+﻿<Promociones>
+	<Promocion Titulo="3x2 in activities" Descripcion="3x2 discount on activities at the campsite until the end of the year" 
+	Foto="/Recursos/Imagenes/Actividad.png"
+	Estado ="True"/>
+	
+	<Promocion Titulo="Free breakfast" Descripcion="Free breakfast every day during the entire month of January" 
+	Foto="/Recursos/Imagenes/Promocion1.png"
+	Estado ="False"/>
+
+	<Promocion Titulo="Gift for children" Descripcion="For 3 nights consumption, children are offered a small souvenir of their stay" 
+	Foto="/Recursos/Imagenes/Promocion3.png"
+	Estado ="True"/>
+	
+	<Promocion Titulo="2 nights free" Descripcion="Book 5 nights and pay 3 nights" 
+	Foto="/Recursos/Imagenes/Promocion2.png"
+	Estado ="True"/>
+
+	<Promocion Titulo="50% discount" Descripcion="50% discount on the entire campsite" 
+	Foto="/Recursos/Imagenes/Promocion.png"
+	Estado ="True"/>
+	
+</Promociones>

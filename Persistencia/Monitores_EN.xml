@@ -1,0 +1,37 @@
+﻿<Monitores>
+	<Monitor Nombre="Lucía García Sánchez" Correo="luciagsanchez@gmail.com" Telefono="693530933"
+	Idioma="Spanish
+	English
+	French
+	German"
+	Foto="/Recursos/Imagenes/Monitor.png" 
+	Restricciones ="Weekends"
+	Estado ="true"
+	Formacion="Superior Degree in Guide, Information and Tourist Assistance"/>
+	
+	<Monitor Nombre="Fernando Gómez López" Correo="fergomezlopezz@yahoo.es" Telefono="678332003"
+	Idioma="Spanish
+	English"
+	Foto="/Recursos/Imagenes/Monitor1.png"
+	Restricciones ="Monday and Wednesday"
+	Estado ="true"
+	Formacion="Degree in Physical Activity and Sports Science"/>
+
+	<Monitor Nombre="Luisa Murillo Murillo" Correo="luisammurillo@yahoo.es" Telefono="698374738"
+	Idioma="Spanish
+	English
+	French"
+	Foto="/Recursos/Imagenes/Monitor2.png"
+	Restricciones ="Tuesday and Friday"
+	Estado ="false"
+	Formacion="Baccalaureate"/>
+
+	<Monitor Nombre="María Díaz Jiménez" Correo="mariadiazjimenez@gmail.com" Telefono="659879649"
+	Idioma="Spanish"
+	Foto="/Recursos/Imagenes/icono_usuario.png"
+	Restricciones ="Monday and Wednesday"
+	Estado ="true"
+	Formacion="Degree in Physical Activity and Sports Science
+	Superior Degree in Guide, Information and Tourist Assistance"/>
+	
+</Monitores>

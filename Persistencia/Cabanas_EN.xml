@@ -1,0 +1,29 @@
+﻿<Cabanas>
+	<Cabana Titulo="Cabin with pool" Precio="100" Capacidad="6"
+	Descripcion="Cozy cabin with pool nearby"
+	Imagen="/Recursos/Imagenes/Cabaña2.png"
+	Restriccion="Entrance from 14:00"
+	Equipamiento="Television
+	Wi-Fi
+	Bath linen
+	Oven
+	Microwave"
+	Disponibilidad="true" />
+	
+	<Cabana Titulo="Forest cabin" Precio="150" Capacidad="2"
+	Descripcion="Cabin located in forest reserve overlooking the forest and creek"
+	Imagen="/Recursos/Imagenes/Cabaña1.png"
+	Restriccion="Check-in from 10:00 a.m.
+	Departure before 14:00"
+	Equipamiento="Oven
+	Bed linen and towels"
+	Disponibilidad="true" />
+
+	<Cabana Titulo="Mountain cabin" Precio="80" Capacidad="5"
+	Descripcion="Cottage with mountain views and is located near a famous route"
+	Imagen="/Recursos/Imagenes/Cabaña.png"
+	Restriccion="Entrance from 9:00 a.m."
+	Equipamiento="Oven
+	Microwave"
+	Disponibilidad="false" />
+</Cabanas>

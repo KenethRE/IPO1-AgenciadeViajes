@@ -1,0 +1,34 @@
+﻿<Parcelas>
+	<Parcela Titulo="Rustic plot" Precio="800" Temporada="High"
+	Ubicacion="It is located near the beach"
+	Tamano="5000"
+	Servicios ="Electricity,Water,Gas"
+	Foto="/Recursos/Imagenes/parcela1.png"
+	MinCapacidad ="13"
+	Disponibilidad ="true"/>
+	
+	<Parcela Titulo="Mountain plot" Precio="1000" Temporada="Low"
+	Ubicacion="It is located near the mountain"
+	Tamano="10000"
+	Servicios ="Electricity"
+	MinCapacidad ="5"
+	Foto="/Recursos/Imagenes/parcela2.png"
+	Disponibilidad ="false"/>
+
+	<Parcela Titulo="Non-building land for agriculture" Precio="5000" Temporada="Media"
+	Ubicacion="It is located on the outskirts of the town."
+	Tamano="10000"
+	Servicios ="Water"
+	MinCapacidad ="25"
+	Foto="/Recursos/Imagenes/parcela3.png"
+	Disponibilidad ="true"/>
+
+	<Parcela Titulo="Rustic plot" Precio="1600" Temporada="High"
+	Ubicacion="Perfect land to build a villa"
+	Tamano="1000"
+	Servicios ="Water"
+	MinCapacidad ="12"
+	Foto="/Recursos/Imagenes/parcela4.png"
+	Disponibilidad ="true"/>
+	
+</Parcelas>
