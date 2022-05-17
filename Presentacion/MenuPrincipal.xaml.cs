@@ -89,7 +89,12 @@ namespace IPO1_AgenciadeViajes.Presentacion
         {
             // Cargar contenido de prueba
             XmlDocument doc = new XmlDocument();
-            var fichero = Application.GetResourceStream(new Uri("Persistencia/Monitores.xml", UriKind.Relative));
+            var fichero = Application.GetResourceStream(new Uri("Persistencia/Monitores.xml", UriKind.Relative)); ;
+            if (System.Globalization.CultureInfo.CurrentCulture.Equals("EN-en"))
+            {
+                fichero = Application.GetResourceStream(new Uri("Persistencia/Monitores_EN.xml", UriKind.Relative));
+            }
+
             doc.Load(fichero.Stream);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
@@ -112,7 +117,12 @@ namespace IPO1_AgenciadeViajes.Presentacion
         {
             // Cargar contenido de prueba
             XmlDocument doc = new XmlDocument();
-            var fichero = Application.GetResourceStream(new Uri("Persistencia/Parcelas.xml", UriKind.Relative));
+            var fichero = Application.GetResourceStream(new Uri("Persistencia/Parcelas.xml", UriKind.Relative)); ;
+            if (System.Globalization.CultureInfo.CurrentCulture.Equals("EN-en"))
+            {
+                fichero = Application.GetResourceStream(new Uri("Persistencia/Parcelas_EN.xml", UriKind.Relative));
+            }
+
             doc.Load(fichero.Stream);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
@@ -137,7 +147,12 @@ namespace IPO1_AgenciadeViajes.Presentacion
         {
             // Cargar contenido de prueba
             XmlDocument doc = new XmlDocument();
-            var fichero = Application.GetResourceStream(new Uri("Persistencia/Cabanas.xml", UriKind.Relative));
+            var fichero = Application.GetResourceStream(new Uri("Persistencia/Cabanas.xml", UriKind.Relative)); ;
+            if (System.Globalization.CultureInfo.CurrentCulture.Equals("EN-en"))
+            {
+                fichero = Application.GetResourceStream(new Uri("Persistencia/Cabanas_EN.xml", UriKind.Relative));
+            }
+
             doc.Load(fichero.Stream);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
@@ -194,7 +209,12 @@ namespace IPO1_AgenciadeViajes.Presentacion
         {
             // Cargar contenido de prueba
             XmlDocument doc = new XmlDocument();
-            var fichero = Application.GetResourceStream(new Uri("Persistencia/Promociones.xml", UriKind.Relative));
+            var fichero = Application.GetResourceStream(new Uri("Persistencia/Promociones.xml", UriKind.Relative)); ;
+            if (System.Globalization.CultureInfo.CurrentCulture.Equals("EN-en"))
+            {
+                fichero = Application.GetResourceStream(new Uri("Persistencia/Promociones_EN.xml", UriKind.Relative));
+            }
+
             doc.Load(fichero.Stream);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
