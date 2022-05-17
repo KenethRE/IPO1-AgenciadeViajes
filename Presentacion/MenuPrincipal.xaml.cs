@@ -162,7 +162,11 @@ namespace IPO1_AgenciadeViajes.Presentacion
         {
             // Cargar contenido de prueba
             XmlDocument doc = new XmlDocument();
-            var fichero = Application.GetResourceStream(new Uri("Persistencia/Actividades.xml", UriKind.Relative));
+            var fichero = Application.GetResourceStream(new Uri("Persistencia/Actividades.xml", UriKind.Relative)); ;
+            if (System.Globalization.CultureInfo.CurrentCulture.Equals("EN-en")) {
+                fichero = Application.GetResourceStream(new Uri("Persistencia/Actividades_EN.xml", UriKind.Relative));
+            }
+           
             doc.Load(fichero.Stream);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {

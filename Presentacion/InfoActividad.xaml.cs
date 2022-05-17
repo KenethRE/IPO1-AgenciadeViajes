@@ -126,5 +126,10 @@ namespace IPO1_AgenciadeViajes
         {
 
         }
+
+        private void cbIdiomas_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            App.SelectCulture("ES-es");
+        }
     }
 }

@@ -16,29 +16,29 @@
             <RowDefinition Height="80.64"/>
         </Grid.RowDefinitions>
         <Menu Grid.Row="0" x:Name="miMenu" FontSize="16" FontWeight="Bold" Grid.ColumnSpan="2" Background="#FFF0F0F0" BorderBrush="Black" Margin="0,0,11,30">
-            <MenuItem Header="Archivo" >
-                <MenuItem Header="Cambiar Idioma">
-                    <MenuItem x:Name="spanish" Header="Español" Click="spanish_Click">
+            <MenuItem Header="{DynamicResource lblArchivoCrearRuta}" >
+                <MenuItem Header="{DynamicResource lblCambiarIdiomaCrearRuta}" >
+                    <MenuItem x:Name="spanish" Header="{DynamicResource lblEspanolCrearRuta}" Click="spanish_Click">
                         <MenuItem.Icon>
                             <Image Source="/Recursos/Imagenes/spain.png"/>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem x:Name="english" Header="English" Click="english_Click">
+                    <MenuItem x:Name="english" Header="{DynamicResource lblEnglishCrearRuta}" Click="english_Click">
                         <MenuItem.Icon>
                             <Image Source="/Recursos/Imagenes/united-states.png"/>
                         </MenuItem.Icon>
                     </MenuItem>
                 </MenuItem>
-                <MenuItem x:Name="miSalir" Header="Salir" Click="miSalir_Click"/>
+                <MenuItem x:Name="miSalir" Header="{DynamicResource lblSalirCrearRuta}" Click="miSalir_Click"/>
             </MenuItem>
-            <MenuItem Header="Ayuda">
-                <MenuItem x:Name="miAcercaDe" Header="Acerca de..." Click="MiAcercaDe_Click" />
-                <MenuItem x:Name="miDocumentacion" Header="Documentacion" Click="MiDocumentacion_Click" />
-                <MenuItem x:Name="miError" Header="Reportar un Error" Click="miError_Click" />
+            <MenuItem Header="{DynamicResource lblAyudaCrearRuta}" >
+                <MenuItem x:Name="miAcercaDe" Header="{DynamicResource lblAcercadeCrearRuta}" Click="MiAcercaDe_Click" />
+                <MenuItem x:Name="miDocumentacion" Header="{DynamicResource lblDocumentacionCrearRuta}" Click="MiDocumentacion_Click" />
+                <MenuItem x:Name="miError" Header="{DynamicResource lblReportarCrearRuta}" Click="miError_Click" />
             </MenuItem>
         </Menu>
-        <Label x:Name="lblHoraInicioCrearRuta" Content="{DynamicResource lblHoraInicioCrearRuta}" HorizontalAlignment="Left" Height="41" Margin="137,42,0,0" VerticalAlignment="Top" Width="118" FontSize="16" Grid.Row="1"/>
-        <Label x:Name="lblHoraFinCrearRuta" Content="{DynamicResource lblHoraFinCrearRuta}" HorizontalAlignment="Left" Height="32" Margin="137,3,0,0" VerticalAlignment="Top" Width="103" Grid.Row="1" FontSize="16"/>
+        <Label x:Name="lblHoraFinCrearRuta" Content="{DynamicResource lblHoraFinCrearRuta}" HorizontalAlignment="Left" Height="41" Margin="137,42,0,0" VerticalAlignment="Top" Width="118" FontSize="16" Grid.Row="1"/>
+        <Label x:Name="lblHoraInicioCrearRuta" Content="{DynamicResource lblHoraInicioCrearRuta}" HorizontalAlignment="Left" Height="32" Margin="137,2.6,0,0" VerticalAlignment="Top" Width="118" Grid.Row="1" FontSize="16"/>
         <TextBox HorizontalAlignment="Left" Height="20" Margin="295,16,0,0" Grid.Row="1" TextWrapping="Wrap" Text="&#xD;&#xA;" VerticalAlignment="Top" Width="73"/>
         <TextBox HorizontalAlignment="Left" Height="20" Margin="295,42,0,0" Grid.Row="1" TextWrapping="Wrap" Text="&#xA;" VerticalAlignment="Top" Width="73"/>
         <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="14,0,0,0" VerticalAlignment="Center" Source="/Recursos/Imagenes/spain.png" Height="36" Width="60" Grid.Row="1"/>

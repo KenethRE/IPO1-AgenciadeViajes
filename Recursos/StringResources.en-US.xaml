@@ -2,7 +2,7 @@
 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="btLogin">Login</sys:String>
-    <sys:String x:Key="cbItem1">SP</sys:String>
+    <sys:String x:Key="cbItem1">US</sys:String>
     <sys:String x:Key="lblContraseña">Password</sys:String>
     <sys:String x:Key="lblLogin">Login</sys:String>
     <sys:String x:Key="lblRecordarContraseña">Forgot password?</sys:String>
@@ -26,31 +26,21 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="LlbDocumentacion">Documentation</sys:String>
     <sys:String x:Key="LlbError">Report Error</sys:String>
 
-    <sys:String x:Key="lblNombreReservarCabana">Name:</sys:String>
-    <sys:String x:Key="TelefonoReservarCabana">Phone:</sys:String>
-    <sys:String x:Key="btnCancelarReservarCabana">Cancel</sys:String>
-    <sys:String x:Key="EmailReservarCabana">Email:</sys:String>
-    <sys:String x:Key="txtBox">(Optional):</sys:String>
-    <sys:String x:Key="CapacidadReservarCabana">Nº vacants:</sys:String>
-    <sys:String x:Key="btnConfirmarReservarCabana">Confirm</sys:String>
-    <sys:String x:Key="txtBoxEmailOpcionalReservarCabana">(Optional)</sys:String>
-    <sys:String x:Key="SolicitudesReservarCabana">Special requests:</sys:String>
-    <sys:String x:Key="txtBoxSolicitudesReservarCabana">Enter here if you need any special request such as a cot, specific kitchenware, any special mobility circumstance of people staying or others.</sys:String>
-
-    <sys:String x:Key="lblNombreReservarParcela">Name:</sys:String>
-    <sys:String x:Key="lblTelefonoReservarParcela">Phone:</sys:String>
-    <sys:String x:Key="CancelarReservarParcela">Cancel</sys:String>
-    <sys:String x:Key="lblEmailReservarParcela">Email:</sys:String>
-    <sys:String x:Key="txtBoxTelefonoReservarParcela">(Optional)</sys:String>
-    <sys:String x:Key="lblCapacidadReservarParcela">Nº vacants:</sys:String>
-    <sys:String x:Key="btnConfirmar">Confirm</sys:String>
-    <sys:String x:Key="txtBoxEmailReservarParcela">(Optional)</sys:String>
 
     <sys:String x:Key="lblInformacionCrearRuta">Here you can design your own route as you wish.</sys:String>
     <sys:String x:Key="lblHoraInicioCrearRuta">Start time:</sys:String>
     <sys:String x:Key="lblHoraFinCrearRuta">End Time:</sys:String>
     <sys:String x:Key="btnCancelarCrearRuta">Cancel</sys:String>
     <sys:String x:Key="btnGuardarCrearRuta">Save</sys:String>
+    <sys:String x:Key="lblArchivoCrearRuta">File</sys:String>
+    <sys:String x:Key="lblIdiomaCrearRuta">Change language</sys:String>
+    <sys:String x:Key="lblEspanolCrearRuta">Spanish</sys:String>
+    <sys:String x:Key="lblInglesCrearRuta">English</sys:String>
+    <sys:String x:Key="lblSalirCrearRuta">Exit</sys:String>
+    <sys:String x:Key="lblAcercadeCrearRuta">About...</sys:String>
+    <sys:String x:Key="lblDocumentacionCrearRuta">Documentation</sys:String>
+    <sys:String x:Key="lblErrorCrearRuta">Report Error</sys:String>
+    <sys:String x:Key="lblAyudaCrearRuta">Help</sys:String>
 
     <sys:String x:Key="lblTituloActividad">Activity</sys:String>
     <sys:String x:Key="lblMonitorActividad">Monitor/s who teach it:</sys:String>
@@ -119,4 +109,25 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblDificultadRuta">Degree of difficulty</sys:String>
     <sys:String x:Key="lblMapaRuta">Route map</sys:String>
 
+    <sys:String x:Key="Lblconfirmacion">To reserve the cabin "cabin" for the dates 12/12/2001 to 16/12/2001 you must fill in the following information:</sys:String>
+    <sys:String x:Key="lblNombreReservarCabana">Name:</sys:String>
+    <sys:String x:Key="TelefonoReservarCabana">Phone:</sys:String>
+    <sys:String x:Key="EmailReservarCabana">Email:</sys:String>
+    <sys:String x:Key="txtBoxEmailOpcionalReservarCabana">(Optional)</sys:String>
+    <sys:String x:Key="CapacidadReservarCabana">Nº occupants:</sys:String>
+    <sys:String x:Key="SolicitudesReservarCabana">Special requests:</sys:String>
+    <sys:String x:Key="txtBoxSolicitudesReservarCabana">Enter here if you need any special request such as crib, specific household items, special mobility circumstances of guests or others.</sys:String>
+    <sys:String x:Key="btnConfirmarReservaCabana">Confirm</sys:String>
+    <sys:String x:Key="btnCancelarReservarCabana">Cancel</sys:String>
+
+    <sys:String x:Key="lblconfirmacion">To reserve the plot "plot deluxe" for the dates 12/12/2001 to 16/12/2001 you must fill in the following information::</sys:String>
+    <sys:String x:Key="lblNombreReservarParcela">Name:</sys:String>
+    <sys:String x:Key="lblTelefonoReservarParcela">Phone:</sys:String>
+    <sys:String x:Key="lblEmailReservarParcela">Email:</sys:String>
+    <sys:String x:Key="lblCapacidadReservarParcela">Nº occupants:</sys:String>
+    <sys:String x:Key="btnConfirmarReservarParcela">Confirm</sys:String>
+    <sys:String x:Key="CancelarReservarParcela">Cancel</sys:String>
+
+    
+    
 </ResourceDictionary>

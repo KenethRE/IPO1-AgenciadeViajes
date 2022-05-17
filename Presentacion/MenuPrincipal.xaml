@@ -129,7 +129,7 @@
             <RowDefinition Height="174*"/>
         </Grid.RowDefinitions>
         <Menu Grid.Row="0" x:Name="miMenu" FontSize="16" FontWeight="Bold" Grid.ColumnSpan="2" Background="#FFF0F0F0" BorderBrush="Black">
-            <MenuItem Header="{DynamicResource LlbArchivo}" >
+            <MenuItem Header="{DynamicResource LlbArchivo}" Click="MenuItem_Click_1" >
                 <MenuItem Header="{DynamicResource LlbIdioma}">
                     <MenuItem x:Name="spanish" Header="{DynamicResource LlbEspañol}" Click="spanish_Click">
                         <MenuItem.Icon>

@@ -19,39 +19,29 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="LlbArchivo">Archivo</sys:String>
     <sys:String x:Key="LlbIdioma">Cambiar de idioma</sys:String>
     <sys:String x:Key="LlbEspañol">Español</sys:String>
-    <sys:String x:Key="LlbIngles">Ingles</sys:String>
+    <sys:String x:Key="LlbIngles">Inglés</sys:String>
     <sys:String x:Key="LlbSalir">Salir</sys:String>
     <sys:String x:Key="LlbAcercade">Acerca de...</sys:String>
     <sys:String x:Key="LlbDocumentacion">Documentacion</sys:String>
     <sys:String x:Key="LlbError">Reportar un Error</sys:String>
     <sys:String x:Key="lbAyuda">Ayuda</sys:String>
-    
-    <sys:String x:Key="lblNombreReservarCabana">Nombre:</sys:String>
-    <sys:String x:Key="TelefonoReservarCabana">Telefono:</sys:String>
-    <sys:String x:Key="btnCancelarReservarCabana">Cancelar</sys:String>
-    <sys:String x:Key="EmailReservarCabana">Email:</sys:String>
-    <sys:String x:Key="txtBox">(Opcional):</sys:String>
-    <sys:String x:Key="CapacidadReservarCabana">Nº ocupantes:</sys:String>
-    <sys:String x:Key="btnConfirmarReservarCabana">Confirmar</sys:String>
-    <sys:String x:Key="txtBoxEmailOpcionalReservarCabana">(Opcional)</sys:String>
-    <sys:String x:Key="SolicitudesReservarCabana">Solicitudes especiales:</sys:String>
-    <sys:String x:Key="txtBoxSolicitudesReservarCabana">Introduzca aquí si necesita alguna solicitud especial como por ejemplo cuna, menaje concreto, alguna circunstancia de movilidad especial de personas alojadas u otros.</sys:String>
-    
-    <sys:String x:Key="lblNombreReservarParcela">Nombre:</sys:String>
-    <sys:String x:Key="lblTelefonoReservarParcela">Telefono:</sys:String>
-    <sys:String x:Key="CancelarReservarParcela">Cancelar</sys:String>
-    <sys:String x:Key="lblEmailReservarParcela">Email:</sys:String>
-    <sys:String x:Key="txtBoxTelefonoReservarParcela">(Opcional)</sys:String>
-    <sys:String x:Key="lblCapacidadReservarParcela">Nº ocupantes:</sys:String>
-    <sys:String x:Key="btnConfirmar">Confirmar</sys:String>
-    <sys:String x:Key="txtBoxEmailReservarParcela">(Opcional)</sys:String>
-    
+
     <sys:String x:Key="lblInformacionCrearRuta">Aquí puede diseñar su propia ruta como desee.</sys:String>
     <sys:String x:Key="lblHoraInicioCrearRuta">Hora de inicio:</sys:String>
     <sys:String x:Key="lblHoraFinCrearRuta">Hora de fin:</sys:String>
     <sys:String x:Key="btnCancelarCrearRuta">Cancelar</sys:String>
     <sys:String x:Key="btnGuardarCrearRuta">Guardar</sys:String>
-    
+    <sys:String x:Key="lblArchivoCrearRuta">Archivo</sys:String>
+    <sys:String x:Key="lblIdiomaCrearRuta">Cambiar de idioma</sys:String>
+    <sys:String x:Key="lblEspanolCrearRuta">Español</sys:String>
+    <sys:String x:Key="lblInglesCrearRuta">Inglés</sys:String>
+    <sys:String x:Key="lblSalirCrearRuta">Salir</sys:String>
+    <sys:String x:Key="lblAcercadeCrearRuta">Acerca de...</sys:String>
+    <sys:String x:Key="lblDocumentacionCrearRuta">Documentacion</sys:String>
+    <sys:String x:Key="lblErrorCrearRuta">Reportar un Error</sys:String>
+    <sys:String x:Key="lblAyudaCrearRuta">Ayuda</sys:String>
+
+
     <sys:String x:Key="lblTituloActividad">Actividad</sys:String>
     <sys:String x:Key="lblMonitorActividad">Monitor/es que la imparten:</sys:String>
     <sys:String x:Key="lblHorarioActividad">Horario</sys:String>
@@ -125,5 +115,25 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblBorrarUsuario">Borrar</sys:String>
     <sys:String x:Key="lblUsuarios">Usuarios</sys:String>
     <sys:String x:Key="lblDisponibilidad">Disponibilidad</sys:String>
+
+    <sys:String x:Key="Lblconfirmacion">Para reservar la cabaña "cabaña" para las fechas 12/12/2001 al 16/12/2001 debe rellenar los siguientes datos:</sys:String>
+    <sys:String x:Key="lblNombreReservarCabana">Nombre:</sys:String>
+    <sys:String x:Key="TelefonoReservarCabana">Teléfono:</sys:String>
+    <sys:String x:Key="EmailReservarCabana">Email:</sys:String>
+    <sys:String x:Key="txtBoxEmailOpcionalReservarCabana">(Opcional)</sys:String>
+    <sys:String x:Key="CapacidadReservarCabana">Nº ocupantes:</sys:String>
+    <sys:String x:Key="SolicitudesReservarCabana">Solicitudes especiales:</sys:String>
+    <sys:String x:Key="txtBoxSolicitudesReservarCabana">Introduzca aquí si necesita alguna solicitud especial como por ejemplo cuna, menaje concreto, alguna circunstancia de movilidad especial de personas alojadas u otros.</sys:String>
+    <sys:String x:Key="btnConfirmarReservaCabana">Confirmar</sys:String>
+    <sys:String x:Key="btnCancelarReservarCabana">Cancelar</sys:String>
+
+    <sys:String x:Key="lblconfirmacion">Para reservar la parcela "parcela deluxe" para las fechas 12/12/2001 al 16/12/2001 debe rellenar los siguientes datos:</sys:String>
+    <sys:String x:Key="lblNombreReservarParcela">Nombre:</sys:String>
+    <sys:String x:Key="lblTelefonoReservarParcela">Teléfono:</sys:String>
+    <sys:String x:Key="lblEmailReservarParcela">Email:</sys:String>
+    <sys:String x:Key="lblCapacidadReservarParcela">Nº ocupantes:</sys:String>
+    <sys:String x:Key="btnConfirmarReservarParcela">Confirmar</sys:String>
+    <sys:String x:Key="CancelarReservarParcela">Cancelar</sys:String>
+
 
 </ResourceDictionary>

@@ -56,7 +56,7 @@
         <Button x:Name="btnInscritosActividad" HorizontalAlignment="Left" FontSize="16" Content="{DynamicResource btnInscritosActividad}" VerticalAlignment="Center" RenderTransformOrigin="0.452,-3.352" Grid.Row="10" Grid.Column="4" Click="Button_Click" Height="43" Margin="24,0,0,0" Width="246" />
         <Label x:Name="lblEstado" Content="{DynamicResource lblEstado}" Margin="0,25,0,0" Grid.Row="11" Background="White" Opacity="0.7" Height="30" Grid.ColumnSpan="7"/>
         <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="337,2,0,0" VerticalAlignment="Top" Source="/Recursos/Imagenes/spain.png" Height="39" Width="40" RenderTransformOrigin="0.572,1.906" Grid.Column="4" Grid.RowSpan="2"/>
-        <ComboBox x:Name="cbIdiomas" Margin="13,9,10,0" VerticalAlignment="Top" Opacity="0.6" SelectedIndex="0" Background="Black" Height="27" RenderTransformOrigin="0.077,0.142" Grid.Column="5" Grid.RowSpan="2" >
+        <ComboBox x:Name="cbIdiomas" Margin="13,9,10,0" VerticalAlignment="Top" Opacity="0.6" SelectedIndex="0" Background="Black" Height="27" RenderTransformOrigin="0.077,0.142" Grid.Column="5" Grid.RowSpan="2" SelectionChanged="cbIdiomas_SelectionChanged" >
             <ComboBoxItem x:Name="cbItem1" Content="ES"/>
             <ComboBoxItem x:Name="cbItem2" Content="EN"/>
         </ComboBox>
