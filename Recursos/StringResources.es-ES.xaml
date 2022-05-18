@@ -121,7 +121,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblEditarUsuario">Editar</sys:String>
     <sys:String x:Key="lblBorrarUsuario">Borrar</sys:String>
     <sys:String x:Key="lblUsuarios">Usuarios</sys:String>
-    <sys:String x:Key="lblEditar">Editar</sys:String>
+    <sys:String x:Key="lblEditarMenu">Editar</sys:String>
     <sys:String x:Key="lblDisponibilidad">Disponibilidad</sys:String>
     
 

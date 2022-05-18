@@ -144,7 +144,7 @@
                 </MenuItem>
                 <MenuItem x:Name="miSalir" Header="{DynamicResource LlbSalir}" Click="miSalir_Click"/>
             </MenuItem>
-            <MenuItem Header="{DynamicResource lblEditar}" Click="MenuItem_Click">
+            <MenuItem x:Name="lblEditarMenu" Header="{DynamicResource lblEditarMenu}" Click="MenuItem_Click">
                 <MenuItem x:Name="miUsuario" Header="{DynamicResource lblUsuarios}">
                     <MenuItem x:Name="minuevo" Header="{DynamicResource lblNuevoUsuario}" Click="NuevoUsuario_Click" />
                     <MenuItem x:Name="mieditar" Header="{DynamicResource lblEditarUsuario}" Click="EditarUsuario_Click" />
