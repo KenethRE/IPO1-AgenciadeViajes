@@ -76,7 +76,7 @@
                 </MenuItem>
                 <MenuItem x:Name="miSalir" Header="{DynamicResource LlbEspañol}" Click="miSalir_Click"/>
             </MenuItem>
-            <MenuItem Header="Ayuda">
+            <MenuItem x:Name="lblAyuda" Header="{DynamicResource lblAyuda}">
                 <MenuItem x:Name="miAcercaDe" Header="{DynamicResource LlbAcercade}" Click="miAcercaDe_Click" />
                 <MenuItem x:Name="miError" Header="{DynamicResource LlbError}" Click="miError_Click" />
             </MenuItem>

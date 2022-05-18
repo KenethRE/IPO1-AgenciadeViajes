@@ -12,6 +12,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblUltInicio">Last Login:</sys:String>
     <sys:String x:Key="lblMasInfo">More Info</sys:String>
     <sys:String x:Key="lbAyuda">Help</sys:String>
+    <sys:String x:Key="lblAyuda">Help</sys:String>
 
     <sys:String x:Key="lblMonitores">Monitors</sys:String>
     <sys:String x:Key="lblParcelas">Plots</sys:String>
@@ -76,7 +77,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="btnBorrar">Delete</sys:String>
 
 
-    <sys:String x:Key="lblCorreoInscrito">Email:</sys:String>
+    <sys:String x:Key="lblCorreoInscrito">E-Mail:</sys:String>
     <sys:String x:Key="lblTelefonoInscrito">Phone:</sys:String>
     <sys:String x:Key="checkBoxPagadoInscrito">Paid</sys:String>
     <sys:String x:Key="lblInscripcionInscrito">Type of registration:</sys:String>
@@ -121,6 +122,16 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblCapacidadRuta">Maximum and minimum number of people</sys:String>
     <sys:String x:Key="lblDificultadRuta">Degree of difficulty</sys:String>
     <sys:String x:Key="lblMapaRuta">Route map</sys:String>
+
+    <sys:String x:Key="lblNuevo">New</sys:String>
+    <sys:String x:Key="lblNuevoUsuario">New user</sys:String>
+    <sys:String x:Key="lblEditarUsuario">Edit</sys:String>
+    <sys:String x:Key="lblBorrarUsuario">Delete</sys:String>
+    <sys:String x:Key="lblUsuarios">Users</sys:String>
+    <sys:String x:Key="lblEditar">Edit</sys:String>
+    <sys:String x:Key="lblDisponibilidad">Availability</sys:String>
+
+
 
     <sys:String x:Key="Lblconfirmacion">To reserve the cabin "cabin" for the dates 12/12/2001 to 16/12/2001 you must fill in the following information:</sys:String>
     <sys:String x:Key="lblNombreReservarCabana">Name:</sys:String>
