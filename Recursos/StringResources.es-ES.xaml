@@ -26,6 +26,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="LlbError">Reportar un Error</sys:String>
     <sys:String x:Key="lbAyuda">Ayuda</sys:String>
 
+    
     <sys:String x:Key="lblInformacionCrearRuta">Aquí puede diseñar su propia ruta como desee.</sys:String>
     <sys:String x:Key="lblHoraInicioCrearRuta">Hora de inicio:</sys:String>
     <sys:String x:Key="lblHoraFinCrearRuta">Hora de fin:</sys:String>
@@ -42,10 +43,10 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblAyudaCrearRuta">Ayuda</sys:String>
 
 
-    <sys:String x:Key="lblTituloActividad">Actividad</sys:String>
-    <sys:String x:Key="lblMonitorActividad">Monitor/es que la imparten:</sys:String>
+   
+    <sys:String x:Key="lblMonitorActividad">Monitor/es que la imparten</sys:String>
     <sys:String x:Key="lblHorarioActividad">Horario</sys:String>
-    <sys:String x:Key="lblCaracteristicasActividades">Caracteristicas de los destinatarios</sys:String>
+    <sys:String x:Key="lblCaracteristicasActividades">Características de los destinatarios</sys:String>
     <sys:String x:Key="btnCancelarActividad">Cancelar</sys:String>
     <sys:String x:Key="btnDarActividad">Dar de Alta/Baja</sys:String>
     <sys:String x:Key="lblCapacidadActividad">Cupo mínimo y máximo de inscritos</sys:String>
@@ -55,17 +56,25 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="btnModificarActividad">Modificar información</sys:String>
     <sys:String x:Key="btnGuardarActividad">Guardar cambios</sys:String>
     <sys:String x:Key="btnInscritosActividad">Gestionar el listado de inscritos</sys:String>
+    <sys:String x:Key="btnnuevaactividad">Nuevo</sys:String>
+    <sys:String x:Key="btnBorrarActividad">Borrar</sys:String>
 
-    <sys:String x:Key="lblTituloCabana">Cabaña</sys:String>
-    <sys:String x:Key="lblPrecioCabana">Precio por noche:</sys:String>
+    
+    <sys:String x:Key="lblPrecioCabana">Precio por noche</sys:String>
     <sys:String x:Key="lblCapacidadCabana">Capacidad máxima</sys:String>
     <sys:String x:Key="lblRestriccionesCabana">Restricción de estancia mínima</sys:String>
     <sys:String x:Key="lblFechaInicioCabana">Fecha de inicio:</sys:String>
     <sys:String x:Key="lblFechaFinCabana">Fecha de fin:</sys:String>
+    <sys:String x:Key="lblEquipamiento_Copy">Disponibilidad</sys:String>
     <sys:String x:Key="btnCancelarCabana">Cancelar</sys:String>
     <sys:String x:Key="btnReservarCabana">Reservar</sys:String>
     <sys:String x:Key="lblEquipamientoCabana">Equipamiento</sys:String>
     <sys:String x:Key="lblImagenesCabana">Imágenes</sys:String>
+    <sys:String x:Key="btnModificar">Modificar</sys:String>
+    <sys:String x:Key="btnNuevo">Nuevo</sys:String>
+    <sys:String x:Key="Btn_img">Imagen</sys:String>
+    <sys:String x:Key="Guardar">Guardar</sys:String>
+    <sys:String x:Key="btnBorrar">Borrar</sys:String>
 
     
     <sys:String x:Key="lblCorreoInscrito">Correo:</sys:String>
@@ -87,19 +96,23 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="btnModificarMonitor">Modificar información</sys:String>
     <sys:String x:Key="btnGuardarMonitor">Guardar cambios</sys:String>
 
-    <sys:String x:Key="lblPrecioParcela">Precio por noche:</sys:String>
-    <sys:String x:Key="lblUbicacionParcela">Ubicación:</sys:String>
+    <sys:String x:Key="lblPrecioParcela">Precio por noche</sys:String>
+    <sys:String x:Key="lblUbicacionParcela">Ubicación</sys:String>
     <sys:String x:Key="lblServiciosParcela">Servicios</sys:String>
     <sys:String x:Key="lblFechaInicioParcela">Fecha de inicio:</sys:String>
     <sys:String x:Key="lblFechaFinParcela">Fecha de fin:</sys:String>
+    <sys:String x:Key="lblDispparc">Disponibilidad</sys:String>
     <sys:String x:Key="btnCancelarParcela">Cancelar</sys:String>
     <sys:String x:Key="btnReservarParcela">Reservar</sys:String>
 
+    <sys:String x:Key="lblTituloPromocion">Promoción:</sys:String>
     <sys:String x:Key="lblFotosPromocion">Fotos</sys:String>
     <sys:String x:Key="btnCancelarPromocion">Cancelar</sys:String>
-    <sys:String x:Key="btnDarPromocion">Dar de Alta/Baja</sys:String>
+    <sys:String x:Key="btnDarPromocion">Nuevo</sys:String>
     <sys:String x:Key="btnModificarPromocion">Modificar información</sys:String>
     <sys:String x:Key="btnGuardarPromocion">Guardar cambios</sys:String>
+    <sys:String x:Key="cargar_foto">Imagen</sys:String>
+    <sys:String x:Key="btnborrar">Borrrar</sys:String>
 
     <sys:String x:Key="lblMonitorRuta">Monitor/es</sys:String>
     <sys:String x:Key="lblHorarioRuta">Horario de inicio y fin</sys:String>
@@ -109,6 +122,8 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblDificultadRuta">Grado de dificultad</sys:String>
     <sys:String x:Key="lblMapaRuta">Mapa de la ruta</sys:String>
     <sys:String x:Key="lblEditar">Editar</sys:String>
+    
+    
     <sys:String x:Key="lblNuevo">Nuevo</sys:String>
     <sys:String x:Key="lblNuevoUsuario">Nuevo Usuario</sys:String>
     <sys:String x:Key="lblEditarUsuario">Editar</sys:String>

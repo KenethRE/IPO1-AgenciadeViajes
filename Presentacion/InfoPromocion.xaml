@@ -19,7 +19,7 @@
             <ColumnDefinition Width="556*"/>
             <ColumnDefinition Width="49*"/>
         </Grid.ColumnDefinitions>
-        <Label Content="Promoción:" HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="157" Margin="0,32,0,0" FontSize="26" Grid.RowSpan="2" Grid.Column="1" FontWeight="Bold"/>
+        <Label x:Name="lblTituloPromocion" Content="Promoción:" HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="157" Margin="0,32,0,0" FontSize="26" Grid.RowSpan="2" Grid.Column="1" FontWeight="Bold"/>
         <Label x:Name="lblFotosPromocion" Content="Fotos" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,23,0,0" FontSize="22" Height="43" Width="91" Grid.Row="2" Grid.Column="1"/>
         <Button x:Name="btnCancelarPromocion" HorizontalAlignment="Left" Margin="476,198,0,0" FontSize="16" Content="Cancelar" Height="47" VerticalAlignment="Top" Width="66" RenderTransformOrigin="0.452,-3.352" Grid.Row="2" Grid.Column="2" Click="btnCancelarPromocion_Click" />
         <Button x:Name="btnDarPromocion" HorizontalAlignment="Left" Margin="167,198,0,0" FontSize="16" Content="Nuevo" Height="47" VerticalAlignment="Top" Width="109" RenderTransformOrigin="0.452,-3.352" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Click="btnDarPromocion_Click" />

@@ -129,14 +129,14 @@
             <RowDefinition Height="174*"/>
         </Grid.RowDefinitions>
         <Menu Grid.Row="0" x:Name="miMenu" FontSize="16" FontWeight="Bold" Grid.ColumnSpan="2" Background="#FFF0F0F0" BorderBrush="Black">
-            <MenuItem Header="{DynamicResource LlbArchivo}" Click="MenuItem_Click_1" >
+            <MenuItem Header="{DynamicResource LlbArchivo}" >
                 <MenuItem Header="{DynamicResource LlbIdioma}">
                     <MenuItem x:Name="spanish" Header="{DynamicResource LlbEspañol}" Click="spanish_Click">
                         <MenuItem.Icon>
                             <Image Source="/Recursos/Imagenes/spain.png"/>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem x:Name="Inlges" Header="{DynamicResource LlbIngles}" Click="english_Click">
+                    <MenuItem x:Name="Ingles" Header="{DynamicResource LlbIngles}" Click="english_Click">
                         <MenuItem.Icon>
                             <Image Source="/Recursos/Imagenes/united-states.png"/>
                         </MenuItem.Icon>

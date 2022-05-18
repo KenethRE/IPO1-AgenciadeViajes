@@ -42,7 +42,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblErrorCrearRuta">Report Error</sys:String>
     <sys:String x:Key="lblAyudaCrearRuta">Help</sys:String>
 
-    <sys:String x:Key="lblTituloActividad">Activity</sys:String>
+   
     <sys:String x:Key="lblMonitorActividad">Monitor/s who teach it:</sys:String>
     <sys:String x:Key="lblHorarioActividad">Schedule</sys:String>
     <sys:String x:Key="lblCaracteristicasActividades">Characteristics of the recipients</sys:String>
@@ -54,18 +54,26 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblEquipamientoActividad">Necessary equipment</sys:String>
     <sys:String x:Key="btnModificarActividad">Modify information</sys:String>
     <sys:String x:Key="btnGuardarActividad">Save information</sys:String>
-    <sys:String x:Key="btnInscritosActividad">Gestionar el listado de inscritos</sys:String>
+    <sys:String x:Key="btnInscritosActividad">Manage the list of registrants</sys:String>
+    <sys:String x:Key="btnnuevaactividad">New</sys:String>
+    <sys:String x:Key="btnBorrarActividad">Delete</sys:String>
 
-    <sys:String x:Key="lblTituloCabana">Cabins</sys:String>
+    
     <sys:String x:Key="lblPrecioCabana">Price per night:</sys:String>
     <sys:String x:Key="lblCapacidadCabana">Maximum capacity</sys:String>
     <sys:String x:Key="lblRestriccionesCabana">Minimum stay restriction</sys:String>
     <sys:String x:Key="lblFechaInicioCabana">Start date:</sys:String>
     <sys:String x:Key="lblFechaFinCabana">End date:</sys:String>
+    <sys:String x:Key="lblEquipamiento_Copy">Availability</sys:String>
     <sys:String x:Key="btnCancelarCabana">Cancel</sys:String>
     <sys:String x:Key="btnReservarCabana">Book</sys:String>
     <sys:String x:Key="lblEquipamientoCabana">Equipment</sys:String>
     <sys:String x:Key="lblImagenesCabana">Images</sys:String>
+    <sys:String x:Key="btnModificar">Modify</sys:String>
+    <sys:String x:Key="btnNuevo">New</sys:String>
+    <sys:String x:Key="Btn_img">Image</sys:String>
+    <sys:String x:Key="Guardar">Save</sys:String>
+    <sys:String x:Key="btnBorrar">Delete</sys:String>
 
 
     <sys:String x:Key="lblCorreoInscrito">Mail:</sys:String>
@@ -92,14 +100,18 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblServiciosParcela">Services</sys:String>
     <sys:String x:Key="lblFechaInicioParcela">Start date:</sys:String>
     <sys:String x:Key="lblFechaFinParcela">End date:</sys:String>
+    <sys:String x:Key="lblDispparc">Availability</sys:String>
     <sys:String x:Key="btnCancelarParcela">Cancel</sys:String>
     <sys:String x:Key="btnReservarParcela">Reserve</sys:String>
 
+    <sys:String x:Key="lblTituloPromocion">Promotion:</sys:String>
     <sys:String x:Key="lblFotosPromocion">Images</sys:String>
     <sys:String x:Key="btnCancelarPromocion">Cancel</sys:String>
     <sys:String x:Key="btnDarPromocion">Register/Cancel</sys:String>
     <sys:String x:Key="btnModificarPromocion">Modify information</sys:String>
     <sys:String x:Key="btnGuardarPromocion">Save changes</sys:String>
+    <sys:String x:Key="cargar_foto">Image</sys:String>
+    <sys:String x:Key="btnborrar">Delete</sys:String>
 
     <sys:String x:Key="lblMonitorRuta">Monitor/ss</sys:String>
     <sys:String x:Key="lblHorarioRuta">Start and end Schelude</sys:String>
