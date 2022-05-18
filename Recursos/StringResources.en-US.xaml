@@ -76,13 +76,14 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="btnBorrar">Delete</sys:String>
 
 
-    <sys:String x:Key="lblCorreoInscrito">Mail:</sys:String>
+    <sys:String x:Key="lblCorreoInscrito">Email:</sys:String>
     <sys:String x:Key="lblTelefonoInscrito">Phone:</sys:String>
-    <sys:String x:Key="lblInscripcionInscrito">Registration type:</sys:String>
-    <sys:String x:Key="btnCancelarInscrito">Cancel</sys:String>
-    <sys:String x:Key="btnDarInscrito">Register/Cancel</sys:String>
+    <sys:String x:Key="checkBoxPagadoInscrito">Paid</sys:String>
+    <sys:String x:Key="lblInscripcionInscrito">Type of registration:</sys:String>
+    <sys:String x:Key="btnEliminar">Delete</sys:String>
     <sys:String x:Key="btnModificarInscrito">Modify information</sys:String>
     <sys:String x:Key="btnGuardarInscrito">Save changes</sys:String>
+    <sys:String x:Key="btnCancelarInscrito">Cancel</sys:String>
 
 
     <sys:String x:Key="lblCorreoMonitor">E-Mails:</sys:String>

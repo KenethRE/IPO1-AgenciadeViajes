@@ -76,16 +76,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="Guardar">Guardar</sys:String>
     <sys:String x:Key="btnBorrar">Borrar</sys:String>
 
-    
-    <sys:String x:Key="lblCorreoInscrito">Correo:</sys:String>
-    <sys:String x:Key="lblTelefonoInscrito">Telefono:</sys:String>
-    <sys:String x:Key="lblInscripcionInscrito">Tipo Inscripcion:</sys:String>
-    <sys:String x:Key="btnCancelarInscrito">Cancelar</sys:String>
-    <sys:String x:Key="btnDarInscrito">Dar de Ata/Baja</sys:String>
-    <sys:String x:Key="btnModificarInscrito">Modificar información</sys:String>
-    <sys:String x:Key="btnGuardarInscrito">Guardar cambios</sys:String>
 
-    
     <sys:String x:Key="lblCorreoMonitor">Correo/s electrónicos:</sys:String>
     <sys:String x:Key="lblTelefonoMonitor">Teléfono/s de contacto:</sys:String>
     <sys:String x:Key="lblFormacionMonitor">Formación</sys:String>
@@ -130,6 +121,19 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblBorrarUsuario">Borrar</sys:String>
     <sys:String x:Key="lblUsuarios">Usuarios</sys:String>
     <sys:String x:Key="lblDisponibilidad">Disponibilidad</sys:String>
+
+
+    <sys:String x:Key="lblCorreoInscrito">Correo:</sys:String>
+    <sys:String x:Key="lblTelefonoInscrito">Teléfono:</sys:String>
+    <sys:String x:Key="checkBoxPagadoInscrito">Pagado</sys:String>
+    <sys:String x:Key="lblInscripcionInscrito">Tipo inscripción:</sys:String>
+    <sys:String x:Key="btnEliminar">Eliminar</sys:String>
+    <sys:String x:Key="btnModificarInscrito">Modificar información</sys:String>
+    <sys:String x:Key="btnGuardarInscrito">Guardar cambios</sys:String>
+    <sys:String x:Key="btnCancelarInscrito">Cancelar</sys:String>
+
+
+
 
     <sys:String x:Key="Lblconfirmacion">Para reservar la cabaña "cabaña" para las fechas 12/12/2001 al 16/12/2001 debe rellenar los siguientes datos:</sys:String>
     <sys:String x:Key="lblNombreReservarCabana">Nombre:</sys:String>

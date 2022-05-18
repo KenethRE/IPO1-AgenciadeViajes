@@ -1,7 +1,7 @@
 ﻿<Window x:Class="IPO1_AgenciadeViajes.InfoInscrito"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2010"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IPO1_AgenciadeViajes"
         mc:Ignorable="d"
@@ -55,14 +55,14 @@
                 <Label x:Name="lblNombre" FontWeight="Bold" FontSize="20" Content="{Binding ElementName=lstListaInscritos, Path=SelectedItem.Nombre}"/>
                 <Image x:Name="imgFoto" Height="120" Width="100" HorizontalAlignment="Left" Margin="5,5,5,5" Stretch="Fill"
                     Source="{Binding ElementName=lstListaInscritos, Path=SelectedItem.Foto}"/>
-                <Label x:Name="lblCorreoInscrito" FontWeight="Bold">Correo:</Label>
+                <Label x:Name="lblCorreoInscrito" Content="{DynamicResource lblCorreoInscrito}" FontWeight="Bold"></Label>
                 <TextBox x:Name="txtcorreo" TextWrapping="Wrap" Text="{Binding ElementName=lstListaInscritos, Path=SelectedItem.Correo}" Width="120" Height="24" BorderBrush="{x:Null}"/>
-                <Label x:Name="lblTelefonoInscrito" FontWeight="Bold">Telefono:</Label>
+                <Label x:Name="lblTelefonoInscrito" Content="{DynamicResource lblTelefonoInscrito}" FontWeight="Bold"></Label>
                 <TextBox x:Name="txttelefono" TextWrapping="Wrap" Text="{Binding ElementName=lstListaInscritos, Path=SelectedItem.Telefono}" Width="120" Height="29" BorderBrush="{x:Null}"/>
                 <Label FontWeight="Bold">
-                    <CheckBox Content="Pagado" HorizontalAlignment="Left"/>
+                    <CheckBox x:Name="checkBoxPagadoInscrito" Content="{DynamicResource checkBoxPagadoInscrito}" HorizontalAlignment="Left"/>
                 </Label>
-                <Label x:Name="lblInscripcionInscrito" FontWeight="Bold">Tipo Inscripcion:</Label>
+                <Label x:Name="lblInscripcionInscrito" Content="{DynamicResource lblInscripcionInscrito}" FontWeight="Bold"></Label>
                 <TextBlock x:Name="txtInscripcion" Margin="5" Text="{Binding ElementName=lstListaInscritos, Path=SelectedItem.Inscripcion}" Height="53"/>
             </StackPanel>
 
