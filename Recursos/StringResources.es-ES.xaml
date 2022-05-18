@@ -137,6 +137,14 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
 
 
+    <sys:String x:Key="lblNombreNuevoUsuario">Nombre:</sys:String>
+    <sys:String x:Key="lblContraseñaNuevoUsuario">Contraseña:</sys:String>
+    <sys:String x:Key="lblImagenNuevoUsuario">Imagen:</sys:String>
+    <sys:String x:Key="Btn_Cargarimagen">Cargar imagen</sys:String>
+    <sys:String x:Key="Btn_Cargarimagen_Copy">Guardar usuario</sys:String>
+
+
+
 
     <sys:String x:Key="Lblconfirmacion">Para reservar la cabaña "cabaña" para las fechas 12/12/2001 al 16/12/2001 debe rellenar los siguientes datos:</sys:String>
     <sys:String x:Key="lblNombreReservarCabana">Nombre:</sys:String>
@@ -156,6 +164,25 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblCapacidadReservarParcela">Nº ocupantes:</sys:String>
     <sys:String x:Key="btnConfirmarReservarParcela">Confirmar</sys:String>
     <sys:String x:Key="CancelarReservarParcela">Cancelar</sys:String>
+
+
+    <sys:String x:Key="Confirmacioncabana">Confirmaciób reserva cabaña</sys:String>
+    <sys:String x:Key="Confirmacionparcela">Confirmación reserva parcela</sys:String>
+    <sys:String x:Key="Crearruta">Crear ruta</sys:String>
+    <sys:String x:Key="Documentacion">Documentación</sys:String>
+    <sys:String x:Key="HistorialActividades">Historial de actividades</sys:String>
+    <sys:String x:Key="LblActivida">Información de actividad</sys:String>
+    <sys:String x:Key="LblCabana">Información de cabaña</sys:String>
+    <sys:String x:Key="LblInscrito">Información de inscrito</sys:String>
+    <sys:String x:Key="LblMonitor">Información de monitor</sys:String>
+    <sys:String x:Key="LblParcela">Información de parcela</sys:String>
+    <sys:String x:Key="LblPromocion">Información de promoción</sys:String>
+    <sys:String x:Key="LblRutaSenderista">Información de ruta senderista</sys:String>
+    <sys:String x:Key="LblInicio">Inicio</sys:String>
+    <sys:String x:Key="LblMonitoresLista">Lista de monitores</sys:String>
+    <sys:String x:Key="LblNuevoUsuarioo">Crear nuevo usuario</sys:String>
+    <sys:String x:Key="LblReportarErrores">Reportar error</sys:String>
+
 
 
 </ResourceDictionary>

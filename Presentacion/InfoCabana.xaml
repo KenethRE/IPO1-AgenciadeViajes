@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IPO1_AgenciadeViajes"
         mc:Ignorable="d"
-        Title="Cabana" Height="780" Width="679.2">
+        Title="{DynamicResource LblCabana}" Height="780" Width="679.2">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="41*"/>

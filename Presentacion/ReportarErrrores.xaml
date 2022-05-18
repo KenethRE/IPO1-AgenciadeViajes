@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IPO1_AgenciadeViajes.Presentacion"
         mc:Ignorable="d"
-        Title="ReportarErrrores" Height="323" Width="626" WindowStartupLocation="CenterScreen">
+        Title="{DynamicResource LblReportarErrores}" Height="323" Width="626" WindowStartupLocation="CenterScreen">
     <Grid Margin="0,0,20,8">
         <Grid.RowDefinitions>
             <RowDefinition Height="94*"/>

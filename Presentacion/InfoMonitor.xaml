@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IPO1_AgenciadeViajes"
         mc:Ignorable="d"
-        Title="Monitor" Height="654.874" Width="801.6">
+        Title="{DynamicResource LblMonitor}" Height="654.874" Width="801.6">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="54*"/>

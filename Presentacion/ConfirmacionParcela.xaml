@@ -41,7 +41,7 @@
         <TextBox AcceptsReturn="True" Grid.Row="4" Grid.Column="1"
             x:Name="txtBoxTelefonoReservarParcela" Margin="2,29.6,14,25.4" Text="{DynamicResource txtBoxopcional}" Grid.RowSpan="2" />
         <Label x:Name="lblCapacidadReservarParcela" Content="{DynamicResource CapacidadReservarCabana}" Grid.Row="6" Margin="1,4.6,1,1" Grid.RowSpan="2" />
-        <Button x:Name="btnConfirmarReservarParcela" HorizontalAlignment="Center" Margin="55,4.2,38,0" Grid.Row="7" FontSize="16" Content="{DynamicResource btnConfirmarReservarCabana}" Height="37" VerticalAlignment="Top" Click="AceptarConfirmacionParcela" Width="103" RenderTransformOrigin="0.452,-3.352" Grid.Column="1" />
+        <Button x:Name="btnConfirmarReservarParcela" HorizontalAlignment="Center" Margin="55,4.2,38,0" Grid.Row="7" FontSize="16" Height="37" VerticalAlignment="Top" Click="AceptarConfirmacionParcela" Width="103" RenderTransformOrigin="0.452,-3.352" Content="{DynamicResource btnConfirmarReservaCabana}" Grid.Column="1" />
         <TextBox AcceptsReturn="True" Grid.Row="5"
             x:Name="txtBoxEmailReservarParcela" Margin="2,7,164.4,28.8" Text="{DynamicResource txtBoxopcional}" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2" />
         <TextBox AcceptsReturn="True" Grid.Row="6" Grid.Column="1"

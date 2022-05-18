@@ -87,6 +87,14 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="btnCancelarInscrito">Cancel</sys:String>
 
 
+    <sys:String x:Key="lblNombreNuevoUsuario">Name:</sys:String>
+    <sys:String x:Key="lblContraseñaNuevoUsuario">Password:</sys:String>
+    <sys:String x:Key="lblImagenNuevoUsuario">Image:</sys:String>
+    <sys:String x:Key="Btn_Cargarimagen">Load image</sys:String>
+    <sys:String x:Key="Btn_Cargarimagen_Copy">Save user</sys:String>
+
+
+
     <sys:String x:Key="lblCorreoMonitor">E-Mails:</sys:String>
     <sys:String x:Key="lblTelefonoMonitor">Phone contact:</sys:String>
     <sys:String x:Key="lblFormacionMonitor">Training</sys:String>
@@ -152,6 +160,24 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="btnConfirmarReservarParcela">Confirm</sys:String>
     <sys:String x:Key="CancelarReservarParcela">Cancel</sys:String>
 
-    
-    
+
+    <sys:String x:Key="Confirmacioncabana">Confirmation of cabin reservation</sys:String>
+    <sys:String x:Key="Confirmacionparcela">Confirmation of plot reservation</sys:String>
+    <sys:String x:Key="Crearruta">Create route</sys:String>
+    <sys:String x:Key="Documentacion">Documentation</sys:String>
+    <sys:String x:Key="HistorialActividades">Activity history</sys:String>
+    <sys:String x:Key="LblActivida">Activity information</sys:String>
+    <sys:String x:Key="LblCabana">Cabin information</sys:String>
+    <sys:String x:Key="LblInscrito">Registration information</sys:String>
+    <sys:String x:Key="LblMonitor">Monitor information</sys:String>
+    <sys:String x:Key="LblParcela">Plot information</sys:String>
+    <sys:String x:Key="LblPromocion">Promotional information</sys:String>
+    <sys:String x:Key="LblRutaSenderista">Hiking route information</sys:String>
+    <sys:String x:Key="LblInicio">Home</sys:String>
+    <sys:String x:Key="LblMonitoresLista">List of monitors</sys:String>
+    <sys:String x:Key="LblNuevoUsuarioo">Create new user</sys:String>
+    <sys:String x:Key="LblReportarErrores">Report error</sys:String>
+
+
+
 </ResourceDictionary>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IPO1_AgenciadeViajes"
         mc:Ignorable="d"
-        Title="Parcela" Height="782.773" Width="592.4" ScrollViewer.VerticalScrollBarVisibility="Auto" ResizeMode="NoResize">
+        Title="{DynamicResource LblParcela}" Height="782.773" Width="592.4" ScrollViewer.VerticalScrollBarVisibility="Auto" ResizeMode="NoResize">
     <Grid Margin="0,0,-0.4,-3.8">
         <Grid.RowDefinitions>
             <RowDefinition Height="13*"/>
