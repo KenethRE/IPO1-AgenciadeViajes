@@ -13,12 +13,12 @@
             <RowDefinition Height="161*"/>
             <RowDefinition Height="98*"/>
         </Grid.RowDefinitions>
-        <Label Content="Reportar un error" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Height="40" Width="778" Padding="5,5,5,5" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
+        <Label x:Name="lblReportarUnError" Content="{DynamicResource lblReportarUnError}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Height="40" Width="778" Padding="5,5,5,5" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
         <Label Content="E-Mail:" HorizontalAlignment="Left" Margin="77,0,0,0" Grid.Row="1" VerticalAlignment="Center" Height="26" Width="52"/>
         <TextBox x:Name="EMail" HorizontalAlignment="Left" Margin="139,14,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="213" Height="17"/>
-        <Label Content="Comentario:" HorizontalAlignment="Left" Margin="58,16,0,0" Grid.Row="2" VerticalAlignment="Top" Height="26" Width="77"/>
+        <Label x:Name="lblComentario" Content="{DynamicResource lblComentario}" HorizontalAlignment="Left" Margin="58,16,0,0" Grid.Row="2" VerticalAlignment="Top" Height="26" Width="77"/>
         <TextBox x:Name="Comentario" HorizontalAlignment="Left" Margin="139,0,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="386" Height="75"/>
-        <Button Content="ENVIAR" HorizontalAlignment="Center" Margin="0,30,0,0" Grid.Row="3" VerticalAlignment="Top" Height="29" Width="103" Click="Button_Click"/>
+        <Button x:Name="lblEnviar" Content="{DynamicResource lblEnviar}" HorizontalAlignment="Center" Margin="0,30,0,0" Grid.Row="3" VerticalAlignment="Top" Height="29" Width="103" Click="Button_Click"/>
 
     </Grid>
 </Window>

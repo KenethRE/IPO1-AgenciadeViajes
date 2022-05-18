@@ -184,5 +184,10 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="LblReportarErrores">Reportar error</sys:String>
 
 
+    <sys:String x:Key="lblReportarUnError">Reportar un error</sys:String>
+    <sys:String x:Key="lblComentario">Comentario:</sys:String>
+    <sys:String x:Key="lblEnviar">ENVIAR</sys:String>
+
+
 
 </ResourceDictionary>
