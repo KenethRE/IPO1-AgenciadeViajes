@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:IPO1_AgenciadeViajes.Presentacion"
         mc:Ignorable="d"
         Title="{DynamicResource LlbMenuPrincipal}" Height="500" Width="800" Background="#FFCCCCCC"
+        SizeToContent="WidthAndHeight"
         Name="mainMenu">
     <Window.Resources>
         <DataTemplate x:Key="PlantillaItemsMenu">
@@ -124,9 +125,9 @@
             <ColumnDefinition Width="153*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="13*"/>
-            <RowDefinition Height="30*"/>
-            <RowDefinition Height="174*"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="133*"/>
         </Grid.RowDefinitions>
         <Menu Grid.Row="0" x:Name="miMenu" FontSize="16" FontWeight="Bold" Grid.ColumnSpan="2" Background="#FFF0F0F0" BorderBrush="Black">
             <MenuItem Header="{DynamicResource LlbArchivo}" >
@@ -283,12 +284,12 @@
                 </TabItem.Header>
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="17*"/>
+                        <RowDefinition Height="25"/>
                         <RowDefinition Height="154*"/>
                     </Grid.RowDefinitions>
-                    <Button x:Name="histActividades" Content="Historial de Actividades" Grid.Row="0" Margin="541,0,68,0" Click="histActividades_Click"></Button>
-                    <Button x:Name="mngMonit" Content="Monitores" Grid.Row="0" Margin="58,0,554,0" Click="mngMonit_Click" ></Button>
-                    <Button x:Name="crearRuta" Content="Crear Ruta" Grid.Row="0" Margin="306,0,306,0" Click="crearRuta_Click" ></Button>
+                    <Button x:Name="histActividades" Content="Historial de Actividades" Grid.Row="0" Margin="541,0,68,0" Click="histActividades_Click" Width="180" Height="25"></Button>
+                    <Button x:Name="mngMonit" Content="Monitores" Grid.Row="0" Margin="58,0,554,0" Click="mngMonit_Click" Width="180" Height="25"></Button>
+                    <Button x:Name="crearRuta" Content="Crear Ruta" Grid.Row="0" Margin="306,0,306,0" Click="crearRuta_Click" Width="180" Height="25"></Button>
                     <Grid Grid.Row="1">
                         <ItemsControl
 
@@ -311,28 +312,19 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <Grid Grid.Row="1" Grid.Column="1" Margin="20,1,0,4">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="0*"/>
-                <ColumnDefinition Width="0*"/>
-            </Grid.ColumnDefinitions>
-            <Grid Margin="0,0,1,0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" MinHeight="14"/>
-                    <RowDefinition Height="Auto" MinHeight="14"/>
-                    <RowDefinition Height="Auto" MinHeight="14"/>
-                    <RowDefinition Height="Auto" MinHeight="14"/>
-                </Grid.RowDefinitions>
-                <TextBlock x:Name="lblUsuario" Text="{DynamicResource lblUsuario}" Grid.Row="0" FontSize="10" FontWeight="Bold" Margin="0,0,0,0"/>
-                <TextBlock Text="{Binding ElementName=mainMenu, Path=usuarioActual.Nombre}" FontSize="10" Margin="0,0,0,0" Grid.Row="1"/>
-                <TextBlock x:Name="lblUltInicio" Text="{DynamicResource lblUltInicio}" Grid.Row="2" FontSize="10" FontWeight="Bold" Margin="0,0,0,0"/>
-                <TextBlock x:Name="contect" Text="{Binding ElementName=mainMenu, Path=usuarioActual.UltimoInicio}" Grid.Row="3" FontSize="10" Margin="0,0,0,0"/>
-                <Image Margin="194,2,50,10" Source="{Binding usuarioActual.ImgUsuario, ElementName=mainMenu}" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="4"/>
-                <Button x:Name="btnSalir" ToolTip="Salir" Margin="249,4,10,7" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click" Grid.RowSpan="4">
+        <Grid Margin="0,1,0,0" HorizontalAlignment="Right" Width="284" VerticalAlignment="Top" Height="55" Grid.Column="1" Grid.Row="1">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Width="284" Height="55">
+                <StackPanel Orientation="Vertical" Width="188">
+                    <TextBlock x:Name="lblUsuario" Text="{DynamicResource lblUsuario}" FontSize="10" FontWeight="Bold" Height="14" Width="41"/>
+                    <TextBlock Text="{Binding usuarioActual.Nombre, ElementName=mainMenu}" FontSize="10" Height="14" Width="47"/>
+                    <TextBlock x:Name="lblUltInicio" Text="{DynamicResource lblUltInicio}" FontSize="10" FontWeight="Bold" Height="14" Width="68"/>
+                    <TextBlock x:Name="contect" Text="{Binding usuarioActual.UltimoInicio, ElementName=mainMenu}" FontSize="10" Height="14" Width="40"/>
+                </StackPanel>
+                <Image Source="{Binding usuarioActual.ImgUsuario, ElementName=mainMenu}" RenderTransformOrigin="0.5,0.5" Height="47" Width="70"/>
+                <Button x:Name="btnSalir" ToolTip="Salir" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click" Height="45" Width="26" HorizontalAlignment="Right" VerticalAlignment="Bottom">
                     <Image Source="/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
                 </Button>
-            </Grid>
+            </StackPanel>
         </Grid>
 
     </Grid>
