@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="{DynamicResource LlbMenuPrincipal}" Height="500" Width="800" Background="#FFCCCCCC"
         SizeToContent="WidthAndHeight"
-        Name="mainMenu">
+        Name="mainMenu" Closing="mainMenu_Closing">
     <Window.Resources>
         <DataTemplate x:Key="PlantillaItemsMenu">
             <Border  Width="150" Height="150" CornerRadius="10,10,10,10" Margin="4,4,0,0" Padding="4,4,4,4">
