@@ -43,7 +43,7 @@
         <Label x:Name="CapacidadReservarCabana" Content="{DynamicResource CapacidadReservarCabana}" Grid.Row="6" Margin="1,4,2,0" />
         <TextBox AcceptsReturn="True" Grid.Row="6" Grid.Column="1"
             x:Name="_comentario_Copy2" Margin="3,6,244,10" Grid.RowSpan="4" />
-        <Button x:Name="btnConfirmarReservaCabana" HorizontalAlignment="Left" Margin="54,2,0,6" Grid.Row="8" FontSize="16" Content="{DynamicResource btnConfirmarReservarCabana}" Click="AceptarConfirmacionCabana_Click" Width="108" RenderTransformOrigin="0.452,-3.352" Grid.Column="1" />
+        <Button x:Name="btnConfirmarReservaCabana" HorizontalAlignment="Left" Margin="56.4,1.8,0,5.6" Grid.Row="8" FontSize="16" Content="{DynamicResource btnConfirmarReservaCabana}" Click="AceptarConfirmacionCabana_Click" Width="108" RenderTransformOrigin="0.452,-3.352" Grid.Column="1" />
         <TextBox AcceptsReturn="True" Grid.Row="5"
             x:Name="txtBoxEmailOpcionalReservarCabana" Margin="2,8,131,1" Text="(Opcional)" Grid.Column="1" Grid.ColumnSpan="2" />
         <TextBox AcceptsReturn="True" Grid.Row="6" Grid.Column="1"

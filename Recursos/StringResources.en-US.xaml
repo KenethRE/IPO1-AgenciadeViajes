@@ -12,6 +12,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblUltInicio">Last Login:</sys:String>
     <sys:String x:Key="lblMasInfo">More Info</sys:String>
     <sys:String x:Key="lbAyuda">Help</sys:String>
+    <sys:String x:Key="lblAyuda">Help</sys:String>
 
     <sys:String x:Key="lblMonitores">Monitors</sys:String>
     <sys:String x:Key="lblParcelas">Plots</sys:String>
@@ -76,13 +77,22 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="btnBorrar">Delete</sys:String>
 
 
-    <sys:String x:Key="lblCorreoInscrito">Mail:</sys:String>
+    <sys:String x:Key="lblCorreoInscrito">E-Mail:</sys:String>
     <sys:String x:Key="lblTelefonoInscrito">Phone:</sys:String>
-    <sys:String x:Key="lblInscripcionInscrito">Registration type:</sys:String>
-    <sys:String x:Key="btnCancelarInscrito">Cancel</sys:String>
-    <sys:String x:Key="btnDarInscrito">Register/Cancel</sys:String>
+    <sys:String x:Key="checkBoxPagadoInscrito">Paid</sys:String>
+    <sys:String x:Key="lblInscripcionInscrito">Type of registration:</sys:String>
+    <sys:String x:Key="btnEliminar">Delete</sys:String>
     <sys:String x:Key="btnModificarInscrito">Modify information</sys:String>
     <sys:String x:Key="btnGuardarInscrito">Save changes</sys:String>
+    <sys:String x:Key="btnCancelarInscrito">Cancel</sys:String>
+
+
+    <sys:String x:Key="lblNombreNuevoUsuario">Name:</sys:String>
+    <sys:String x:Key="lblContraseñaNuevoUsuario">Password:</sys:String>
+    <sys:String x:Key="lblImagenNuevoUsuario">Image:</sys:String>
+    <sys:String x:Key="Btn_Cargarimagen">Load image</sys:String>
+    <sys:String x:Key="Btn_Cargarimagen_Copy">Save user</sys:String>
+
 
 
     <sys:String x:Key="lblCorreoMonitor">E-Mails:</sys:String>
@@ -121,6 +131,16 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblDificultadRuta">Degree of difficulty</sys:String>
     <sys:String x:Key="lblMapaRuta">Route map</sys:String>
 
+    <sys:String x:Key="lblNuevo">New</sys:String>
+    <sys:String x:Key="lblNuevoUsuario">New user</sys:String>
+    <sys:String x:Key="lblEditarUsuario">Edit</sys:String>
+    <sys:String x:Key="lblBorrarUsuario">Delete</sys:String>
+    <sys:String x:Key="lblUsuarios">Users</sys:String>
+    <sys:String x:Key="lblEditarMenu">Edit</sys:String>
+    <sys:String x:Key="lblDisponibilidad">Availability</sys:String>
+
+
+
     <sys:String x:Key="Lblconfirmacion">To reserve the cabin "cabin" for the dates 12/12/2001 to 16/12/2001 you must fill in the following information:</sys:String>
     <sys:String x:Key="lblNombreReservarCabana">Name:</sys:String>
     <sys:String x:Key="TelefonoReservarCabana">Phone:</sys:String>
@@ -140,6 +160,28 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="btnConfirmarReservarParcela">Confirm</sys:String>
     <sys:String x:Key="CancelarReservarParcela">Cancel</sys:String>
 
-    
-    
+
+    <sys:String x:Key="Confirmacioncabana">Confirmation of cabin reservation</sys:String>
+    <sys:String x:Key="Confirmacionparcela">Confirmation of plot reservation</sys:String>
+    <sys:String x:Key="Crearruta">Create route</sys:String>
+    <sys:String x:Key="Documentacion">Documentation</sys:String>
+    <sys:String x:Key="HistorialActividades">Activity history</sys:String>
+    <sys:String x:Key="LblActivida">Activity information</sys:String>
+    <sys:String x:Key="LblCabana">Cabin information</sys:String>
+    <sys:String x:Key="LblInscrito">Registration information</sys:String>
+    <sys:String x:Key="LblMonitor">Monitor information</sys:String>
+    <sys:String x:Key="LblParcela">Plot information</sys:String>
+    <sys:String x:Key="LblPromocion">Promotional information</sys:String>
+    <sys:String x:Key="LblRutaSenderista">Hiking route information</sys:String>
+    <sys:String x:Key="LblInicio">Home</sys:String>
+    <sys:String x:Key="LblMonitoresLista">List of monitors</sys:String>
+    <sys:String x:Key="LblNuevoUsuarioo">Create new user</sys:String>
+    <sys:String x:Key="LblReportarErrores">Report error</sys:String>
+
+
+    <sys:String x:Key="lblReportarUnError">Report an error</sys:String>
+    <sys:String x:Key="lblComentario">Comment:</sys:String>
+    <sys:String x:Key="lblEnviar">SEND</sys:String>
+
+
 </ResourceDictionary>

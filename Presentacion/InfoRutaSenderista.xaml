@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IPO1_AgenciadeViajes"
         mc:Ignorable="d"
-        Title="RutaSenderista" Height="605" Width="772.5">
+        Title="{DynamicResource LblRutaSenderista}" Height="605" Width="772.5">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="32*"/>

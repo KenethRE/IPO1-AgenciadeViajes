@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IPO1_AgenciadeViajes"
         mc:Ignorable="d"
-        Title="Inicio" Width="800" Height="500" 
+        Title="{DynamicResource LblInicio}" Width="800" Height="500" 
         ResizeMode="NoResize"
         >
     <Window.Resources>
@@ -76,7 +76,7 @@
                 </MenuItem>
                 <MenuItem x:Name="miSalir" Header="{DynamicResource LlbEspañol}" Click="miSalir_Click"/>
             </MenuItem>
-            <MenuItem Header="Ayuda">
+            <MenuItem x:Name="lblAyuda" Header="{DynamicResource lblAyuda}">
                 <MenuItem x:Name="miAcercaDe" Header="{DynamicResource LlbAcercade}" Click="miAcercaDe_Click" />
                 <MenuItem x:Name="miError" Header="{DynamicResource LlbError}" Click="miError_Click" />
             </MenuItem>
