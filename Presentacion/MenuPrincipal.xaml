@@ -121,7 +121,7 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="247*"/>
+            <ColumnDefinition Width="480"/>
             <ColumnDefinition Width="153*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
