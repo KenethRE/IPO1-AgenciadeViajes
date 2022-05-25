@@ -51,11 +51,6 @@
         </Label>
         <Button x:Name="btnCancelarMonitor" HorizontalAlignment="Center" Margin="19.6,10,70.2,0" FontSize="16" Content="Cancelar" Height="53" VerticalAlignment="Top" Width="83" RenderTransformOrigin="0.452,-3.352" Grid.ColumnSpan="2" Grid.Column="4" Grid.Row="6" />
         <Button x:Name="btnDarMonitor" HorizontalAlignment="Center" Margin="10.8,10,49.8,0" FontSize="16" Content="Dar de Alta/Baja" Height="53" VerticalAlignment="Top" Width="137" RenderTransformOrigin="0.452,-3.352" Grid.Column="1" Grid.Row="6" />
-        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="142.8,-4,0,16.4" VerticalAlignment="Center" Source="/Recursos/Imagenes/spain.png" Height="42" Width="55" RenderTransformOrigin="0.572,1.906" Grid.Column="3" Grid.ColumnSpan="2"/>
-        <ComboBox x:Name="cbIdiomas" Margin="15.6,6,10.4,20.4" VerticalAlignment="Center" Opacity="0.6" SelectedIndex="0" Background="Black" Height="28" RenderTransformOrigin="0.077,0.142" Grid.Column="4" >
-            <ComboBoxItem x:Name="cbItem1" Content="ES"/>
-            <ComboBoxItem x:Name="cbItem2" Content="EN"/>
-        </ComboBox>
         <Label Content="683474384&#xD;&#xA;683479348" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="14.2,0,0,78.6" Width="215" FontSize="16" Height="54" RenderTransformOrigin="0.5,0.5" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2">
             <Label.RenderTransform>
                 <TransformGroup>

@@ -49,11 +49,6 @@
             </Label.RenderTransform>
         </Label>
         <Button x:Name="btnCancelarRuta" HorizontalAlignment="Center" Margin="295.8,86.2,128.6,0" FontSize="16" Content="Cancelar" Height="41" VerticalAlignment="Top" Width="142" RenderTransformOrigin="0.452,-3.352" Grid.Row="6" Grid.Column="2" />
-        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="432.8,-3,0,1.4" VerticalAlignment="Center" Source="/Recursos/Imagenes/spain.png" Height="32" Width="56" RenderTransformOrigin="0.572,1.906" Grid.Column="2"/>
-        <ComboBox x:Name="cbIdiomas" Margin="496.8,4,24.6,4.4" VerticalAlignment="Center" Opacity="0.6" SelectedIndex="0" Background="Black" Height="22" RenderTransformOrigin="0.077,0.142" Grid.Column="2" >
-            <ComboBoxItem x:Name="cbItem1" Content="ES"/>
-            <ComboBoxItem x:Name="cbItem2" Content="EN"/>
-        </ComboBox>
         <Label Content="Nombre y Apellidos" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="1,0,0,84.8" Width="382" FontSize="16" Height="39" RenderTransformOrigin="0.5,0.5" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Column="1">
             <Label.RenderTransform>
                 <TransformGroup>

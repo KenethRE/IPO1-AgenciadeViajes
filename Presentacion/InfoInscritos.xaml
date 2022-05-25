@@ -68,11 +68,6 @@
 
 
         </StackPanel>
-        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="599,0,0,368" VerticalAlignment="Center" Source="/Recursos/Imagenes/spain.png" Height="42" Width="55" RenderTransformOrigin="0.572,1.906"/>
-        <ComboBox x:Name="cbIdiomas" Margin="663,7,78,0" VerticalAlignment="Top" Opacity="0.6" SelectedIndex="0" Background="Black" Height="28" RenderTransformOrigin="0.077,0.142" >
-            <ComboBoxItem x:Name="cbItem1" Content="ES"/>
-            <ComboBoxItem x:Name="cbItem2" Content="EN"/>
-        </ComboBox>
         <StackPanel HorizontalAlignment="Left" Margin="553,140,0,0" Orientation="Vertical" VerticalAlignment="Top">
             <Button x:Name="btnEliminar" FontSize="16" Content="Eliminar" Height="44" Width="137" RenderTransformOrigin="0.452,-3.352" Click="miEliminarItemLB_Click" Margin="0,0,0,10" />
             <Button x:Name="btnModificarInscrito" FontSize="16" Content="Modificar información" Height="39" Width="180" RenderTransformOrigin="0.452,-3.352" Click="btnModificarInscrito_Click" />

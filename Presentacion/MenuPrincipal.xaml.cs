@@ -89,13 +89,17 @@ namespace IPO1_AgenciadeViajes.Presentacion
         {
             // Cargar contenido de prueba
             XmlDocument doc = new XmlDocument();
-            var fichero = Application.GetResourceStream(new Uri("Persistencia/Monitores.xml", UriKind.Relative)); ;
+            String outputpath = Environment.CurrentDirectory;
+            String outputpath2 = outputpath.Replace("\\bin\\Debug", "");
+            var xmpath = Path.Combine(outputpath2, "Persistencia/Monitores.xml");
+
             if (System.Globalization.CultureInfo.CurrentCulture.Equals("EN-en"))
             {
-                fichero = Application.GetResourceStream(new Uri("Persistencia/Monitores_EN.xml", UriKind.Relative));
+                xmpath = Path.Combine(outputpath2, "Persistencia/Monitores_EN.xml");
             }
 
-            doc.Load(fichero.Stream);
+            string xmpath2 = new Uri(xmpath).LocalPath;
+            doc.Load(xmpath2);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
                 var nuevoMonitor = new Dominio.Monitor("", 0, "", "", null, "", "", false)
@@ -117,13 +121,19 @@ namespace IPO1_AgenciadeViajes.Presentacion
         {
             // Cargar contenido de prueba
             XmlDocument doc = new XmlDocument();
-            var fichero = Application.GetResourceStream(new Uri("Persistencia/Parcelas.xml", UriKind.Relative)); ;
+            String outputpath = Environment.CurrentDirectory;
+            String outputpath2 = outputpath.Replace("\\bin\\Debug", "");
+            var xmpath = Path.Combine(outputpath2, "Persistencia/Parcelas.xml");
+
             if (System.Globalization.CultureInfo.CurrentCulture.Equals("EN-en"))
             {
-                fichero = Application.GetResourceStream(new Uri("Persistencia/Parcelas_EN.xml", UriKind.Relative));
+                xmpath = Path.Combine(outputpath2, "Persistencia/Parcelas_EN.xml");
             }
 
-            doc.Load(fichero.Stream);
+            string xmpath2 = new Uri(xmpath).LocalPath;
+            doc.Load(xmpath2);
+
+            doc.Load(xmpath2);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
                 var nuevaParcela = new Dominio.Parcela("", 0, "", "", 0, "", false,null)
@@ -147,13 +157,19 @@ namespace IPO1_AgenciadeViajes.Presentacion
         {
             // Cargar contenido de prueba
             XmlDocument doc = new XmlDocument();
-            var fichero = Application.GetResourceStream(new Uri("Persistencia/Cabanas.xml", UriKind.Relative)); ;
+            String outputpath = Environment.CurrentDirectory;
+            String outputpath2 = outputpath.Replace("\\bin\\Debug", "");
+            var xmpath = Path.Combine(outputpath2, "Persistencia/Cabanas.xml");
+
             if (System.Globalization.CultureInfo.CurrentCulture.Equals("EN-en"))
             {
-                fichero = Application.GetResourceStream(new Uri("Persistencia/Cabanas_EN.xml", UriKind.Relative));
+                xmpath = Path.Combine(outputpath2, "Persistencia/Cabanas_EN.xml");
             }
 
-            doc.Load(fichero.Stream);
+            string xmpath2 = new Uri(xmpath).LocalPath;
+            doc.Load(xmpath2);
+
+            doc.Load(xmpath2);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
                 var nuevaCabana = new Dominio.Cabana("", 0, 0, "", null, "", "", false)
@@ -177,12 +193,19 @@ namespace IPO1_AgenciadeViajes.Presentacion
         {
             // Cargar contenido de prueba
             XmlDocument doc = new XmlDocument();
-            var fichero = Application.GetResourceStream(new Uri("Persistencia/Actividades.xml", UriKind.Relative)); ;
-            if (System.Globalization.CultureInfo.CurrentCulture.Equals("EN-en")) {
-                fichero = Application.GetResourceStream(new Uri("Persistencia/Actividades_EN.xml", UriKind.Relative));
+            String outputpath = Environment.CurrentDirectory;
+            String outputpath2 = outputpath.Replace("\\bin\\Debug", "");
+            var xmpath = Path.Combine(outputpath2, "Persistencia/Actividades.xml");
+
+            if (System.Globalization.CultureInfo.CurrentCulture.Equals("EN-en"))
+            {
+                xmpath = Path.Combine(outputpath2, "Persistencia/Actividades_EN.xml");
             }
-           
-            doc.Load(fichero.Stream);
+
+            string xmpath2 = new Uri(xmpath).LocalPath;
+            doc.Load(xmpath2);
+
+            doc.Load(xmpath2);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
                 var nuevaActividad = new Dominio.Actividad("", "", "", "", false, 0, 0, 0, "", "", false,null)
@@ -209,13 +232,19 @@ namespace IPO1_AgenciadeViajes.Presentacion
         {
             // Cargar contenido de prueba
             XmlDocument doc = new XmlDocument();
-            var fichero = Application.GetResourceStream(new Uri("Persistencia/Promociones.xml", UriKind.Relative)); ;
+            String outputpath = Environment.CurrentDirectory;
+            String outputpath2 = outputpath.Replace("\\bin\\Debug", "");
+            var xmpath = Path.Combine(outputpath2, "Persistencia/Promociones.xml");
+
             if (System.Globalization.CultureInfo.CurrentCulture.Equals("EN-en"))
             {
-                fichero = Application.GetResourceStream(new Uri("Persistencia/Promociones_EN.xml", UriKind.Relative));
+                xmpath = Path.Combine(outputpath2, "Persistencia/Promociones_EN.xml");
             }
 
-            doc.Load(fichero.Stream);
+            string xmpath2 = new Uri(xmpath).LocalPath;
+            doc.Load(xmpath2);
+
+            doc.Load(xmpath2);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
                 var nuevaPromocion = new Dominio.Promocion("", "", null, false)
@@ -449,7 +478,7 @@ namespace IPO1_AgenciadeViajes.Presentacion
                         try
                         {
                            el.ParentNode.RemoveChild(el);
-                           doc.Save("C:/Users/plati/source/repos/KenethRE/IPO1-AgenciadeViajes/Persistencia/usuarios.xml");
+                           doc.Save("Persistencia/usuarios.xml");
                            MessageBox.Show("usuario "+usuarioActual.Nombre + "  borrado correctamente" );
                         }
                         catch (Exception ex)

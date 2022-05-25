@@ -155,11 +155,15 @@ namespace IPO1_AgenciadeViajes
         private void spanish_Click(object sender, RoutedEventArgs e)
         {
             App.SelectCulture("es-ES");
+            cbIdiomas.SelectedIndex = 0;
+            cambiarBandera("es-ES");
         }
 
         private void english_Click(object sender, RoutedEventArgs e)
         {
             App.SelectCulture("en-US");
+            cbIdiomas.SelectedIndex = 1;
+            cambiarBandera("en-US");
         }
 
         private void miSalir_Click(object sender, RoutedEventArgs e)
@@ -191,5 +195,9 @@ namespace IPO1_AgenciadeViajes
 
         }
 
+        private void MiDocumentacion_Click(object sender, RoutedEventArgs e)
+        {
+            new Documentacion().Show();
+        }
     }
 }

@@ -55,11 +55,6 @@
         <Button x:Name="btnGuardarActividad" HorizontalAlignment="Left" Margin="287,16,0,0" FontSize="16" Content="{DynamicResource btnGuardarActividad}" Height="52" VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.452,-3.352" Grid.Row="9" Grid.Column="4" Grid.ColumnSpan="2" Click="btnGuardarActividad_Click" />
         <Button x:Name="btnInscritosActividad" HorizontalAlignment="Left" FontSize="16" Content="{DynamicResource btnInscritosActividad}" VerticalAlignment="Center" RenderTransformOrigin="0.452,-3.352" Grid.Row="10" Grid.Column="4" Click="Button_Click" Height="43" Margin="24,0,0,0" Width="246" />
         <Label x:Name="lblEstado" Content="{DynamicResource lblEstado}" Margin="0,25,0,0" Grid.Row="11" Background="White" Opacity="0.7" Height="30" Grid.ColumnSpan="7"/>
-        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="337,2,0,0" VerticalAlignment="Top" Source="/Recursos/Imagenes/spain.png" Height="39" Width="40" RenderTransformOrigin="0.572,1.906" Grid.Column="4" Grid.RowSpan="2"/>
-        <ComboBox x:Name="cbIdiomas" Margin="13,9,10,0" VerticalAlignment="Top" Opacity="0.6" SelectedIndex="0" Background="Black" Height="27" RenderTransformOrigin="0.077,0.142" Grid.Column="5" Grid.RowSpan="2" >
-            <ComboBoxItem x:Name="cbItem1" Content="ES"/>
-            <ComboBoxItem x:Name="cbItem2" Content="EN"/>
-        </ComboBox>
         <TextBox x:Name="txtTitulo" Grid.Column="4" HorizontalAlignment="Left" Margin="12,40,0,0" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" BorderBrush="{x:Null}" Height="29" FontSize="16" IsEnabled="False"/>
         <TextBox x:Name="txtDescripcionActiv" Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="4,78,0,0" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" BorderBrush="{x:Null}" Height="18" IsEnabled="False"/>
         <TextBox x:Name="xtnommonitor" Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="5,40,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" BorderBrush="{x:Null}" Height="18" IsEnabled="False"/>

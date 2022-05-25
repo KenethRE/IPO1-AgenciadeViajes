@@ -41,11 +41,6 @@
         <Label x:Name="lblHoraInicioCrearRuta" Content="{DynamicResource lblHoraInicioCrearRuta}" HorizontalAlignment="Left" Height="32" Margin="137,2.6,0,0" VerticalAlignment="Top" Width="118" Grid.Row="1" FontSize="16"/>
         <TextBox HorizontalAlignment="Left" Height="20" Margin="295,16,0,0" Grid.Row="1" TextWrapping="Wrap" Text="&#xD;&#xA;" VerticalAlignment="Top" Width="73"/>
         <TextBox HorizontalAlignment="Left" Height="20" Margin="295,42,0,0" Grid.Row="1" TextWrapping="Wrap" Text="&#xA;" VerticalAlignment="Top" Width="73"/>
-        <Image x:Name="imgIdioma" HorizontalAlignment="Left" Margin="14,0,0,0" VerticalAlignment="Center" Source="/Recursos/Imagenes/spain.png" Height="36" Width="60" Grid.Row="1"/>
-        <ComboBox x:Name="cbIdiomas" Margin="64,0,649,0" VerticalAlignment="Center" Opacity="0.6" SelectedIndex="0" Background="Black" Height="22" Grid.Row="1" RenderTransformOrigin="-0.148,0.4" >
-            <ComboBoxItem x:Name="cbItem1" Content="ES"/>
-            <ComboBoxItem x:Name="cbItem2" Content="EN"/>
-        </ComboBox>
         <Button x:Name="btnCancelarCrearRuta" HorizontalAlignment="Left" Margin="609,32,0,0" FontSize="16" Content="{DynamicResource btnCancelarCrearRuta}" Grid.Column="0" Height="32" VerticalAlignment="Top" Width="102" RenderTransformOrigin="0.452,-3.352" Grid.Row="1" />
         <Button x:Name="btnGuardarCrearRuta" HorizontalAlignment="Left" Margin="484,32,0,0" FontSize="16" Content="{DynamicResource btnGuardarCrearRuta}" Height="32" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.452,-3.352" Grid.Row="1" Grid.Column="0" />
         <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="1" Margin="124,0,11,434" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click">
