@@ -43,7 +43,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblErrorCrearRuta">Report Error</sys:String>
     <sys:String x:Key="lblAyudaCrearRuta">Help</sys:String>
 
-   
+    <sys:String x:Key="lblTituloActividad">Title</sys:String>
     <sys:String x:Key="lblMonitorActividad">Monitor/s who teach it:</sys:String>
     <sys:String x:Key="lblHorarioActividad">Schedule</sys:String>
     <sys:String x:Key="lblCaracteristicasActividades">Characteristics of the recipients</sys:String>

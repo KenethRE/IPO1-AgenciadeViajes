@@ -94,6 +94,10 @@ namespace IPO1_AgenciadeViajes
             btnBorrar.Visibility = Visibility.Hidden;
             Btn_img.Visibility = Visibility.Visible;
             Guardar.Visibility = Visibility.Visible;
+            lblFechaFinCabana.Visibility = Visibility.Hidden;
+            lblFechaInicioCabana.Visibility = Visibility.Hidden;
+            fechainic.Visibility = Visibility.Hidden; 
+            fechafin.Visibility = Visibility.Hidden; 
 
         }
 

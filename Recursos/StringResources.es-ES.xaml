@@ -44,7 +44,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblAyudaCrearRuta">Ayuda</sys:String>
 
 
-   
+    <sys:String x:Key="lblTituloActividad">Titulo</sys:String>
     <sys:String x:Key="lblMonitorActividad">Monitor/es que la imparten</sys:String>
     <sys:String x:Key="lblHorarioActividad">Horario</sys:String>
     <sys:String x:Key="lblCaracteristicasActividades">Características de los destinatarios</sys:String>

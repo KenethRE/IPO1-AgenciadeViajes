@@ -96,6 +96,10 @@ namespace IPO1_AgenciadeViajes
             btnBorrar.Visibility = Visibility.Hidden;
             Btn_img.Visibility = Visibility.Visible;
             Guardar.Visibility = Visibility.Visible;
+            fechafin.Visibility = Visibility.Hidden;
+            fechainic.Visibility = Visibility.Hidden;
+            lblFechaFinParcela.Visibility = Visibility.Hidden;
+            lblFechaInicioParcela.Visibility= Visibility.Hidden;
         }
 
         private void btnNuevo_Click(object sender, RoutedEventArgs e)
@@ -121,8 +125,7 @@ namespace IPO1_AgenciadeViajes
             Guardar.Visibility = Visibility.Visible;
             Img_parcela.Source = new BitmapImage(new Uri(@"/Recursos/Imagenes/icono_imagen.png", UriKind.Relative));
             btnReservarParcela.Visibility = Visibility.Hidden;
-            fechafin.Visibility = Visibility.Hidden;
-            fechafin.Visibility = Visibility.Hidden;
+            
         }
 
         private void Guardar_Click(object sender, RoutedEventArgs e)
