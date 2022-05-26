@@ -103,5 +103,9 @@ namespace IPO1_AgenciadeViajes
                 this.Close();
             }
         }
+        private void btnGuardarCrearRuta_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
