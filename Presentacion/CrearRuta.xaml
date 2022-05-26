@@ -63,18 +63,18 @@
                         <GradientStop Color="Black"/>
                     </LinearGradientBrush>
                 </StackPanel.Background>
-                <Image x:Name="animales" Margin="5" Source="/Recursos/Imagenes/iconoAnimales.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
-                <Image x:Name="arboleda" Margin="5" Source="/Recursos/Imagenes/iconoArboleda.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
-                <Image x:Name="edificacion" Margin="5" Source="/Recursos/Imagenes/iconoEdificacion.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
-                <Image x:Name="final" Margin="5" Source="/Recursos/Imagenes/iconoFinal.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
-                <Image x:Name="inicio" Margin="5" Source="/Recursos/Imagenes/iconoInicio.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
-                <Image x:Name="agua" Margin="5" Source="/Recursos/Imagenes/iconoFuenteAguaPotable.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
-                <Image x:Name="merendero" Margin="5" Source="/Recursos/Imagenes/iconoMerendero.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
-                <Image x:Name="mirador" Margin="5" Source="/Recursos/Imagenes/iconoMirador.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
-                <Image x:Name="pinturaRupestre" Margin="5" Source="/Recursos/Imagenes/iconoPinturaRupestre.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
-                <Image x:Name="puente" Margin="5" Source="/Recursos/Imagenes/iconoPuente.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
-                <Image x:Name="rio" Margin="5" Source="/Recursos/Imagenes/iconoRio.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
-                <Image x:Name="terrenoElevado" Margin="5" Source="/Recursos/Imagenes/iconoTerrenoElevado.png" MouseDown="inicioArrastrar" Width="30" Height="30"/>
+                <Image x:Name="animales" Margin="5" Source="/Recursos/Imagenes/iconoAnimales.png" Width="30" Height="30" AllowDrop="True" MouseDown="inicioArrastrar"/>
+                <Image x:Name="arboleda" Margin="5" Source="/Recursos/Imagenes/iconoArboleda.png" Width="30" Height="30" AllowDrop="True" MouseDown="inicioArrastrar"/>
+                <Image x:Name="edificacion" Margin="5" Source="/Recursos/Imagenes/iconoEdificacion.png" Width="30" Height="30" AllowDrop="True" MouseDown="inicioArrastrar"/>
+                <Image x:Name="final" Margin="5" Source="/Recursos/Imagenes/iconoFinal.png" Width="30" Height="30" AllowDrop="True" MouseDown="inicioArrastrar"/>
+                <Image x:Name="inicio" Margin="5" Source="/Recursos/Imagenes/iconoInicio.png" Width="30" Height="30" AllowDrop="True" MouseDown="inicioArrastrar"/>
+                <Image x:Name="agua" Margin="5" Source="/Recursos/Imagenes/iconoFuenteAguaPotable.png" Width="30" Height="30" AllowDrop="True" MouseDown="inicioArrastrar"/>
+                <Image x:Name="merendero" Margin="5" Source="/Recursos/Imagenes/iconoMerendero.png" Width="30" Height="30" AllowDrop="True" MouseDown="inicioArrastrar"/>
+                <Image x:Name="mirador" Margin="5" Source="/Recursos/Imagenes/iconoMirador.png" Width="30" Height="30" AllowDrop="True" MouseDown="inicioArrastrar"/>
+                <Image x:Name="pinturaRupestre" Margin="5" Source="/Recursos/Imagenes/iconoPinturaRupestre.png" Width="30" Height="30" AllowDrop="True" MouseDown="inicioArrastrar"/>
+                <Image x:Name="puente" Margin="5" Source="/Recursos/Imagenes/iconoPuente.png" Width="30" Height="30" AllowDrop="True" MouseDown="inicioArrastrar"/>
+                <Image x:Name="rio" Margin="5" Source="/Recursos/Imagenes/iconoRio.png" Width="30" Height="30" AllowDrop="True" MouseDown="inicioArrastrar"/>
+                <Image x:Name="terrenoElevado" Margin="5" Source="/Recursos/Imagenes/iconoTerrenoElevado.png" AllowDrop="True" MouseDown="inicioArrastrar" Width="30" Height="30"/>
             </StackPanel>
             <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="403" Width="24" Height="24" Canvas.Top="325" Drop="añadirObjeto" AllowDrop="True"/>
             <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="498" Width="24" Height="24" Canvas.Top="313" Drop="añadirObjeto" AllowDrop="True"/>
