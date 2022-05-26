@@ -33,7 +33,7 @@ namespace IPO1_AgenciadeViajes.Presentacion
         private NuevoUsuario2 ventananuevousuario;
         private Monitores ventanaMonitores;
         private HistActividades historialactividades;
-        
+        public Actividad actividad;
 
         public Usuario usuarioActual { get; set; }
 
@@ -283,7 +283,7 @@ namespace IPO1_AgenciadeViajes.Presentacion
 
         private void BtnActividad_Click(object sender, RoutedEventArgs e)
         {
-            Actividad actividad = sender as Actividad;
+            actividad = sender as Actividad;
             ventanaActividad = new InfoActividad(actividad)
             {
                 Owner = this
@@ -414,9 +414,6 @@ namespace IPO1_AgenciadeViajes.Presentacion
             }
             else
                 MessageBox.Show("Actividad no disponible");
-
-
-
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
