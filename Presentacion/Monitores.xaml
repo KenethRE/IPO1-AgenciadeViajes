@@ -32,7 +32,7 @@
 
                         </Image>
                     </WrapPanel>
-                    <CheckBox Grid.Row="2" Content="Disponible" Margin="0,0,0,0" IsChecked="{Binding Estado}" IsEnabled="False"/>
+                    <CheckBox Grid.Row="2" Content="{DynamicResource lblDisponible}" Margin="0,0,0,0" IsChecked="{Binding Estado}" IsEnabled="False"/>
                     <Button x:Name="Masinfo" Content="{DynamicResource lblMasInfo}" Grid.Row="3" Click="Masinfo_Click" />
                 </Grid>
             </Border>
