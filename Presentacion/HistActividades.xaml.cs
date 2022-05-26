@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Xml;
+using Path = System.IO.Path;
 
 namespace IPO1_AgenciadeViajes.Presentacion
 {
@@ -35,8 +36,11 @@ namespace IPO1_AgenciadeViajes.Presentacion
             // Cargar contenido de prueba
             
             XmlDocument doc = new XmlDocument();
-            var fichero = Application.GetResourceStream(new Uri("Persistencia/HistActividades.xml", UriKind.Relative));
-            doc.Load(fichero.Stream);
+            String outputpath = Environment.CurrentDirectory;
+            String outputpath2 = outputpath.Replace("\\bin\\Debug", "");
+            var xmpath = Path.Combine(outputpath2, "Persistencia/HistActividades.xml");
+            string xmpath2 = new Uri(xmpath).LocalPath;
+            doc.Load(xmpath2);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
                 var nuevoActividad = new Dominio.HistorialActividades("","","");
