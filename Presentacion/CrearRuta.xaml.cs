@@ -80,5 +80,20 @@ namespace IPO1_AgenciadeViajes
             Image imgToUpdate = (Image)e.OriginalSource;
             imgToUpdate.Source = imgDragged.Source;
         }
+
+        private void btnGuardarCrearRuta_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnCancelarCrearRuta_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result;
+            result = MessageBox.Show("¿Estás seguro de cancelar la ruta?", "Cancelar reserva", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if (result == MessageBoxResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }
