@@ -42,8 +42,10 @@
         <Label x:Name="lblHoraInicioCrearRuta" Content="{DynamicResource lblHoraInicioCrearRuta}" HorizontalAlignment="Left" Height="32" Margin="137,2.6,0,0" VerticalAlignment="Top" Width="118" Grid.Row="1" FontSize="16"/>
         <TextBox HorizontalAlignment="Left" Height="20" Margin="295,15.6,0,0" Grid.Row="1" TextWrapping="Wrap" Text="&#xD;&#xA;" VerticalAlignment="Top" Width="73"/>
         <TextBox HorizontalAlignment="Left" Height="20" Margin="295,41.6,0,0" Grid.Row="1" TextWrapping="Wrap" Text="&#xA;" VerticalAlignment="Top" Width="73"/>
-        <Button x:Name="btnCancelarCrearRuta" HorizontalAlignment="Left" Margin="609,31.6,0,0" FontSize="16" Content="{DynamicResource btnCancelarCrearRuta}" Grid.Column="0" Height="32" VerticalAlignment="Top" Width="102" RenderTransformOrigin="0.452,-3.352" Grid.Row="1" />
-        <Button x:Name="btnGuardarCrearRuta" HorizontalAlignment="Left" Margin="484,31.6,0,0" FontSize="16" Content="{DynamicResource btnGuardarCrearRuta}" Height="32" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.452,-3.352" Grid.Row="1" Grid.Column="0" />
+        <StackPanel Margin="484,31.6,20.8,17.2" Orientation="Horizontal" Grid.Row="1">
+            <Button x:Name="btnGuardarCrearRuta" HorizontalAlignment="Left" FontSize="16" Content="{DynamicResource btnGuardarCrearRuta}" Height="32" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.452,-3.352" />
+            <Button x:Name="btnCancelarCrearRuta" HorizontalAlignment="Left" FontSize="16" Content="{DynamicResource btnCancelarCrearRuta}" Height="32" VerticalAlignment="Top" Width="95" RenderTransformOrigin="0.452,-3.352" Margin="50,0,0,0" />
+        </StackPanel>
         <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="1" Margin="124.2,0,10.6,434.4" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click" Grid.ColumnSpan="2">
             <Image Source="/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
         </Button>
@@ -52,8 +54,7 @@
             <Canvas.Background>
                 <ImageBrush ImageSource="/Recursos/Imagenes/mapaa.png"/>
             </Canvas.Background>
-            <Image x:Name="imgTalavera" Source="/Recursos/Imagenes/vacio.png" Canvas.Left="317" Width="24" Height="24" Canvas.Top="325" Drop="añadirObjeto" />
-            <Image x:Name="imgToledo" Source="/Recursos/Imagenes/vacio.png" Canvas.Left="154" Width="24" Height="24" Canvas.Top="20" AllowDrop="True" Drop="añadirObjeto"/>            <StackPanel x:Name="stpPaleta" Grid.Column="0" Cursor="Hand" Canvas.Left="887" Height="508" Width="41">
+            <Image Source="/Recursos/Imagenes/vacio.png" Canvas.Left="154" Width="28" Height="34" Canvas.Top="10" AllowDrop="True" Drop="añadirObjeto"/>            <StackPanel x:Name="stpPaleta" Grid.Column="0" Cursor="Hand" Canvas.Left="887" Height="508" Width="41">
                 <StackPanel.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
@@ -61,36 +62,36 @@
                         <GradientStop Color="Black"/>
                     </LinearGradientBrush>
                 </StackPanel.Background>
-                <Image x:Name="animales" Margin="5" Source="/Recursos/Imagenes/iconoAnimales.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
-                <Image x:Name="arboleda" Margin="5" Source="/Recursos/Imagenes/iconoArboleda.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
-                <Image x:Name="edificacion" Margin="5" Source="/Recursos/Imagenes/iconoEdificacion.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
-                <Image x:Name="final" Margin="5" Source="/Recursos/Imagenes/iconoFinal.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
-                <Image x:Name="inicio" Margin="5" Source="/Recursos/Imagenes/iconoInicio.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
-                <Image x:Name="agua" Margin="5" Source="/Recursos/Imagenes/iconoFuenteAguaPotable.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
-                <Image x:Name="merendero" Margin="5" Source="/Recursos/Imagenes/iconoMerendero.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
-                <Image x:Name="mirador" Margin="5" Source="/Recursos/Imagenes/iconoMirador.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
-                <Image x:Name="pinturaRupestre" Margin="5" Source="/Recursos/Imagenes/iconoPinturaRupestre.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
-                <Image x:Name="puente" Margin="5" Source="/Recursos/Imagenes/iconoPuente.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
-                <Image x:Name="rio" Margin="5" Source="/Recursos/Imagenes/iconoRio.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
-                <Image x:Name="terrenoElevado" Margin="5" Source="/Recursos/Imagenes/iconoTerrenoElevado.png" MouseDown="inicioArrastrar" Width="30" Height="30"/>
+                <Image x:Name="animales" Margin="5" Source="/Recursos/Imagenes/iconoAnimales.png" Width="30" Height="30" AllowDrop="True" MouseDown="inicioArrastrar"/>
+                <Image x:Name="arboleda" Margin="5" Source="/Recursos/Imagenes/iconoArboleda.png" Width="30" Height="30" AllowDrop="True" MouseDown="inicioArrastrar"/>
+                <Image x:Name="edificacion" Margin="5" Source="/Recursos/Imagenes/iconoEdificacion.png" Width="30" Height="30" AllowDrop="True" MouseDown="inicioArrastrar"/>
+                <Image x:Name="final" Margin="5" Source="/Recursos/Imagenes/iconoFinal.png" Width="30" Height="30" AllowDrop="True" MouseDown="inicioArrastrar"/>
+                <Image x:Name="inicio" Margin="5" Source="/Recursos/Imagenes/iconoInicio.png" Width="30" Height="30" AllowDrop="True" MouseDown="inicioArrastrar"/>
+                <Image x:Name="agua" Margin="5" Source="/Recursos/Imagenes/iconoFuenteAguaPotable.png" Width="30" Height="30" AllowDrop="True" MouseDown="inicioArrastrar"/>
+                <Image x:Name="merendero" Margin="5" Source="/Recursos/Imagenes/iconoMerendero.png" Width="30" Height="30" AllowDrop="True" MouseDown="inicioArrastrar"/>
+                <Image x:Name="mirador" Margin="5" Source="/Recursos/Imagenes/iconoMirador.png" Width="30" Height="30" AllowDrop="True" MouseDown="inicioArrastrar"/>
+                <Image x:Name="pinturaRupestre" Margin="5" Source="/Recursos/Imagenes/iconoPinturaRupestre.png" Width="30" Height="30" AllowDrop="True" MouseDown="inicioArrastrar"/>
+                <Image x:Name="puente" Margin="5" Source="/Recursos/Imagenes/iconoPuente.png" Width="30" Height="30" AllowDrop="True" MouseDown="inicioArrastrar"/>
+                <Image x:Name="rio" Margin="5" Source="/Recursos/Imagenes/iconoRio.png" Width="30" Height="30" AllowDrop="True" MouseDown="inicioArrastrar"/>
+                <Image x:Name="terrenoElevado" Margin="5" Source="/Recursos/Imagenes/iconoTerrenoElevado.png" AllowDrop="True" MouseDown="inicioArrastrar" Width="30" Height="30"/>
             </StackPanel>
-            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="403" Width="24" Height="24" Canvas.Top="325" Drop="añadirObjeto" AllowDrop="True"/>
-            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="498" Width="24" Height="24" Canvas.Top="313" Drop="añadirObjeto" AllowDrop="True"/>
-            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="582" Width="24" Height="24" Canvas.Top="270" Drop="añadirObjeto" AllowDrop="True"/>
-            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="629" Width="24" Height="24" Canvas.Top="207" Drop="añadirObjeto" AllowDrop="True"/>
-            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="669" Width="24" Height="24" Canvas.Top="219" Drop="añadirObjeto" AllowDrop="True"/>
-            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="690" Width="24" Height="24" Canvas.Top="260" Drop="añadirObjeto" AllowDrop="True"/>
-            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="714" Width="24" Height="24" Canvas.Top="169" Drop="añadirObjeto" AllowDrop="True"/>
-            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="690" Width="24" Height="24" Canvas.Top="119" Drop="añadirObjeto" AllowDrop="True"/>
-            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="690" Width="24" Height="24" Canvas.Top="58" Drop="añadirObjeto" AllowDrop="True"/>
-            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="603" Width="24" Height="24" Canvas.Top="69" Drop="añadirObjeto" RenderTransformOrigin="-1.467,-1.975" AllowDrop="True"/>
-            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="508" Width="24" Height="24" Canvas.Top="69" Drop="añadirObjeto" AllowDrop="True"/>
-            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="482" Width="24" Height="24" Canvas.Top="110" Drop="añadirObjeto" AllowDrop="True"/>
-            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="482" Width="24" Height="24" Canvas.Top="110" Drop="añadirObjeto" AllowDrop="True"/>
-            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="422" Width="24" Height="24" Canvas.Top="100" Drop="añadirObjeto" AllowDrop="True"/>
-            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="358" Width="24" Height="24" Canvas.Top="83" Drop="añadirObjeto" AllowDrop="True"/>
-            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="276" Width="24" Height="24" Canvas.Top="42" Drop="añadirObjeto" AllowDrop="True"/>
+            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="271" Width="28" Height="34" Canvas.Top="40" AllowDrop="True" Drop="añadirObjeto"/>
+            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="356" Width="28" Height="34" Canvas.Top="75" AllowDrop="True" Drop="añadirObjeto"/>
+            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="422" Width="28" Height="34" Canvas.Top="100" AllowDrop="True" Drop="añadirObjeto"/>
         </Canvas>
+        <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" AllowDrop="True" Drop="añadirObjeto" Margin="484,141,240.8,287.4"/>
+        <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" AllowDrop="True" Drop="añadirObjeto" Margin="506,89,218.8,339.4"/>
+        <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" AllowDrop="True" Drop="añadirObjeto" Margin="603,98,121.8,330.4"/>
+        <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" AllowDrop="True" Drop="añadirObjeto" Margin="686,81,38.8,347.4"/>
+        <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" AllowDrop="True" Drop="añadirObjeto" Margin="686,152,38.8,276.4"/>
+        <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" AllowDrop="True" Drop="añadirObjeto" Margin="715,191,9.8,237.4"/>
+        <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" AllowDrop="True" Drop="añadirObjeto" Margin="686,287,38.8,141.4"/>
+        <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" AllowDrop="True" Drop="añadirObjeto" Margin="668,239,56.8,189.4"/>
+        <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" AllowDrop="True" Drop="añadirObjeto" Margin="625,229,99.8,199.4"/>
+        <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" AllowDrop="True" Drop="añadirObjeto" Margin="581,296,143.8,132.4"/>
+        <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" AllowDrop="True" Drop="añadirObjeto" Margin="497,329,227.8,99.4"/>
+        <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" AllowDrop="True" Drop="añadirObjeto" Margin="401,349,323.8,79.4"/>
+        <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" AllowDrop="True" Drop="añadirObjeto" Margin="317,349,407.8,79.4"/>
 
     </Grid>
 </Window>
