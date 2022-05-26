@@ -267,34 +267,7 @@ namespace IPO1_AgenciadeViajes.Presentacion
 
         private void btnSalir_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult result;
-            result = MessageBox.Show("¿Estás seguro de cerrar la sesión?", "Cerrar Sesión", MessageBoxButton.YesNo, MessageBoxImage.Warning);
-            if (result == MessageBoxResult.Yes)
-            {
-                string UltimoInicio = DateTime.Now.ToString("d");
-                XmlDocument doc = new XmlDocument();
-                String outputpaht = Environment.CurrentDirectory;
-                String outputpath2 = outputpaht.Replace("\\bin\\Debug", "");
-                var xmpath = Path.Combine(outputpath2, "Persistencia/usuarios.xml");
-                string xmpath2 = new Uri(xmpath).LocalPath;
-                doc.Load(xmpath2);
-                XmlElement usuariomodificado = doc.DocumentElement;
-                var listanodos = usuariomodificado.SelectNodes("/Usuarios/Usuario");
-                foreach (XmlNode node in listanodos) {
-                    var nombre = node.SelectSingleNode("@Nombre").InnerText;
-                    if (nombre == usuarioActual.Nombre)
-                    {
-                        node.SelectSingleNode("@ultinic").InnerText = UltimoInicio;
-                        doc.Save(xmpath2);
-                    }
-
-                }
-               
-                Visibility = Visibility.Hidden;
-                new InicioSesion().Show();
-                this.Close();
-            }
-
+            this.Close();
         }
 
 

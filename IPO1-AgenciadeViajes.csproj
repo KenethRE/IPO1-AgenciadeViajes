@@ -361,9 +361,9 @@
     <Resource Include="Recursos\Imagenes\guardar.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Persistencia\Inscritos.xml">
+    <AdditionalFiles Include="Persistencia\Inscritos.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </AdditionalFiles>
     <Resource Include="Recursos\Imagenes\vacio.png" />
     <Resource Include="Recursos\Imagenes\iconoAnimales.png" />
     <Resource Include="Recursos\Imagenes\iconoArboleda.png" />
@@ -384,33 +384,33 @@
     <Resource Include="Recursos\Imagenes\icono_comentario.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Persistencia\Monitores.xml">
+    <AdditionalFiles Include="Persistencia\Monitores.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </AdditionalFiles>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Recursos\Imagenes\add_c.png" />
     <Resource Include="Recursos\Imagenes\remove_c.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Persistencia\Actividades.xml">
+    <AdditionalFiles Include="Persistencia\Actividades.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </AdditionalFiles>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Persistencia\Cabanas.xml">
+    <AdditionalFiles Include="Persistencia\Cabanas.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </AdditionalFiles>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Persistencia\Parcelas.xml">
+    <AdditionalFiles Include="Persistencia\Parcelas.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </AdditionalFiles>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Persistencia\Promociones.xml">
+    <AdditionalFiles Include="Persistencia\Promociones.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </AdditionalFiles>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Recursos\Imagenes\Actividad.png" />
@@ -448,9 +448,9 @@
     <Resource Include="Recursos\Imagenes\Promocion3.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Persistencia\RutaSenderista.xml">
+    <AdditionalFiles Include="Persistencia\RutaSenderista.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </AdditionalFiles>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Recursos\Imagenes\imagen_ruta1.jpg" />
@@ -468,62 +468,62 @@
     <Resource Include="Recursos\Imagenes\parcela4.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Persistencia\usuarios.xml">
+    <AdditionalFiles Include="Persistencia\usuarios.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </AdditionalFiles>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Recursos\Imagenes\mapa.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Persistencia\HistActividades.xml">
+    <AdditionalFiles Include="Persistencia\HistActividades.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </AdditionalFiles>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Persistencia\Actividades_EN.xml">
+    <AdditionalFiles Include="Persistencia\Actividades_EN.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </AdditionalFiles>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Persistencia\Cabanas_EN.xml">
+    <AdditionalFiles Include="Persistencia\Cabanas_EN.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </AdditionalFiles>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Persistencia\HistActividades_EN.xml">
+    <AdditionalFiles Include="Persistencia\HistActividades_EN.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </AdditionalFiles>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Persistencia\Inscritos_EN.xml">
+    <AdditionalFiles Include="Persistencia\Inscritos_EN.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </AdditionalFiles>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Persistencia\Monitores_EN.xml">
+    <AdditionalFiles Include="Persistencia\Monitores_EN.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </AdditionalFiles>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Persistencia\Parcelas_EN.xml">
+    <AdditionalFiles Include="Persistencia\Parcelas_EN.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </AdditionalFiles>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Persistencia\Promociones_EN.xml">
+    <AdditionalFiles Include="Persistencia\Promociones_EN.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </AdditionalFiles>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Persistencia\RutaSenderista_EN.xml">
+    <AdditionalFiles Include="Persistencia\RutaSenderista_EN.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </AdditionalFiles>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
