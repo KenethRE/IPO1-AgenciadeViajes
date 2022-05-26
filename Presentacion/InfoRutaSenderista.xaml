@@ -8,14 +8,15 @@
         Title="{DynamicResource LblRutaSenderista}" Height="605" Width="772.5">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="32*"/>
-            <RowDefinition Height="65*"/>
-            <RowDefinition Height="93*"/>
-            <RowDefinition Height="70*"/>
-            <RowDefinition Height="89*"/>
-            <RowDefinition Height="76*"/>
-            <RowDefinition Height="135*"/>
-            <RowDefinition Height="50*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="62*"/>
+            <RowDefinition Height="88*"/>
+            <RowDefinition Height="66*"/>
+            <RowDefinition Height="84*"/>
+            <RowDefinition Height="71*"/>
+            <RowDefinition Height="72*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="47*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="16*"/>
@@ -24,10 +25,10 @@
             <ColumnDefinition Width="57*"/>
         </Grid.ColumnDefinitions>
         <Label Content="Ruta senderista" HorizontalAlignment="Left" VerticalAlignment="Top" Height="46" Width="320" Margin="15,24,0,0" FontSize="26" Grid.RowSpan="2" Grid.ColumnSpan="3"/>
-        <Label x:Name="lblMonitorRuta" Content="Monitor/es" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="2,0.4,0,0" FontSize="22" Height="50" Width="249" Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="1"/>
-        <Label Content="Ruta agradable" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="2,0,0,70.6" Width="187" FontSize="16" Height="49" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Column="1"/>
-        <Label x:Name="lblHorarioRuta" Content="Horario de inicio y fin" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="2,13.2,0,0" FontSize="22" Height="57" Width="228" Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="1"/>
-        <Label Content="16:00 -19:00" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="1,0,0,8.6" Width="121" FontSize="16" Height="38" RenderTransformOrigin="0.5,0.5" Grid.Row="2" Grid.Column="1">
+        <Label x:Name="lblMonitorRuta" Content="Monitor/es" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="2,0,0,0" FontSize="22" Height="50" Width="249" Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Label Content="Ruta agradable" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="2,0,0,71" Width="187" FontSize="16" Height="49" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Column="1"/>
+        <Label x:Name="lblHorarioRuta" Content="Horario de inicio y fin" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="2,13,0,0" FontSize="22" Height="57" Width="228" Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Label Content="16:00 -19:00" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="1,0,0,9" Width="121" FontSize="16" Height="38" RenderTransformOrigin="0.5,0.5" Grid.Row="2" Grid.Column="1">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -37,8 +38,8 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="lblEncuentroRuta" Content="Punto de encuentro" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3,15,0,0" FontSize="22" Height="50" Width="399" Grid.Row="4" Grid.ColumnSpan="2" Grid.Column="1"/>
-        <Label Content="En la entrada del camping" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="5,0,0,73.163" Width="212" FontSize="16" Height="40" RenderTransformOrigin="0.5,0.5" Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Column="1">
+        <Label x:Name="lblEncuentroRuta" Content="Punto de encuentro" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3,14.993,0,0" FontSize="22" Height="50" Width="399" Grid.Row="4" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Label Content="En la entrada del camping" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="5,0,0,2.007" Width="212" FontSize="16" Height="40" RenderTransformOrigin="0.5,0.5" Grid.Row="4" Grid.ColumnSpan="2" Grid.Column="1">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -48,8 +49,8 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Button x:Name="btnCancelarRuta" HorizontalAlignment="Center" Margin="295.8,86.2,128.6,0" FontSize="16" Content="Cancelar" Height="41" VerticalAlignment="Top" Width="142" RenderTransformOrigin="0.452,-3.352" Grid.Row="6" Grid.Column="2" />
-        <Label Content="Nombre y Apellidos" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="1,0,0,84.8" Width="382" FontSize="16" Height="39" RenderTransformOrigin="0.5,0.5" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Column="1">
+        <Button x:Name="btnCancelarRuta" HorizontalAlignment="Center" Margin="295.8,14,128.6,0" FontSize="16" Content="Cancelar" Height="41" VerticalAlignment="Top" Width="142" RenderTransformOrigin="0.452,-3.352" Grid.Row="7" Grid.Column="2" />
+        <Label Content="Nombre y Apellidos" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="1,0,0,0.007" Width="382" FontSize="16" Height="39" RenderTransformOrigin="0.5,0.5" Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="1">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -59,8 +60,8 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="lblCapacidadRuta" Content="Número máximo y mínimo de personas" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="2,11.2,0,0" FontSize="22" Height="50" Width="399" Grid.Row="5" Grid.ColumnSpan="2" Grid.Column="1"/>
-        <Label Content="10 - 30 personas" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="4,0,0,123" Width="212" FontSize="16" Height="40" RenderTransformOrigin="0.5,0.5" Grid.Row="5" Grid.ColumnSpan="2" Grid.Column="1" Grid.RowSpan="2">
+        <Label x:Name="lblCapacidadRuta" Content="Número máximo y mínimo de personas" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="2,11.993,0,0" FontSize="22" Height="50" Width="399" Grid.Row="5" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Label Content="10 - 30 personas" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="4,0,0,67" Width="212" FontSize="16" Height="40" RenderTransformOrigin="0.5,0.5" Grid.Row="5" Grid.ColumnSpan="2" Grid.Column="1" Grid.RowSpan="2">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -70,8 +71,8 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="lblDificultadRuta" Content="Grado de dificultad" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,5.2,0,0" FontSize="22" Height="50" Width="399" Grid.Row="6" Grid.ColumnSpan="2" Grid.Column="1"/>
-        <Label Content="Bajo" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="7,0,0,53" Width="212" FontSize="16" Height="40" RenderTransformOrigin="0.5,0.5" Grid.Row="6" Grid.ColumnSpan="2" Grid.Column="1">
+        <Label x:Name="lblDificultadRuta" Content="Grado de dificultad" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,5.793,0,0" FontSize="22" Height="50" Width="399" Grid.Row="6" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Label Content="Bajo" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="7,0,0,52.407" Width="212" FontSize="16" Height="40" RenderTransformOrigin="0.5,0.5" Grid.Row="6" Grid.ColumnSpan="2" Grid.Column="1" Grid.RowSpan="2">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -86,6 +87,6 @@
         <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="3" Margin="10.4,0,10.4,10.4" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click">
             <Image Source="/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
         </Button>
-        <Label x:Name="lblEstado" Content="Estado de aplicación" Margin="0,17.593,0.4,-0.393" Grid.Row="7" Background="White" Opacity="0.7" Height="30" Grid.ColumnSpan="4"/>
+        <Label x:Name="lblEstado" Content="Estado de aplicación" Margin="0,17.593,0.4,-0.393" Grid.Row="8" Background="White" Opacity="0.7" Height="30" Grid.ColumnSpan="4"/>
     </Grid>
 </Window>

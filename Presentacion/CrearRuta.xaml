@@ -42,8 +42,10 @@
         <Label x:Name="lblHoraInicioCrearRuta" Content="{DynamicResource lblHoraInicioCrearRuta}" HorizontalAlignment="Left" Height="32" Margin="137,2.6,0,0" VerticalAlignment="Top" Width="118" Grid.Row="1" FontSize="16"/>
         <TextBox HorizontalAlignment="Left" Height="20" Margin="295,15.6,0,0" Grid.Row="1" TextWrapping="Wrap" Text="&#xD;&#xA;" VerticalAlignment="Top" Width="73"/>
         <TextBox HorizontalAlignment="Left" Height="20" Margin="295,41.6,0,0" Grid.Row="1" TextWrapping="Wrap" Text="&#xA;" VerticalAlignment="Top" Width="73"/>
-        <Button x:Name="btnCancelarCrearRuta" HorizontalAlignment="Left" Margin="609,31.6,0,0" FontSize="16" Content="{DynamicResource btnCancelarCrearRuta}" Grid.Column="0" Height="32" VerticalAlignment="Top" Width="102" RenderTransformOrigin="0.452,-3.352" Grid.Row="1" />
-        <Button x:Name="btnGuardarCrearRuta" HorizontalAlignment="Left" Margin="484,31.6,0,0" FontSize="16" Content="{DynamicResource btnGuardarCrearRuta}" Height="32" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.452,-3.352" Grid.Row="1" Grid.Column="0" />
+        <StackPanel Margin="484,31.6,20.8,17.2" Orientation="Horizontal" Grid.Row="1">
+            <Button x:Name="btnGuardarCrearRuta" HorizontalAlignment="Left" FontSize="16" Content="{DynamicResource btnGuardarCrearRuta}" Height="32" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.452,-3.352" />
+            <Button x:Name="btnCancelarCrearRuta" HorizontalAlignment="Left" FontSize="16" Content="{DynamicResource btnCancelarCrearRuta}" Height="32" VerticalAlignment="Top" Width="95" RenderTransformOrigin="0.452,-3.352" Margin="50,0,0,0" />
+        </StackPanel>
         <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="1" Margin="124.2,0,10.6,434.4" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click" Grid.ColumnSpan="2">
             <Image Source="/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
         </Button>

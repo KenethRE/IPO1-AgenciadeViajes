@@ -19,16 +19,16 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="43*"/>
-            <ColumnDefinition Width="197*"/>
+            <ColumnDefinition Width="173*"/>
+            <ColumnDefinition Width="214*"/>
             <ColumnDefinition Width="190*"/>
-            <ColumnDefinition Width="191*"/>
-            <ColumnDefinition Width="80*"/>
-            <ColumnDefinition Width="93*"/>
+            <ColumnDefinition Width="119*"/>
+            <ColumnDefinition Width="55*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="txtNomMon" Content="Nombre y Apellidos" HorizontalAlignment="Left" VerticalAlignment="Top" Height="60" Width="314" Margin="0.2,22,0,0" FontSize="26" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-        <Label x:Name="lblTelefonoMonitor" Content="Teléfono/s de contacto" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10.2,9.6,0,0" FontSize="22" Height="43" Width="314" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1"/>
-        <Label x:Name="lblCorreoMonitor" Content="Correo/s electrónicos" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="43,100.6,0,0" FontSize="22" Height="42" Width="256" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="2"/>
-        <Label x:Name="txtcorreosmonitor" Content="nombreapellidos@gmail.com&#xD;&#xA;nombreapellidos@gmail.com" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="4.8,0,0,0.6" Width="239" FontSize="16" Height="50" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.Row="2" Grid.Column="1">
+        <Label x:Name="txtNomMon" Content="Nombre y Apellidos" HorizontalAlignment="Left" VerticalAlignment="Top" Height="60" Width="314" Margin="25.539,22,0,0" FontSize="26" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Label x:Name="lblTelefonoMonitor" Content="Teléfono/s de contacto" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="35.539,11.6,0,0" FontSize="22" Height="43" Width="314" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1"/>
+        <Label x:Name="lblCorreoMonitor" Content="Correo/s electrónicos" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="43,1.8,0,0" FontSize="22" Height="42" Width="256" Grid.ColumnSpan="3" Grid.Row="2"/>
+        <Label x:Name="txtcorreosmonitor" Content="nombreapellidos@gmail.com&#xD;&#xA;nombreapellidos@gmail.com" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="4.8,0,0,101.8" Width="239" FontSize="16" Height="50" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.Row="2" Grid.Column="1" Grid.RowSpan="2">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -38,8 +38,8 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="lblFormacionMonitor" Content="Formación" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="43,0.2,0,0" FontSize="22" Height="43" Width="374" Grid.ColumnSpan="3" Grid.Row="4"/>
-        <Label x:Name="txtformacionmonitor" Content="Grado Superior en Guía, Información y Asistencia Turística" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="2.8,0,0,4.6" Width="445" FontSize="16" Height="34" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="4">
+        <Label x:Name="lblFormacionMonitor" Content="Formación" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="43,2.2,0,0" FontSize="22" Height="43" Width="374" Grid.ColumnSpan="3" Grid.Row="4"/>
+        <Label x:Name="txtformacionmonitor" Content="Grado Superior en Guía, Información y Asistencia Turística" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="2.8,0,0,2.6" Width="445" FontSize="16" Height="34" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="4">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -49,9 +49,13 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Button x:Name="btnCancelarMonitor" HorizontalAlignment="Center" Margin="19.6,10,70.2,0" FontSize="16" Content="Cancelar" Height="53" VerticalAlignment="Top" Width="83" RenderTransformOrigin="0.452,-3.352" Grid.ColumnSpan="2" Grid.Column="4" Grid.Row="6" />
-        <Button x:Name="btnDarMonitor" HorizontalAlignment="Center" Margin="10.8,10,49.8,0" FontSize="16" Content="Dar de Alta/Baja" Height="53" VerticalAlignment="Top" Width="137" RenderTransformOrigin="0.452,-3.352" Grid.Column="1" Grid.Row="6" />
-        <Label Content="683474384&#xD;&#xA;683479348" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="14.2,0,0,78.6" Width="215" FontSize="16" Height="54" RenderTransformOrigin="0.5,0.5" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2">
+        <StackPanel Grid.ColumnSpan="4" Grid.Column="1" Margin="10.8,10.8,1.461,14.6" Orientation="Horizontal" Grid.Row="6">
+            <Button x:Name="btnDarMonitor" HorizontalAlignment="Center" FontSize="16" Content="Dar de Alta/Baja" Height="53" VerticalAlignment="Top" Width="137" RenderTransformOrigin="0.452,-3.352" />
+            <Button x:Name="btnModificarMonitor" HorizontalAlignment="Center" FontSize="16" Content="Modificar información" Height="53" VerticalAlignment="Top" Width="180" RenderTransformOrigin="0.452,-3.352" Margin="40,0,0,0" />
+            <Button x:Name="btnGuardarMonitor" HorizontalAlignment="Right" FontSize="16" Content="Guardar cambios" Height="53" VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.452,-3.352" Margin="40,0,0,0" />
+            <Button x:Name="btnCancelarMonitor" HorizontalAlignment="Center" FontSize="16" Content="Cancelar" Height="53" VerticalAlignment="Top" Width="96" RenderTransformOrigin="0.452,-3.352" Margin="40,0,0,0" />
+        </StackPanel>
+        <Label Content="683474384&#xD;&#xA;683479348" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="39.539,0,0,76.6" Width="215" FontSize="16" Height="54" RenderTransformOrigin="0.5,0.5" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -61,8 +65,8 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="lblIdiomasMonitor" Content="Idiomas" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,5.4,0,0" FontSize="22" Height="42" Width="374" Grid.ColumnSpan="3" Grid.Row="3"/>
-        <Label x:Name="txtidiomamonitor" Content="Español&#xD;&#xA;Inlglés" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="1.8,0,0,1.8" Width="239" FontSize="16" Height="58" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="3">
+        <Label x:Name="lblIdiomasMonitor" Content="Idiomas" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,7.4,0,0" FontSize="22" Height="42" Width="374" Grid.ColumnSpan="3" Grid.Row="3"/>
+        <Label x:Name="txtidiomamonitor" Content="Español&#xD;&#xA;Inlglés" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="1.8,0,0,76.6" Width="239" FontSize="16" Height="58" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="3" Grid.RowSpan="2">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -72,8 +76,8 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="lblRestriccionesMonitor" Content="Restricciones de disponibilidad" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3.8,0.4,0,0" FontSize="22" Height="43" Width="374" Grid.ColumnSpan="2" Grid.Row="5" Grid.Column="1"/>
-        <Label x:Name="txtrestriccionesmonitor" Content="Fines de semana" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="8.8,0,0,20" Width="375" FontSize="16" Height="34" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="5">
+        <Label x:Name="lblRestriccionesMonitor" Content="Restricciones de disponibilidad" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3.8,2.4,0,0" FontSize="22" Height="43" Width="374" Grid.ColumnSpan="2" Grid.Row="5" Grid.Column="1"/>
+        <Label x:Name="txtrestriccionesmonitor" Content="Fines de semana" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="8.8,0,0,19.2" Width="375" FontSize="16" Height="34" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="5">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -83,10 +87,8 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Button x:Name="btnModificarMonitor" HorizontalAlignment="Center" Margin="190.8,10,17.2,0" FontSize="16" Content="Modificar información" Height="53" VerticalAlignment="Top" Width="180" RenderTransformOrigin="0.452,-3.352" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="6" />
-        <Button x:Name="btnGuardarMonitor" HorizontalAlignment="Right" Margin="0,10,18.4,0" FontSize="16" Content="Guardar cambios" Height="53" VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.452,-3.352" Grid.Column="3" Grid.Row="6" />
         <Image x:Name="img_monitor" HorizontalAlignment="Left" Height="134" Margin="3.8,22,0,0" VerticalAlignment="Top" Width="151" Grid.RowSpan="3" Source="http://assets.stickpng.com/thumbs/585e4bf3cb11b227491c339a.png" Grid.Column="1" />
-        <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="5" Margin="36.6,10,10.2,10.4" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click">
+        <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="5" Margin="5.539,10,6.661,8.4" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click">
             <Image Source="/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
         </Button>
     </Grid>

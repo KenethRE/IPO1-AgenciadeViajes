@@ -45,15 +45,20 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Button x:Name="btnCancelarActividad" HorizontalAlignment="Left" Margin="316,0,0,0" FontSize="16" Content="{DynamicResource btnCancelarActividad}" Height="43" VerticalAlignment="Center" Width="120" RenderTransformOrigin="0.452,-3.352" Grid.Row="10" Grid.Column="4" Grid.ColumnSpan="2" Click="btnCancelarActividad_Click" />
-        <Button x:Name="btnnuevaactividad" HorizontalAlignment="Left" Margin="4,15,0,0" FontSize="16" Content="Nuevo" Height="53" VerticalAlignment="Top" Width="126" RenderTransformOrigin="0.452,-3.352" Grid.Row="9" Grid.Column="2" Grid.ColumnSpan="2" Click="btnDarActividad_Click" />
+        <StackPanel Grid.ColumnSpan="4" Grid.Column="2" Margin="1.6,4.4,8.2,5.8" Orientation="Horizontal" Grid.Row="10">
+            <Button x:Name="btnBorrarActividad" HorizontalAlignment="Left" Margin="0,5,0,4.8" FontSize="16" Content="Borrar" Height="43" VerticalAlignment="Center" Width="126" RenderTransformOrigin="0.452,-3.352" Click="btnDarActividad_Click" />
+            <Button x:Name="btnInscritosActividad" HorizontalAlignment="Left" FontSize="16" Content="{DynamicResource btnInscritosActividad}" VerticalAlignment="Center" RenderTransformOrigin="0.452,-3.352" Click="Button_Click" Height="43" Margin="40,5,0,4.8" Width="246" />
+            <Button x:Name="btnCancelarActividad" HorizontalAlignment="Left" Margin="40,5,0,4.8" FontSize="16" Content="{DynamicResource btnCancelarActividad}" Height="43" VerticalAlignment="Center" Width="109" RenderTransformOrigin="0.452,-3.352" Click="btnCancelarActividad_Click" />
+        </StackPanel>
         <Label x:Name="cupo" Content="{DynamicResource lblCapacidadActividad}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,4,0,0" FontSize="22" Height="41" Width="374" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3"/>
         <Label x:Name="lblPrecioActividad" Content="Precio" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,6,0,0" FontSize="22" Height="43" Width="374" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="3"/>
         <Label x:Name="lblAreaActividad" Content="{DynamicResource lblAreaActividad}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,78,0,0" FontSize="22" Height="40" Width="564" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="4" Grid.RowSpan="2"/>
         <Label x:Name="lblEquipamientoActividad" Content="{DynamicResource lblEquipamientoActividad}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,80,0,0" FontSize="22" Height="39" Width="564" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="4" Grid.RowSpan="2"/>
-        <Button x:Name="bntModificarActividad" HorizontalAlignment="Left" Margin="73,16,0,0" FontSize="16" Content="{DynamicResource btnModificarActividad}" Height="52" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.452,-3.352" Grid.Row="9" Grid.Column="4" Click="bntModificarActividad_Click" />
-        <Button x:Name="btnGuardarActividad" HorizontalAlignment="Left" Margin="287,16,0,0" FontSize="16" Content="{DynamicResource btnGuardarActividad}" Height="52" VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.452,-3.352" Grid.Row="9" Grid.Column="4" Grid.ColumnSpan="2" Click="btnGuardarActividad_Click" />
-        <Button x:Name="btnInscritosActividad" HorizontalAlignment="Left" FontSize="16" Content="{DynamicResource btnInscritosActividad}" VerticalAlignment="Center" RenderTransformOrigin="0.452,-3.352" Grid.Row="10" Grid.Column="4" Click="Button_Click" Height="43" Margin="24,0,0,0" Width="246" />
+        <StackPanel Grid.ColumnSpan="4" Grid.Column="2" Margin="3.6,15.2,8.2,9.6" Orientation="Horizontal" Grid.Row="9">
+            <Button x:Name="btnnuevaactividad" HorizontalAlignment="Left" FontSize="16" Content="Nuevo" Height="51" VerticalAlignment="Top" Width="126" RenderTransformOrigin="0.452,-3.352" Click="btnDarActividad_Click" Margin="0,1,0,0" />
+            <Button x:Name="bntModificarActividad" HorizontalAlignment="Left" Margin="60,1,0,0" FontSize="16" Content="{DynamicResource btnModificarActividad}" Height="51" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.452,-3.352" Click="bntModificarActividad_Click" Padding="1" />
+            <Button x:Name="btnGuardarActividad" HorizontalAlignment="Left" Margin="60,1,0,0" FontSize="16" Content="{DynamicResource btnGuardarActividad}" Height="51" VerticalAlignment="Top" Width="148" RenderTransformOrigin="0.452,-3.352" Click="btnGuardarActividad_Click" />
+        </StackPanel>
         <Label x:Name="lblEstado" Content="{DynamicResource lblEstado}" Margin="0,25,0,0" Grid.Row="11" Background="White" Opacity="0.7" Height="30" Grid.ColumnSpan="7"/>
         <TextBox x:Name="txtTitulo" Grid.Column="4" HorizontalAlignment="Left" Margin="12,40,0,0" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" BorderBrush="{x:Null}" Height="29" FontSize="16" IsEnabled="False"/>
         <TextBox x:Name="txtDescripcionActiv" Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="4,78,0,0" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" BorderBrush="{x:Null}" Height="18" IsEnabled="False"/>
@@ -63,6 +68,5 @@
         <TextBox x:Name="txtprecio" Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="4,49,0,0" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Top" Width="197" BorderBrush="{x:Null}" IsEnabled="False"/>
         <TextBox x:Name="txtAreaActividad" Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="6,52,0,0" Grid.Row="7" TextWrapping="Wrap" VerticalAlignment="Top" Width="324" BorderBrush="{x:Null}" IsEnabled="False"/>
         <TextBox x:Name="txtEquipActividad" Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="5,44,0,0" Grid.Row="8" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" BorderBrush="{x:Null}" Height="18" IsEnabled="False"/>
-        <Button x:Name="btnBorrarActividad" HorizontalAlignment="Left" Margin="2,0,0,0" FontSize="16" Content="Borrar" Height="53" VerticalAlignment="Center" Width="126" RenderTransformOrigin="0.452,-3.352" Grid.Row="10" Grid.Column="2" Grid.ColumnSpan="2" Click="btnDarActividad_Click" />
     </Grid>
 </Window>

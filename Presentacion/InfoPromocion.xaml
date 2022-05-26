@@ -8,27 +8,33 @@
         Title="{DynamicResource LblPromocion}" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="49*"/>
-            <RowDefinition Height="60*"/>
-            <RowDefinition Height="296*"/>
-            <RowDefinition Height="29*"/>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="181*"/>
+            <RowDefinition Height="106*"/>
+            <RowDefinition Height="28*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="22*"/>
-            <ColumnDefinition Width="173*"/>
-            <ColumnDefinition Width="556*"/>
-            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="143*"/>
+            <ColumnDefinition Width="156*"/>
+            <ColumnDefinition Width="184*"/>
+            <ColumnDefinition Width="171*"/>
+            <ColumnDefinition Width="78*"/>
+            <ColumnDefinition Width="40*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="lblTituloPromocion" Content="Promoción:" HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="157" Margin="0,32,0,0" FontSize="26" Grid.RowSpan="2" Grid.Column="1" FontWeight="Bold"/>
-        <Label x:Name="lblFotosPromocion" Content="Fotos" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,23,0,0" FontSize="22" Height="43" Width="91" Grid.Row="2" Grid.Column="1"/>
-        <Button x:Name="btnCancelarPromocion" HorizontalAlignment="Left" Margin="476,198,0,0" FontSize="16" Content="Cancelar" Height="47" VerticalAlignment="Top" Width="66" RenderTransformOrigin="0.452,-3.352" Grid.Row="2" Grid.Column="2" Click="btnCancelarPromocion_Click" />
-        <Button x:Name="btnDarPromocion" HorizontalAlignment="Left" Margin="167,198,0,0" FontSize="16" Content="Nuevo" Height="47" VerticalAlignment="Top" Width="109" RenderTransformOrigin="0.452,-3.352" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Click="btnDarPromocion_Click" />
-        <Button x:Name="btnModificarPromocion" HorizontalAlignment="Left" Margin="133,198,0,0" FontSize="16" Content="Modificar información" Height="47" VerticalAlignment="Top" Width="166" RenderTransformOrigin="0.452,-3.352" Grid.Row="2" Grid.Column="2" Click="btnModificarPromocion_Click" />
-        <Button x:Name="btnGuardarPromocion" HorizontalAlignment="Right" Margin="0,198,103,0" FontSize="16" Content="Guardar cambios" Height="47" VerticalAlignment="Top" Width="137" RenderTransformOrigin="0.452,-3.352" Grid.Row="2" Grid.Column="2" Click="btnGuardarPromocion_Click" />
-        <Image x:Name="ImPromo" Grid.Column="1" HorizontalAlignment="Left" Height="102" Margin="10,66,0,0" Grid.Row="2" VerticalAlignment="Top" Width="122" Source="/Recursos/Imagenes/icono_imagen.png" />
-        <Button x:Name="btnborrar" Grid.Column="1" Content="Borrar" HorizontalAlignment="Right" Margin="0,198,41,0" Grid.Row="2" VerticalAlignment="Top" Height="47" Width="91" FontSize="16" Click="btnborrar_Click"/>
-        <Button x:Name="cargar_foto" Grid.Column="1" Content="imagen" HorizontalAlignment="Left" Margin="132,97,0,0" Grid.Row="2" VerticalAlignment="Top" IsEnabled="False" Grid.ColumnSpan="2" Height="40" Width="79" Click="cargar_foto_Click"/>
-        <TextBox x:Name="txtdescrip2" Grid.Column="2" HorizontalAlignment="Left" Margin="77,23,0,0" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="376" BorderBrush="{x:Null}" Height="114"/>
-        <TextBox x:Name="txttitulo" Grid.Column="2" HorizontalAlignment="Left" Margin="77,49,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="343" BorderBrush="{x:Null}" Height="33" Grid.RowSpan="2"/>
+        <Label x:Name="lblTituloPromocion" Content="Promoción:" HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="157" Margin="7.4,32,134.8,0" FontSize="26" Grid.RowSpan="2" Grid.Column="1" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblFotosPromocion" Content="Fotos" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10.4,23.4,0,0" FontSize="22" Height="43" Width="91" Grid.Row="2" Grid.Column="1"/>
+        <StackPanel Grid.ColumnSpan="6" Grid.Column="1" Margin="40.4,17.8,37.6,41" Orientation="Horizontal" Grid.Row="3">
+            <Button x:Name="btnborrar" Content="Borrar" HorizontalAlignment="Right" VerticalAlignment="Top" Height="47" Width="91" FontSize="16" Click="btnborrar_Click"/>
+            <Button x:Name="btnDarPromocion" HorizontalAlignment="Left" FontSize="16" Content="Nuevo" Height="47" VerticalAlignment="Top" Width="109" RenderTransformOrigin="0.452,-3.352" Click="btnDarPromocion_Click" Margin="30,0" />
+            <Button x:Name="btnModificarPromocion" HorizontalAlignment="Left" FontSize="16" Content="Modificar información" Height="47" VerticalAlignment="Top" Width="166" RenderTransformOrigin="0.452,-3.352" Click="btnModificarPromocion_Click" />
+            <Button x:Name="btnGuardarPromocion" HorizontalAlignment="Right" FontSize="16" Content="Guardar cambios" Height="47" VerticalAlignment="Top" Width="137" RenderTransformOrigin="0.452,-3.352" Click="btnGuardarPromocion_Click" Margin="30,0" />
+            <Button x:Name="btnCancelarPromocion" HorizontalAlignment="Left" FontSize="16" Content="Cancelar" Height="47" VerticalAlignment="Top" Width="66" RenderTransformOrigin="0.452,-3.352" Click="btnCancelarPromocion_Click" />
+        </StackPanel>
+        <Image x:Name="ImPromo" Grid.Column="1" HorizontalAlignment="Left" Height="102" Margin="0.4,66.4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="122" Source="/Recursos/Imagenes/icono_imagen.png" />
+        <Button x:Name="cargar_foto" Grid.Column="1" Content="imagen" HorizontalAlignment="Left" Margin="132.4,97.4,0,0" Grid.Row="2" VerticalAlignment="Top" IsEnabled="False" Grid.ColumnSpan="2" Height="40" Width="79" Click="cargar_foto_Click"/>
+        <TextBox x:Name="txtdescrip2" Grid.Column="2" HorizontalAlignment="Left" Margin="106.2,23.4,0,0" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="376" BorderBrush="{x:Null}" Height="114" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="txttitulo" Grid.Column="2" HorizontalAlignment="Left" Margin="106.2,1.8,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="343" BorderBrush="{x:Null}" Height="33" Grid.Row="1" Grid.ColumnSpan="3"/>
     </Grid>
 </Window>
