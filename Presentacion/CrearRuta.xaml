@@ -93,7 +93,7 @@
         <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" AllowDrop="True" Drop="añadirObjeto" Margin="497,329,227.8,99.4"/>
         <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" AllowDrop="True" Drop="añadirObjeto" Margin="401,349,323.8,79.4"/>
         <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" AllowDrop="True" Drop="añadirObjeto" Margin="317,349,407.8,79.4"/>
-        <Button Content="" HorizontalAlignment="Left" Margin="35,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="61" Height="61" FontWeight="Bold" Foreground="#FF2F4227" Click="Button_Click">
+        <Button Content="" HorizontalAlignment="Left" Margin="35,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="61" Height="61" FontWeight="Bold" Foreground="#FF2F4227" Click="save_as_pdf">
             <Button.Background>
                 <ImageBrush ImageSource="/Recursos/Imagenes/printIcon.png" Opacity="1"/>
             </Button.Background>

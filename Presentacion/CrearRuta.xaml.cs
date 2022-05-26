@@ -82,7 +82,7 @@ namespace IPO1_AgenciadeViajes
             imgToUpdate.Source = imgDragged.Source;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void save_as_pdf(object sender, RoutedEventArgs e)
         {
             SaveCanvasToPDF(mapa);
         }
@@ -93,6 +93,15 @@ namespace IPO1_AgenciadeViajes
             pd.PrintTicket.PageOrientation = PageOrientation.Landscape;
             pd.PrintTicket.PageScalingFactor = 100;
             pd.PrintVisual(myCanvas, "Nomograph");
+        }
+        private void btnCancelarCrearRuta_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result;
+            result = MessageBox.Show("¿Estás seguro de cancelar la ruta?", "Cancelar reserva", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if (result == MessageBoxResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }
