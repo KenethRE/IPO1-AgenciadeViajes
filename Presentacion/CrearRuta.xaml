@@ -54,7 +54,8 @@
             <Canvas.Background>
                 <ImageBrush ImageSource="/Recursos/Imagenes/mapaa.png"/>
             </Canvas.Background>
-            <Image Source="/Recursos/Imagenes/vacio.png" Canvas.Left="154" Width="28" Height="34" Canvas.Top="10" AllowDrop="True" Drop="añadirObjeto"/>            <StackPanel x:Name="stpPaleta" Grid.Column="0" Cursor="Hand" Canvas.Left="887" Height="508" Width="41">
+            <Image Source="/Recursos/Imagenes/vacio.png" Canvas.Left="154" Width="28" Height="34" Canvas.Top="10" AllowDrop="True" Drop="añadirObjeto"/>
+            <StackPanel x:Name="stpPaleta" Grid.Column="0" Cursor="Hand" Canvas.Left="887" Height="508" Width="41">
                 <StackPanel.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
