@@ -54,7 +54,8 @@
             <Canvas.Background>
                 <ImageBrush ImageSource="/Recursos/Imagenes/mapaa.png"/>
             </Canvas.Background>
-            <Image Source="/Recursos/Imagenes/vacio.png" Canvas.Left="154" Width="28" Height="34" Canvas.Top="10" AllowDrop="True" Drop="añadirObjeto"/>            <StackPanel x:Name="stpPaleta" Grid.Column="0" Cursor="Hand" Canvas.Left="887" Height="508" Width="41">
+            <Image Source="/Recursos/Imagenes/vacio.png" Canvas.Left="154" Width="28" Height="34" Canvas.Top="10" AllowDrop="True" Drop="añadirObjeto"/>
+            <StackPanel x:Name="stpPaleta" Grid.Column="0" Cursor="Hand" Canvas.Left="887" Height="508" Width="41">
                 <StackPanel.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
@@ -92,6 +93,11 @@
         <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" AllowDrop="True" Drop="añadirObjeto" Margin="497,329,227.8,99.4"/>
         <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" AllowDrop="True" Drop="añadirObjeto" Margin="401,349,323.8,79.4"/>
         <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" AllowDrop="True" Drop="añadirObjeto" Margin="317,349,407.8,79.4"/>
+        <Button Content="" HorizontalAlignment="Left" Margin="35,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="61" Height="61" FontWeight="Bold" Foreground="#FF2F4227" Click="Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Recursos/Imagenes/printIcon.png" Opacity="1"/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Printing;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -79,6 +80,19 @@ namespace IPO1_AgenciadeViajes
             Image imgDragged = (Image)e.Data.GetData(typeof(Image));
             Image imgToUpdate = (Image)e.OriginalSource;
             imgToUpdate.Source = imgDragged.Source;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            SaveCanvasToPDF(mapa);
+        }
+        void SaveCanvasToPDF(Canvas myCanvas)
+        {
+            PrintDialog pd = new PrintDialog();
+            pd.PrintQueue = new PrintQueue(new PrintServer(), "Microsoft Print to PDF");
+            pd.PrintTicket.PageOrientation = PageOrientation.Landscape;
+            pd.PrintTicket.PageScalingFactor = 100;
+            pd.PrintVisual(myCanvas, "Nomograph");
         }
     }
 }
