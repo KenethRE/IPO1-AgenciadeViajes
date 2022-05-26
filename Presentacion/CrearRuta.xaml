@@ -8,14 +8,15 @@
         Title="{DynamicResource Crearruta}" Height="575.6" Width="937.6">
     <Grid Margin="0,0,-6,3" MouseUp="mostrarCoordenadas">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="379*"/>
-            <ColumnDefinition Width="93*"/>
+            <ColumnDefinition Width="753*"/>
+            <ColumnDefinition Width="134*"/>
+            <ColumnDefinition Width="51*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="80.64"/>
         </Grid.RowDefinitions>
-        <Menu Grid.Row="0" x:Name="miMenu" FontSize="16" FontWeight="Bold" Grid.ColumnSpan="2" Background="#FFF0F0F0" BorderBrush="Black" Margin="0,0,11,30">
+        <Menu Grid.Row="0" x:Name="miMenu" FontSize="16" FontWeight="Bold" Grid.ColumnSpan="3" Background="#FFF0F0F0" BorderBrush="Black" Margin="0,0,10.6,30.4">
             <MenuItem Header="{DynamicResource lblArchivoCrearRuta}" >
                 <MenuItem Header="{DynamicResource lblCambiarIdiomaCrearRuta}" >
                     <MenuItem x:Name="spanish" Header="{DynamicResource lblEspanolCrearRuta}" Click="spanish_Click">
@@ -37,14 +38,59 @@
                 <MenuItem x:Name="miError" Header="{DynamicResource lblReportarCrearRuta}" Click="miError_Click" />
             </MenuItem>
         </Menu>
-        <Label x:Name="lblHoraFinCrearRuta" Content="{DynamicResource lblHoraFinCrearRuta}" HorizontalAlignment="Left" Height="41" Margin="137,42,0,0" VerticalAlignment="Top" Width="118" FontSize="16" Grid.Row="1"/>
+        <Label x:Name="lblHoraFinCrearRuta" Content="{DynamicResource lblHoraFinCrearRuta}" HorizontalAlignment="Left" Height="41" Margin="137,41.6,0,-1.8" VerticalAlignment="Top" Width="118" FontSize="16" Grid.Row="1"/>
         <Label x:Name="lblHoraInicioCrearRuta" Content="{DynamicResource lblHoraInicioCrearRuta}" HorizontalAlignment="Left" Height="32" Margin="137,2.6,0,0" VerticalAlignment="Top" Width="118" Grid.Row="1" FontSize="16"/>
-        <TextBox HorizontalAlignment="Left" Height="20" Margin="295,16,0,0" Grid.Row="1" TextWrapping="Wrap" Text="&#xD;&#xA;" VerticalAlignment="Top" Width="73"/>
-        <TextBox HorizontalAlignment="Left" Height="20" Margin="295,42,0,0" Grid.Row="1" TextWrapping="Wrap" Text="&#xA;" VerticalAlignment="Top" Width="73"/>
-        <Button x:Name="btnCancelarCrearRuta" HorizontalAlignment="Left" Margin="609,32,0,0" FontSize="16" Content="{DynamicResource btnCancelarCrearRuta}" Grid.Column="0" Height="32" VerticalAlignment="Top" Width="102" RenderTransformOrigin="0.452,-3.352" Grid.Row="1" />
-        <Button x:Name="btnGuardarCrearRuta" HorizontalAlignment="Left" Margin="484,32,0,0" FontSize="16" Content="{DynamicResource btnGuardarCrearRuta}" Height="32" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.452,-3.352" Grid.Row="1" Grid.Column="0" />
-        <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="1" Margin="124,0,11,434" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click">
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="295,15.6,0,0" Grid.Row="1" TextWrapping="Wrap" Text="&#xD;&#xA;" VerticalAlignment="Top" Width="73"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="295,41.6,0,0" Grid.Row="1" TextWrapping="Wrap" Text="&#xA;" VerticalAlignment="Top" Width="73"/>
+        <Button x:Name="btnCancelarCrearRuta" HorizontalAlignment="Left" Margin="609,31.6,0,0" FontSize="16" Content="{DynamicResource btnCancelarCrearRuta}" Grid.Column="0" Height="32" VerticalAlignment="Top" Width="102" RenderTransformOrigin="0.452,-3.352" Grid.Row="1" />
+        <Button x:Name="btnGuardarCrearRuta" HorizontalAlignment="Left" Margin="484,31.6,0,0" FontSize="16" Content="{DynamicResource btnGuardarCrearRuta}" Height="32" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.452,-3.352" Grid.Row="1" Grid.Column="0" />
+        <Button x:Name="btnSalir" ToolTip="Salir" Grid.Column="1" Margin="124.2,0,10.6,434.4" RenderTransformOrigin="0.5,0.707" Click="btnSalir_Click" Grid.ColumnSpan="2">
             <Image Source="/Recursos/Imagenes/salir_c.png" RenderTransformOrigin="5.078,0.781" />
         </Button>
+        <Canvas x:Name="mapa" HorizontalAlignment="Left" Height="399" VerticalAlignment="Top" Width="886" Margin="0,33,0,0" Grid.ColumnSpan="2">
+
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Recursos/Imagenes/mapaa.png"/>
+            </Canvas.Background>
+            <Image x:Name="imgTalavera" Source="/Recursos/Imagenes/vacio.png" Canvas.Left="317" Width="24" Height="24" Canvas.Top="325" Drop="añadirObjeto" />
+            <Image x:Name="imgToledo" Source="/Recursos/Imagenes/vacio.png" Canvas.Left="154" Width="24" Height="24" Canvas.Top="20" AllowDrop="True" Drop="añadirObjeto"/>            <StackPanel x:Name="stpPaleta" Grid.Column="0" Cursor="Hand" Canvas.Left="887" Height="508" Width="41">
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FF979797" Offset="0.493"/>
+                        <GradientStop Color="Black"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <Image x:Name="animales" Margin="5" Source="/Recursos/Imagenes/iconoAnimales.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
+                <Image x:Name="arboleda" Margin="5" Source="/Recursos/Imagenes/iconoArboleda.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
+                <Image x:Name="edificacion" Margin="5" Source="/Recursos/Imagenes/iconoEdificacion.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
+                <Image x:Name="final" Margin="5" Source="/Recursos/Imagenes/iconoFinal.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
+                <Image x:Name="inicio" Margin="5" Source="/Recursos/Imagenes/iconoInicio.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
+                <Image x:Name="agua" Margin="5" Source="/Recursos/Imagenes/iconoFuenteAguaPotable.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
+                <Image x:Name="merendero" Margin="5" Source="/Recursos/Imagenes/iconoMerendero.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
+                <Image x:Name="mirador" Margin="5" Source="/Recursos/Imagenes/iconoMirador.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
+                <Image x:Name="pinturaRupestre" Margin="5" Source="/Recursos/Imagenes/iconoPinturaRupestre.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
+                <Image x:Name="puente" Margin="5" Source="/Recursos/Imagenes/iconoPuente.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
+                <Image x:Name="rio" Margin="5" Source="/Recursos/Imagenes/iconoRio.png" Width="30" Height="30" MouseDown="inicioArrastrar"/>
+                <Image x:Name="terrenoElevado" Margin="5" Source="/Recursos/Imagenes/iconoTerrenoElevado.png" MouseDown="inicioArrastrar" Width="30" Height="30"/>
+            </StackPanel>
+            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="403" Width="24" Height="24" Canvas.Top="325" Drop="añadirObjeto" AllowDrop="True"/>
+            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="498" Width="24" Height="24" Canvas.Top="313" Drop="añadirObjeto" AllowDrop="True"/>
+            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="582" Width="24" Height="24" Canvas.Top="270" Drop="añadirObjeto" AllowDrop="True"/>
+            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="629" Width="24" Height="24" Canvas.Top="207" Drop="añadirObjeto" AllowDrop="True"/>
+            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="669" Width="24" Height="24" Canvas.Top="219" Drop="añadirObjeto" AllowDrop="True"/>
+            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="690" Width="24" Height="24" Canvas.Top="260" Drop="añadirObjeto" AllowDrop="True"/>
+            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="714" Width="24" Height="24" Canvas.Top="169" Drop="añadirObjeto" AllowDrop="True"/>
+            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="690" Width="24" Height="24" Canvas.Top="119" Drop="añadirObjeto" AllowDrop="True"/>
+            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="690" Width="24" Height="24" Canvas.Top="58" Drop="añadirObjeto" AllowDrop="True"/>
+            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="603" Width="24" Height="24" Canvas.Top="69" Drop="añadirObjeto" RenderTransformOrigin="-1.467,-1.975" AllowDrop="True"/>
+            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="508" Width="24" Height="24" Canvas.Top="69" Drop="añadirObjeto" AllowDrop="True"/>
+            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="482" Width="24" Height="24" Canvas.Top="110" Drop="añadirObjeto" AllowDrop="True"/>
+            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="482" Width="24" Height="24" Canvas.Top="110" Drop="añadirObjeto" AllowDrop="True"/>
+            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="422" Width="24" Height="24" Canvas.Top="100" Drop="añadirObjeto" AllowDrop="True"/>
+            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="358" Width="24" Height="24" Canvas.Top="83" Drop="añadirObjeto" AllowDrop="True"/>
+            <Image Source="/IPO1-AgenciadeViajes;component/Recursos/Imagenes/vacio.png" Canvas.Left="276" Width="24" Height="24" Canvas.Top="42" Drop="añadirObjeto" AllowDrop="True"/>
+        </Canvas>
+
     </Grid>
 </Window>

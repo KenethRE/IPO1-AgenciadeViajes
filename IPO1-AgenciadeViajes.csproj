@@ -68,7 +68,13 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
@@ -324,6 +330,7 @@
     </EmbeddedResource>
     <None Include="IPO1-AgenciadeViajes_TemporaryKey.pfx" />
     <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -357,6 +364,20 @@
     <Content Include="Persistencia\Inscritos.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Recursos\Imagenes\vacio.png" />
+    <Resource Include="Recursos\Imagenes\iconoAnimales.png" />
+    <Resource Include="Recursos\Imagenes\iconoArboleda.png" />
+    <Resource Include="Recursos\Imagenes\iconoEdificacion.png" />
+    <Resource Include="Recursos\Imagenes\iconoFinal.png" />
+    <Resource Include="Recursos\Imagenes\iconoFuenteAguaPotable.png" />
+    <Resource Include="Recursos\Imagenes\iconoInicio.png" />
+    <Resource Include="Recursos\Imagenes\iconoMerendero.png" />
+    <Resource Include="Recursos\Imagenes\iconoMirador.png" />
+    <Resource Include="Recursos\Imagenes\iconoPinturaRupestre.png" />
+    <Resource Include="Recursos\Imagenes\iconoPuente.png" />
+    <Resource Include="Recursos\Imagenes\iconoRio.png" />
+    <Resource Include="Recursos\Imagenes\iconoTerrenoElevado.png" />
+    <Resource Include="Recursos\Imagenes\mapaa.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Recursos\Imagenes\icono_cabana.png" />
@@ -452,7 +473,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Recursos\Imagenes\1527526175_206265_1527526294_noticia_normal.jpg" />
+    <Resource Include="Recursos\Imagenes\mapa.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Persistencia\HistActividades.xml">
@@ -502,7 +523,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

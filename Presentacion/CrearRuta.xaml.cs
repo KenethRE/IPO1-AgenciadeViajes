@@ -66,5 +66,19 @@ namespace IPO1_AgenciadeViajes
         {
             this.Close();
         }
+
+        private void inicioArrastrar(object sender, MouseButtonEventArgs e)
+        {
+            DataObject dataO = new DataObject((Image)sender);
+            DragDrop.DoDragDrop((Image)sender, dataO, DragDropEffects.Move);
+        }
+
+
+        private void añadirObjeto(object sender, DragEventArgs e)
+        {
+            Image imgDragged = (Image)e.Data.GetData(typeof(Image));
+            Image imgToUpdate = (Image)e.OriginalSource;
+            imgToUpdate.Source = imgDragged.Source;
+        }
     }
 }
