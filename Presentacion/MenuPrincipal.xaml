@@ -106,9 +106,9 @@
                     <WrapPanel Grid.Row="1" Margin="0,0,0,10" Orientation="Vertical">
                         <Image Source="{Binding Foto}"/>
                     </WrapPanel>
-                    <TextBlock Grid.Row="2" Text="Precio " Margin="0,0,0,0" Height="20" FontWeight="Bold" ></TextBlock>
+                    <TextBlock x:Name="lblPrecioActividaad" Grid.Row="2" Text="{DynamicResource lblPrecioActividaad}" Margin="0,0,0,0" Height="20" FontWeight="Bold" ></TextBlock>
                     <TextBlock x:Name="PrecioAct" Grid.Row="3" Text="{Binding Precio}" Margin="0,0,0,0" Height="20"></TextBlock>
-                    <TextBlock Grid.Row="4" Text="Tamaño (en m2)" Margin="0,0,0,0" Height="20" FontWeight="Bold" ></TextBlock>
+                    <TextBlock x:Name="lblTamañoActividaad" Grid.Row="4" Text="{DynamicResource lblTamañoActividaad}" Margin="0,0,0,0" Height="20" FontWeight="Bold" ></TextBlock>
                     <TextBlock Grid.Row="5" Text="{Binding Tamano}" Margin="0,0,0,0" Height="20"></TextBlock>
                     <CheckBox Grid.Row="6" Content="{DynamicResource lblDisponible}" Margin="0,0,0,0" IsChecked="{Binding Estado}" IsEnabled="False"/>
                     <Button IsEnabled="{Binding Estado}" Content="{DynamicResource btnReservarCabana}" Grid.Row="6" Click="BtnParcela_Click"/>
@@ -287,9 +287,9 @@
                         <RowDefinition Height="25"/>
                         <RowDefinition Height="154*"/>
                     </Grid.RowDefinitions>
-                    <Button x:Name="histActividades" Content="Historial de Actividades" Grid.Row="0" Margin="541,0,68,0" Click="histActividades_Click" Width="180" Height="25"></Button>
-                    <Button x:Name="mngMonit" Content="Monitores" Grid.Row="0" Margin="58,0,554,0" Click="mngMonit_Click" Width="180" Height="25"></Button>
-                    <Button x:Name="crearRuta" Content="Crear Ruta" Grid.Row="0" Margin="306,0,306,0" Click="crearRuta_Click" Width="180" Height="25"></Button>
+                    <Button x:Name="histActividades" Content="{DynamicResource histActividades}" Grid.Row="0" Margin="541,0,68,0" Click="histActividades_Click" Width="180" Height="25"></Button>
+                    <Button x:Name="mngMonit" Content="{DynamicResource mngMonit}" Grid.Row="0" Margin="58,0,554,0" Click="mngMonit_Click" Width="180" Height="25"></Button>
+                    <Button x:Name="crearRuta" Content="{DynamicResource crearRuta}" Grid.Row="0" Margin="306,0,306,0" Click="crearRuta_Click" Width="180" Height="25"></Button>
                     <Grid Grid.Row="1">
                         <ItemsControl
 

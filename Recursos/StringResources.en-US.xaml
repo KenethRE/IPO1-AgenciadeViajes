@@ -184,5 +184,11 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="lblComentario">Comment:</sys:String>
     <sys:String x:Key="lblEnviar">SEND</sys:String>
 
+    <sys:String x:Key="lblPrecioActividaad">Price</sys:String>
+    <sys:String x:Key="lblTamañoActividaad">Size (in m2)</sys:String>
+    <sys:String x:Key="mngMonit">Monitors</sys:String>
+    <sys:String x:Key="crearRuta">Create route</sys:String>
+    <sys:String x:Key="histActividades">Activity history</sys:String>
+
 
 </ResourceDictionary>
